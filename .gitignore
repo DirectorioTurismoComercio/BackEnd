@@ -2,3 +2,4 @@
 turismo/settings.py
 *.pyc
 static
+*~
