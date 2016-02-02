@@ -14,14 +14,18 @@ def to_python_object(cuestionarios):
               
                   if opcion['dato']:
                     w=w+ "(" +  str(opcion["id"]) + "," + str(opcion["valor"])+") , "
-                # if len(w)==1:
-                #  break
                 w=w+"],"
                 if len(w)>3:
                   s = s + str(pregunta["pregunta"]["id"]) + ": "
                   s=s + w
-        s=s[:len(s)-1]
+        s_length = len(s)
+        
+        if s_length == 1:
+          return "{}"
+
+        s=s[:s_length-1]
         s = s+"}"
+       
         return s
 def get_dependencias(cuestionarios):
   dependencias={}
@@ -35,6 +39,7 @@ def get_dependencias(cuestionarios):
         dependencias[pregunta_id]=cp[0].dependencia_respuestas.all()[0].pregunta.id
 
   return dependencias      
+
 
 def python_object_to_cuestionario(respuestas,cuestionarios):
    respuestas=eval(respuestas)
