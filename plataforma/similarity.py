@@ -1,6 +1,7 @@
 from plataforma.models import *
 from math import *
 def to_python_object(cuestionarios):
+   # try:
         s = "{"  
         for cuestionario in cuestionarios:
           for pregunta in cuestionario['preguntas']:
