@@ -25,7 +25,7 @@ from django.contrib.auth.models import User
 class UserSerializer(serializers.ModelSerializer):
   class Meta:
     model = User
-    fields = ('username', 'email', 'password')
+    fields = ('email', 'password')
  
 # Serializador del modelo RedSocial
 class RedSocialSerializer(serializers.ModelSerializer):  
