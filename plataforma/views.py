@@ -3,6 +3,7 @@
 from plataforma.models import *
 from rest_framework import status
 from plataforma.serializers import *
+from authentication_module.serializers import *
 from rest_framework.decorators import detail_route, list_route
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -137,7 +138,7 @@ class UsuarioListCreate(generics.ListCreateAPIView):
                               status=status.HTTP_400_BAD_REQUEST)
              
         
-      user = UserSerializer(data={'email':correo,'password': password, 'username':correo})
+      user = CustomUserSerializer(data={'email':correo,'password': password, 'username':correo})
       usuario = UsuarioSerializer(data=request.data)
       if user.is_valid():
         if usuario.is_valid(): 
