@@ -21,11 +21,6 @@ from plataforma.models import Conversacion
 from plataforma.models import Mensaje
 from django.contrib.auth.models import User
 
-# Serializador del modelo User de django.contrib.auth.models
-class UserSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = User
-    fields = ('email', 'password')
  
 # Serializador del modelo RedSocial
 class RedSocialSerializer(serializers.ModelSerializer):  
