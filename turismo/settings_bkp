@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'authentication_module',
     'rest_framework_swagger',   #Django-REST Library that generates online documentation, See: http://django-rest-swagger.readthedocs.org/en/latest/ 
     'corsheaders',
     'rest_framework',
@@ -62,6 +63,15 @@ MIDDLEWARE_CLASSES = (
   
 )
 
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+AUTH_USER_MODEL = 'authentication_module.CustomUser'
+
 SITE_ID = 1
 ROOT_URLCONF = 'turismo.urls'
 
@@ -76,8 +86,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'plataforma',
+ 	'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'prueba',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
@@ -86,7 +96,7 @@ DATABASES = {
 }
 # smtp 
 # python -m smtpd -n -c DebuggingServer localhost:1025
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = '1025'
 EMAIL_USE_TLS = False
@@ -111,18 +121,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
-#MEDIA_ROOT = (
-#                    os.path.join(os.path.dirname(__file__),'media'),
-#)
+
 
 TEMPLATE_DIRS = (
                     os.path.join(os.path.dirname(__file__),'templates'),
 )
 
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
