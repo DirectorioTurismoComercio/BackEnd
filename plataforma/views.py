@@ -125,6 +125,7 @@ class UsuarioListCreate(generics.ListCreateAPIView):
    # permission_classes = (IsAuthenticated,)
 
     def create(self, request):
+      print request.body
       if 'password' not in request.data:
         password=''
       else: 
@@ -138,12 +139,12 @@ class UsuarioListCreate(generics.ListCreateAPIView):
                               status=status.HTTP_400_BAD_REQUEST)
              
         
-      user = CustomUserSerializer(data={'email':correo,'password': password, 'username':correo})
+      user = CustomUserSerializer(data={'email':correo,'password': password})
       usuario = UsuarioSerializer(data=request.data)
       if user.is_valid():
         if usuario.is_valid(): 
          correo =correo
-         nombre = request.data['nombres']+' '+request.data['apellido1']+' '+request.data['apellido2'] 
+         nombre = request.data['nombres']+' '+request.data['apellido1']
          user=user.save()
          user.set_password(password);
          user.save()
