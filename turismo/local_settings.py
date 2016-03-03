@@ -10,7 +10,7 @@ DATABASES = {
 }
 # smtp 
 # python -m smtpd -n -c DebuggingServer localhost:1025
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = '1025'
 EMAIL_USE_TLS = False
