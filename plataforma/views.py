@@ -122,10 +122,8 @@ class RolCuestionariosSave(viewsets.ViewSet):
 class UsuarioListCreate(generics.ListCreateAPIView):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-   # permission_classes = (IsAuthenticated,)
-
+  
     def create(self, request):
-      print request.body
       if 'password' not in request.data:
         password=''
       else: 
@@ -392,7 +390,6 @@ class CuestionarioList(generics.ListAPIView):
 class AfinidadList(viewsets.ViewSet):
     def list(self,request):
        num_registros=10;
-       print request.stream.body
        busqueda = request.data["cuestionario"]
        cuestionarios_json = busqueda["cuestionarios"];
        if(busqueda["tipo"]=="P"):

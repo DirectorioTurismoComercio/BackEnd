@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'django_jenkins',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,6 +83,13 @@ WSGI_APPLICATION = 'turismo.wsgi.application'
 CORS_ORIGIN_ALLOW_ALL = True
 
 from local_settings import *
+
+#Jenkins
+#JENKINS_TEST_RUNNER = 'plataforma.scripts.testrunner.NoopTestRunner'
+
+PROJECT_APPS = (
+    'plataforma', 'authentication_module',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
