@@ -58,6 +58,7 @@ urlpatterns = patterns('',
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^account/', include('allauth.urls')),
     url(r'^accounts/profile/$', RedirectView.as_view(url='/'), name='profile-redirect'),
+    url(r'^api/login/', include('rest_social_auth.urls_token')),
     
 
    

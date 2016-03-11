@@ -14,3 +14,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = '1025'
 EMAIL_USE_TLS = False
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1529648703998052'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'b7609e3cb5d8af0df1da85c61b263cf1'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', ]  # optional
+

@@ -70,6 +70,8 @@ AUTHENTICATION_BACKENDS = (
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+
+    'social.backends.facebook.FacebookOAuth2',
 )
 AUTH_USER_MODEL = 'authentication_module.CustomUser'
 
