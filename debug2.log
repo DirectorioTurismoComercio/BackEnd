@@ -1,0 +1,873 @@
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 155, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/user.py", line 70, in create_user
+    'user': strategy.create_user(**fields)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/base.py", line 53, in create_user
+    return self.storage.user.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/storage/django_orm.py", line 60, in create_user
+    return cls.user_model().objects.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 187, in create_user
+    **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 180, in _create_user
+    date_joined=now, **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'is_active' is an invalid keyword argument for this function
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 155, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/user.py", line 70, in create_user
+    'user': strategy.create_user(**fields)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/base.py", line 53, in create_user
+    return self.storage.user.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/storage/django_orm.py", line 60, in create_user
+    return cls.user_model().objects.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 187, in create_user
+    **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 180, in _create_user
+    date_joined=now, **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'is_active' is an invalid keyword argument for this function
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 156, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/user.py", line 70, in create_user
+    'user': strategy.create_user(**fields)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/base.py", line 53, in create_user
+    return self.storage.user.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/storage/django_orm.py", line 60, in create_user
+    return cls.user_model().objects.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 187, in create_user
+    **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 180, in _create_user
+    date_joined=now, **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'is_active' is an invalid keyword argument for this function
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/user.py", line 70, in create_user
+    'user': strategy.create_user(**fields)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/base.py", line 53, in create_user
+    return self.storage.user.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/storage/django_orm.py", line 60, in create_user
+    return cls.user_model().objects.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 187, in create_user
+    **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 180, in _create_user
+    date_joined=now, **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'is_active' is an invalid keyword argument for this function
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 111, in run_pipeline
+    func = module_member(name)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 56, in module_member
+    module = import_module(mod)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 50, in import_module
+    __import__(name)
+ImportError: No module named users.social_pipeline
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 111, in run_pipeline
+    func = module_member(name)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 56, in module_member
+    module = import_module(mod)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 50, in import_module
+    __import__(name)
+ImportError: No module named users.social_pipeline
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 111, in run_pipeline
+    func = module_member(name)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 56, in module_member
+    module = import_module(mod)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 50, in import_module
+    __import__(name)
+ImportError: No module named users.social_pipeline
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 111, in run_pipeline
+    func = module_member(name)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 56, in module_member
+    module = import_module(mod)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 50, in import_module
+    __import__(name)
+ImportError: No module named users.social_pipeline
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/user.py", line 70, in create_user
+    'user': strategy.create_user(**fields)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/base.py", line 53, in create_user
+    return self.storage.user.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/storage/django_orm.py", line 60, in create_user
+    return cls.user_model().objects.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 187, in create_user
+    **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 180, in _create_user
+    date_joined=now, **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'is_active' is an invalid keyword argument for this function
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/user.py", line 70, in create_user
+    'user': strategy.create_user(**fields)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/base.py", line 53, in create_user
+    return self.storage.user.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/storage/django_orm.py", line 60, in create_user
+    return cls.user_model().objects.create_user(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 187, in create_user
+    **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/models.py", line 180, in _create_user
+    date_joined=now, **extra_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 480, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'is_superuser' is an invalid keyword argument for this function
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 126, in post
+    return Response(resp_data.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 893, in get_fields
+    field_name
+AssertionError: The field in the `exclude` option must be a model field. Got user_permissions.
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 126, in post
+    return Response(resp_data.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 893, in get_fields
+    field_name
+AssertionError: The field in the `exclude` option must be a model field. Got groups.
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 126, in post
+    return Response(resp_data.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 1314, in to_representation
+    return method(value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/serializers.py", line 38, in get_token
+    token, created = Token.objects.get_or_create(user=obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 407, in get_or_create
+    return self._create_object_from_params(lookup, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 447, in _create_object_from_params
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 439, in _create_object_from_params
+    obj = self.create(**params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/authtoken/models.py", line 36, in save
+    return super(Token, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`plataforma`.`authtoken_token`, CONSTRAINT `authtoken_token_user_id_1d10c57f535fb363_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`))')
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 126, in post
+    return Response(resp_data.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 1314, in to_representation
+    return method(value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/serializers.py", line 38, in get_token
+    token, created = Token.objects.get_or_create(user=obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 407, in get_or_create
+    return self._create_object_from_params(lookup, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 447, in _create_object_from_params
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 439, in _create_object_from_params
+    obj = self.create(**params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/authtoken/models.py", line 36, in save
+    return super(Token, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`plataforma`.`authtoken_token`, CONSTRAINT `authtoken_token_user_id_1d10c57f535fb363_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`))')
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 126, in post
+    return Response(resp_data.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 893, in get_fields
+    field_name
+AssertionError: The field in the `exclude` option must be a model field. Got is_staff.
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 115, in post
+    user = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 157, in get_object
+    user = self.request.backend.complete(user=user)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 41, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/utils.py", line 229, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 87, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/facebook.py", line 119, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/strategies/django_strategy.py", line 96, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 74, in authenticate
+    user = backend.authenticate(**credentials)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 82, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 85, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/social/backends/base.py", line 112, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/local/lib/python2.7/dist-packages/social/pipeline/social_auth.py", line 20, in social_user
+    social = backend.strategy.storage.user.get_social_auth(provider, uid)
+  File "/usr/local/lib/python2.7/dist-packages/social/apps/django_app/default/models.py", line 48, in get_social_auth
+    uid=uid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 328, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'authentication_module_customuser.is_staff' in 'field list'")
+Internal Server Error: /api/login/social/token_user/facebook
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/views.py", line 126, in post
+    return Response(resp_data.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 1314, in to_representation
+    return method(value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_social_auth/serializers.py", line 38, in get_token
+    token, created = Token.objects.get_or_create(user=obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 407, in get_or_create
+    return self._create_object_from_params(lookup, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 447, in _create_object_from_params
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 439, in _create_object_from_params
+    obj = self.create(**params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/authtoken/models.py", line 36, in save
+    return super(Token, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`plataforma`.`authtoken_token`, CONSTRAINT `authtoken_token_user_id_1d10c57f535fb363_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`))')
