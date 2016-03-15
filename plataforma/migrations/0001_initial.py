@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import migrations, models
+from django.db import models, migrations
 from django.conf import settings
 
 
@@ -170,7 +170,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('nombres', models.CharField(max_length=200)),
                 ('apellido1', models.CharField(max_length=200)),
-                ('apellido2', models.CharField(max_length=200)),
+                ('apellido2', models.CharField(default=None, max_length=200, null=True, blank=True)),
                 ('numero_documento', models.CharField(default=None, max_length=200, null=True, blank=True)),
                 ('correo', models.CharField(default=None, max_length=200, unique=True, null=True, blank=True)),
                 ('nombre_institucion', models.CharField(default=None, max_length=200, null=True, blank=True)),

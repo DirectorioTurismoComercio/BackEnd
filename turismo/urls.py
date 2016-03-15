@@ -3,6 +3,7 @@ from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from plataforma import views
 from django.views.generic import RedirectView
+from authentication_module import views as authentication_module_views
 # from landing_page import views
 
 urlpatterns = patterns('',
@@ -58,7 +59,11 @@ urlpatterns = patterns('',
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^account/', include('allauth.urls')),
     url(r'^accounts/profile/$', RedirectView.as_view(url='/'), name='profile-redirect'),
-    url(r'^api/login/', include('rest_social_auth.urls_token')),
+    #url(r'^api/login/', include('rest_social_auth.urls_token')),
+    #url(r'^api/login/social/token/facebook', authentication_module_views.CustomSocialTokenUserAuthView.as_view()),
+    url(r'^api/login/social/token/(?:(?P<provider>[a-zA-Z0-9_-]+)/?)?$',
+       authentication_module_views.CustomSocialTokenUserAuthView.as_view(),
+        name='login_social_token_user'),
     
 
    

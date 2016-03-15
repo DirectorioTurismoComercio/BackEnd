@@ -15,7 +15,12 @@ EMAIL_HOST = 'localhost'
 EMAIL_PORT = '1025'
 EMAIL_USE_TLS = False
 
-SOCIAL_AUTH_FACEBOOK_KEY = '1038428972870177'
-SOCIAL_AUTH_FACEBOOK_SECRET = '24d4b5924906052fab2a2b2a46d6df1a'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', ]  # optional
+SOCIAL_AUTH_FACEBOOK_KEY = '1529648703998052'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'b7609e3cb5d8af0df1da85c61b263cf1'
+# social auth settings
+# valid redirect domain for all apps: http://restsocialexample.c
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id,name,email', # needed starting from protocol v2.4
+}
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']  # optional
 
