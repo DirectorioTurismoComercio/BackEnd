@@ -26,5 +26,5 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', ]
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id,name,email', # needed starting from protocol v2.4
 }
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']  # optional
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'public_profile']  # optional
 

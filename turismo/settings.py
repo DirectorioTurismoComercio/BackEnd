@@ -52,6 +52,7 @@ INSTALLED_APPS = (
 
     'landing_page',
     'plataforma',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,6 +83,19 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+SOCIAL_AUTH_PIPELINE = (
+    'users.social_pipeline.auto_logout',  # custom action
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    'social.pipeline.user.create_user',
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details',
+    'users.social_pipeline.save_avatar',  # custom action
+)
 
 AUTH_USER_MODEL = 'authentication_module.CustomUser'
 
@@ -93,6 +107,7 @@ RESET_PASSWORD_FRONTEND_URL=""
 WSGI_APPLICATION = 'turismo.wsgi.application'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
 
 from local_settings import *
 
@@ -151,7 +166,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': 'debug4.log',
+            'filename': 'debug5.log',
         },
     },
     'loggers': {
