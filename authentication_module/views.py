@@ -15,18 +15,13 @@ class CustomSocialTokenUserAuthView(BaseSocialAuthView):
     	data={
     		"nombres":user.first_name,
     		"apellido1":user.last_name,
-    		"correo":user.email
+    		"correo":user.email,
+            "user":user.id
     	}
      	usuario = UsuarioSerializer(data=data)
-     	#.nombre=user.first_name
-     	#usuario.apellido1=user.last_name
-     	#usuario.correo=user.email
-        usuario.user = user
       	if usuario.is_valid():
-      		print ("////guardando")
         	usuario.save()      
         else:
         	print("////////", usuario.errors)   
-        print("El usuario /////", usuario)
-       	print("login...", user.username,"////",user.email, "***", self, "||", backend)
+
 
