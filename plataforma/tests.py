@@ -7,24 +7,11 @@ from plataforma.models import *
 from mock import Mock
 
 
-<<<<<<< HEAD
-
-# class ToPythonObjectTest(TestCase):
-# 	def test_empty_questionnaire(self):
-# 		questionnaire=[]
-# 		self.assertEqual(to_python_object(questionnaire),'{}')
-# 	def test_malformed_questionnaire(self):	
-# 		questionnaire=[{1:"pregunta"}]
-# 		self.assertRaises(Exception,to_python_object,questionnaire)
-
-
 from plataforma import similarity
 similarity.to_python_object = Mock(return_value='{111}')
 from plataforma.similarity import cuestionario_afinidad
 
 
-class CuestionarioAfinidadTest(TestCase):	
-=======
 class CreateUserTest(TestCase):
     rol_id=2
     municipio_id=1
@@ -54,7 +41,6 @@ class CreateUserTest(TestCase):
 
 
 class SimilarityTest(TestCase):
->>>>>>> 0a83060f842b70245246a8a4bb8d3d7da6da9409
 	def test_empty_questionnaire(self):
 		questionnaires=[]
 		problemas_soluciones=[]
