@@ -2,6 +2,8 @@
 from django.db import models
 from django.conf.urls import url
 from django.contrib.auth.models import User
+from authentication_module.models import *
+
 ## Modelo que representa el rol dentro del sistema (Empresario,Emprendedor, Programador...)
 class Rol(models.Model):
   nombre = models.CharField(max_length=200)
@@ -38,7 +40,7 @@ class Usuario(models.Model):
   rol = models.ForeignKey(Rol,blank=False)
   redes = models.ManyToManyField(RedSocial, through='UsuarioRedes')
   tags = tags = models.ManyToManyField(Tag)
-  user = models.ForeignKey(User,null=True)
+  user = models.ForeignKey(CustomUser,null=True)
 
   
 ## Modelo que asocia las redes sociales de un usuario
