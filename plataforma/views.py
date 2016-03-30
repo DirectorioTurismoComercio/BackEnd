@@ -142,7 +142,7 @@ class UsuarioListCreate(generics.ListCreateAPIView):
       if user.is_valid():
         if usuario.is_valid(): 
          correo =correo
-         nombre = request.data['nombres']+' '+request.data['apellido1']
+         nombre = request.data['nombres']+' '+request.data['apellidos']
          user=user.save()
          user.set_password(password);
          user.save()
