@@ -14,7 +14,7 @@ class CustomSocialTokenUserAuthView(BaseSocialAuthView):
     def do_login(self, backend, user):
     	data={
     		"nombres":user.first_name,
-    		"apellido1":user.last_name,
+    		"apellidos":user.last_name,
     		"correo":user.email,
             "user":user.id
     	}

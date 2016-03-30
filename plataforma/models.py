@@ -25,20 +25,9 @@ class Tag(models.Model):
 ## Modelo que contiene la información del usuario.        
 class Usuario(models.Model):
   nombres = models.CharField(max_length=200)
-  apellido1 = models.CharField(max_length=200)
-  apellido2 = models.CharField(max_length=200, blank=True,null=True, default=None)
-  numero_documento = models.CharField(max_length=200,blank=True, null=True, default=None)
+  apellidos = models.CharField(max_length=200)
   correo = models.CharField(max_length=200, blank=True, null=True, default=None,unique=True)
-  nombre_institucion = models.CharField(max_length=200, blank=True,null=True, default=None)
-  telefono_institucion = models.CharField(max_length=200, blank=True, null=True, default=None)
-  ubicacion_institucion = models.CharField(max_length=200, blank=True,null=True, default=None)
-  direccion_institucion = models.CharField(max_length=200, blank=True,null=True, default=None)
-  correo_institucion = models.CharField(max_length=200, blank=True,null=True, default=None)
-  NIT = models.CharField(max_length=200, blank=True, null=True,default=None)
-  descripcion = models.TextField(null=True)
-  municipio_id = models.IntegerField(null=True)
-  rol = models.ForeignKey(Rol, null=True)
-  redes = models.ManyToManyField(RedSocial, through='UsuarioRedes')
+  telefono = models.CharField(max_length=200, blank=True, null=True, default=None)
   tags = tags = models.ManyToManyField(Tag)
   user = models.ForeignKey(CustomUser,null=True)
 
