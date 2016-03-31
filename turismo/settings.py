@@ -49,7 +49,7 @@ INSTALLED_APPS = (
     'allauth.account',
     'rest_auth.registration',
     'social.apps.django_app.default',
-
+    'sitios',
     'landing_page',
     'plataforma',
     'users',

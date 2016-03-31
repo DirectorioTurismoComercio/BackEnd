@@ -2,9 +2,10 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from plataforma import views
+from sitios import views as sitio_views
 from django.views.generic import RedirectView
 from authentication_module import views as authentication_module_views
-# from landing_page import views
+
 
 urlpatterns = patterns('',
     # Examples:   //
@@ -16,10 +17,9 @@ urlpatterns = patterns('',
     url(r'^usuariosredes', views.UsuarioRedesListCreate.as_view()),
     url(r'^usuarios/(?P<usuario>[0-9]+)/problemas_soluciones/(?P<pk>[0-9]+)', views.ProblemaSolucionDetail.as_view()),
     url(r'^usuarios/(?P<usuario>[0-9]+)/problemas_soluciones', views.ProblemaSolucionListCreate.as_view()), 
-
-    url(r'^buscar/$', views.ProblemaSolucionListCreate.as_view()), 
-    url(r'^sugerencias/$', views.Sugerencias.as_view({'get':'list_sugerencias'})), 
-    url(r'^sugerencias_tags/$', views.Sugerencias.as_view({'get':'list_sugerencias_tags'})), 
+    url(r'^buscar/$', sitio_views.SitioListCreate.as_view()), 
+   #url(r'^sugerencias/$', views.Sugerencias.as_view({'get':'list_sugerencias'})), 
+   #url(r'^sugerencias_tags/$', views.Sugerencias.as_view({'get':'list_sugerencias_tags'})), 
     url(r'^usuario/(?P<usuario>[0-9]+)/busquedas', views.ProblemaSolucionListCreate.as_view()), 
     url(r'^usuario/(?P<usuario>[0-9]+)/busquedas', views.BusquedaCreateRetrieve.as_view({'post':'create'})), 
     url(r'^usuario/(?P<usuario>[0-9]+)/conversaciones', views.ConversacionView.as_view({'get':'list'})), 
