@@ -840,3 +840,48 @@ Traceback (most recent call last):
   File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 16, in get_queryset
     if token is not None:
 NameError: global name 'token' is not defined
+Internal Server Error: /sugerencias/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/viewsets.py", line 85, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 28, in list_sugerencias
+    n_espacios = token.count(' ');
+AttributeError: 'NoneType' object has no attribute 'count'
+Internal Server Error: /sugerencias/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/viewsets.py", line 85, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 66, in list_sugerencias
+    return Response(sugerencias[0:5])
+NameError: global name 'Response' is not defined
+Internal Server Error: /sugerencias/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/viewsets.py", line 85, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 29, in list_sugerencias
+    n_espacios = token.count(' ');
+AttributeError: 'NoneType' object has no attribute 'count'
