@@ -10,7 +10,7 @@ class BusquedaSitioTest(TestCase):
         
         
 	def test_busqueda(self):
-		resultados = self.client.get('/buscar/?search=panaderia');
+		resultados = self.client.get('/buscar/?search=Pan');
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 
 		self.assertTrue(self.sitio1.nombre in resultados)
