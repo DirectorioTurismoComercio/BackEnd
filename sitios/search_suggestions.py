@@ -23,26 +23,33 @@ def generate_string_suggestions(string, string_array):
      
 	for string in string_array:
     		position = string.upper().find(token.upper());   
-    		s=string
     		if position==0 or not has_spaces(string): 
 	        	space_indexes=find_character_indexes(string[position:],' ')
 	        	if space_indexes: 
 					if number_spaces_token==0:
 						if string[position+len(token)]==' ':
 							if len(space_indexes)>1:
-								suggestion = string[position:position+space_indexes[1]]                    
+								suggestion = string[position:position+space_indexes[1]]  
+								print("i1",suggestion)                  
 							else:
-								suggestion = string[position:]            
+								suggestion = string[position:]  
+								print("i2",suggestion)          
 						else: 
 							suggestion = string[position:position+space_indexes[0]]
+							print("i3",suggestion)
 					else:
-						if number_spaces_token<=len(space_indexes): 
+						if number_spaces_token+1<len(space_indexes): 
 							suggestion = string[position:position+space_indexes[number_spaces_token+1]]
+							print("i4",suggestion)
 						else:
 							suggestion = string[position:]
+							print("i5",suggestion)
+
 	        	else:
+	        		if position>=0:
 					suggestion = string[position:]  
-			if suggestion not in sugerencias: 
+					print("i6",suggestion,position)
+			if position>=0 and suggestion not in sugerencias: 
 				sugerencias.append(suggestion)	
 
 	return sugerencias

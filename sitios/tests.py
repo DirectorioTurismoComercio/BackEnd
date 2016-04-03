@@ -33,4 +33,13 @@ class SuggestionsTest(TestCase):
 		results=generate_string_suggestions(string,string_array)
 		self.assertItemsEqual(expected_results,results,results)	
 
+		string='Panaderia Don J'
+		expected_results=['Panaderia Don Juan']
+		results=generate_string_suggestions(string,string_array)
+		self.assertItemsEqual(expected_results,results,results)
 
+		string='pan de'
+		expected_results=['pan de a']
+		results=generate_string_suggestions(string,string_array)
+		self.assertItemsEqual(expected_results,results,results)	
+		
