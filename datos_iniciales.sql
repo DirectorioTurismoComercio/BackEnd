@@ -20,7 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `plataforma`
 --
-
 --
 -- Volcado de datos para la tabla `plataforma_municipio`
 --
