@@ -1,5 +1,5 @@
-
-turismo/settings.py
+turismo/local_settings.py
 *.pyc
 static
 *~
+.idea

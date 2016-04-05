@@ -122,8 +122,7 @@ class RolCuestionariosSave(viewsets.ViewSet):
 class UsuarioListCreate(generics.ListCreateAPIView):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-   # permission_classes = (IsAuthenticated,)
-
+  
     def create(self, request):
       if 'password' not in request.data:
         password=''
@@ -138,12 +137,12 @@ class UsuarioListCreate(generics.ListCreateAPIView):
                               status=status.HTTP_400_BAD_REQUEST)
              
         
-      user = CustomUserSerializer(data={'email':correo,'password': password, 'username':correo})
+      user = CustomUserSerializer(data={'email':correo,'password': password})
       usuario = UsuarioSerializer(data=request.data)
       if user.is_valid():
         if usuario.is_valid(): 
          correo =correo
-         nombre = request.data['nombres']+' '+request.data['apellido1']+' '+request.data['apellido2'] 
+         nombre = request.data['nombres']+' '+request.data['apellido1']
          user=user.save()
          user.set_password(password);
          user.save()
@@ -391,7 +390,6 @@ class CuestionarioList(generics.ListAPIView):
 class AfinidadList(viewsets.ViewSet):
     def list(self,request):
        num_registros=10;
-       print request.stream.body
        busqueda = request.data["cuestionario"]
        cuestionarios_json = busqueda["cuestionarios"];
        if(busqueda["tipo"]=="P"):

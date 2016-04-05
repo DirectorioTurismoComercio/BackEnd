@@ -19,7 +19,7 @@ class CreateUserTest(TestCase):
         pregunta=Pregunta.objects.create(enunciado='Donde')
         Rol.objects.create(id=self.rol_id,nombre='Comerciante')
         OpcionesDeRespuesta.objects.create(id=self.municipio_id,respuesta='Cota',
-            valor=self.municipio_id,orden=self.municipio_id,pregunta=pregunta)
+        valor=self.municipio_id,orden=self.municipio_id,pregunta=pregunta)
 
     def test_succesfully_created(self):
 
@@ -35,7 +35,7 @@ class CreateUserTest(TestCase):
         "rol": self.rol_id,  
         "municipio_id":  self.municipio_id
         } 
-        response = self.client.post('/usuarios2/',data,format='json')
+        response = self.client.post('/usuarios/',data,format='json')
         
         self.assertEqual(response.status_code, status.HTTP_201_CREATED, response)
 
