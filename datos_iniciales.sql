@@ -51,7 +51,6 @@ INSERT INTO `sitios_sitio` (`id`, `nombre`, `latitud`, `longitud`, `URLfoto`, `d
 -- Volcado de datos para la tabla `sitios_sitio`
 --
 INSERT INTO `plataforma_municipio` (`nombre`, `latitud`, `longitud`) VALUES
-('Todo Cundinamarca',4.7822667,-74.5324981),
 ('Bogotá',4.66771508574261,-74.0544954545059),
 ('Boita',4.66828,-74.055457),
 ('Cajicá',4.91861111111111,-74.0280555555556),
