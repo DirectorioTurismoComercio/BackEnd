@@ -27,7 +27,7 @@ urlpatterns = patterns('',
     url(r'^api/login/social/token/(?:(?P<provider>[a-zA-Z0-9_-]+)/?)?$',
        authentication_module_views.CustomSocialTokenUserAuthView.as_view(),
         name='login_social_token_user'),
-    
+    url(r'^ruta/sitios', sitio_views.SitiosCercanosARuta.as_view({'post':'list_sites'})), 
 
    
 )

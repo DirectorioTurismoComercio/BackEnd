@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework import generics
 from rest_framework.response import Response
+from sitios.distancia import *
 
 
 class SitioListCreate(generics.ListCreateAPIView):
@@ -112,3 +113,29 @@ class Sugerencias(viewsets.ViewSet):
                 
 
       return Response(sugerencias[0:5]) 
+
+class SitiosCercanosARuta(viewsets.ViewSet):
+  def list_sites(self,request):
+   # sites=Sitio.objects.all()
+    
+    puntoInicial=(4.583388, -74.102836)
+    puntoFinal=(4.586596, -74.098426)
+
+    print("El punto inicial en cartesianas es", geodesica_a_cartesiana((puntoInicial[0],puntoInicial[1])))
+    print("El punto final en cartesianas es", geodesica_a_cartesiana((puntoFinal[0],puntoFinal[1])))
+    
+    
+    #b=hallar_distancia_geodesica(puntoInicial,puntoFinal)/2
+    
+    #a=2
+
+    #print("El valor de A //////", a)
+
+    #results=[]
+    #for site in sites:
+     # puntoCartesiano=geodesica_a_cartesiana((site.latitud,site.longitud))
+      #print("El valor de punto cartesiano //////", puntoCartesiano)
+      #if( dentro_de_elipse(a,b,puntoCartesiano[0],puntoCartesiano[1])):
+       # results.add(site)
+    
+    return Response("ok")
