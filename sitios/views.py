@@ -116,15 +116,26 @@ class Sugerencias(viewsets.ViewSet):
 
 class SitiosCercanosARuta(viewsets.ViewSet):
   def list_sites(self,request):
-   # sites=Sitio.objects.all()
+    sites=Sitio.objects.all()
     
+    resultados=[]
     puntoInicial=(4.583388, -74.102836)
     puntoFinal=(4.586596, -74.098426)
 
-    print("El punto inicial en cartesianas es", geodesica_a_cartesiana((puntoInicial[0],puntoInicial[1])))
-    print("El punto final en cartesianas es", geodesica_a_cartesiana((puntoFinal[0],puntoFinal[1])))
-    
-    
+    puntos=request.data['points']
+    paso=1
+
+    for i in range(0,len(puntos)-(paso+1),paso):
+      radio=hallar_distancia_geodesica(puntos[i],puntos[i+paso])/2
+      for site in sites:
+        distancia=hallar_distancia_geodesica(puntos[i],(site.latitud,site.longitud))
+        #if site.nombre=='ESTADIO EL CAMPIN BAR':
+         # print("la distancia", distancia)
+        if distancia<= radio:
+          if not site in resultados:
+            siteSerializer=SitioSerializer(site)
+            resultados.append(siteSerializer.data)
+
     #b=hallar_distancia_geodesica(puntoInicial,puntoFinal)/2
     
     #a=2
@@ -137,5 +148,5 @@ class SitiosCercanosARuta(viewsets.ViewSet):
       #print("El valor de punto cartesiano //////", puntoCartesiano)
       #if( dentro_de_elipse(a,b,puntoCartesiano[0],puntoCartesiano[1])):
        # results.add(site)
-    
-    return Response("ok")
+    print (resultados)
+    return Response(resultados)
