@@ -132,5 +132,4 @@ class SitiosCercanosARuta(viewsets.ViewSet):
             siteSerializer=SitioSerializer(site)
             resultados.append(siteSerializer.data)
 
-    print (resultados)
     return Response(resultados)
