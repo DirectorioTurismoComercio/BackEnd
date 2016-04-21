@@ -129,24 +129,10 @@ class SitiosCercanosARuta(viewsets.ViewSet):
       radio=hallar_distancia_geodesica(puntos[i],puntos[i+paso])/2
       for site in sites:
         distancia=hallar_distancia_geodesica(puntos[i],(site.latitud,site.longitud))
-        #if site.nombre=='ESTADIO EL CAMPIN BAR':
-         # print("la distancia", distancia)
         if distancia<= radio:
           if not site in resultados:
             siteSerializer=SitioSerializer(site)
             resultados.append(siteSerializer.data)
-
-    #b=hallar_distancia_geodesica(puntoInicial,puntoFinal)/2
-    
-    #a=2
-
-    #print("El valor de A //////", a)
-
-    #results=[]
-    #for site in sites:
-     # puntoCartesiano=geodesica_a_cartesiana((site.latitud,site.longitud))
-      #print("El valor de punto cartesiano //////", puntoCartesiano)
-      #if( dentro_de_elipse(a,b,puntoCartesiano[0],puntoCartesiano[1])):
-       # results.add(site)
+            
     print (resultados)
     return Response(resultados)
