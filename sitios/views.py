@@ -119,8 +119,6 @@ class SitiosCercanosARuta(viewsets.ViewSet):
     sites=Sitio.objects.all()
     
     resultados=[]
-    puntoInicial=(4.583388, -74.102836)
-    puntoFinal=(4.586596, -74.098426)
 
     puntos=request.data['points']
     paso=1
@@ -133,6 +131,6 @@ class SitiosCercanosARuta(viewsets.ViewSet):
           if not site in resultados:
             siteSerializer=SitioSerializer(site)
             resultados.append(siteSerializer.data)
-            
+
     print (resultados)
     return Response(resultados)
