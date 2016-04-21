@@ -117,24 +117,54 @@ class Sugerencias(viewsets.ViewSet):
 class SitiosCercanosARuta(viewsets.ViewSet):
   def list_sites(self,request):
     sites=Sitio.objects.all()
-    
+    parametroB=0.01
     resultados=[]
-    puntoInicial=(4.583388, -74.102836)
-    puntoFinal=(4.586596, -74.098426)
 
     puntos=request.data['points']
     paso=1
 
+
     for i in range(0,len(puntos)-(paso+1),paso):
-      radio=hallar_distancia_geodesica(puntos[i],puntos[i+paso])/2
+      puntoInicial=puntos[i]
+      puntoFinal=puntos[i+1]
+     
+      
+      coordenadaInicial=geodesica_a_cartesiana((puntoInicial[0],puntoInicial[1]))
+      coordenadaFinal=geodesica_a_cartesiana((puntoFinal[0],puntoFinal[1]))
+      anguloRotado=hallar_angulo_rotacion(coordenadaInicial,coordenadaFinal)
+
+
+      puntoInicialRotado=hallar_punto_rotado(coordenadaInicial,anguloRotado)
+      puntoFinalRotado=hallar_punto_rotado(coordenadaFinal,anguloRotado)
+
+      a=hallar_distancia_sin_rotar(coordenadaInicial,coordenadaFinal)/2
+
+
+      distancia_Translacion_En_X=hallar_distancia_traslacion_X(puntoInicialRotado[0],a)
+      distancia_Translacion_En_Y=puntoInicialRotado[1]
+
+      #print("coordenadaInicial",coordenadaInicial,"coordenadaFinal",coordenadaFinal,"anguloRotado",anguloRotado,"puntoInicialRotado",puntoInicialRotado,"puntoFinalRotado",puntoFinalRotado,"a",a,"distancia_Translacion_En_X",distancia_Translacion_En_X,"distancia_Translacion_En_Y",distancia_Translacion_En_Y)
+
+      if parametroB<a:
+        b=parametroB
+      else:
+        b=a
+
+
       for site in sites:
-        distancia=hallar_distancia_geodesica(puntos[i],(site.latitud,site.longitud))
-        #if site.nombre=='ESTADIO EL CAMPIN BAR':
-         # print("la distancia", distancia)
-        if distancia<= radio:
-          if not site in resultados:
-            siteSerializer=SitioSerializer(site)
-            resultados.append(siteSerializer.data)
+        coordenada=geodesica_a_cartesiana((site.latitud,site.longitud))
+        puntoRotado=hallar_punto_rotado(coordenada,anguloRotado)
+
+        puntoRotadoYTrasladadoX=hallar_coordenada_trasladada(puntoRotado[0],distancia_Translacion_En_X)
+        puntoRotadoYTrasladadoY=hallar_coordenada_trasladada(puntoRotado[1],distancia_Translacion_En_Y)
+        
+        if esta_dentro_de_elipse(a,b,puntoRotadoYTrasladadoX,puntoRotadoYTrasladadoY):
+          print("punto inicial",puntoInicial,"punto final",puntoFinal)
+          print("El lugar fue",site.nombre,"Punto rotado",puntoRotado,"valor de a", a, "valor de b", b, "valor de x", puntoRotadoYTrasladadoX, "y", puntoRotadoYTrasladadoY)
+          siteSerializer=SitioSerializer(site)
+          resultados.append(siteSerializer.data)
+
+
 
     #b=hallar_distancia_geodesica(puntoInicial,puntoFinal)/2
     
@@ -148,5 +178,5 @@ class SitiosCercanosARuta(viewsets.ViewSet):
       #print("El valor de punto cartesiano //////", puntoCartesiano)
       #if( dentro_de_elipse(a,b,puntoCartesiano[0],puntoCartesiano[1])):
        # results.add(site)
-    print (resultados)
+    
     return Response(resultados)
