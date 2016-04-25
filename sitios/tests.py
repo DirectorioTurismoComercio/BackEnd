@@ -40,9 +40,7 @@ class BusquedaSitiosEnRutaTest(TestCase):
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0)
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0)
 
-	def test_list_sites(self):
-		resultados = self.client.post('/ruta/sitios')
-		self.assertEqual("ok",resultados.data) 
+	
 
 class HallarDistanciGeodesicaTest(TestCase):
 
@@ -65,7 +63,7 @@ class HallarAnguloRotacionTest(TestCase):
 		coordenadaInicial=geodesica_a_cartesiana((puntoInicial[0],puntoInicial[1]))
 		coordenadaFinal=geodesica_a_cartesiana((puntoFinal[0],puntoFinal[1]))
 
-		self.assertEqual(1.9103930795299962,hallar_angulo_rotacion(coordenadaInicial,coordenadaFinal))
+		self.assertAlmostEqual(1.9103930795299962,hallar_angulo_rotacion(coordenadaInicial,coordenadaFinal),10)
 
 class HallarPuntoRotadoTest(TestCase):
 
@@ -77,8 +75,11 @@ class HallarPuntoRotadoTest(TestCase):
 		coordenadaFinal=geodesica_a_cartesiana((puntoFinal[0],puntoFinal[1]))
 
 		anguloRotado=hallar_angulo_rotacion(coordenadaInicial,coordenadaFinal)
+		puntoEsperado = 1561.5399741072129,-5948.656663685767
+		puntoResultado = hallar_punto_rotado(coordenadaInicial,anguloRotado)
+		self.assertAlmostEqual(puntoEsperado[0],puntoResultado[0],10)
+		self.assertAlmostEqual(puntoEsperado[1],puntoResultado[1],10)
 
-		self.assertEqual((1561.5399741072129,-5948.656663685767),hallar_punto_rotado(coordenadaInicial,anguloRotado))
 
 class HallarDistanciaSinRotarTest(TestCase):
 
