@@ -40,9 +40,6 @@ class BusquedaSitiosEnRutaTest(TestCase):
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0)
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0)
 
-	def test_list_sites(self):
-		resultados = self.client.post('/ruta/sitios')
-		self.assertEqual("ok",resultados.data) 
 
 class HallarDistanciGeodesicaTest(TestCase):
 
