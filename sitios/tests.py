@@ -40,7 +40,7 @@ class BusquedaSitiosEnRutaTest(TestCase):
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0)
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0)
 
-	
+
 
 class HallarDistanciGeodesicaTest(TestCase):
 
