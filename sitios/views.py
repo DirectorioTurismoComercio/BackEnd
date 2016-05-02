@@ -20,7 +20,25 @@ class SitioListCreate(generics.ListCreateAPIView):
           
         return queryset.filter()
 
+class SitiosCercanosARuta(viewsets.ViewSet):
+  def list_sites(self,request):
+    sites=Sitio.objects.all()
+    
+    resultados=[]
 
+    puntos=request.data['points']
+    paso=1
+
+    for i in range(0,len(puntos)-(paso+1),paso):
+      radio=hallar_distancia_geodesica(puntos[i],puntos[i+paso])/2
+      for site in sites:
+        distancia=hallar_distancia_geodesica(puntos[i],(site.latitud,site.longitud))
+        if distancia<= radio:
+          if not site in resultados:
+            siteSerializer=SitioSerializer(site)
+            resultados.append(siteSerializer.data)
+
+    return Response(resultados)
 
 class Sugerencias(viewsets.ViewSet):
     def list_sugerencias(self,request,token=None):
@@ -113,23 +131,3 @@ class Sugerencias(viewsets.ViewSet):
                 
 
       return Response(sugerencias[0:5]) 
-
-class SitiosCercanosARuta(viewsets.ViewSet):
-  def list_sites(self,request):
-    sites=Sitio.objects.all()
-    
-    resultados=[]
-
-    puntos=request.data['points']
-    paso=1
-
-    for i in range(0,len(puntos)-(paso+1),paso):
-      radio=hallar_distancia_geodesica(puntos[i],puntos[i+paso])/2
-      for site in sites:
-        distancia=hallar_distancia_geodesica(puntos[i],(site.latitud,site.longitud))
-        if distancia<= radio:
-          if not site in resultados:
-            siteSerializer=SitioSerializer(site)
-            resultados.append(siteSerializer.data)
-
-    return Response(resultados)

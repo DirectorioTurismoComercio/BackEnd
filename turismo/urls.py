@@ -5,7 +5,8 @@ from plataforma import views
 from sitios import views as sitio_views
 from django.views.generic import RedirectView
 from authentication_module import views as authentication_module_views
-
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = patterns('',
     # Examples:   //
@@ -28,7 +29,10 @@ urlpatterns = patterns('',
        authentication_module_views.CustomSocialTokenUserAuthView.as_view(),
         name='login_social_token_user'),
     url(r'^ruta/sitios', sitio_views.SitiosCercanosARuta.as_view({'post':'list_sites'})), 
+    url(r'^sitio', sitio_views.SitioListCreate.as_view()), 
+
 
    
 )
 urlpatterns = format_suffix_patterns(urlpatterns)
+urlpatterns=urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
