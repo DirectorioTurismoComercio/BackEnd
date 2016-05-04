@@ -1,10 +1,13 @@
-from sitios.serializers import SitioSerializer
+from sitios.models import Foto
 from sitios.models import Sitio
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework import generics
 from rest_framework.response import Response
 from sitios.distancia import *
+from sitios.serializers import SitioSerializer
+from sitios.serializers import FotoSerializer
+
 
 
 class SitioListCreate(generics.ListCreateAPIView):
@@ -19,6 +22,21 @@ class SitioListCreate(generics.ListCreateAPIView):
           return queryset.filter(nombre__icontains=search)
           
         return queryset.filter()
+
+    def create(self,request):
+      datos=request.data
+      sitio=Sitio.objects.create(
+        latitud=datos["latitud"],
+        longitud=datos["longitud"],
+        nombre=datos["nombre"]
+        )
+
+
+      for key, foto in request.FILES.iteritems():
+        Foto.objects.create(
+          URLfoto=foto,
+          sitio=sitio)
+      return Response("ok")
 
 class SitiosCercanosARuta(viewsets.ViewSet):
   def list_sites(self,request):
