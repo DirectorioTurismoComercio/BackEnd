@@ -25,17 +25,16 @@ class SitioListCreate(generics.ListCreateAPIView):
 
     def create(self,request):
       datos=request.data
-      sitio=Sitio.objects.create(
-        latitud=datos["latitud"],
-        longitud=datos["longitud"],
-        nombre=datos["nombre"]
-        )
 
+      serializer = SitioSerializer(data=datos)
+      serializer.is_valid()
+      serializer.save()
 
       for key, foto in request.FILES.iteritems():
-        Foto.objects.create(
+       Foto.objects.create(
           URLfoto=foto,
-          sitio=sitio)
+          sitio_id=serializer.data["id"]
+          )
       return Response("ok")
 
 class SitiosCercanosARuta(viewsets.ViewSet):

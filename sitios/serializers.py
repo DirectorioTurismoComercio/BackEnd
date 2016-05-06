@@ -7,7 +7,7 @@ class FotoSerializer(serializers.ModelSerializer):
 			model = Foto
 
 class SitioSerializer(serializers.ModelSerializer):  
-		fotos=FotoSerializer(many=True)
+		fotos=FotoSerializer(many=True, read_only=True)
 		class Meta:
 			model = Sitio
 			#fields = ('nombre','latitud','longitud','descripcion')
