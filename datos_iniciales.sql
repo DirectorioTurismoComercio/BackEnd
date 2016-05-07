@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+	-- phpMyAdmin SQL Dump
 -- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
@@ -3802,6 +3802,23 @@ INSERT INTO `plataforma_municipio` (`nombre`, `latitud`, `longitud`) VALUES
 ('Tocancipa',4.96527777777778,-73.9130555555556),
 ('Ubate',5.30944444444444,-73.8158333333333),
 ('Une',4.40305555555556,-74.0252777777778);
+
+--
+-- Volcado de datos para la tabla `plataforma_categoria`
+--
+INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `categoria_padre_id`) VALUES
+(1,'Comidas',1,null),
+(2,'Tipica',2,1),
+(3,'Extranjera',2,1),
+(4,'Exotica',2,1),
+(5,'Entretenimiento',1,null),
+(6,'Cine',2,5),
+(7,'Teatro',2,5),
+(8,'Centros comerciales',2,5),
+(9,'Deportes extremos',2,5),
+(10,'Hoteles',1,null),
+(11,'Ecologicos',2,10),
+(12,'spa',2,10);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
