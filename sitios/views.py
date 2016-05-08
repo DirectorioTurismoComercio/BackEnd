@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from sitios.distancia import *
 from sitios.serializers import SitioSerializer
 from sitios.serializers import FotoSerializer
-
+from django.db.models import Q
 
 
 class SitioListCreate(generics.ListCreateAPIView):
@@ -16,12 +16,17 @@ class SitioListCreate(generics.ListCreateAPIView):
     
     def get_queryset(self):
         queryset = super(SitioListCreate, self).get_queryset()       
-        search = self.request.QUERY_PARAMS.get('search', None)
+        word = self.request.QUERY_PARAMS.get('search', None)
 
-        if search is not None:
-          return queryset.filter(nombre__icontains=search)
-          
-        return queryset.filter()
+        if word is not None:
+
+          return queryset.filter(
+            Q(nombre__istartswith=word+' ') |
+            Q(nombre__icontains=' '+word+' ') |
+            Q(nombre__iendswith=' '+word)
+            );
+
+        return {}
 
     def create(self,request):
       datos=request.data

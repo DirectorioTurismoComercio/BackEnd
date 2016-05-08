@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.test import TestCase
 from sitios.models import Sitio
 from search_suggestions import generate_string_suggestions
@@ -18,15 +19,39 @@ class BusquedaSitioTest(TestCase):
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0)
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0)
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0)
-        
-        
+		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0)
+		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0)
+		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0)
+		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0)
+		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0)
+		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0)
+		
 	def test_busqueda(self):
-		resultados = self.client.get('/buscar/?search=Pan');
+		resultados = self.client.get('/buscar/?search=bar');
 		resultados = {resultado['nombre'] for resultado in resultados.data}
+		
+		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
+		self.assertTrue(self.sitio5.nombre in resultados)
+		self.assertTrue(self.sitio5.nombre in resultados)
+		self.assertTrue(self.sitio6.nombre in resultados)
 
-		self.assertTrue(self.sitio1.nombre in resultados)
-		self.assertTrue(self.sitio2.nombre in resultados)
-		self.assertFalse(self.sitio3.nombre in resultados)
+		self.assertFalse(self.sitio7.nombre in resultados)
+		self.assertFalse(self.sitio8.nombre in resultados)
+
+	def test_busqueda_con_acentos(self):	
+
+		resultados = self.client.get('/buscar/?search=café');
+		resultados = {resultado['nombre'] for resultado in resultados.data}
+		
+		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
+		self.assertTrue(self.sitio5.nombre in resultados)
+	
+	def test_busqueda_con_ene(self): 
+		resultados = self.client.get('/buscar/?search=baño');
+		resultados = {resultado['nombre'] for resultado in resultados.data}
+		
+		self.assertTrue(self.sitio9.nombre.decode('utf8') in resultados)
+			
 
 	def test_sugerencias(self):
 		palabras_esperadas = [u'Panaderia',u'Pan']
