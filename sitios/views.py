@@ -3,12 +3,13 @@ from sitios.models import Sitio
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework import generics
+from rest_framework import status
 from rest_framework.response import Response
 from sitios.distancia import *
 from sitios.serializers import SitioSerializer
 from sitios.serializers import FotoSerializer
 from django.db.models import Q
-
+import plataforma
 
 class SitioListCreate(generics.ListCreateAPIView):
     queryset = Sitio.objects.all()
@@ -32,15 +33,18 @@ class SitioListCreate(generics.ListCreateAPIView):
       datos=request.data
 
       serializer = SitioSerializer(data=datos)
-      serializer.is_valid()
-      serializer.save()
-
-      for key, foto in request.FILES.iteritems():
-       Foto.objects.create(
+      if serializer.is_valid():
+        serializer.save()
+        for key, foto in request.FILES.iteritems():
+          Foto.objects.create(
           URLfoto=foto,
           sitio_id=serializer.data["id"]
           )
-      return Response("ok")
+      else:
+        return Response(data=serializer.errors,status=status.HTTP_400_BAD_REQUEST) 
+
+      
+      return Response(status=status.HTTP_201_CREATED)
 
 class SitiosCercanosARuta(viewsets.ViewSet):
   def list_sites(self,request):

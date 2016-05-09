@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
+import os
+from rest_framework import status
 from django.test import TestCase
 from sitios.models import Sitio
+from sitios.models import Foto
 from search_suggestions import generate_string_suggestions
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
@@ -11,6 +14,51 @@ from sitios.distancia import hallar_a
 from sitios.distancia import hallar_distancia_traslacion_X
 from sitios.distancia import hallar_coordenada_trasladada
 from sitios.distancia import esta_dentro_de_elipse
+
+class CrearSitioTest(TestCase):
+
+	def test_create_successfully(self):
+		new_site = {
+		    "nombre": "Café Bar", 
+  			"latitud": 4.13, 
+    		"longitud": 74.23, 
+    		"descripcion": "Breve descripción", 
+		}
+		response = self.client.post('/sitio',
+                                    new_site)
+
+		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+
+
+	def test_create_successfully_with_photos(self):
+		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		nombreFoto1="piqueteadero.jpg"
+		nombreFoto2="piqueteadero2.jpg"
+		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
+		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		new_site = {
+		    	"nombre": "Café Bar", 
+  				"latitud": 4.13, 
+    			"longitud": 74.23, 
+    			"descripcion": "Breve descripción",
+    			"foto1": fp1,
+    			"foto2": fp2
+			}
+		
+		response = self.client.post('/sitio',new_site)
+		
+		self.assertEqual(len(Foto.objects.all()),2)
+		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+
+	def test_create_bad_request(self):
+		new_site = {
+  			"latitud": 4.13, 
+    		"longitud": 74.23, 
+    		"descripcion": "Breve descripción", 
+		}
+		response = self.client.post('/sitio',new_site)
+		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response.data)
+
 
 
 class BusquedaSitioTest(TestCase):

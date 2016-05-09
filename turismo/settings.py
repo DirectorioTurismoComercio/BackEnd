@@ -101,6 +101,7 @@ AUTH_USER_MODEL = 'authentication_module.CustomUser'
 
 SITE_ID = 1
 ROOT_URLCONF = 'turismo.urls'
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 RESET_PASSWORD_FRONTEND_URL=""
 
