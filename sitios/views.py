@@ -18,17 +18,28 @@ class SitioListCreate(generics.ListCreateAPIView):
     def get_queryset(self):
         queryset = super(SitioListCreate, self).get_queryset()       
         word = self.request.QUERY_PARAMS.get('search', None)
-
+        id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
+        resultados={}
         if word is not None:
+          if id_municipio is not None:
 
-          return queryset.filter(
-            Q(nombre__istartswith=word+' ') |
-            Q(nombre__icontains=' '+word+' ') |
-            Q(nombre__iendswith=' '+word) |
-            Q(nombre=word)
-            ) ;
+              resultados= queryset.filter(
+              Q(nombre__istartswith=word+' ') |
+              Q(nombre__icontains=' '+word+' ') |
+              Q(nombre__iendswith=' '+word) |
+              Q(nombre=word) ,
+              Q(municipio_id=id_municipio)
+              ) ;
 
-        return {}
+          else:
+              resultados=  queryset.filter(
+              Q(nombre__istartswith=word+' ') |
+              Q(nombre__icontains=' '+word+' ') |
+              Q(nombre__iendswith=' '+word) |
+              Q(nombre=word) 
+              ) ;
+
+        return resultados
 
     def create(self,request):
       datos=request.data
