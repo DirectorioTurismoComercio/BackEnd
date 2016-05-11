@@ -73,6 +73,7 @@ class BusquedaSitioTest(TestCase):
 		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0)
 		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0)
 		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0)
+
 		
 	def test_busqueda(self):
 		resultados = self.client.get('/buscar/?search=bar');
@@ -99,6 +100,11 @@ class BusquedaSitioTest(TestCase):
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 		
 		self.assertTrue(self.sitio9.nombre.decode('utf8') in resultados)
+
+	def test_coincidencia_exacta(self):
+		resultados = self.client.get('/buscar/?search=cafe bar');
+		resultados = {resultado['nombre'] for resultado in resultados.data}
+		self.assertTrue(self.sitio5.nombre in resultados)
 			
 
 	def test_sugerencias(self):

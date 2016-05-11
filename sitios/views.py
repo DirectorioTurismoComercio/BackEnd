@@ -24,8 +24,9 @@ class SitioListCreate(generics.ListCreateAPIView):
           return queryset.filter(
             Q(nombre__istartswith=word+' ') |
             Q(nombre__icontains=' '+word+' ') |
-            Q(nombre__iendswith=' '+word)
-            );
+            Q(nombre__iendswith=' '+word) |
+            Q(nombre=word)
+            ) ;
 
         return {}
 
