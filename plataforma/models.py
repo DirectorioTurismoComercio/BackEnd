@@ -14,7 +14,6 @@ class Usuario(models.Model):
   apellidos = models.CharField(max_length=200)
   correo = models.CharField(max_length=200, blank=True, null=True, default=None,unique=True)
   telefono = models.CharField(max_length=200, blank=True, null=True, default=None)
-  tags = tags = models.ManyToManyField(Tag)
   user = models.ForeignKey(CustomUser,null=True)
 
 ## Modelo que representa la categoría a la cual puede pertenecer un problema.

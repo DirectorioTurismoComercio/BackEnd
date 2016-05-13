@@ -15,6 +15,7 @@ class SitioListCreate(generics.ListCreateAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer 
     
+
     def get_queryset(self):
         queryset = super(SitioListCreate, self).get_queryset()       
         word = self.request.QUERY_PARAMS.get('search', None)
@@ -43,8 +44,10 @@ class SitioListCreate(generics.ListCreateAPIView):
 
     def create(self,request):
       datos=request.data
+      dictprueba=dict(request.POST.iterlists())
 
-      serializer = SitioSerializer(data=datos)
+
+      serializer = SitioSerializer(data=dictprueba)
       if serializer.is_valid():
         serializer.save()
         for key, foto in request.FILES.iteritems():
