@@ -15,17 +15,27 @@ class SitioSerializer(serializers.ModelSerializer):
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False)
     
 	def to_internal_value(self, data):
-		data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
-		data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
-		data["descripcion"]=(data.get("descripcion")[0]).encode('utf-8')
-		data["correolocal"]=(data.get("correolocal")[0]).encode('utf-8')
-		data["ubicacionlocal"]=(data.get("ubicacionlocal")[0]).encode('utf-8')
-		data["telefono"]=int(data.get("telefono")[0])
-		data["latitud"]=float(data.get("latitud")[0])
-		data["longitud"]=float(data.get("longitud")[0])
-		data["municipio"]=int(data.get("municipio")[0])
+		if data["nombre"]:
+			data["nombre"]=(data.get("nombre")[0])
+			print("#######",data["nombre"])
+		if "horariolocal" in data:
+			data["horariolocal"]=(data.get("horariolocal")[0])
+		if "descripcion" in data: 
+			data["descripcion"]=(data.get("descripcion")[0])
+		if "correolocal" in data:
+			data["correolocal"]=(data.get("correolocal")[0])
+		if "ubicacionlocal" in data:
+			data["ubicacionlocal"]=(data.get("ubicacionlocal")[0])
+		if "telefono" in data:
+			data["telefono"]=int(data.get("telefono")[0])
+		if "latitud" in data:
+			data["latitud"]=float(data.get("latitud")[0])
+		if "longitud" in data: 
+			data["longitud"]=float(data.get("longitud")[0])
+		if "municipio" in data: 
+			data["municipio"]=int(data.get("municipio")[0])
 
-		if data.get("tags") is not None:   # si existen tags
+		if data.get("tags"):   # si existen tags
 			self.check_for_new_tags(data.get("tags")) #entonces revisa cuales tags son nuevos
 		return super(SitioSerializer,self).to_internal_value(data)
 

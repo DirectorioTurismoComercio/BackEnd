@@ -4,6 +4,8 @@ from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework import generics
 from rest_framework import status
+from rest_framework.parsers import MultiPartParser
+from rest_framework.parsers import FormParser
 from rest_framework.response import Response
 from sitios.distancia import *
 from sitios.serializers import SitioSerializer
@@ -44,10 +46,11 @@ class SitioListCreate(generics.ListCreateAPIView):
 
     def create(self,request):
       datos=request.data
-      dictprueba=dict(request.POST.iterlists())
+      print("datos",datos)
+      dictdatos=dict(request.POST.iterlists())
+      print("dict",dictdatos)
 
-
-      serializer = SitioSerializer(data=dictprueba)
+      serializer = SitioSerializer(data=dictdatos)
       if serializer.is_valid():
         serializer.save()
         for key, foto in request.FILES.iteritems():

@@ -1422,3 +1422,1622 @@ Traceback (most recent call last):
   File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 44, in create
     return Response(content=serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 TypeError: __init__() got an unexpected keyword argument 'content'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")).encode('utf-8')
+AttributeError: 'NoneType' object has no attribute 'encode'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")).encode('utf-8')
+AttributeError: 'NoneType' object has no attribute 'encode'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 51, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 52, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 55, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 28, in to_internal_value
+    if data.get("tags") is not None:   # si existen tags
+AttributeError: 'str' object has no attribute 'get'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 50
+    dictdatos=request.POST.iterlists())
+                                      ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 53, in create
+    serializer = SitioSerializer(data=dictprueba)
+NameError: global name 'dictprueba' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    data["nombre"]=(data.get("nombre")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 19, in to_internal_value
+    data["horariolocal"]=(data.get("horariolocal")[0]).encode('utf-8')
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 20, in to_internal_value
+    if data["horariolocal"]:
+KeyError: 'horariolocal'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 20, in to_internal_value
+    if data["horariolocal"]:
+KeyError: 'horariolocal'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 24, in to_internal_value
+    if data["correolocal"]:
+KeyError: 'correolocal'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 24, in to_internal_value
+    if data["correolocal"]:
+KeyError: 'correolocal'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 26, in to_internal_value
+    if "ubicacionlocal" in data["ubicacionlocal"]:
+KeyError: 'ubicacionlocal'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 26, in to_internal_value
+    if "ubicacionlocal" in data["ubicacionlocal"]:
+KeyError: 'ubicacionlocal'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 39, in to_internal_value
+    return super(SitioSerializer,self).to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 397, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 576, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 367, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
+    return six.text_type(data)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 3: ordinal not in range(128)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 39, in to_internal_value
+    return super(SitioSerializer,self).to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 397, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 576, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 367, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
+    return six.text_type(data)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 3: ordinal not in range(128)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 39, in to_internal_value
+    return super(SitioSerializer,self).to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 397, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 576, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 367, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
+    return six.text_type(data)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 3: ordinal not in range(128)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 39, in to_internal_value
+    return super(SitioSerializer,self).to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 397, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 576, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 367, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
+    return six.text_type(data)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 3: ordinal not in range(128)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 39, in to_internal_value
+    return super(SitioSerializer,self).to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 397, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 576, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 367, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
+    return six.text_type(data)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 3: ordinal not in range(128)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 40, in to_internal_value
+    return super(SitioSerializer,self).to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 397, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 576, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 367, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
+    return six.text_type(data)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 15: ordinal not in range(128)

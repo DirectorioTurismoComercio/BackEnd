@@ -4,6 +4,7 @@ from rest_framework import status
 from django.test import TestCase
 from sitios.models import Sitio
 from sitios.models import Foto
+from plataforma.models import Municipio
 from search_suggestions import generate_string_suggestions
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
@@ -14,6 +15,7 @@ from sitios.distancia import hallar_a
 from sitios.distancia import hallar_distancia_traslacion_X
 from sitios.distancia import hallar_coordenada_trasladada
 from sitios.distancia import esta_dentro_de_elipse
+from django.http import QueryDict
 
 class CrearSitioTest(TestCase):
 
@@ -22,10 +24,12 @@ class CrearSitioTest(TestCase):
 		    "nombre": "Café Bar", 
   			"latitud": 4.13, 
     		"longitud": 74.23, 
-    		"descripcion": "Breve descripción", 
+    		"descripcion": "Breve descripcion", 
 		}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_site)
 		response = self.client.post('/sitio',
-                                    new_site)
+                                    qdict)
 
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 
@@ -64,15 +68,16 @@ class CrearSitioTest(TestCase):
 class BusquedaSitioTest(TestCase):
 
 	def setUp(self):
-		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0)
-		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0)
-		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0)
-		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0)
-		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0)
-		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0)
-		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0)
-		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0)
-		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0)
+		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15")
+		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 
 		
 	def test_busqueda(self):
@@ -106,6 +111,10 @@ class BusquedaSitioTest(TestCase):
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 		self.assertTrue(self.sitio5.nombre in resultados)
 			
+	def busqueda_por_descripcion(self):
+		resultados = self.client.get('/buscar/?search=baño');
+		resultados = {resultado['nombre'] for resultado in resultados.data}
+		self.assertTrue(self.sitio5.nombre in resultados)
 
 	def test_sugerencias(self):
 		palabras_esperadas = [u'Panaderia',u'Pan']
