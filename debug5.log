@@ -3041,3 +3041,48 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 579, in to_internal_value
     return six.text_type(data)
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 15: ordinal not in range(128)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 54, in create
+    if serializer.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 18, in to_internal_value
+    if data["nombre"]:
+KeyError: 'nombre'
+Internal Server Error: /usuarios/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 55, in create
+    usuario=usuario.save()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 784, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Usuario.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Usuario.objects.create()`. You may need to make the field read-only, or override the UsuarioSerializer.create() method to handle this correctly.
+Original exception text was: 'tags' is an invalid keyword argument for this function.

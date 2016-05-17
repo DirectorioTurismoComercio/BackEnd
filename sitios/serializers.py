@@ -15,9 +15,8 @@ class SitioSerializer(serializers.ModelSerializer):
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False)
     
 	def to_internal_value(self, data):
-		if data["nombre"]:
+		if "nombre" in data:
 			data["nombre"]=(data.get("nombre")[0])
-			print("#######",data["nombre"])
 		if "horariolocal" in data:
 			data["horariolocal"]=(data.get("horariolocal")[0])
 		if "descripcion" in data: 

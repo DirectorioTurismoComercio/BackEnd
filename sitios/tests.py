@@ -5,6 +5,7 @@ from django.test import TestCase
 from sitios.models import Sitio
 from sitios.models import Foto
 from plataforma.models import Municipio
+from plataforma.models import Categoria
 from search_suggestions import generate_string_suggestions
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
@@ -18,6 +19,9 @@ from sitios.distancia import esta_dentro_de_elipse
 from django.http import QueryDict
 
 class CrearSitioTest(TestCase):
+	def setUp(self):
+		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		categoria = Categoria.objects.create(nombre="Comida")
 
 	def test_create_successfully(self):
 		new_site = {
@@ -25,6 +29,8 @@ class CrearSitioTest(TestCase):
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
+    		"municipio": 1,
+    		"categorias": [1]
 		}
 		qdict = QueryDict('', mutable=True)
 		qdict.update(new_site)
@@ -45,9 +51,13 @@ class CrearSitioTest(TestCase):
   				"latitud": 4.13, 
     			"longitud": 74.23, 
     			"descripcion": "Breve descripción",
+    			"municipio": 1,
+    			"categorias": [1],
     			"foto1": fp1,
     			"foto2": fp2
 			}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_site)
 		
 		response = self.client.post('/sitio',new_site)
 		
@@ -60,6 +70,9 @@ class CrearSitioTest(TestCase):
     		"longitud": 74.23, 
     		"descripcion": "Breve descripción", 
 		}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_site)
+		
 		response = self.client.post('/sitio',new_site)
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response.data)
 

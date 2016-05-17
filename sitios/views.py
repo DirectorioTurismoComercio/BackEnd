@@ -46,15 +46,12 @@ class SitioListCreate(generics.ListCreateAPIView):
 
     def create(self,request):
       datos=request.data
-      print("datos",datos)
       dictdatos=dict(request.POST.iterlists())
-      print("dict",dictdatos)
-
       serializer = SitioSerializer(data=dictdatos)
       if serializer.is_valid():
         serializer.save()
         for key, foto in request.FILES.iteritems():
-          Foto.objects.create(
+          z=Foto.objects.create(
           URLfoto=foto,
           sitio_id=serializer.data["id"]
           )
@@ -88,7 +85,6 @@ class Sugerencias(viewsets.ViewSet):
     def list_sugerencias(self,request,token=None):
 
       token = self.request.QUERY_PARAMS.get('token', None)
-      print (token)
 
       n_espacios = token.count(' ');
       resultados = Sitio.objects.filter(nombre__icontains=token); 
