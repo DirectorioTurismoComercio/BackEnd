@@ -6,6 +6,7 @@ from sitios.models import Sitio
 from sitios.models import Foto
 from plataforma.models import Municipio
 from plataforma.models import Categoria
+from plataforma.models import Tag
 from search_suggestions import generate_string_suggestions
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
@@ -82,14 +83,19 @@ class BusquedaSitioTest(TestCase):
 
 	def setUp(self):
 		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		tag1 = Tag.objects.create(tag='baño')
+		tag2 = Tag.objects.create(tag='restaurante')
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15")
 		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio6.tags.add(tag1)
+		self.sitio6.tags.add(tag2)
 		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio8.tags.add(tag2)
 		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 
 		
@@ -124,15 +130,24 @@ class BusquedaSitioTest(TestCase):
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 		self.assertTrue(self.sitio5.nombre in resultados)
 			
-	def busqueda_por_descripcion(self):
+	def test_busqueda_por_descripcion(self):
 		resultados = self.client.get('/buscar/?search=baño');
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 		self.assertTrue(self.sitio5.nombre in resultados)
 
+	def test_busqueda_por_tags(self):
+		resultados = self.client.get('/buscar/?search=baño');
+		resultados = {resultado['nombre'] for resultado in resultados.data}
+		self.assertTrue(self.sitio6.nombre in resultados)
+		self.assertFalse(self.sitio8.nombre in resultados)
+
 	def test_sugerencias(self):
 		palabras_esperadas = [u'Panaderia',u'Pan']
 		resultados = self.client.get('/sugerencias/?token=pa')
-		self.assertItemsEqual(palabras_esperadas,resultados.data)	
+		self.assertItemsEqual(palabras_esperadas,resultados.data)
+	
+	
+
 
 class BusquedaSitiosEnRutaTest(TestCase):
 

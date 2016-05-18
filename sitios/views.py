@@ -30,7 +30,13 @@ class SitioListCreate(generics.ListCreateAPIView):
               Q(nombre__istartswith=word+' ') |
               Q(nombre__icontains=' '+word+' ') |
               Q(nombre__iendswith=' '+word) |
-              Q(nombre=word) ,
+              Q(nombre=word) |
+              Q(descripcion__istartswith=word+' ') |
+              Q(descripcion__icontains=' '+word+' ') |
+              Q(descripcion__iendswith=' '+word) |
+              Q(descripcion=word) |
+              Q(tags__tag=word)
+              ,
               Q(municipio_id=id_municipio)
               ) ;
 
@@ -39,7 +45,12 @@ class SitioListCreate(generics.ListCreateAPIView):
               Q(nombre__istartswith=word+' ') |
               Q(nombre__icontains=' '+word+' ') |
               Q(nombre__iendswith=' '+word) |
-              Q(nombre=word) 
+              Q(nombre=word)  |
+              Q(descripcion__istartswith=word+' ') |
+              Q(descripcion__icontains=' '+word+' ') |
+              Q(descripcion__iendswith=' '+word) |
+              Q(descripcion=word) |
+              Q(tags__tag=word)
               ) ;
 
         return resultados
