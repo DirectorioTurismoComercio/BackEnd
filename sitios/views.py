@@ -88,7 +88,8 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         if distancia<= radio:
           if not site in resultados:
             siteSerializer=SitioSerializer(site)
-            resultados.append(siteSerializer.data)
+            if not siteSerializer.data in resultados:
+              resultados.append(siteSerializer.data)
 
     return Response(resultados)
 
