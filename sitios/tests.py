@@ -83,16 +83,23 @@ class BusquedaSitioTest(TestCase):
 
 	def setUp(self):
 		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		categoria1 = Categoria.objects.create(nombre='sanduches')
+		categoria2 = Categoria.objects.create(nombre='cuba')
 		tag1 = Tag.objects.create(tag='baño')
 		tag2 = Tag.objects.create(tag='restaurante')
+		tag3 = Tag.objects.create(tag='hamburguesa')
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15")
+		self.sitio5.categorias.add(categoria1)
+		self.sitio5.categorias.add(categoria2)
 		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio6.tags.add(tag1)
 		self.sitio6.tags.add(tag2)
+		self.sitio6.tags.add(tag3)
+	
 		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
 		self.sitio8.tags.add(tag2)
@@ -101,12 +108,14 @@ class BusquedaSitioTest(TestCase):
 		
 	def test_busqueda(self):
 		resultados = self.client.get('/buscar/?search=bar');
-		resultados = {resultado['nombre'] for resultado in resultados.data}
+		resultados = [resultado['nombre'] for resultado in resultados.data]
 		
 		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
 		self.assertTrue(self.sitio5.nombre in resultados)
 		self.assertTrue(self.sitio5.nombre in resultados)
 		self.assertTrue(self.sitio6.nombre in resultados)
+		self.assertTrue(self.sitio6.nombre in resultados)
+		self.assertTrue((resultados).count(self.sitio6.nombre)==1,(resultados).count(self.sitio6.nombre))
 
 		self.assertFalse(self.sitio7.nombre in resultados)
 		self.assertFalse(self.sitio8.nombre in resultados)
@@ -132,14 +141,21 @@ class BusquedaSitioTest(TestCase):
 			
 	def test_busqueda_por_descripcion(self):
 		resultados = self.client.get('/buscar/?search=baño');
-		resultados = {resultado['nombre'] for resultado in resultados.data}
+		resultados = [resultado['nombre'] for resultado in resultados.data]
 		self.assertTrue(self.sitio5.nombre in resultados)
+		self.assertTrue((resultados).count(self.sitio5.nombre)==1,(resultados).count(self.sitio5.nombre))
 
 	def test_busqueda_por_tags(self):
 		resultados = self.client.get('/buscar/?search=baño');
-		resultados = {resultado['nombre'] for resultado in resultados.data}
+		resultados = [resultado['nombre'] for resultado in resultados.data]
+		
 		self.assertTrue(self.sitio6.nombre in resultados)
 		self.assertFalse(self.sitio8.nombre in resultados)
+
+	def test_busqueda_por_categoria(self):
+		resultados = self.client.get('/buscar/?search=cuba');
+		resultados = [resultado['nombre'] for resultado in resultados.data]
+		self.assertTrue(self.sitio5.nombre in resultados)
 
 	def test_sugerencias(self):
 		palabras_esperadas = [u'Panaderia',u'Pan']

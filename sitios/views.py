@@ -26,7 +26,7 @@ class SitioListCreate(generics.ListCreateAPIView):
         if word is not None:
           if id_municipio is not None:
 
-              resultados= queryset.filter(
+              resultados= queryset.distinct().filter(
               Q(nombre__istartswith=word+' ') |
               Q(nombre__icontains=' '+word+' ') |
               Q(nombre__iendswith=' '+word) |
@@ -35,13 +35,14 @@ class SitioListCreate(generics.ListCreateAPIView):
               Q(descripcion__icontains=' '+word+' ') |
               Q(descripcion__iendswith=' '+word) |
               Q(descripcion=word) |
-              Q(tags__tag=word)
+              Q(tags__tag=word) |
+              Q(categorias__nombre=word)
               ,
               Q(municipio_id=id_municipio)
               ) ;
 
           else:
-              resultados=  queryset.filter(
+              resultados=  queryset.distinct().filter(
               Q(nombre__istartswith=word+' ') |
               Q(nombre__icontains=' '+word+' ') |
               Q(nombre__iendswith=' '+word) |
@@ -50,7 +51,8 @@ class SitioListCreate(generics.ListCreateAPIView):
               Q(descripcion__icontains=' '+word+' ') |
               Q(descripcion__iendswith=' '+word) |
               Q(descripcion=word) |
-              Q(tags__tag=word)
+              Q(tags__tag=word) |
+              Q(categorias__nombre=word)
               ) ;
 
         return resultados
