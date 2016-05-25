@@ -7,6 +7,7 @@ from sitios.models import Foto
 from plataforma.models import Municipio
 from plataforma.models import Categoria
 from plataforma.models import Tag
+from plataforma.models import Usuario
 from search_suggestions import generate_string_suggestions
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
@@ -21,18 +22,22 @@ from django.http import QueryDict
 
 class CrearSitioTest(TestCase):
 	def setUp(self):
-		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
-		categoria = Categoria.objects.create(nombre="Comida")
+		self.municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		self.categoria = Categoria.objects.create(nombre="Comida")
+		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com')
 
 	def test_create_successfully(self):
+
 		new_site = {
 		    "nombre": "Café Bar", 
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
-    		"municipio": 1,
-    		"categorias": [1]
+    		"municipio": self.municipio.id,
+    		"categorias": [self.categoria.id],
+    		"usuario": self.usuario.id
 		}
+
 		qdict = QueryDict('', mutable=True)
 		qdict.update(new_site)
 		response = self.client.post('/sitio',
@@ -55,7 +60,8 @@ class CrearSitioTest(TestCase):
     			"municipio": 1,
     			"categorias": [1],
     			"foto1": fp1,
-    			"foto2": fp2
+    			"foto2": fp2,
+    			"usuario": self.usuario.id
 			}
 		qdict = QueryDict('', mutable=True)
 		qdict.update(new_site)
@@ -70,6 +76,7 @@ class CrearSitioTest(TestCase):
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripción", 
+
 		}
 		qdict = QueryDict('', mutable=True)
 		qdict.update(new_site)
@@ -83,27 +90,29 @@ class BusquedaSitioTest(TestCase):
 
 	def setUp(self):
 		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com')
+
 		categoria1 = Categoria.objects.create(nombre='sanduches')
 		categoria2 = Categoria.objects.create(nombre='cuba')
 		tag1 = Tag.objects.create(tag='baño')
 		tag2 = Tag.objects.create(tag='restaurante')
 		tag3 = Tag.objects.create(tag='hamburguesa')
-		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
-		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
-		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
-		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
-		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15")
+		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio5.categorias.add(categoria1)
 		self.sitio5.categorias.add(categoria2)
-		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio6.tags.add(tag1)
 		self.sitio6.tags.add(tag2)
 		self.sitio6.tags.add(tag3)
 	
-		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
-		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio7=Sitio.objects.create(nombre='Barranquilla',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio8.tags.add(tag2)
-		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15")
+		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 
 		
 	def test_busqueda(self):

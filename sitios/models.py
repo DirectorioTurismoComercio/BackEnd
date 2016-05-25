@@ -6,6 +6,7 @@ from django.db import models
 from plataforma.models import Categoria
 from plataforma.models import Municipio
 from plataforma.models import Tag
+from plataforma.models import Usuario
 
 
 class Sitio(models.Model):
@@ -19,6 +20,7 @@ class Sitio(models.Model):
 	ubicacionlocal = models.TextField(null=True)
 	categorias = models.ManyToManyField(Categoria)
 	tags = models.ManyToManyField(Tag)
+	usuario = models.ForeignKey(Usuario, related_name='sitios', null=False)
 	municipio = models.ForeignKey(Municipio, related_name='sitios', null=False) 
 
 

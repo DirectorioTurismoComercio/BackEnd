@@ -33,6 +33,8 @@ class SitioSerializer(serializers.ModelSerializer):
 			data["longitud"]=float(data.get("longitud")[0])
 		if "municipio" in data: 
 			data["municipio"]=int(data.get("municipio")[0])
+		if "usuario" in data: 
+			data["usuario"]=int(data.get("usuario")[0])	
 
 		if data.get("tags"):   # si existen tags
 			self.check_for_new_tags(data.get("tags")) #entonces revisa cuales tags son nuevos
