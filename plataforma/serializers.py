@@ -18,19 +18,6 @@ class MunicipioSerializer(serializers.ModelSerializer):
               
 # Serializador del modelo Usuario      
 class UsuarioSerializer(serializers.ModelSerializer):
-   tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False)
-    
-   def to_internal_value(self, data):
-      if data.get("tags") is not None:   # si existen tags
-        self.check_for_new_tags(data.get("tags")) #entonces revisa cuales tags son nuevos
-      return super(UsuarioSerializer,self).to_internal_value(data)
-
-   def check_for_new_tags(self,tags): # Crea en la base aquellos tags que no existan 
-      for tag in tags:
-        try:
-             tag_object = Tag.objects.get(tag=tag)
-        except:
-             tag_object = Tag.objects.create(tag=tag)   
    class Meta:
         model = Usuario
 
