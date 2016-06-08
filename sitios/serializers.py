@@ -4,6 +4,7 @@ from rest_framework import serializers
 from sitios.models import Sitio
 from sitios.models import Foto 
 from sitios.models import Tag 
+from plataforma.serializers import MunicipioSerializer
 
 
 class FotoSerializer(serializers.ModelSerializer):  
@@ -12,8 +13,9 @@ class FotoSerializer(serializers.ModelSerializer):
 
 class SitioSerializer(serializers.ModelSerializer):  
 	fotos=FotoSerializer(many=True, read_only=True)
+	municipio=MunicipioSerializer(read_only=True)
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False)
-    
+	municipio = serializers.IntegerField(source='municipio_id')
 	def to_internal_value(self, data):
 		if "nombre" in data:
 			data["nombre"]=(data.get("nombre")[0])
