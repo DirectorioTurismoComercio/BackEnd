@@ -15,7 +15,7 @@ class SitioSerializer(serializers.ModelSerializer):
 	fotos=FotoSerializer(many=True, read_only=True)
 	municipio=MunicipioSerializer(read_only=True)
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False)
-	municipio = serializers.IntegerField(source='municipio_id')
+	municipio_id = serializers.IntegerField()
 	def to_internal_value(self, data):
 		if "nombre" in data:
 			data["nombre"]=(data.get("nombre")[0])
@@ -33,8 +33,8 @@ class SitioSerializer(serializers.ModelSerializer):
 			data["latitud"]=float(data.get("latitud")[0])
 		if "longitud" in data: 
 			data["longitud"]=float(data.get("longitud")[0])
-		if "municipio" in data: 
-			data["municipio"]=int(data.get("municipio")[0])
+		if "municipio_id" in data: 
+			data["municipio_id"]=int(data.get("municipio_id")[0])
 		if "usuario" in data: 
 			data["usuario"]=int(data.get("usuario")[0])	
 

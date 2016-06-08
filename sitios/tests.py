@@ -33,7 +33,7 @@ class CrearSitioTest(TestCase):
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
-    		"municipio": self.municipio.id,
+    		"municipio_id": self.municipio.id,
     		"categorias": [self.categoria.id],
     		"usuario": self.usuario.id
 		}
@@ -57,7 +57,7 @@ class CrearSitioTest(TestCase):
   				"latitud": 4.13, 
     			"longitud": 74.23, 
     			"descripcion": "Breve descripción",
-    			"municipio": 1,
+    			"municipio_id": 1,
     			"categorias": [1],
     			"foto1": fp1,
     			"foto2": fp2,
