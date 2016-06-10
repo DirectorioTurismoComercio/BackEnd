@@ -64,9 +64,20 @@ class SitioListCreate(generics.ListCreateAPIView):
       if serializer.is_valid():
         serializer.save()
         for key, foto in request.FILES.iteritems():
+          tipo=key
+          if 'PRINCIPAL' in tipo:
+            tipoAbreviatura='P'
+          elif 'FACHADA' in tipo:
+            tipoAbreviatura='F'
+          elif 'INTERIOR' in tipo:
+            tipoAbreviatura='I'
+          elif 'PRODUCTOS' in tipo:
+            tipoAbreviatura='PR'
+
           z=Foto.objects.create(
           URLfoto=foto,
-          sitio_id=serializer.data["id"]
+          sitio_id=serializer.data["id"],
+          tipo=tipoAbreviatura
           )
       else:
         return Response(data=serializer.errors,status=status.HTTP_400_BAD_REQUEST) 
