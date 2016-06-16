@@ -3905,18 +3905,21 @@ INSERT INTO `plataforma_municipio` (`nombre`, `latitud`, `longitud`) VALUES
 -- Volcado de datos para la tabla `plataforma_categoria`
 --
 INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `categoria_padre_id`) VALUES
-(1,'Comidas',1,null),
-(2,'Tipica',2,1),
-(3,'Extranjera',2,1),
-(4,'Exotica',2,1),
-(5,'Entretenimiento',1,null),
-(6,'Cine',2,5),
-(7,'Teatro',2,5),
-(8,'Centros comerciales',2,5),
-(9,'Deportes extremos',2,5),
-(10,'Hoteles',1,null),
-(11,'Ecologicos',2,10),
-(12,'spa',2,10);
+(1,'Naturaleza y Agroturismo',1,null),
+(2,'Deportes',1,null),
+(3,'Creencias y Costumbres',1,null),
+(4,'Arte y Cultura',1,null),
+(5,'Comida y Bebida',1,null),
+(6,'Entretenimiento',1,null),
+(7,'Comercio',1,null),
+(8,'Transporte',1,null),
+(9,'Hospedaje y Salud',1,null),
+(10,'Cine',2,5),
+(11,'Teatro',2,5),
+(12,'Centros comerciales',2,5),
+(13,'Deportes extremos',2,2),
+(14,'Ecologicos',2,10),
+(15,'spa',2,10);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

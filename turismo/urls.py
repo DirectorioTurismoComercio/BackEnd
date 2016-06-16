@@ -7,6 +7,7 @@ from django.views.generic import RedirectView
 from authentication_module import views as authentication_module_views
 from django.conf.urls.static import static
 from django.conf import settings
+import local_settings
 
 urlpatterns = patterns('',
     # Examples:   //
@@ -35,4 +36,4 @@ urlpatterns = patterns('',
    
 )
 urlpatterns = format_suffix_patterns(urlpatterns)
-urlpatterns=urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns=urlpatterns+static(local_settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
