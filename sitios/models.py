@@ -11,8 +11,8 @@ from plataforma.models import Usuario
 
 class Sitio(models.Model):
 	nombre = models.CharField(max_length=200, null=False)
-	telefono = models.IntegerField(default=0)
-	whatsapp = models.IntegerField(default=0)
+	telefono = models.TextField(default="")
+	whatsapp = models.TextField(default="")
 	horariolocal = models.TextField(default="")
 	web = models.TextField(default="")
 	latitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)
