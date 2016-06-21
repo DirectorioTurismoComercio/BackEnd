@@ -13,7 +13,7 @@ class Sitio(models.Model):
 	nombre = models.CharField(max_length=200, null=False)
 	telefono = models.TextField(default="")
 	whatsapp = models.TextField(default="")
-	horariolocal = models.TextField(default="")
+	horariolocal = models.TextField(default="", blank=True)
 	web = models.TextField(default="")
 	latitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)
 	longitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)

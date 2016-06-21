@@ -29,6 +29,10 @@ class SitioSerializer(serializers.ModelSerializer):
 			data["ubicacionlocal"]=(data.get("ubicacionlocal")[0])
 		if "telefono" in data:
 			data["telefono"]=int(data.get("telefono")[0])
+		if "whatsapp" in data:
+			data["whatsapp"]=(data.get("whatsapp")[0])
+		if "web" in data:
+			data["web"]=(data.get("web")[0])
 		if "latitud" in data:
 			data["latitud"]=float(data.get("latitud")[0])
 		if "longitud" in data: 
