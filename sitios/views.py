@@ -87,11 +87,13 @@ class SitioListCreate(generics.ListCreateAPIView):
 
 class SitiosCercanosARuta(viewsets.ViewSet):
   def list_sites(self,request):
+    
     sites=Sitio.objects.all()
     
     resultados=[]
 
     puntos=request.data['points']
+  
     paso=1
 
     for i in range(0,len(puntos)-(paso+1),paso):
@@ -100,7 +102,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         distancia=hallar_distancia_geodesica(puntos[i],(site.latitud,site.longitud))
         if distancia<= radio:
           if not site in resultados:
-            siteSerializer=SitioSerializer(site)
+            siteSerializer=SitioSerializer(site,context={'request': request})
             if not siteSerializer.data in resultados:
               resultados.append(siteSerializer.data)
 
