@@ -22,6 +22,6 @@ class CustomSocialTokenUserAuthView(BaseSocialAuthView):
       	if usuario.is_valid():
         	usuario.save()      
         else:
-        	print("////////", usuario.errors)   
+        	print("Error", usuario.errors)   
 
 
