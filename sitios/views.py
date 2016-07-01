@@ -85,6 +85,11 @@ class SitioListCreate(generics.ListCreateAPIView):
       
       return Response(status=status.HTTP_201_CREATED)
 
+class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Sitio.objects.all()
+  serializer_class = SitioSerializer 
+
+
 class SitiosCercanosARuta(viewsets.ViewSet):
   def list_sites(self,request):
     

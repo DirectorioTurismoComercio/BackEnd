@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 from rest_framework import status
-from django.test import TestCase
+from django.test import TestCase, RequestFactory
 from sitios.models import Sitio
 from sitios.models import Foto
 from plataforma.models import Municipio
@@ -19,13 +19,22 @@ from sitios.distancia import hallar_distancia_traslacion_X
 from sitios.distancia import hallar_coordenada_trasladada
 from sitios.distancia import esta_dentro_de_elipse
 from django.http import QueryDict
+from sitios.views import SitioDetail
+
 
 class CrearSitioTest(TestCase):
 	def setUp(self):
+		self.factory = RequestFactory()
 		self.municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
 		self.categoria = Categoria.objects.create(nombre="Comida")
 		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com')
-
+		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=self.municipio,horariolocal="7-15",usuario=self.usuario)
+		self.sitio1.categorias.add(self.categoria)
+		tag1 = Tag.objects.create(tag='baño')
+		tag2 = Tag.objects.create(tag='restaurante')
+		self.sitio1.tags.add(tag1)
+		self.sitio1.tags.add(tag2)
+	
 	def test_create_successfully(self):
 
 		new_site = {
@@ -59,8 +68,8 @@ class CrearSitioTest(TestCase):
     			"descripcion": "Breve descripción",
     			"municipio_id": 1,
     			"categorias": [1],
-    			"foto1": fp1,
-    			"foto2": fp2,
+    			"PRINCIPAL_foto1": fp1,
+    			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
 			}
 		qdict = QueryDict('', mutable=True)
@@ -83,6 +92,35 @@ class CrearSitioTest(TestCase):
 		
 		response = self.client.post('/sitio',new_site)
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response.data)
+
+	def test_sitio_texts_update(self):
+		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		nombreFoto1="piqueteadero.jpg"
+		nombreFoto2="piqueteadero2.jpg"
+		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
+		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+
+		updated_site = {
+		    	"nombre": "Coca Cola Bar", 
+  				"latitud": 4.13, 
+    			"longitud": 74.23, 
+    			"descripcion": "Breve descripción",
+    			"municipio_id": 1,
+    			"categorias": [1],
+    			#"PRINCIPAL_foto1": fp1,
+    			#"FACHADA_foto2": fp2,
+    			"usuario": self.usuario.id
+			};
+
+		#qdict = QueryDict('', mutable=True)
+		#qdict.update(updated_site)
+		#response = self.client.put('/sitio/detail/'+str(self.sitio1.id), urlencode(updated_site) ,content_type = 'application/x-www-form-urlencoded')
+		#print response
+		request = self.factory.put('/sitio/detail/',updated_site)
+		response = SitioDetail.as_view()(request,pk=self.sitio1.id)
+		print(response.data)
+		self.assertEquals(updated_site["nombre"],response.data["nombre"],response.data) 		
+		
 
 
 

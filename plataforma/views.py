@@ -91,10 +91,7 @@ class CategoriaListCreate(generics.ListCreateAPIView):
           if padre is not None:
             return queryset.filter(nivel=nivel,categoria_padre_id=padre)            
           else:
-            return queryset.filter(nivel=nivel)
-         
-
-          
+            return queryset.filter(nivel=nivel)    
 
         return queryset.filter()  
 
