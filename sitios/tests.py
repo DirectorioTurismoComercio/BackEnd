@@ -93,37 +93,7 @@ class CrearSitioTest(TestCase):
 		response = self.client.post('/sitio',new_site)
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response.data)
 
-	def test_sitio_texts_update(self):
-		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
-		nombreFoto1="piqueteadero.jpg"
-		nombreFoto2="piqueteadero2.jpg"
-		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
-		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
-
-		updated_site = {
-		    	"nombre": "Coca Cola Bar", 
-  				"latitud": 4.13, 
-    			"longitud": 74.23, 
-    			"descripcion": "Breve descripción",
-    			"municipio_id": 1,
-    			"categorias": [1],
-    			#"PRINCIPAL_foto1": fp1,
-    			#"FACHADA_foto2": fp2,
-    			"usuario": self.usuario.id
-			};
-
-		#qdict = QueryDict('', mutable=True)
-		#qdict.update(updated_site)
-		#response = self.client.put('/sitio/detail/'+str(self.sitio1.id), urlencode(updated_site) ,content_type = 'application/x-www-form-urlencoded')
-		#print response
-		request = self.factory.put('/sitio/detail/',updated_site)
-		response = SitioDetail.as_view()(request,pk=self.sitio1.id)
-		print(response.data)
-		self.assertEquals(updated_site["nombre"],response.data["nombre"],response.data) 		
-		
-
-
-
+	
 class BusquedaSitioTest(TestCase):
 
 	def setUp(self):

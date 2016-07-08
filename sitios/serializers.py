@@ -49,6 +49,26 @@ class SitioSerializer(serializers.ModelSerializer):
 			self.check_for_new_tags(data.get("tags")) #entonces revisa cuales tags son nuevos
 		return super(SitioSerializer,self).to_internal_value(data)
 
+	def add_photos_with_abbreviations(self, fotos):
+			for nombre, archivo in fotos:
+				tipoAbreviatura = 'P'
+
+				if 'PRINCIPAL' in nombre:
+					tipoAbreviatura = 'P'
+				elif 'FACHADA' in nombre:
+					tipoAbreviatura = 'F'
+				elif 'INTERIOR' in nombre:
+					tipoAbreviatura = 'I'
+				elif 'PRODUCTOS' in nombre:
+					tipoAbreviatura = 'PR'
+
+				z = Foto.objects.create(
+                    URLfoto=archivo,
+                    sitio_id=self.data["id"],
+                    tipo=tipoAbreviatura
+                )	
+
+	
 	def check_for_new_tags(self,tags): # Crea en la base aquellos tags que no existan 
 		for tag in tags:
 			try:

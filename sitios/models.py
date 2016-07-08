@@ -32,3 +32,5 @@ class Foto(models.Model):
 	tipo = models.CharField(max_length=2,choices=(('P','PRINCIPAL'),('F','FACHADA'),('I','INTERIOR'),('PR','PRODUCTOS')),default='P',
                                                   null=False, blank=False)
 
+
+

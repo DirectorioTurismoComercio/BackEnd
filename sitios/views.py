@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from sitios.models import Foto
 from sitios.models import Sitio
 from rest_framework.views import APIView
@@ -35,7 +36,7 @@ class SitioListCreate(generics.ListCreateAPIView):
 
             else:
                 resultados = queryset.distinct().filter(
-                    Q(nombre__iregex=r'[[:<:]]'+word+'[[:>:]]') |
+                    Q(nombre__iregex=r'[[:<:]]'+"caf[eèêéë]"+'[[:>:]]') |
                     Q(descripcion__iregex=r'[[:<:]]' + word + '[[:>:]]') |
                     Q(tags__tag__iregex=r'[[:<:]]' + word + '[[:>:]]') |
                     Q(categorias__nombre__iregex=r'[[:<:]]' + word + '[[:>:]]'))
@@ -46,24 +47,10 @@ class SitioListCreate(generics.ListCreateAPIView):
         datos = request.data
         dictdatos = dict(request.POST.iterlists())
         serializer = SitioSerializer(data=dictdatos)
+        photos = request.FILES.iteritems()
         if serializer.is_valid():
             serializer.save()
-            for key, foto in request.FILES.iteritems():
-                tipo = key
-                if 'PRINCIPAL' in tipo:
-                    tipoAbreviatura = 'P'
-                elif 'FACHADA' in tipo:
-                    tipoAbreviatura = 'F'
-                elif 'INTERIOR' in tipo:
-                    tipoAbreviatura = 'I'
-                elif 'PRODUCTOS' in tipo:
-                    tipoAbreviatura = 'PR'
-
-                z = Foto.objects.create(
-                    URLfoto=foto,
-                    sitio_id=serializer.data["id"],
-                    tipo=tipoAbreviatura
-                )
+            serializer.add_photos_with_abbreviations(photos)
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -74,6 +61,18 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
 
+    def update(self, request, *args, **kwargs):
+        print request.data
+        print args
+        pk = kwargs['pk']
+        sitio = Sitio.objects.get(pk=pk)
+        print (sitio)
+        #super(SitioDetail, self).update(request, *args, **kwargs)
+        for key, foto in request.FILES.iteritems():
+            print key
+        return Response(status=status.HTTP_200_OK)
+
+        
 
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):
