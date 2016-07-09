@@ -17,7 +17,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = '1025'
 EMAIL_USE_TLS = False
-MEDIA_URL = '/Fotos/Fotos/'
+
 SOCIAL_AUTH_FACEBOOK_KEY = '1529648703998052'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'b7609e3cb5d8af0df1da85c61b263cf1'
 
@@ -30,21 +30,29 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id,name,email', # needed starting from protocol v2.4
 }
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'public_profile']  # optional
+MEDIA_URL='/Fotos/Fotos/'
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': 'debug5.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    },
+   'version': 1,
+   'disable_existing_loggers': False,
+   'handlers': {
+       'file': {
+           'level': 'ERROR',
+           'class': 'logging.FileHandler',
+           'filename': 'debug6.log',
+       },
+   },
+   'loggers': {
+       'django': {
+           'handlers': ['file'],
+           'level': 'ERROR',
+           'propagate': True,
+       },
+       'django.db.backends': {
+           'handlers': ['file'],
+           'level': 'DEBUG',
+           'propagate': True,
+       },
+
+   },
+}

@@ -11,6 +11,7 @@ from rest_framework.response import Response
 from sitios.distancia import *
 from sitios.serializers import SitioSerializer
 from sitios.serializers import FotoSerializer
+from sitios.string_processing import *
 from django.db.models import Q
 import plataforma
 
@@ -25,6 +26,8 @@ class SitioListCreate(generics.ListCreateAPIView):
         id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
         resultados = {}
         if word is not None:
+            word = remove_accents(word.encode('utf-8'))
+            word = create_accents_regular_expression(word)
             if id_municipio is not None:
 
                 resultados = queryset.distinct().filter(
@@ -36,10 +39,12 @@ class SitioListCreate(generics.ListCreateAPIView):
 
             else:
                 resultados = queryset.distinct().filter(
-                    Q(nombre__iregex=r'[[:<:]]'+"caf[eèêéë]"+'[[:>:]]') |
+                    Q(nombre__iregex=r'[[:<:]]'+ word +'[[:>:]]')  |
                     Q(descripcion__iregex=r'[[:<:]]' + word + '[[:>:]]') |
                     Q(tags__tag__iregex=r'[[:<:]]' + word + '[[:>:]]') |
-                    Q(categorias__nombre__iregex=r'[[:<:]]' + word + '[[:>:]]'))
+                    Q(categorias__nombre__iregex=r'[[:<:]]' + word + '[[:>:]]')
+                    )
+                
 
         return resultados
 

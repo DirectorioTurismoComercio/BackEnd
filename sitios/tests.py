@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import time
 from rest_framework import status
 from django.test import TestCase, RequestFactory
 from sitios.models import Sitio
@@ -20,6 +21,7 @@ from sitios.distancia import hallar_coordenada_trasladada
 from sitios.distancia import esta_dentro_de_elipse
 from django.http import QueryDict
 from sitios.views import SitioDetail
+from sitios.string_processing import *
 
 
 class CrearSitioTest(TestCase):
@@ -141,7 +143,6 @@ class BusquedaSitioTest(TestCase):
 
 		resultados = self.client.get('/buscar/?search=café');
 		resultados = {resultado['nombre'] for resultado in resultados.data}
-		
 		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
 		self.assertTrue(self.sitio5.nombre in resultados)
 	
@@ -178,8 +179,18 @@ class BusquedaSitioTest(TestCase):
 		palabras_esperadas = [u'Panaderia',u'Pan']
 		resultados = self.client.get('/sugerencias/?token=pa')
 		self.assertItemsEqual(palabras_esperadas,resultados.data)
-	
-	
+
+class StringProcessingTest(TestCase):
+	def test_remove_accents(self):
+		self.assertEquals(remove_accents('café'),'cafe')	
+		self.assertEquals(remove_accents('cafÉ'),'cafe')
+		self.assertEquals(remove_accents('Alcalá'),'alcala')
+		self.assertEquals(remove_accents('cáíóúké'),'caiouke')	
+		self.assertEquals(remove_accents('cÁÍÓÚkÉ'),'caiouke')	
+
+	def test_create_accents_regular_expression(self):
+		self.assertEquals(create_accents_regular_expression('cafe'),'c[aáàäâ]f[eèêéë]')
+		
 
 
 class BusquedaSitiosEnRutaTest(TestCase):
