@@ -22,19 +22,24 @@ from sitios.distancia import esta_dentro_de_elipse
 from django.http import QueryDict
 from sitios.views import SitioDetail
 from sitios.string_processing import *
+from django.test.client import encode_multipart
+from decimal import *
 
 
-class CrearSitioTest(TestCase):
+class CrearActualizarSitioTest(TestCase):
 	def setUp(self):
 		self.factory = RequestFactory()
 		self.municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		self.municipio2 = Municipio.objects.create(nombre='Tengo',latitud=0,longitud=0)
 		self.categoria = Categoria.objects.create(nombre="Comida")
+		self.categoria2 = Categoria.objects.create(nombre="Hospedaje")
 		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com')
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=self.municipio,horariolocal="7-15",usuario=self.usuario)
 		self.sitio1.categorias.add(self.categoria)
-		tag1 = Tag.objects.create(tag='baño')
+		self.tag1 = Tag.objects.create(tag='baño')
 		tag2 = Tag.objects.create(tag='restaurante')
-		self.sitio1.tags.add(tag1)
+		tag3 = Tag.objects.create(tag='pollo')
+		self.sitio1.tags.add(self.tag1)
 		self.sitio1.tags.add(tag2)
 	
 	def test_create_successfully(self):
@@ -68,8 +73,8 @@ class CrearSitioTest(TestCase):
   				"latitud": 4.13, 
     			"longitud": 74.23, 
     			"descripcion": "Breve descripción",
-    			"municipio_id": 1,
-    			"categorias": [1],
+    			"municipio_id": self.municipio.id,
+    			"categorias": [self.categoria.id],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
@@ -95,6 +100,96 @@ class CrearSitioTest(TestCase):
 		response = self.client.post('/sitio',new_site)
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response.data)
 
+	def test_update_site_texts(self):
+		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		sitio_id = self.sitio1.id
+		nombreFoto1="piqueteadero.jpg"
+		nombreFoto2="piqueteadero2.jpg"
+		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
+		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		nuevo_nombre = "Nuevo bar"
+		nueva_latitud = 2.22
+		nueva_longitud = 33.33
+		nueva_descripcion = "nuevo dato"
+		nuevo_telefono = "1234567"
+		nueva_web = "www.abc.com"
+		nuevo_whatsapp = "3124131221"
+		nuevo_correolocal = "abc@jmail.com"
+		nueva_ubicacionlocal = "av 1234"
+		new_data = {
+		    	"nombre": nuevo_nombre, 
+  				"latitud": nueva_latitud, 
+    			"longitud": nueva_longitud, 
+    			"descripcion": nueva_descripcion,
+    			"telefono": nuevo_telefono,
+    			"web": nueva_web,
+    			"whatsapp": nuevo_whatsapp,
+    			"correolocal": nuevo_correolocal,
+    			"ubicacionlocal": nueva_ubicacionlocal,
+    			"municipio_id": self.municipio2.id,
+    			"categorias": [self.categoria.id],
+    			"PRINCIPAL_foto1": fp1,
+    			"FACHADA_foto2": fp2,
+    			"usuario": self.usuario.id
+			}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_data)
+
+		content = encode_multipart('BoUnDaRyStRiNg', new_data)
+		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
+		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
+		sitio = Sitio.objects.get(pk=sitio_id)
+		self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+		self.assertEqual(sitio.nombre, nuevo_nombre)
+		self.assertTrue(sitio.longitud- Decimal(nueva_longitud) <0.1)
+		self.assertTrue(sitio.latitud- Decimal(nueva_latitud) <0.1)
+		self.assertEqual(sitio.descripcion, nueva_descripcion)
+		self.assertEqual(sitio.telefono, nuevo_telefono)
+		self.assertEqual(sitio.web, nueva_web)
+		self.assertEqual(sitio.whatsapp, nuevo_whatsapp)
+		self.assertEqual(sitio.correolocal, nuevo_correolocal)
+		self.assertEqual(sitio.ubicacionlocal, nueva_ubicacionlocal)
+		self.assertEqual(sitio.municipio, self.municipio2)
+	
+
+	def test_update_site_categories_tags(self):
+		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		sitio_id = self.sitio1.id
+		nombreFoto1="piqueteadero.jpg"
+		nombreFoto2="piqueteadero2.jpg"
+		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
+		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		nuevo_nombre = "Nuevo bar"
+		nueva_latitud = 2.22
+		nueva_longitud = 33.33
+		nueva_descripcion = "nueva descripción"
+		nuevo_tag = "pollo"
+		new_data = {
+		    	"nombre": nuevo_nombre, 
+  				"latitud": nueva_latitud, 
+    			"longitud": nueva_longitud, 
+    			"descripcion": nueva_descripcion,
+    			"municipio_id": self.municipio.id,
+    			"categorias": [self.categoria2.id],
+    			"tags": [nuevo_tag],
+    			"PRINCIPAL_foto1": fp1,
+    			"FACHADA_foto2": fp2,
+    			"usuario": self.usuario.id
+			}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_data)
+
+		content = encode_multipart('BoUnDaRyStRiNg', new_data)
+		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
+		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
+		sitio = Sitio.objects.get(pk=sitio_id)
+		self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+		self.assertTrue(self.categoria2 in sitio.categorias.all())
+		self.assertFalse(self.categoria in sitio.categorias.all())
+		tag = Tag.objects.filter(tag=nuevo_tag)[0]
+		self.assertTrue(tag in sitio.tags.all())
+		self.assertFalse(self.tag1 in sitio.tags.all())
+	
 	
 class BusquedaSitioTest(TestCase):
 

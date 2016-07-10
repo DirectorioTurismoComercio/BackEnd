@@ -67,12 +67,9 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SitioSerializer
 
     def update(self, request, *args, **kwargs):
-        print request.data
-        print args
         pk = kwargs['pk']
         sitio = Sitio.objects.get(pk=pk)
-        print (sitio)
-        #super(SitioDetail, self).update(request, *args, **kwargs)
+        super(SitioDetail, self).update(request, *args, **kwargs)
         for key, foto in request.FILES.iteritems():
             print key
         return Response(status=status.HTTP_200_OK)
