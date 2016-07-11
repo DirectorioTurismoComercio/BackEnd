@@ -50,7 +50,9 @@ class SitioSerializer(serializers.ModelSerializer):
 		return super(SitioSerializer,self).to_internal_value(data)
 
 	def add_photos_with_abbreviations(self, fotos):
+			print "CREATING PHOTO SERIALIZER|"
 			for nombre, archivo in fotos:
+				print nombre
 				tipoAbreviatura = 'P'
 
 				if 'PRINCIPAL' in nombre:

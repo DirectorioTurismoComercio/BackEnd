@@ -155,10 +155,7 @@ class CrearActualizarSitioTest(TestCase):
 	def test_update_site_categories_tags(self):
 		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
 		sitio_id = self.sitio1.id
-		nombreFoto1="piqueteadero.jpg"
-		nombreFoto2="piqueteadero2.jpg"
-		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
-		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		
 		nuevo_nombre = "Nuevo bar"
 		nueva_latitud = 2.22
 		nueva_longitud = 33.33
@@ -172,8 +169,6 @@ class CrearActualizarSitioTest(TestCase):
     			"municipio_id": self.municipio.id,
     			"categorias": [self.categoria2.id],
     			"tags": [nuevo_tag],
-    			"PRINCIPAL_foto1": fp1,
-    			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
 			}
 		qdict = QueryDict('', mutable=True)
@@ -189,7 +184,56 @@ class CrearActualizarSitioTest(TestCase):
 		tag = Tag.objects.filter(tag=nuevo_tag)[0]
 		self.assertTrue(tag in sitio.tags.all())
 		self.assertFalse(self.tag1 in sitio.tags.all())
-	
+
+	def test_update_site_photos(self):
+
+		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		sitio_id = self.sitio1.id
+		nombreFoto1="piqueteadero"
+		nombreFoto2="piqueteadero2"
+		nombreFoto3="piqueteadero4"
+		nombreFoto4="piqueteadero5"
+		ext=".jpg"
+		
+		photo1 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto1+ext), sitio=self.sitio1, tipo='P')
+		photo2 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto2+ext), sitio=self.sitio1, tipo='P')
+
+		fp3=open(os.path.join(os.pardir, dir+nombreFoto3+ext),'rb')
+		fp4=open(os.path.join(os.pardir, dir+nombreFoto4+ext),'rb')
+
+
+		nuevo_nombre = "Nuevo bar"
+		nueva_latitud = 2.22
+		nueva_longitud = 33.33
+		nueva_descripcion = "nueva descripción"
+		nuevo_tag = "pollo"
+		new_data = {
+		    	"nombre": nuevo_nombre, 
+  				"latitud": nueva_latitud, 
+    			"longitud": nueva_longitud, 
+    			"descripcion": nueva_descripcion,
+    			"municipio_id": self.municipio.id,
+    			"categorias": [self.categoria2.id],
+    			"tags": [nuevo_tag],
+    			"PRINCIPAL_foto3": fp3,
+    			"FACHADA_foto4": fp4,
+    			"usuario": self.usuario.id
+			}
+
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_data)
+
+		content = encode_multipart('BoUnDaRyStRiNg', new_data)
+		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
+		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
+		sitio = Sitio.objects.get(pk=sitio_id)
+		self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+		self.assertFalse(nombreFoto1 in sitio.fotos.all()[0].URLfoto or nombreFoto1 in sitio.fotos.all()[1].URLfoto)
+		self.assertFalse(nombreFoto2 in sitio.fotos.all()[1].URLfoto or nombreFoto2 in sitio.fotos.all()[0].URLfoto)
+		
+		self.assertTrue(nombreFoto3 in str(sitio.fotos.all()[0].URLfoto) or nombreFoto3 in str(sitio.fotos.all()[1].URLfoto))
+		self.assertTrue(nombreFoto4 in str(sitio.fotos.all()[0].URLfoto) or nombreFoto4 in str(sitio.fotos.all()[1].URLfoto))
+		
 	
 class BusquedaSitioTest(TestCase):
 
