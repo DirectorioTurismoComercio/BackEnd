@@ -5,6 +5,7 @@ from sitios.models import Sitio
 from sitios.models import Foto 
 from sitios.models import Tag 
 from plataforma.models import Municipio
+from plataforma.models import Categoria
 
 class MunicipioSerializer(serializers.ModelSerializer):
   class Meta:
@@ -14,11 +15,18 @@ class FotoSerializer(serializers.ModelSerializer):
 		class Meta:
 			model = Foto
 
+# Serializador del modelo Categoría
+class CategoriaSerializer(serializers.ModelSerializer):
+   class Meta:
+        model = Categoria
+
 class SitioSerializer(serializers.ModelSerializer):  
 	fotos=FotoSerializer(many=True, read_only=True)
 	municipio=MunicipioSerializer(read_only=True)
-	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False)
+	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False) 
+	categorias_completas = CategoriaSerializer(many=True, read_only=True, source="categorias")
 	municipio_id = serializers.IntegerField()
+	
 	def to_internal_value(self, data):
 		if "nombre" in data:
 			data["nombre"]=(data.get("nombre")[0])
