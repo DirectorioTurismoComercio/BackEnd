@@ -227,7 +227,7 @@ class CrearActualizarSitioTest(TestCase):
 		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
 		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
 		sitio = Sitio.objects.get(pk=sitio_id)
-		self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+		self.assertEqual(response.status_code, status.HTTP_200_OK, response)
 		self.assertFalse(nombreFoto1 in sitio.fotos.all()[0].URLfoto or nombreFoto1 in sitio.fotos.all()[1].URLfoto)
 		self.assertFalse(nombreFoto2 in sitio.fotos.all()[1].URLfoto or nombreFoto2 in sitio.fotos.all()[0].URLfoto)
 		

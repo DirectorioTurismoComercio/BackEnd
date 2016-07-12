@@ -1,4 +1,6 @@
 from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import pre_delete
 
 # Create your models here.
 
@@ -7,6 +9,7 @@ from plataforma.models import Categoria
 from plataforma.models import Municipio
 from plataforma.models import Tag
 from plataforma.models import Usuario
+
 
 
 class Sitio(models.Model):
@@ -34,3 +37,7 @@ class Foto(models.Model):
 
 
 
+@receiver(pre_delete, sender=Foto)
+def Foto_delete(sender, instance, **kwargs):
+	print "delete..."
+	instance.URLfoto.delete(False)

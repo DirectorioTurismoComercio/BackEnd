@@ -1906,3 +1906,30 @@ Traceback (most recent call last):
     class_name=serializer.__class__.__name__
 AssertionError: The `.update()` method does not support writable nestedfields by default.
 Write an explicit `.update()` method for serializer `sitios.serializers.SitioSerializer`, or set `read_only=True` on nested serializer fields.
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 75, in update
+    self.get_object().fotos.all().delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 537, in delete
+    collector.delete()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 287, in delete
+    sender=model, instance=obj, using=self.using
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 201, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/camilo/Documents/BackEnd/sitios/models.py", line 43, in Foto_delete
+    instance.file.delete(False)
+AttributeError: 'Foto' object has no attribute 'file'
+The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
+The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
