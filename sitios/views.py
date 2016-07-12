@@ -49,9 +49,8 @@ class SitioListCreate(generics.ListCreateAPIView):
         return resultados
 
     def create(self, request):
-        datos = request.data
-        dictdatos = dict(request.POST.iterlists())
-        serializer = SitioSerializer(data=dictdatos)
+        data = request.data
+        serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()
         if serializer.is_valid():
             serializer.save()
