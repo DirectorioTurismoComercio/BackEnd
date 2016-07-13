@@ -246,7 +246,8 @@ class CRUDSitioTest(TestCase):
 		photo1 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto1+ext), sitio=self.sitio1, tipo='P')
 		photo2 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto2+ext), sitio=self.sitio1, tipo='P')
 		response = self.client.delete('/sitio/detail/'+str(sitio_id))
-
+		
+		self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT, response.data)
 		self.assertTrue(len(Sitio.objects.filter(pk=sitio_id))==0)	
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto1))==0) 
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto2))==0)
