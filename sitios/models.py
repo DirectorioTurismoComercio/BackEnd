@@ -39,5 +39,4 @@ class Foto(models.Model):
 
 @receiver(pre_delete, sender=Foto)
 def Foto_delete(sender, instance, **kwargs):
-	print "delete..."
 	instance.URLfoto.delete(False)

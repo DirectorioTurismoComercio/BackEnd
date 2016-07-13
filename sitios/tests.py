@@ -24,9 +24,10 @@ from sitios.views import SitioDetail
 from sitios.string_processing import *
 from django.test.client import encode_multipart
 from decimal import *
+from turismo import settings
 
 
-class CrearActualizarSitioTest(TestCase):
+class CRUDSitioTest(TestCase):
 	def setUp(self):
 		self.factory = RequestFactory()
 		self.municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
@@ -187,7 +188,7 @@ class CrearActualizarSitioTest(TestCase):
 
 	def test_update_site_photos(self):
 
-		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		dir = settings.MEDIA_ROOT  + "/test_photos/"
 		sitio_id = self.sitio1.id
 		nombreFoto1="piqueteadero"
 		nombreFoto2="piqueteadero2"
@@ -225,7 +226,7 @@ class CrearActualizarSitioTest(TestCase):
 
 		content = encode_multipart('BoUnDaRyStRiNg', new_data)
 		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
-		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
+		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content, follow=True)
 		sitio = Sitio.objects.get(pk=sitio_id)
 		self.assertEqual(response.status_code, status.HTTP_200_OK, response)
 		self.assertFalse(nombreFoto1 in sitio.fotos.all()[0].URLfoto or nombreFoto1 in sitio.fotos.all()[1].URLfoto)
@@ -233,6 +234,24 @@ class CrearActualizarSitioTest(TestCase):
 		
 		self.assertTrue(nombreFoto3 in str(sitio.fotos.all()[0].URLfoto) or nombreFoto3 in str(sitio.fotos.all()[1].URLfoto))
 		self.assertTrue(nombreFoto4 in str(sitio.fotos.all()[0].URLfoto) or nombreFoto4 in str(sitio.fotos.all()[1].URLfoto))
+
+	def test_delete_site(self):
+		dir = settings.MEDIA_ROOT  + "/test_photos/"
+		sitio_id = self.sitio1.id
+		nombreFoto1="piqueteadero"
+		nombreFoto2="piqueteadero2"
+
+		ext=".jpg"
+		
+		photo1 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto1+ext), sitio=self.sitio1, tipo='P')
+		photo2 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto2+ext), sitio=self.sitio1, tipo='P')
+		response = self.client.delete('/sitio/detail/'+str(sitio_id))
+
+		self.assertTrue(len(Sitio.objects.filter(pk=sitio_id))==0)	
+		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto1))==0) 
+		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto2))==0)
+		
+
 		
 	
 class BusquedaSitioTest(TestCase):

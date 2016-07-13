@@ -1933,3 +1933,7 @@ Traceback (most recent call last):
 AttributeError: 'Foto' object has no attribute 'file'
 The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
 The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
+The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
+The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
+The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
+The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
