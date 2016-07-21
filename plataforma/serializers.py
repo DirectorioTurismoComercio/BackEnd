@@ -6,18 +6,17 @@ from plataforma import models
 from plataforma.models import Usuario
 from plataforma.models import Categoria
 from plataforma.models import Tag
-from plataforma.models import Municipio
+from sitios.serializers import SitioSerializer
+
 from django.contrib.auth.models import User
 
 
 
-# Serializador de los Municipios para el registro y para las preguntas. Corresponde al nodelo OpcionesDeRespuesta
-class MunicipioSerializer(serializers.ModelSerializer):
-  class Meta:
-        model = Municipio
+
               
 # Serializador del modelo Usuario      
 class UsuarioSerializer(serializers.ModelSerializer):
+   sitios = SitioSerializer(many=True, read_only=True) 
    class Meta:
         model = Usuario
 

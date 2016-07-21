@@ -4,8 +4,11 @@ from rest_framework import serializers
 from sitios.models import Sitio
 from sitios.models import Foto 
 from sitios.models import Tag 
-from plataforma.serializers import MunicipioSerializer
+from plataforma.models import Municipio
 
+class MunicipioSerializer(serializers.ModelSerializer):
+  class Meta:
+        model = Municipio
 
 class FotoSerializer(serializers.ModelSerializer):  
 		class Meta:
