@@ -14,6 +14,7 @@ from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
 from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated, AllowAny
+import json
 
 import plataforma
 
@@ -57,8 +58,11 @@ class SitioListCreate(generics.ListCreateAPIView):
         if serializer.is_valid():
             serializer.save()
             serializer.add_photos_with_abbreviations(photos)
+            print request.POST
+            print '*'*30
+            print eval(data['categorias'])
             if "categorias" in data: 
-                serializer.add_categories(data['categorias']) 
+                serializer.add_categories(json.loads(request.POST['categorias'])) 
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

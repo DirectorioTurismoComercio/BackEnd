@@ -26,13 +26,15 @@ class SitioCategoriaSerializer(serializers.ModelSerializer):
         model = SitioCategoria
 
 class SitioSerializer(serializers.ModelSerializer):  
-	categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)  
+	categoriasID = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)  
 	fotos=FotoSerializer(many=True, read_only=True)
 	municipio=MunicipioSerializer(read_only=True)
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False) 
 	municipio_id = serializers.IntegerField()
+
 	
 	def to_internal_value(self, data):
+		print data.get('categorias')
 		if data.get("tags") is not None:   # si existen tags
 			self.check_for_new_tags(data.getlist('tags')) #entonces revisa cuales tags son nuevos
 		return super(SitioSerializer,self).to_internal_value(data)
@@ -59,9 +61,11 @@ class SitioSerializer(serializers.ModelSerializer):
                 )	
 
 	def add_categories(self,categories):
+		print categories
 		for category in categories:
-			SitioCategoria.objects.create(sitio_id=self.data["id"],categoria_id=category);
-
+			print 'Z '*30
+			print category
+			SitioCategoria.objects.create(sitio_id=self.data["id"],categoria_id=category["categoria_id"],tipo=category["tipo"]);
 	
 	def check_for_new_tags(self,tags): # Crea en la base aquellos tags que no existan 
 		for tag in tags:
