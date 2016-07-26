@@ -265,6 +265,45 @@ class CRUDSitioTest(TestCase):
 		self.assertTrue(len(Sitio.objects.filter(pk=sitio_id))==0)	
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto1))==0) 
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto2))==0)
+
+	def only_owner_can_update(self):
+		email2 ='correo2'
+		password = '123'
+		user2 = CustomUserSerializer(data={'email': email,'password': password})
+		user2.is_valid()
+		user2 = user.save()
+		user2.set_password(password)
+		user2.save()
+		token2, created = Token.objects.get_or_create(user=user2)
+		client2 =  APIClient()
+		client2.credentials(HTTP_AUTHORIZATION='Token ' + token2.key)
+
+		sitio_id = self.sitio1.id
+		
+		nuevo_nombre = "Nuevo bar"
+		nueva_latitud = 2.22
+		nueva_longitud = 33.33
+		nueva_descripcion = "nueva descripción"
+		nuevo_tag = "pollo"
+		new_data = {
+		    	"nombre": nuevo_nombre, 
+  				"latitud": nueva_latitud, 
+    			"longitud": nueva_longitud, 
+    			"descripcion": nueva_descripcion,
+    			"municipio_id": self.municipio.id,
+    			"categorias": [self.categoria2.id],
+    			"tags": [nuevo_tag],
+    			"usuario": self.usuario.id
+			}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_data)
+
+		content = encode_multipart('BoUnDaRyStRiNg', new_data)
+		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
+		response = client2.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
+		sitio = Sitio.objects.get(pk=sitio_id)
+		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response.status.code)
+
 		
 
 		
