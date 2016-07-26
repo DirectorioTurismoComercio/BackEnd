@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import time
+from authentication_module.serializers import CustomUserSerializer
 from rest_framework import status
 from django.test import TestCase, RequestFactory
 from sitios.models import Sitio
@@ -25,16 +26,26 @@ from sitios.string_processing import *
 from django.test.client import encode_multipart
 from decimal import *
 from turismo import settings
-
+from rest_framework.authtoken.models import Token
+from rest_framework.test import APIClient
 
 class CRUDSitioTest(TestCase):
+	PASSWORD='12345'
+	EMAIL='correo@correo.com'
+	
 	def setUp(self):
 		self.factory = RequestFactory()
+		user = CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
+		user.is_valid()
+		user = user.save()
+		user.set_password(self.PASSWORD)
+		user.save()
+
 		self.municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
 		self.municipio2 = Municipio.objects.create(nombre='Tengo',latitud=0,longitud=0)
 		self.categoria = Categoria.objects.create(nombre="Comida")
 		self.categoria2 = Categoria.objects.create(nombre="Hospedaje")
-		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com')
+		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com', user=user)
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=self.municipio,horariolocal="7-15",usuario=self.usuario)
 		self.sitio1.categorias.add(self.categoria)
 		self.tag1 = Tag.objects.create(tag='baño')
@@ -42,6 +53,9 @@ class CRUDSitioTest(TestCase):
 		tag3 = Tag.objects.create(tag='pollo')
 		self.sitio1.tags.add(self.tag1)
 		self.sitio1.tags.add(tag2)
+		token, created = Token.objects.get_or_create(user=user)
+		self.client =  APIClient()
+		self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
 	
 	def test_create_successfully(self):
 

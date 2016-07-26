@@ -13,6 +13,8 @@ from sitios.serializers import SitioSerializer
 from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
 from django.db.models import Q
+from rest_framework.permissions import IsAuthenticated, AllowAny
+
 import plataforma
 
 
@@ -64,6 +66,7 @@ class SitioListCreate(generics.ListCreateAPIView):
 class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
+    permission_classes = (IsAuthenticated,)
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)

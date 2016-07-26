@@ -21,7 +21,10 @@ from django.db.models import Q
 import json
 import logging 
 
+from rest_framework import permissions
+
 class MunicipiosListCreate(generics.ListCreateAPIView):
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     queryset = Municipio.objects.all()
     serializer_class = MunicipioSerializer  
 
@@ -41,6 +44,11 @@ class UsuarioListCreate(generics.ListCreateAPIView):
         correo=request.data['correo']   
       if password=='' or correo=='':
          return Response({'error':'los campos correo y password requeridos'},
+                              status=status.HTTP_400_BAD_REQUEST)
+
+
+      if len(CustomUser.objects.filter(email=correo).all())>0:
+        return Response({'error':'E101'},
                               status=status.HTTP_400_BAD_REQUEST)
              
         

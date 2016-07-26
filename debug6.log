@@ -1937,3 +1937,166 @@ The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.
 The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
 The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
 The joined path (/home/camilo/Documents/BackEnd/sitios/test_photos/piqueteadero.jpg) is located outside of the base path component (/home/camilo/Documents/BackEnd/Fotos)
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 25, in <module>
+    class MunicipiosListCreate(generics.ListCreateAPIView):
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 26, in MunicipiosListCreate
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+NameError: name 'permissions' is not defined
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 25, in <module>
+    class MunicipiosListCreate(generics.ListCreateAPIView):
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 26, in MunicipiosListCreate
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+NameError: name 'permissions' is not defined
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 25, in <module>
+    class MunicipiosListCreate(generics.ListCreateAPIView):
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 26, in MunicipiosListCreate
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+NameError: name 'permissions' is not defined
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in <module>
+    class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 67, in SitioDetail
+    permission_classes = (IsAuthenticated,)
+NameError: name 'IsAuthenticated' is not defined
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in <module>
+    class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 67, in SitioDetail
+    permission_classes = (IsAuthenticated,)
+NameError: name 'IsAuthenticated' is not defined
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in <module>
+    class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 67, in SitioDetail
+    permission_classes = (IsAuthenticated,)
+NameError: name 'IsAuthenticated' is not defined
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in <module>
+    class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 67, in SitioDetail
+    permission_classes = (IsAuthenticated,)
+NameError: name 'IsAuthenticated' is not defined

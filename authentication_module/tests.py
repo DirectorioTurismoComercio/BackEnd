@@ -24,4 +24,7 @@ class AuthenticationTest(TestCase):
 		data={'email':self.EMAIL,'password': self.WRONG_PASSWORD}
 		response = self.client.post('/rest-auth/login',data,format='json')        
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response)
+
+
+
 		
