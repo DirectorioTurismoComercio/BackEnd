@@ -68,7 +68,7 @@ class CRUDSitioTest(TestCase):
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
     		"municipio_id": self.municipio.id,
-    		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria.id, "tipo":2}],
+    		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria2.id, "tipo":1}],
     		"usuario": self.usuario.id
 		}
 
@@ -79,6 +79,7 @@ class CRUDSitioTest(TestCase):
 		sitio=Sitio.objects.filter(nombre="Café Bar").all()[0]
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 		self.assertTrue(self.categoria in sitio.categorias.all())
+		self.assertTrue(self.categoria2 in sitio.categorias.all())
 
 
 	def test_create_successfully_with_photos(self):
@@ -93,7 +94,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": 74.23, 
     			"descripcion": "Breve descripción",
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria_id":self.categoria.id, "tipo":2}],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
@@ -111,7 +112,7 @@ class CRUDSitioTest(TestCase):
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripción", 
-    		"categorias":[{"categoria_id":self.categoria.id, "tipo":1}]
+    		"categorias":[{"categoria":self.categoria.id, "tipo":1}]
 
 		}
 		qdict = QueryDict('', mutable=True)
@@ -187,7 +188,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria_id":self.categoria2.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"usuario": self.usuario.id
 			}
