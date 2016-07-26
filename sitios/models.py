@@ -23,7 +23,7 @@ class Sitio(models.Model):
 	descripcion = models.TextField(null=True)
 	correolocal = models.TextField(default="")
 	ubicacionlocal = models.TextField(null=True)
-	categorias = models.ManyToManyField(Categoria)
+	categorias = models.ManyToManyField(Categoria, through='SitioCategoria')
 	tags = models.ManyToManyField(Tag)
 	usuario = models.ForeignKey(Usuario, related_name='sitios', null=False)
 	municipio = models.ForeignKey(Municipio, related_name='sitios', null=False) 
@@ -40,3 +40,10 @@ class Foto(models.Model):
 @receiver(pre_delete, sender=Foto)
 def Foto_delete(sender, instance, **kwargs):
 	instance.URLfoto.delete(False)
+
+class SitioCategoria(models.Model):
+	tipo = models.IntegerField(default=1)
+	categoria = models.ForeignKey(Categoria,blank=False)
+	sitio = models.ForeignKey(Sitio,blank=False)
+
+		
