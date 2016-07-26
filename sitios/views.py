@@ -57,6 +57,8 @@ class SitioListCreate(generics.ListCreateAPIView):
         if serializer.is_valid():
             serializer.save()
             serializer.add_photos_with_abbreviations(photos)
+            if "categorias" in data: 
+                serializer.add_categories(data['categorias']) 
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -66,7 +68,7 @@ class SitioListCreate(generics.ListCreateAPIView):
 class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
-    permission_classes = (IsAuthenticated,)
+ #   permission_classes = (IsAuthenticated,)
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
@@ -76,8 +78,11 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
         self.get_object().fotos.all().delete()
+        self.get_object().categorias.all().delete()
         serializer.add_photos_with_abbreviations(photos)
 
+        if "categorias" in request.data: 
+            serializer.add_categories(request.data['categorias']) 
 
         return Response(serializer.data)
 

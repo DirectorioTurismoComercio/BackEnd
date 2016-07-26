@@ -22,6 +22,7 @@ from sitios.distancia import hallar_coordenada_trasladada
 from sitios.distancia import esta_dentro_de_elipse
 from django.http import QueryDict
 from sitios.views import SitioDetail
+from sitios.models import SitioCategoria
 from sitios.string_processing import *
 from django.test.client import encode_multipart
 from decimal import *
@@ -47,7 +48,9 @@ class CRUDSitioTest(TestCase):
 		self.categoria2 = Categoria.objects.create(nombre="Hospedaje")
 		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com', user=user)
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=self.municipio,horariolocal="7-15",usuario=self.usuario)
-		self.sitio1.categorias.add(self.categoria)
+
+		SitioCategoria.objects.create(sitio=self.sitio1,categoria=self.categoria);
+
 		self.tag1 = Tag.objects.create(tag='baño')
 		tag2 = Tag.objects.create(tag='restaurante')
 		tag3 = Tag.objects.create(tag='pollo')
@@ -73,8 +76,9 @@ class CRUDSitioTest(TestCase):
 		qdict.update(new_site)
 		response = self.client.post('/sitio',
                                     qdict)
-
+		sitio=Sitio.objects.filter(nombre="Café Bar").all()[0]
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+		self.assertTrue(self.categoria in sitio.categorias.all())
 
 
 	def test_create_successfully_with_photos(self):
@@ -107,6 +111,7 @@ class CRUDSitioTest(TestCase):
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripción", 
+    		"categorias":[self.categoria.id]
 
 		}
 		qdict = QueryDict('', mutable=True)
@@ -191,6 +196,8 @@ class CRUDSitioTest(TestCase):
 
 		content = encode_multipart('BoUnDaRyStRiNg', new_data)
 		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
+
+
 		response = self.client.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
 		sitio = Sitio.objects.get(pk=sitio_id)
 		self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
@@ -285,8 +292,8 @@ class BusquedaSitioTest(TestCase):
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15",usuario=usuario)
-		self.sitio5.categorias.add(categoria1)
-		self.sitio5.categorias.add(categoria2)
+		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria1);
+		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria2);
 		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio6.tags.add(tag1)
 		self.sitio6.tags.add(tag2)

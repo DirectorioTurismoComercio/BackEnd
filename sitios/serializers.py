@@ -4,6 +4,7 @@ from rest_framework import serializers
 from sitios.models import Sitio
 from sitios.models import Foto 
 from sitios.models import Tag 
+from sitios.models import SitioCategoria 
 from plataforma.models import Municipio
 from plataforma.models import Categoria
 
@@ -20,11 +21,15 @@ class CategoriaSerializer(serializers.ModelSerializer):
    class Meta:
         model = Categoria
 
+class SitioCategoriaSerializer(serializers.ModelSerializer):
+   class Meta:
+        model = SitioCategoria
+
 class SitioSerializer(serializers.ModelSerializer):  
+	categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)  
 	fotos=FotoSerializer(many=True, read_only=True)
 	municipio=MunicipioSerializer(read_only=True)
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False) 
-	categorias_completas = CategoriaSerializer(many=True, read_only=True, source="categorias")
 	municipio_id = serializers.IntegerField()
 	
 	def to_internal_value(self, data):
@@ -53,13 +58,17 @@ class SitioSerializer(serializers.ModelSerializer):
                     tipo=tipoAbreviatura
                 )	
 
+	def add_categories(self,categories):
+		for category in categories:
+			SitioCategoria.objects.create(sitio_id=self.data["id"],categoria_id=category);
+
 	
 	def check_for_new_tags(self,tags): # Crea en la base aquellos tags que no existan 
 		for tag in tags:
 			try:
 				tag_object = Tag.objects.get(tag=tag)
 			except:
-				tag_object = Tag.objects.create(tag=tag)   
+				tag_object = Tag.objects.create(tag=tag)   			
 	class Meta:
 		model = Sitio
 
