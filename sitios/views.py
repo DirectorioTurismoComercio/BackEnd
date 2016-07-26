@@ -10,6 +10,7 @@ from rest_framework.parsers import FormParser
 from rest_framework.response import Response
 from sitios.distancia import *
 from sitios.serializers import SitioSerializer
+from sitios.serializers import SitioCategoriaSerializer
 from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
 from django.db.models import Q
@@ -52,21 +53,23 @@ class SitioListCreate(generics.ListCreateAPIView):
         return resultados
 
     def create(self, request):
+       # print request.POST["categorias"]
         data = request.data
         serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()
+        serializer.is_valid()
+           
         if serializer.is_valid():
             serializer.save()
             serializer.add_photos_with_abbreviations(photos)
-            print request.POST
-            print '*'*30
-            print eval(data['categorias'])
             if "categorias" in data: 
-                serializer.add_categories(json.loads(request.POST['categorias'])) 
+                categories = request.data.getlist('categorias');     
+                serializer.add_categories(categories) 
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(status=status.HTTP_201_CREATED)
+
 
 
 class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -86,7 +89,8 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         serializer.add_photos_with_abbreviations(photos)
 
         if "categorias" in request.data: 
-            serializer.add_categories(request.data['categorias']) 
+            categories = request.data.getlist('categorias');     
+            serializer.add_categories(categories) 
 
         return Response(serializer.data)
 

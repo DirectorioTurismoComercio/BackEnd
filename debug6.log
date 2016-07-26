@@ -2100,3 +2100,556 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/sitios/views.py", line 67, in SitioDetail
     permission_classes = (IsAuthenticated,)
 NameError: name 'IsAuthenticated' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 65, in create
+    serializer.add_categories(json.loads(request.POST['categorias']))
+  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    obj, end = self.scan_once(s, idx)
+ValueError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 73, in perform_create
+    print self.request.categorias
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/request.py", line 501, in __getattribute__
+    six.reraise(info[0], info[1], info[2].tb_next)
+  File "<string>", line 2, in reraise
+AttributeError: 'Request' object has no attribute 'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 73, in perform_create
+    print self.request.nombre
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/request.py", line 501, in __getattribute__
+    six.reraise(info[0], info[1], info[2].tb_next)
+  File "<string>", line 2, in reraise
+AttributeError: 'Request' object has no attribute 'nombre'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 58, in create
+    c = SitioCategoriaSerializer(data=data["categorias"], many=True)
+NameError: global name 'SitioCategoriaSerializer' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 58, in create
+    c = SitioCategoriaSerializer(data=data["categorias"], many=True)
+NameError: global name 'SitioCategoriaSerializer' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 60, in create
+    print "serializer",serializer.data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 208, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 62, in create
+    print "serializer",serializer.data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 62, in create
+    print ("serializer********************",serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 62, in create
+    print ("serializer********************",serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 62, in create
+    print ("serializer********************",serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 63, in create
+    print ("serializer********************",serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in create
+    print ("caT**********************",c.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 216, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 492, in get_initial
+    return self.to_representation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 103, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 70, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'unicode' object has no attribute 'categoria'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 65, in create
+    print c.data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 216, in data
+    self._data = self.get_initial()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 492, in get_initial
+    return self.to_representation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 103, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 70, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'unicode' object has no attribute 'categoria'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 61, in create
+    serializer.is_valid()
+NameError: global name 'serializer' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 58, in create
+    serializer = SitioSerializer(data=data)
+NameError: global name 'data' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in create
+    print serializer.data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in create
+    print serializer.data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 79, in perform_create
+    print self.serializer.validated_data
+AttributeError: 'SitioListCreate' object has no attribute 'serializer'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 214, in data
+    self._data = self.to_representation(self.validated_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/relations.py", line 356, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 68, in get_attribute
+    instance = instance[attr]
+KeyError: u'categorias'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in create
+    print serializer.validated_data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 230, in validated_data
+    raise AssertionError(msg)
+AssertionError: You must call `.is_valid()` before accessing `.validated_data`.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 64, in create
+    print serializer.validated_data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 230, in validated_data
+    raise AssertionError(msg)
+AssertionError: You must call `.is_valid()` before accessing `.validated_data`.
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 60, in create
+    c = SitioCategoriaSerializer(data=eval(data), many=True)
+TypeError: eval() arg 1 must be a string or code object
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 314, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 60, in create
+    c = SitioCategoriaSerializer(data=eval(request.data.getlist('categorias')), many=True)
+TypeError: eval() arg 1 must be a string or code object
