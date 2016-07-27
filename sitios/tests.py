@@ -274,7 +274,7 @@ class CRUDSitioTest(TestCase):
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto1))==0) 
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto2))==0)
 
-	def only_owner_can_update(self):
+	def test_only_owner_can_update(self):
 		email2 ='correo2@jmail.com'
 		password2 = '123'
 		user2 = CustomUserSerializer(data={'email': email2,'password': password2})
@@ -310,7 +310,7 @@ class CRUDSitioTest(TestCase):
 		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
 		response = client2.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
 		sitio = Sitio.objects.get(pk=sitio_id)
-		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response)
+		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response.status_code)
 
 		
 

@@ -2,6 +2,7 @@
 from sitios.models import Foto
 from sitios.models import Sitio
 from sitios.models import SitioCategoria
+from sitios.permissions import IsSiteOwner
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework import generics
@@ -82,7 +83,7 @@ class SitioListCreate(generics.ListCreateAPIView):
 class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
- #   permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,IsSiteOwner)
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
