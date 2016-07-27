@@ -10,10 +10,9 @@ from django.conf import settings
 import local_settings
 
 urlpatterns = patterns('',
-    # Examples:   //
-    url(r'^buscar/$', sitio_views.SitioListCreate.as_view()), 
+
+    url(r'^buscar/$', sitio_views.SitioList.as_view()), 
     url(r'^sugerencias/$', sitio_views.Sugerencias.as_view({'get':'list_sugerencias'})), 
-   #url(r'^sugerencias_tags/$', views.Sugerencias.as_view({'get':'list_sugerencias_tags'})), 
     url(r'^municipios', views.MunicipiosListCreate.as_view()), 
     url(r'^usuarios', views.UsuarioListCreate.as_view()), 
     url(r'^usuario', views.UsuarioDetail.as_view()),
@@ -31,10 +30,7 @@ urlpatterns = patterns('',
         name='login_social_token_user'),
     url(r'^ruta/sitios', sitio_views.SitiosCercanosARuta.as_view({'post':'list_sites'})), 
     url(r'^sitio/detail/(?P<pk>[0-9]+)', sitio_views.SitioDetail.as_view()), 
-    url(r'^sitio', sitio_views.SitioListCreate.as_view()), 
-
-
-
+    url(r'^sitio', sitio_views.SitioCreate.as_view()), 
    
 )
 urlpatterns = format_suffix_patterns(urlpatterns)

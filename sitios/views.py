@@ -22,12 +22,12 @@ import json
 import plataforma
 
 
-class SitioListCreate(generics.ListCreateAPIView):
+class SitioList(generics.ListAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
 
     def get_queryset(self):
-        queryset = super(SitioListCreate, self).get_queryset()
+        queryset = super(SitioList, self).get_queryset()
         word = self.request.QUERY_PARAMS.get('search', None)
         id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
         resultados = {}
@@ -53,6 +53,12 @@ class SitioListCreate(generics.ListCreateAPIView):
                 
 
         return resultados
+
+class SitioCreate(generics.CreateAPIView):
+
+    queryset = Sitio.objects.all()
+    serializer_class = SitioSerializer
+    permission_classes = (IsAuthenticated,)
 
     def create(self, request):     
         data = request.data
