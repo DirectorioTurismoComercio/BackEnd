@@ -18,6 +18,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('nombre', models.CharField(max_length=200)),
                 ('nivel', models.IntegerField(default=0)),
+                ('URL_icono_normal', models.FileField(null=True, upload_to=b'normal_icons')),
+                ('URL_icono_seleccionado', models.FileField(null=True, upload_to=b'selected_iconos')),
                 ('categoria_padre', models.ForeignKey(to='plataforma.Categoria', null=True)),
             ],
         ),
