@@ -17,8 +17,7 @@ from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
 from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated, AllowAny
-import json
-
+from inflector import *
 import plataforma
 
 
@@ -32,6 +31,8 @@ class SitioList(generics.ListAPIView):
         id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
         resultados = {}
         if word is not None:
+            inflector = Inflector(Spanish)
+            word = inflector.singularize(word)
             word = remove_accents(word.encode('utf-8'))
             word = create_accents_regular_expression(word)
             if id_municipio is not None:

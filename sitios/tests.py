@@ -378,12 +378,12 @@ class BusquedaSitioTest(TestCase):
 		self.assertFalse(self.sitio7.nombre in resultados)
 		self.assertFalse(self.sitio8.nombre in resultados)
 
-	# def test_busqueda_con_acentos(self):	
+	def test_busqueda_con_acentos(self):	
 
-	# 	resultados = self.client.get('/buscar/?search=café');
-	# 	resultados = {resultado['nombre'] for resultado in resultados.data}
-	# 	self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
-	# 	self.assertTrue(self.sitio5.nombre in resultados)
+		resultados = self.client.get('/buscar/?search=café');
+		resultados = {resultado['nombre'] for resultado in resultados.data}
+		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
+		self.assertTrue(self.sitio5.nombre in resultados)
 	
 	def test_busqueda_con_ene(self): 
 		resultados = self.client.get('/buscar/?search=baño');
@@ -395,6 +395,22 @@ class BusquedaSitioTest(TestCase):
 		resultados = self.client.get('/buscar/?search=cafe bar');
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 		self.assertTrue(self.sitio5.nombre in resultados)
+
+	def test_busqueda_palabra_en_plural(self):
+		resultados = self.client.get('/buscar/?search=bares');
+		resultados = [resultado['nombre'] for resultado in resultados.data]
+		
+		
+		self.assertTrue(self.sitio5.nombre in resultados)
+		self.assertTrue(self.sitio5.nombre in resultados)
+		self.assertTrue(self.sitio6.nombre in resultados)
+		self.assertTrue(self.sitio6.nombre in resultados)
+		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
+		self.assertTrue((resultados).count(self.sitio6.nombre)==1,(resultados).count(self.sitio6.nombre))
+
+		self.assertFalse(self.sitio7.nombre in resultados)
+		self.assertFalse(self.sitio8.nombre in resultados)
+
 			
 	def test_busqueda_por_descripcion(self):
 		resultados = self.client.get('/buscar/?search=baño');
@@ -418,6 +434,7 @@ class BusquedaSitioTest(TestCase):
 		palabras_esperadas = [u'Panaderia',u'Pan']
 		resultados = self.client.get('/sugerencias/?token=pa')
 		self.assertItemsEqual(palabras_esperadas,resultados.data)
+
 
 class StringProcessingTest(TestCase):
 	def test_remove_accents(self):
