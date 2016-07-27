@@ -362,7 +362,7 @@ class BusquedaSitioTest(TestCase):
 		self.sitio8=Sitio.objects.create(nombre='Santa Barbara',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio8.tags.add(tag2)
 		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
-
+		self.sitio10=Sitio.objects.create(nombre='Los mejores panes',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		
 	def test_busqueda(self):
 		resultados = self.client.get('/buscar/?search=bar');
@@ -411,6 +411,15 @@ class BusquedaSitioTest(TestCase):
 		self.assertFalse(self.sitio7.nombre in resultados)
 		self.assertFalse(self.sitio8.nombre in resultados)
 
+	def test_busqueda_titulo_en_plural(self):
+		resultados = self.client.get('/buscar/?search=panes');
+		resultados = [resultado['nombre'] for resultado in resultados.data]
+		self.assertTrue(self.sitio1.nombre in resultados)
+		self.assertTrue(self.sitio2.nombre in resultados)
+		self.assertFalse(self.sitio8.nombre in resultados)
+		self.assertTrue(self.sitio10.nombre in resultados)
+
+
 			
 	def test_busqueda_por_descripcion(self):
 		resultados = self.client.get('/buscar/?search=baño');
@@ -431,7 +440,7 @@ class BusquedaSitioTest(TestCase):
 		self.assertTrue(self.sitio5.nombre in resultados)
 
 	def test_sugerencias(self):
-		palabras_esperadas = [u'Panaderia',u'Pan']
+		palabras_esperadas = [u'Panaderia',u'Pan',u'panes']
 		resultados = self.client.get('/sugerencias/?token=pa')
 		self.assertItemsEqual(palabras_esperadas,resultados.data)
 

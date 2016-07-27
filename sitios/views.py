@@ -31,25 +31,30 @@ class SitioList(generics.ListAPIView):
         id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
         resultados = {}
         if word is not None:
+
             inflector = Inflector(Spanish)
-            word = inflector.singularize(word)
+            singular_word = inflector.singularize(word)
+            singular_word = remove_accents(singular_word.encode('utf-8'))
+            singular_word = create_accents_regular_expression(singular_word)
             word = remove_accents(word.encode('utf-8'))
             word = create_accents_regular_expression(word)
+            regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]|[[:<:]]'+word+'[[:>:]]'
+            
             if id_municipio is not None:
 
                 resultados = queryset.distinct().filter(
-                    Q(nombre__iregex=r'[[:<:]]'+word+'[[:>:]]') |
-                    Q(descripcion__iregex=r'[[:<:]]' + word + '[[:>:]]') |
-                    Q(tags__tag__iregex=r'[[:<:]]' + word + '[[:>:]]') |
-                    Q(categorias__nombre__iregex=r'[[:<:]]' + word + '[[:>:]]'),
+                    Q(nombre__iregex=regular_expression) |
+                    Q(descripcion__iregex=regular_expression) |
+                    Q(tags__tag__iregex=regular_expression) |
+                    Q(categorias__nombre__iregex=regular_expression),
                     Q(municipio_id=id_municipio))
 
             else:
                 resultados = queryset.distinct().filter(
-                    Q(nombre__iregex=r'[[:<:]]'+ word +'[[:>:]]')  |
-                    Q(descripcion__iregex=r'[[:<:]]' + word + '[[:>:]]') |
-                    Q(tags__tag__iregex=r'[[:<:]]' + word + '[[:>:]]') |
-                    Q(categorias__nombre__iregex=r'[[:<:]]' + word + '[[:>:]]')
+                    Q(nombre__iregex=regular_expression)  |
+                    Q(descripcion__iregex=regular_expression) |
+                    Q(tags__tag__iregex=regular_expression) |
+                    Q(categorias__nombre__iregex=regular_expression)
                     )
                 
 
