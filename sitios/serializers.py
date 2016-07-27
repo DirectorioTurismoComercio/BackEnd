@@ -62,7 +62,15 @@ class SitioSerializer(serializers.ModelSerializer):
 	def add_categories(self,categories):
 		for category_string in categories:
 			category = eval(category_string)
-			SitioCategoria.objects.create(sitio_id=self.data["id"],categoria_id=category["categoria_id"],tipo=category["tipo"]);
+			if isinstance(category, dict):
+				category["sitio"]=self.data["id"]
+				serializer = SitioCategoriaSerializer(data=category)
+				if serializer.is_valid(raise_exception=True):
+					serializer.save()
+			else:
+				raise serializers.ValidationError("El campo categorias debería ser un arreglo de objetos cada uno con los campos: categoria y tipo")
+
+			
 	
 	def check_for_new_tags(self,tags): # Crea en la base aquellos tags que no existan 
 		for tag in tags:

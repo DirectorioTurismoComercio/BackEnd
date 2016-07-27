@@ -68,7 +68,7 @@ class CRUDSitioTest(TestCase):
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
     		"municipio_id": self.municipio.id,
-    		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria2.id, "tipo":1}],
+    		"categorias": [{"categoria":self.categoria.id, "tipo":1}, {"categoria":self.categoria2.id, "tipo":1}],
     		"usuario": self.usuario.id
 		}
 
@@ -94,7 +94,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": 74.23, 
     			"descripcion": "Breve descripción",
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria_id":self.categoria.id, "tipo":2}],
+    			"categorias": [{"categoria":self.categoria.id, "tipo":2}],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
@@ -148,7 +148,7 @@ class CRUDSitioTest(TestCase):
     			"correolocal": nuevo_correolocal,
     			"ubicacionlocal": nueva_ubicacionlocal,
     			"municipio_id": self.municipio2.id,
-    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria":self.categoria.id, "tipo":1}],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
@@ -188,7 +188,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria_id":self.categoria2.id, "tipo":1}],
+    			"categorias": [{"categoria":self.categoria2.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"usuario": self.usuario.id
 			}
@@ -236,7 +236,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria":self.categoria.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"PRINCIPAL_foto3": fp3,
     			"FACHADA_foto4": fp4,
@@ -275,12 +275,12 @@ class CRUDSitioTest(TestCase):
 		self.assertTrue(len(Foto.objects.filter(URLfoto__contains=nombreFoto2))==0)
 
 	def only_owner_can_update(self):
-		email2 ='correo2'
-		password = '123'
-		user2 = CustomUserSerializer(data={'email': email,'password': password})
+		email2 ='correo2@jmail.com'
+		password2 = '123'
+		user2 = CustomUserSerializer(data={'email': email2,'password': password2})
 		user2.is_valid()
-		user2 = user.save()
-		user2.set_password(password)
+		user2 = user2.save()
+		user2.set_password(password2)
 		user2.save()
 		token2, created = Token.objects.get_or_create(user=user2)
 		client2 =  APIClient()
@@ -299,7 +299,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [self.categoria2.id],
+    			"categorias": [{"categoria":self.categoria.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"usuario": self.usuario.id
 			}
@@ -310,7 +310,7 @@ class CRUDSitioTest(TestCase):
 		content_type = 'multipart/form-data; boundary=BoUnDaRyStRiNg'
 		response = client2.put('/sitio/detail/'+str(sitio_id) ,content_type=content_type, data=content)
 		sitio = Sitio.objects.get(pk=sitio_id)
-		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response.status.code)
+		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response)
 
 		
 

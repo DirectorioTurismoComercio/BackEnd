@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from sitios.models import Foto
 from sitios.models import Sitio
+from sitios.models import SitioCategoria
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework import generics
@@ -52,8 +53,7 @@ class SitioListCreate(generics.ListCreateAPIView):
 
         return resultados
 
-    def create(self, request):
-       # print request.POST["categorias"]
+    def create(self, request):     
         data = request.data
         serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()
@@ -62,9 +62,16 @@ class SitioListCreate(generics.ListCreateAPIView):
         if serializer.is_valid():
             serializer.save()
             serializer.add_photos_with_abbreviations(photos)
-            if "categorias" in data: 
-                categories = request.data.getlist('categorias');     
-                serializer.add_categories(categories) 
+            if "categorias" in data:
+                categories = request.data.getlist('categorias'); 
+                if isinstance(categories,list): 
+                        
+                    serializer.add_categories(categories) 
+                else:
+                    return Response(data={"categorias":"Categorías debe ser un arreglo"}, status=status.HTTP_400_BAD_REQUEST)
+
+            else:
+                return Response(data={"categorias":"Este campo es obligatorio"}, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -85,12 +92,18 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
         self.get_object().fotos.all().delete()
-        self.get_object().categorias.all().delete()
         serializer.add_photos_with_abbreviations(photos)
 
-        if "categorias" in request.data: 
-            categories = request.data.getlist('categorias');     
-            serializer.add_categories(categories) 
+        if "categorias" in request.data:
+            categories = request.data.getlist('categorias'); 
+            if isinstance(categories,list): 
+                    SitioCategoria.objects.filter(sitio=self.get_object().id).all().delete()
+                    serializer.add_categories(categories) 
+            else:
+                    return Response(data={"categorias":"Categorías debe ser un arreglo"}, status=status.HTTP_400_BAD_REQUEST)
+
+        else:
+                return Response(data={"categorias":"Este campo es obligatorio"}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(serializer.data)
 
