@@ -22,11 +22,13 @@ class CategoriaSerializer(serializers.ModelSerializer):
         model = Categoria
 
 class SitioCategoriaSerializer(serializers.ModelSerializer):
+   categoria = CategoriaSerializer(read_only=True)  
+   categoria_id = serializers.IntegerField()
    class Meta:
         model = SitioCategoria
 
 class SitioSerializer(serializers.ModelSerializer):  
-#	categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)  
+	categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)
 	fotos=FotoSerializer(many=True, read_only=True)
 	municipio=MunicipioSerializer(read_only=True)
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False) 

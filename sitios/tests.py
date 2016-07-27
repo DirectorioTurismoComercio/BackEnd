@@ -68,7 +68,7 @@ class CRUDSitioTest(TestCase):
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
     		"municipio_id": self.municipio.id,
-    		"categorias": [{"categoria":self.categoria.id, "tipo":1}, {"categoria":self.categoria2.id, "tipo":1}],
+    		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria2.id, "tipo":1}],
     		"usuario": self.usuario.id
 		}
 
@@ -89,7 +89,7 @@ class CRUDSitioTest(TestCase):
     		"longitud": 74.23, 
     		"descripcion": "Breve descripcion", 
     		"municipio_id": self.municipio.id,
-    		"categorias": [{"categoria":self.categoria.id, "tipo":1}, {"categoria":self.categoria2.id, "tipo":1}],
+    		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria2.id, "tipo":1}],
     		"usuario": self.usuario.id
 		}
 
@@ -113,7 +113,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": 74.23, 
     			"descripcion": "Breve descripción",
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria":self.categoria.id, "tipo":2}],
+    			"categorias": [{"categoria_id":self.categoria.id, "tipo":2}],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
@@ -131,7 +131,7 @@ class CRUDSitioTest(TestCase):
   			"latitud": 4.13, 
     		"longitud": 74.23, 
     		"descripcion": "Breve descripción", 
-    		"categorias":[{"categoria":self.categoria.id, "tipo":1}]
+    		"categorias":[{"categoria_id":self.categoria.id, "tipo":1}]
 
 		}
 		qdict = QueryDict('', mutable=True)
@@ -167,7 +167,7 @@ class CRUDSitioTest(TestCase):
     			"correolocal": nuevo_correolocal,
     			"ubicacionlocal": nueva_ubicacionlocal,
     			"municipio_id": self.municipio2.id,
-    			"categorias": [{"categoria":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"usuario": self.usuario.id
@@ -207,7 +207,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria":self.categoria2.id, "tipo":1}],
+    			"categorias": [{"categoria_id":self.categoria2.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"usuario": self.usuario.id
 			}
@@ -255,7 +255,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"PRINCIPAL_foto3": fp3,
     			"FACHADA_foto4": fp4,
@@ -318,7 +318,7 @@ class CRUDSitioTest(TestCase):
     			"longitud": nueva_longitud, 
     			"descripcion": nueva_descripcion,
     			"municipio_id": self.municipio.id,
-    			"categorias": [{"categoria":self.categoria.id, "tipo":1}],
+    			"categorias": [{"categoria_id":self.categoria.id, "tipo":1}],
     			"tags": [nuevo_tag],
     			"usuario": self.usuario.id
 			}
