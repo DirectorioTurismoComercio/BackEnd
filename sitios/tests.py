@@ -81,6 +81,25 @@ class CRUDSitioTest(TestCase):
 		self.assertTrue(self.categoria in sitio.categorias.all())
 		self.assertTrue(self.categoria2 in sitio.categorias.all())
 
+	def test_not_authenticated_user_cant_create_site(self):
+		client =  APIClient()
+		new_site = {
+		    "nombre": "Café Bar", 
+  			"latitud": 4.13, 
+    		"longitud": 74.23, 
+    		"descripcion": "Breve descripcion", 
+    		"municipio_id": self.municipio.id,
+    		"categorias": [{"categoria":self.categoria.id, "tipo":1}, {"categoria":self.categoria2.id, "tipo":1}],
+    		"usuario": self.usuario.id
+		}
+
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_site)
+		response = client.post('/sitio',
+                                    qdict)
+		
+		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response.status_code)
+		
 
 	def test_create_successfully_with_photos(self):
 		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
