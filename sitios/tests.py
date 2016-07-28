@@ -396,29 +396,6 @@ class BusquedaSitioTest(TestCase):
 		resultados = {resultado['nombre'] for resultado in resultados.data}
 		self.assertTrue(self.sitio5.nombre in resultados)
 
-	def test_busqueda_palabra_en_plural(self):
-		resultados = self.client.get('/buscar/?search=bares');
-		resultados = [resultado['nombre'] for resultado in resultados.data]
-		
-		
-		self.assertTrue(self.sitio5.nombre in resultados)
-		self.assertTrue(self.sitio5.nombre in resultados)
-		self.assertTrue(self.sitio6.nombre in resultados)
-		self.assertTrue(self.sitio6.nombre in resultados)
-		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
-		self.assertTrue((resultados).count(self.sitio6.nombre)==1,(resultados).count(self.sitio6.nombre))
-
-		self.assertFalse(self.sitio7.nombre in resultados)
-		self.assertFalse(self.sitio8.nombre in resultados)
-
-	def test_busqueda_titulo_en_plural(self):
-		resultados = self.client.get('/buscar/?search=panes');
-		resultados = [resultado['nombre'] for resultado in resultados.data]
-		self.assertTrue(self.sitio1.nombre in resultados)
-		self.assertTrue(self.sitio2.nombre in resultados)
-		self.assertFalse(self.sitio8.nombre in resultados)
-		self.assertTrue(self.sitio10.nombre in resultados)
-
 
 			
 	def test_busqueda_por_descripcion(self):

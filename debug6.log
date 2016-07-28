@@ -3810,3 +3810,270 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 214, in __str__
     return sql % params
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 10: ordinal not in range(128)
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 36, in get_queryset
+    singular_word = inflector.singularize(word)
+  File "/usr/local/lib/python2.7/dist-packages/inflector/__init__.py", line 28, in singularize
+    return self._language.singularize(word)
+  File "/usr/local/lib/python2.7/dist-packages/inflector/languages/spanish.py", line 136, in singularize
+    replacement = replacement.replace('~' + str(k), self.string_replace(groups[k - 1], 'AEIOUaeiou', '����������'))
+  File "/usr/local/lib/python2.7/dist-packages/inflector/languages/base.py", line 113, in string_replace
+    word = re.sub(find[k], replace[k], word)
+  File "/usr/lib/python2.7/re.py", line 151, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xf3 in position 0: ordinal not in range(128)
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 36, in get_queryset
+    singular_word = inflector.singularize(word)
+  File "/usr/local/lib/python2.7/dist-packages/inflector/__init__.py", line 28, in singularize
+    return self._language.singularize(word)
+  File "/usr/local/lib/python2.7/dist-packages/inflector/languages/spanish.py", line 136, in singularize
+    replacement = replacement.replace('~' + str(k), self.string_replace(groups[k - 1], 'AEIOUaeiou', '����������'))
+  File "/usr/local/lib/python2.7/dist-packages/inflector/languages/base.py", line 113, in string_replace
+    word = re.sub(find[k], replace[k], word)
+  File "/usr/lib/python2.7/re.py", line 151, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xf3 in position 0: ordinal not in range(128)
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    singular_word = remove_accents(singular_word.encode('utf-8'))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xf3 in position 3: ordinal not in range(128)
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    singular_word = remove_accents(singular_word)
+  File "/home/camilo/Documents/BackEnd/sitios/string_processing.py", line 16, in remove_accents
+    word = word.decode('utf-8')
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xf3 in position 3: unexpected end of data
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 40, in list
+    instance = self.filter_queryset(self.get_queryset())
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
+    regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
+NameError: global name 'singular_word' is not defined

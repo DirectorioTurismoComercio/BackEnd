@@ -32,13 +32,9 @@ class SitioList(generics.ListAPIView):
         resultados = {}
         if word is not None:
 
-            inflector = Inflector(Spanish)
-            singular_word = inflector.singularize(word)
-            singular_word = remove_accents(singular_word.encode('utf-8'))
-            singular_word = create_accents_regular_expression(singular_word)
             word = remove_accents(word.encode('utf-8'))
             word = create_accents_regular_expression(word)
-            regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]|[[:<:]]'+word+'[[:>:]]'
+            regular_expression = r'[[:<:]]'+word+'[[:>:]]'
             
             if id_municipio is not None:
 
