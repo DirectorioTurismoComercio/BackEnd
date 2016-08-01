@@ -9,7 +9,6 @@ from sitios.models import Foto
 from plataforma.models import Municipio
 from plataforma.models import Categoria
 from plataforma.models import Tag
-from plataforma.models import Usuario
 from search_suggestions import generate_string_suggestions
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
@@ -36,17 +35,17 @@ class CRUDSitioTest(TestCase):
 	
 	def setUp(self):
 		self.factory = RequestFactory()
-		user = CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
-		user.is_valid()
-		user = user.save()
-		user.set_password(self.PASSWORD)
-		user.save()
+		self.usuario =CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
+		self.usuario.is_valid()
+		self.usuario = self.usuario.save()
+		self.usuario.set_password(self.PASSWORD)
+		self.usuario.save()
 
 		self.municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
 		self.municipio2 = Municipio.objects.create(nombre='Tengo',latitud=0,longitud=0)
 		self.categoria = Categoria.objects.create(nombre="Comida")
 		self.categoria2 = Categoria.objects.create(nombre="Hospedaje")
-		self.usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com', user=user)
+		
 		self.sitio1=Sitio.objects.create(nombre='Panaderia pan blandito',latitud=0,longitud=0,municipio=self.municipio,horariolocal="7-15",usuario=self.usuario)
 
 		SitioCategoria.objects.create(sitio=self.sitio1,categoria=self.categoria);
@@ -56,7 +55,7 @@ class CRUDSitioTest(TestCase):
 		tag3 = Tag.objects.create(tag='pollo')
 		self.sitio1.tags.add(self.tag1)
 		self.sitio1.tags.add(tag2)
-		token, created = Token.objects.get_or_create(user=user)
+		token, created = Token.objects.get_or_create(user=self.usuario)
 		self.client =  APIClient()
 		self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
 	
@@ -336,10 +335,17 @@ class CRUDSitioTest(TestCase):
 		
 	
 class BusquedaSitioTest(TestCase):
+	PASSWORD='12345'
+	EMAIL='correo@correo.com'
+	
 
 	def setUp(self):
 		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
-		usuario = Usuario.objects.create(nombres='Juan',apellidos='Pérez', correo='perez.juan@gmail.com')
+		usuario = CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
+		usuario.is_valid()
+		usuario = usuario.save()
+		usuario.set_password(self.PASSWORD)
+		usuario.save()
 
 		categoria1 = Categoria.objects.create(nombre='sanduches')
 		categoria2 = Categoria.objects.create(nombre='cuba')

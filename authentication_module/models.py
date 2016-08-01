@@ -11,8 +11,8 @@ from django.utils.translation import gettext as _
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
 	username = models.CharField(max_length=30, blank=True)
-	first_name = models.CharField(max_length=30, blank=True)
-	last_name = models.CharField(max_length=30, blank=True)
+	nombres = models.CharField(max_length=30, blank=True)
+	apellidos = models.CharField(max_length=30, blank=True)
 	email = models.EmailField(unique=True)
 	is_staff = models.BooleanField(_('staff status'), default=False,
         help_text=_('Designates whether the user can log into this admin '

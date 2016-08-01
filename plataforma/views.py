@@ -29,63 +29,14 @@ class MunicipiosListCreate(generics.ListCreateAPIView):
     serializer_class = MunicipioSerializer  
 
     
-class UsuarioListCreate(generics.ListCreateAPIView):
-    queryset = Usuario.objects.all()
-    serializer_class = UsuarioSerializer
-  
-    def create(self, request):
-      if 'password' not in request.data:
-        password=''
-      else: 
-        password=request.data['password']    
-      if 'correo' not in request.data:
-        correo=''
-      else:
-        correo=request.data['correo']   
-      if password=='' or correo=='':
-         return Response({'error':'los campos correo y password requeridos'},
-                              status=status.HTTP_400_BAD_REQUEST)
-
-
-      if len(CustomUser.objects.filter(email=correo).all())>0:
-        return Response({'error':'E101'},
-                              status=status.HTTP_400_BAD_REQUEST)
-             
-        
-      user = CustomUserSerializer(data={'email':correo,'password': password})
-      usuario = UsuarioSerializer(data=request.data)
-      if user.is_valid():
-        if usuario.is_valid(): 
-         correo =correo
-         nombre = request.data['nombres']+' '+request.data['apellidos']
-         user=user.save()
-         user.set_password(password);
-         user.save()
-         token, created = Token.objects.get_or_create(user=user)
-         usuario=usuario.save()
-         usuario.user = user
-         usuario.save()         
-         enviar_correo(correo, {"usuario":nombre.upper()})
-        else:
-         return Response(usuario.errors,
-                              status=status.HTTP_400_BAD_REQUEST)  
-      else:
-        return Response(user.errors,
-                              status=status.HTTP_400_BAD_REQUEST)
-
-      return Response({'key': token.key}, status=status.HTTP_201_CREATED)
-
-    
     
 class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
 
-    queryset = Usuario.objects.all()
-    serializer_class = UsuarioSerializer  
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer  
     permission_classes = (IsAuthenticated,)
 
-    def get_object(self):
-        return Usuario.objects.get(user_id=self.request.user.id)
-   
+
 
 class CategoriaListCreate(generics.ListCreateAPIView):
     queryset = Categoria.objects.all()

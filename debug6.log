@@ -4077,3 +4077,492 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/sitios/views.py", line 37, in get_queryset
     regular_expression = r'[[:<:]]'+singular_word+'[[:>:]]'
 NameError: global name 'singular_word' is not defined
+Internal Server Error: /usuario/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/14
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/39
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/18
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 87, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/18
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 88, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /usuario/2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 354, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 88, in get_object
+    return Usuario.objects.get(user_id=self.request.user.id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: Usuario matching query does not exist.
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 5, in <module>
+    from plataforma.serializers import *
+  File "/home/camilo/Documents/BackEnd/plataforma/serializers.py", line 6, in <module>
+    from plataforma.models import Usuario
+ImportError: cannot import name Usuario
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 5, in <module>
+    from plataforma.serializers import *
+  File "/home/camilo/Documents/BackEnd/plataforma/serializers.py", line 6, in <module>
+    from plataforma.models import Usuario
+ImportError: cannot import name Usuario
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 5, in <module>
+    from plataforma.serializers import *
+  File "/home/camilo/Documents/BackEnd/plataforma/serializers.py", line 6, in <module>
+    from plataforma.models import Usuario
+ImportError: cannot import name Usuario
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 80, in <module>
+    class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 82, in UsuarioDetail
+    queryset = Usuario.objects.all()
+NameError: name 'Usuario' is not defined
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 80, in <module>
+    class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 83, in UsuarioDetail
+    serializer_class = UsuarioSerializer
+NameError: name 'UsuarioSerializer' is not defined
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 17, in <module>
+    url(r'^usuarios', views.UsuarioListCreate.as_view()),
+AttributeError: 'module' object has no attribute 'UsuarioListCreate'
+Internal Server Error: /rest-auth/registration
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 17, in <module>
+    url(r'^usuarios', views.UsuarioListCreate.as_view()),
+AttributeError: 'module' object has no attribute 'UsuarioListCreate'
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 363, in delete
+    return self.destroy(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 84, in destroy
+    instance = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 245, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 291, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "/home/camilo/Documents/BackEnd/sitios/permissions.py", line 6, in has_object_permission
+    return site.usuario.user == request.user
+AttributeError: 'CustomUser' object has no attribute 'user'
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 98, in update
+    instance = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 245, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 291, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "/home/camilo/Documents/BackEnd/sitios/permissions.py", line 6, in has_object_permission
+    return site.usuario.user == request.user
+AttributeError: 'CustomUser' object has no attribute 'user'
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 98, in update
+    instance = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 245, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 291, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "/home/camilo/Documents/BackEnd/sitios/permissions.py", line 6, in has_object_permission
+    return site.usuario.user == request.user
+AttributeError: 'CustomUser' object has no attribute 'user'
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 98, in update
+    instance = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 245, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 291, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "/home/camilo/Documents/BackEnd/sitios/permissions.py", line 6, in has_object_permission
+    return site.usuario.user == request.user
+AttributeError: 'CustomUser' object has no attribute 'user'
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 98, in update
+    instance = self.get_object()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 245, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 291, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "/home/camilo/Documents/BackEnd/sitios/permissions.py", line 6, in has_object_permission
+    return site.usuario.user == request.user
+AttributeError: 'CustomUser' object has no attribute 'user'

@@ -1,7 +1,10 @@
 from rest_framework import serializers
 from authentication_module.models import *
+from sitios.serializers import SitioSerializer
+
 
 class CustomUserSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = CustomUser
-    fields = ('email', 'password')
+	sitios = SitioSerializer(many=True, read_only=True) 
+ 	class Meta:
+   		model = CustomUser
+   		fields = ('nombres','apellidos','email', 'password','sitios')

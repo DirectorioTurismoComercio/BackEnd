@@ -9,16 +9,6 @@ from authentication_module.models import *
 class Tag(models.Model):
     tag = models.CharField(max_length=255, null=False)
 
-## Modelo que contiene la información del usuario.        
-class Usuario(models.Model):
-  nombres = models.CharField(max_length=200)
-  apellidos = models.CharField(max_length=200)
-  correo = models.CharField(max_length=200, blank=True, null=True, default=None,unique=True)
-  telefono = models.CharField(max_length=200, blank=True, null=True, default=None)
-  user = models.ForeignKey(CustomUser,null=True)
-
-## Modelo que representa la categoría a la cual puede pertenecer un problema.
-
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=200, blank=False, null=False)

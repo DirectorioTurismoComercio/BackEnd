@@ -3,22 +3,19 @@
 from django.forms import widgets
 from rest_framework import serializers
 from plataforma import models
-from plataforma.models import Usuario
 from plataforma.models import Categoria
 from plataforma.models import Tag
-from sitios.serializers import SitioSerializer
-
 from django.contrib.auth.models import User
 
 
 
 
               
-# Serializador del modelo Usuario      
-class UsuarioSerializer(serializers.ModelSerializer):
-   sitios = SitioSerializer(many=True, read_only=True) 
-   class Meta:
-        model = Usuario
+# # Serializador del modelo Usuario      
+# class UsuarioSerializer(serializers.ModelSerializer):
+#    sitios = SitioSerializer(many=True, read_only=True) 
+#    class Meta:
+#         model = Usuario
 
 # Serializador del modelo Categoría
 class CategoriaSerializer(serializers.ModelSerializer):
