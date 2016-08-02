@@ -1,28 +1,24 @@
-from django.utils.translation import ugettext_lazy as _
-from django.conf import settings
-
+from django.http import HttpRequest
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-from rest_framework.generics import CreateAPIView
 from rest_framework import status
-
-from allauth.account.adapter import get_adapter
-from allauth.account.views import ConfirmEmailView
+from rest_framework.authtoken.models import Token
+from rest_framework.generics import CreateAPIView
+from allauth.account.views import SignupView, ConfirmEmailView
 from allauth.account.utils import complete_signup
-from allauth.account import app_settings as allauth_settings
+from allauth.account import app_settings
 
+from rest_auth.app_settings import TokenSerializer
+from rest_auth.registration.serializers import SocialLoginSerializer
+from rest_auth.registration.serializers import RegisterSerializer
+from rest_auth.views import LoginView
+from django.contrib.auth.models import User
+from rest_auth.models import TokenModel
+from django.conf import settings
 from rest_auth.app_settings import (TokenSerializer,
                                     JWTSerializer,
                                     create_token)
-from rest_auth.registration.serializers import (SocialLoginSerializer,
-                                                VerifyEmailSerializer)
-from rest_auth.views import LoginView
-from rest_auth.models import TokenModel
-from .app_settings import RegisterSerializer
-
-from rest_auth.utils import jwt_encode
-
 
 class RegisterView(CreateAPIView):
     serializer_class = RegisterSerializer
@@ -58,10 +54,12 @@ class RegisterView(CreateAPIView):
             self.token = jwt_encode(user)
         else:
             create_token(self.token_model, user, serializer)
+
         complete_signup(self.request._request, user,
                         allauth_settings.EMAIL_VERIFICATION,
                         None)
         return user
+
 
 
 class VerifyEmailView(APIView, ConfirmEmailView):
@@ -69,13 +67,22 @@ class VerifyEmailView(APIView, ConfirmEmailView):
     permission_classes = (AllowAny,)
     allowed_methods = ('POST', 'OPTIONS', 'HEAD')
 
+    def get(self, *args, **kwargs):
+        email = self.request.QUERY_PARAMS.get('email', None)
+
+        if email is not None:
+            if User.objects.filter(email=email):
+              return Response({"error: el correo ya existe en el sistema"}, status=status.HTTP_400_BAD_REQUEST) 
+            else:
+              return Response({"Mensaje: ok, correo disponible"}, status=status.HTTP_200_OK)
+
+        return Response({"error: Enviar la variable 'email' en la url"}, status=status.HTTP_400_BAD_REQUEST)
+
     def post(self, request, *args, **kwargs):
-        serializer = VerifyEmailSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.kwargs['key'] = serializer.validated_data['key']
+        self.kwargs['key'] = self.request.data.get('key', '')
         confirmation = self.get_object()
         confirmation.confirm(self.request)
-        return Response({'message': _('ok')}, status=status.HTTP_200_OK)
+        return Response({'message': 'ok'}, status=status.HTTP_200_OK)
 
 
 class SocialLoginView(LoginView):
@@ -103,6 +110,3 @@ class SocialLoginView(LoginView):
     """
 
     serializer_class = SocialLoginSerializer
-
-    def process_login(self):
-        get_adapter(self.request).login(self.request, self.user)

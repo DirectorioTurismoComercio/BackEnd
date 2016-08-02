@@ -25,7 +25,7 @@ class Sitio(models.Model):
 	ubicacionlocal = models.TextField(null=True)
 	categorias = models.ManyToManyField(Categoria, through='SitioCategoria')
 	tags = models.ManyToManyField(Tag)
-	usuario = models.ForeignKey(CustomUser,null=True)
+	usuario = models.ForeignKey(CustomUser,null=True,related_name='sitios')
 	municipio = models.ForeignKey(Municipio, related_name='sitios', null=False) 
 
 

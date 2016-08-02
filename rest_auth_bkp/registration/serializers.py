@@ -1,22 +1,18 @@
+from allauth.account import app_settings as allauth_settings
 from django.http import HttpRequest
-from django.conf import settings
+from rest_framework import serializers
+from requests.exceptions import HTTPError
+from allauth.account import app_settings as allauth_settings
+from allauth.utils import email_address_exists
+from allauth.account.adapter import get_adapter
+from allauth.account.utils import setup_user_email
 from django.utils.translation import ugettext_lazy as _
 
 try:
-    from allauth.account import app_settings as allauth_settings
-    from allauth.utils import (email_address_exists,
-                               get_username_max_length)
-    from allauth.account.adapter import get_adapter
-    from allauth.account.utils import setup_user_email
-except ImportError:
-    raise ImportError('allauth needs to be added to INSTALLED_APPS.')
-
-from rest_framework import serializers
-from requests.exceptions import HTTPError
-# Import is needed only if we are using social login, in which
-# case the allauth.socialaccount will be declared
-if 'allauth.socialaccount' in settings.INSTALLED_APPS:
     from allauth.socialaccount.helpers import complete_social_login
+    from allauth.account.adapter import get_adapter
+except ImportError:
+    pass
 
 
 class SocialLoginSerializer(serializers.Serializer):
@@ -49,14 +45,14 @@ class SocialLoginSerializer(serializers.Serializer):
 
         if not view:
             raise serializers.ValidationError(
-                _('View is not defined, pass it as a context variable')
+                'View is not defined, pass it as a context variable'
             )
 
         adapter_class = getattr(view, 'adapter_class', None)
         if not adapter_class:
-            raise serializers.ValidationError(_('Define adapter_class in view'))
+            raise serializers.ValidationError('Define adapter_class in view')
 
-        adapter = adapter_class(request)
+        adapter = adapter_class()
         app = adapter.get_provider().get_app(request)
 
         # More info on code vs access_token
@@ -73,11 +69,11 @@ class SocialLoginSerializer(serializers.Serializer):
 
             if not self.callback_url:
                 raise serializers.ValidationError(
-                    _('Define callback_url in view')
+                    'Define callback_url in view'
                 )
             if not self.client_class:
                 raise serializers.ValidationError(
-                    _('Define client_class in view')
+                    'Define client_class in view'
                 )
 
             code = attrs.get('code')
@@ -97,7 +93,7 @@ class SocialLoginSerializer(serializers.Serializer):
             access_token = token['access_token']
 
         else:
-            raise serializers.ValidationError(_('Incorrect input. access_token or code is required.'))
+            raise serializers.ValidationError('Incorrect input. access_token or code is required.')
 
         token = adapter.parse_token({'access_token': access_token})
         token.app = app
@@ -106,7 +102,7 @@ class SocialLoginSerializer(serializers.Serializer):
             login = self.get_social_login(adapter, app, token, access_token)
             complete_social_login(request, login)
         except HTTPError:
-            raise serializers.ValidationError(_('Incorrect value'))
+            raise serializers.ValidationError('Incorrect value')
 
         if not login.is_existing:
             login.lookup()
@@ -156,7 +152,6 @@ class RegisterSerializer(serializers.Serializer):
         setup_user_email(request, user, [])
         user.save()
         return user
-
 
 class VerifyEmailSerializer(serializers.Serializer):
     key = serializers.CharField()

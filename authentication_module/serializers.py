@@ -7,4 +7,4 @@ class CustomUserSerializer(serializers.ModelSerializer):
 	sitios = SitioSerializer(many=True, read_only=True) 
  	class Meta:
    		model = CustomUser
-   		fields = ('nombres','apellidos','email', 'password','sitios')
+   		

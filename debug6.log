@@ -4566,3 +4566,636 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/sitios/permissions.py", line 6, in has_object_permission
     return site.usuario.user == request.user
 AttributeError: 'CustomUser' object has no attribute 'user'
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 24, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/views.py", line 11, in <module>
+    from authentication_module import CustomUserSerializer
+ImportError: cannot import name CustomUserSerializer
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 965, in get_fields
+    field_name, info, model, depth
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 1102, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 1209, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `nombres` is not valid for model `CustomUser`.
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 13, in <module>
+    from rest_auth.registration.serializers import SocialLoginSerializer
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 109, in <module>
+    class RegisterSerializer(serializers.Serializer):
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 111, in RegisterSerializer
+    max_length=get_username_max_length(),
+NameError: name 'get_username_max_length' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 13, in <module>
+    from rest_auth.registration.serializers import SocialLoginSerializer
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 109, in <module>
+    class RegisterSerializer(serializers.Serializer):
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 111, in RegisterSerializer
+    email = serializers.EmailField(required=allauth_settings.EMAIL_REQUIRED)
+NameError: name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 18, in <module>
+    class RegisterView(CreateAPIView):
+NameError: name 'CreateAPIView' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 18, in <module>
+    class RegisterView(CreateAPIView):
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 19, in RegisterView
+    serializer_class = RegisterSerializer
+NameError: name 'RegisterSerializer' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 19, in <module>
+    class RegisterView(CreateAPIView):
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 22, in RegisterView
+    token_model = TokenModel
+NameError: name 'TokenModel' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 17, in <module>
+    from rest_auth.models import TokenModel
+ImportError: cannot import name TokenModel
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 253, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 459, in to_representation
+    fields = self._readable_fields
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 353, in _readable_fields
+    field for field in self.fields.values()
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 965, in get_fields
+    field_name, info, model, depth
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 1102, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 1209, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `nombres` is not valid for model `CustomUser`.
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 42, in create
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 213, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 407, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 439, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 118, in validate_email
+    email = get_adapter().clean_email(email)
+NameError: global name 'get_adapter' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 42, in create
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 213, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 407, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 439, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 121, in validate_email
+    if email and email_address_exists(email):
+NameError: global name 'email_address_exists' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 43, in create
+    user = self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 49, in perform_create
+    user = serializer.save(self.request)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 152, in save
+    user.profile.save()
+AttributeError: 'CustomUser' object has no attribute 'profile'
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 42, in create
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 213, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 407, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 439, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 126, in validate_email
+    _("A user is already registered with this e-mail address."))
+NameError: global name '_' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 43, in create
+    user = self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 50, in perform_create
+    if getattr(settings, 'REST_USE_JWT', False):
+NameError: global name 'settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 18, in <module>
+    import settings
+ImportError: No module named settings
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 43, in create
+    user = self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 53, in perform_create
+    create_token(self.token_model, user, serializer)
+NameError: global name 'create_token' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 25, in <module>
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/urls.py", line 4, in <module>
+    from .views import RegisterView, VerifyEmailView
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 19, in <module>
+    from rest_auth.app_settings import (TokenSerializer,
+ImportError: cannot import name JWTSerializer
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 24, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/views.py", line 13, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+ImportError: cannot import name JWTSerializer
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 24, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/views.py", line 13, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/app_settings.py", line 11, in <module>
+    from .utils import import_callable, default_create_token
+ImportError: cannot import name default_create_token
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 24, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/views.py", line 13, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documents/BackEnd/rest_auth/app_settings.py", line 12, in <module>
+    from rest_auth.utils import import_callable, default_create_token
+ImportError: cannot import name default_create_token
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 46, in create
+    user = self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 59, in perform_create
+    allauth_settings.EMAIL_VERIFICATION,
+NameError: global name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 46, in create
+    
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 59, in perform_create
+    else:
+NameError: global name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 46, in create
+    
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 59, in perform_create
+    else:
+NameError: global name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 46, in create
+    
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 59, in perform_create
+    else:
+NameError: global name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 46, in create
+    
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 59, in perform_create
+    # else:
+NameError: global name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 46, in create
+    
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 59, in perform_create
+    # else:
+NameError: global name 'allauth_settings' is not defined
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 191, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 50, in create
+    user = self.perform_create(serializer)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/views.py", line 56, in perform_create
+    user = serializer.save(self.request)
+  File "/home/camilo/Documents/BackEnd/rest_auth/registration/serializers.py", line 157, in save
+    user.profile.save()
+AttributeError: 'CustomUser' object has no attribute 'profile'
