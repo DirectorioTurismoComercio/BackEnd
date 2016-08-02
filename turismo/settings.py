@@ -50,7 +50,6 @@ INSTALLED_APPS = (
     'rest_auth.registration',
     'social.apps.django_app.default',
     'sitios',
-    'landing_page',
     'plataforma',
     'users',
 )
@@ -163,4 +162,3 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     )
 }
-

@@ -35,7 +35,7 @@ class CRUDSitioTest(TestCase):
 	
 	def setUp(self):
 		self.factory = RequestFactory()
-		self.usuario =CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
+		self.usuario =CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD, 'first_name':'Carlos','last_name':'Torres'})
 		self.usuario.is_valid()
 		self.usuario = self.usuario.save()
 		self.usuario.set_password(self.PASSWORD)
@@ -294,8 +294,8 @@ class CRUDSitioTest(TestCase):
 
 	def test_only_owner_can_update(self):
 		email2 ='correo2@jmail.com'
-		password2 = '123'
-		user2 = CustomUserSerializer(data={'email': email2,'password': password2})
+		password2 = '1234567'
+		user2 = CustomUserSerializer(data={'email': email2,'password': password2, 'first_name':'Carlos','last_name':'Torres'})
 		user2.is_valid()
 		user2 = user2.save()
 		user2.set_password(password2)

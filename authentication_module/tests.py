@@ -9,7 +9,7 @@ class AuthenticationTest(TestCase):
 	email='email@email.com'
 
 	def setUp(self):
-		user = CustomUserSerializer(data={'email':self.email,'password': self.PASSWORD})
+		user = CustomUserSerializer(data={'email': self.email,'password': self.PASSWORD, 'first_name':'Carlos','last_name':'Torres'})
 		user.is_valid()
 		user = user.save()
 		user.set_password(self.PASSWORD)
@@ -17,12 +17,12 @@ class AuthenticationTest(TestCase):
 
 	def test_succesfully_authenticated(self):
 		data={'email':self.email,'password': self.PASSWORD}
-		response = self.client.post('/rest-auth/login',data,format='json')        
+		response = self.client.post('/rest-auth/login/',data,format='json')        
 		self.assertEqual(response.status_code, status.HTTP_200_OK, response)
 
 	def test_failed_authentication(self):
 		data={'email':self.email,'password': self.WRONG_PASSWORD}
-		response = self.client.post('/rest-auth/login',data,format='json')        
+		response = self.client.post('/rest-auth/login/',data,format='json')        
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response)
 
 
@@ -44,7 +44,7 @@ class RegistrationTest(TestCase):
 	def test_succesful_registration(self):
 		email ="perez.juan@gmail.com"
 		password = '1234567'
-		data={'email':email,'password1': password,'password2': password, 'nombres':'Juan', 'apellidos':'perez'}
+		data={'email':email,'password1': password,'password2': password, 'first_name':'Juan', 'last_name':'perez'}
 		response = self.client.post('/rest-auth/registration/',data,format='json')        
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.status_code)
 

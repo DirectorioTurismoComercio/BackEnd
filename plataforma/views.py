@@ -5,6 +5,7 @@ from rest_framework import status
 from plataforma.serializers import *
 from sitios.serializers import MunicipioSerializer
 from sitios.serializers import CategoriaSerializer
+from sitios.permissions import IsSiteOwner
 from authentication_module.serializers import *
 from rest_framework.decorators import detail_route, list_route
 from rest_framework.response import Response
@@ -34,7 +35,7 @@ class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer  
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,IsSiteOwner)
 
 
 
