@@ -1,6 +1,0 @@
-Modelos
-======
-.. automodule:: plataforma.models
-    :members:
-
-

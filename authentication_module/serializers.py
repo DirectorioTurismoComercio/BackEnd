@@ -7,5 +7,6 @@ class CustomUserSerializer(serializers.ModelSerializer):
 	sitios = SitioSerializer(many=True, read_only=True) 
  	class Meta:
    		model = CustomUser
-   		fields = ('email', 'password','first_name','last_name','sitios')
+   		fields = ('id','email', 'password','first_name','last_name','sitios')
+   		extra_kwargs = {'password': {'write_only': True}}
    		
