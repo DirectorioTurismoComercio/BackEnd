@@ -65,7 +65,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
   
 )
-
+OLD_PASSWORD_FIELD_ENABLED = True
 # AUTHENTICATION_BACKENDS = (
 #     # Needed to login by username in Django admin, regardless of `allauth`
 #     'django.contrib.auth.backends.ModelBackend',
