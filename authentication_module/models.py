@@ -4,9 +4,11 @@ from django.contrib.auth.models import UserManager
 from django.contrib.auth.models import Permission
 from django.contrib.auth.models import Group
 
+
 from django.contrib.auth.models import PermissionsMixin
 from django.utils import timezone
 from django.utils.translation import gettext as _
+
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):

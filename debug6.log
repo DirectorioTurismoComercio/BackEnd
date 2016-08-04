@@ -5222,3 +5222,167 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/authentication_module/views.py", line 21, in do_login
     usuario = UsuarioSerializer(data=data)
 NameError: global name 'UsuarioSerializer' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 324, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 307, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `provider` on serializer `UserSocialAuthSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `RelatedManager` instance.
+Original exception text was: 'RelatedManager' object has no attribute 'provider'.
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 9, in <module>
+    from authentication_module.serializers import *
+  File "/home/camilo/Documents/BackEnd/authentication_module/serializers.py", line 6, in <module>
+    class UserSocialAuthSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documents/BackEnd/authentication_module/serializers.py", line 7, in UserSocialAuthSerializer
+    class Meta:
+  File "/home/camilo/Documents/BackEnd/authentication_module/serializers.py", line 8, in Meta
+    model = AbstractUserSocialAuth
+NameError: name 'AbstractUserSocialAuth' is not defined
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documents/BackEnd/plataforma/views.py", line 9, in <module>
+    from authentication_module.serializers import *
+  File "/home/camilo/Documents/BackEnd/authentication_module/serializers.py", line 5, in <module>
+    from social.apps.django_app.default.models import UserSocialAuthSerializer
+ImportError: cannot import name UserSocialAuthSerializer
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 324, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 883, in get_fields
+    info = model_meta.get_field_info(model)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/utils/model_meta.py", line 65, in get_field_info
+    pk = _get_pk(opts)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/utils/model_meta.py", line 78, in _get_pk
+    while pk.rel and pk.rel.parent_link:
+AttributeError: 'NoneType' object has no attribute 'rel'
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 324, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 307, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `provider` on serializer `UserSocialAuthSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `RelatedManager` instance.
+Original exception text was: 'RelatedManager' object has no attribute 'provider'.
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 324, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 869, in get_fields
+    type(fields).__name__
+TypeError: The `fields` option must be a list or tuple. Got str.
