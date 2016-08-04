@@ -178,7 +178,7 @@ class Sugerencias(viewsets.ViewSet):
                 else:
                     palabra = resultado.nombre[posicion:]
 
-                deleteSpecialCharacters=re.compile("[^\w]")
+                deleteSpecialCharacters=re.compile("[^\w| |\xc1|\xe1|\xc9|\xe9|\xcd|\xed|\xbf|\xf3|\xda|\xfa|\xdc|\xfc|\xd1|\xf1]")
                 palabra=deleteSpecialCharacters.sub('', palabra)
 
                 if palabra not in sugerencias:
