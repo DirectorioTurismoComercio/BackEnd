@@ -423,7 +423,7 @@ class BusquedaSitioTest(TestCase):
 		self.assertTrue(self.sitio5.nombre in resultados)
 
 	def test_sugerencias(self):
-		palabras_esperadas = [u'Panaderia',u'Pan',u'panes']
+		palabras_esperadas = [u'Panaderia',u'Pan',u'Panes']
 		resultados = self.client.get('/sugerencias/?token=pa')
 		self.assertItemsEqual(palabras_esperadas,resultados.data)
 
