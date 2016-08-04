@@ -180,6 +180,7 @@ class Sugerencias(viewsets.ViewSet):
 
                 deleteSpecialCharacters=re.compile("[^\w| |\xc1|\xe1|\xc9|\xe9|\xcd|\xed|\xbf|\xf3|\xda|\xfa|\xdc|\xfc|\xd1|\xf1]")
                 palabra=deleteSpecialCharacters.sub('', palabra)
+                palabra=palabra.capitalize()
 
                 if palabra not in sugerencias:
                     sugerencias.append(palabra)
