@@ -1,0 +1,7 @@
+turismo/local_settings.py
+*.pyc
+static
+*~
+.idea
+Fotos/Fotos
+
