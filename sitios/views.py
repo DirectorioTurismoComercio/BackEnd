@@ -17,7 +17,8 @@ from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
 from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from inflector import *
+from sitios.inflector.inflector import Inflector
+from sitios.inflector.rules.spanish import Spanish
 import plataforma
 import re
 
@@ -32,67 +33,67 @@ class SitioList(generics.ListAPIView):
         id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
         resultados = {}
         if word is not None:
-
+            inflector = Inflector(Spanish)
+            word = inflector.singularize(word)
             word = remove_accents(word.encode('utf-8'))
             word = create_accents_regular_expression(word)
-            regular_expression = r'[[:<:]]'+word+'[[:>:]]'
-            
-            if id_municipio is not None:
+            regular_expression = r'[[:<:]]' + word + '[[:>:]]'
 
-                resultados = queryset.distinct().filter(
-                    Q(nombre__iregex=regular_expression) |
-                    Q(descripcion__iregex=regular_expression) |
-                    Q(tags__tag__iregex=regular_expression) |
-                    Q(categorias__nombre__iregex=regular_expression),
-                    Q(municipio_id=id_municipio))
+        if id_municipio is not None:
 
-            else:
-                resultados = queryset.distinct().filter(
-                    Q(nombre__iregex=regular_expression)  |
-                    Q(descripcion__iregex=regular_expression) |
-                    Q(tags__tag__iregex=regular_expression) |
-                    Q(categorias__nombre__iregex=regular_expression)
-                    )
-                
+            resultados = queryset.distinct().filter(
+                Q(nombre__iregex=regular_expression) |
+                Q(descripcion__iregex=regular_expression) |
+                Q(tags__tag__iregex=regular_expression) |
+                Q(categorias__nombre__iregex=regular_expression),
+                Q(municipio_id=id_municipio))
+
+        else:
+            resultados = queryset.distinct().filter(
+                Q(nombre__iregex=regular_expression) |
+                Q(descripcion__iregex=regular_expression) |
+                Q(tags__tag__iregex=regular_expression) |
+                Q(categorias__nombre__iregex=regular_expression)
+            )
 
         return resultados
 
-class SitioCreate(generics.CreateAPIView):
 
+class SitioCreate(generics.CreateAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
     permission_classes = (IsAuthenticated,)
 
-    def create(self, request):     
+    def create(self, request):
         data = request.data
         serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()
         serializer.is_valid()
-           
+
         if serializer.is_valid():
             serializer.save()
             serializer.add_photos_with_abbreviations(photos)
             if "categorias" in data:
-                categories = request.data.getlist('categorias'); 
-                if isinstance(categories,list): 
-                        
-                    serializer.add_categories(categories) 
+                categories = request.data.getlist('categorias');
+                if isinstance(categories, list):
+
+                    serializer.add_categories(categories)
                 else:
-                    return Response(data={"categorias":"Categorías debe ser un arreglo"}, status=status.HTTP_400_BAD_REQUEST)
+                    return Response(data={"categorias": "Categorías debe ser un arreglo"},
+                                    status=status.HTTP_400_BAD_REQUEST)
 
             else:
-                return Response(data={"categorias":"Este campo es obligatorio"}, status=status.HTTP_400_BAD_REQUEST)
+                return Response(data={"categorias": "Este campo es obligatorio"}, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(status=status.HTTP_201_CREATED)
 
 
-
 class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
-    permission_classes = (IsAuthenticated,IsSiteOwner)
+    permission_classes = (IsAuthenticated, IsSiteOwner)
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
@@ -105,19 +106,19 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         serializer.add_photos_with_abbreviations(photos)
 
         if "categorias" in request.data:
-            categories = request.data.getlist('categorias'); 
-            if isinstance(categories,list): 
-                    SitioCategoria.objects.filter(sitio=self.get_object().id).all().delete()
-                    serializer.add_categories(categories) 
+            categories = request.data.getlist('categorias');
+            if isinstance(categories, list):
+                SitioCategoria.objects.filter(sitio=self.get_object().id).all().delete()
+                serializer.add_categories(categories)
             else:
-                    return Response(data={"categorias":"Categorías debe ser un arreglo"}, status=status.HTTP_400_BAD_REQUEST)
+                return Response(data={"categorias": "Categorías debe ser un arreglo"},
+                                status=status.HTTP_400_BAD_REQUEST)
 
         else:
-                return Response(data={"categorias":"Este campo es obligatorio"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(data={"categorias": "Este campo es obligatorio"}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(serializer.data)
 
-        
 
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):
@@ -178,15 +179,12 @@ class Sugerencias(viewsets.ViewSet):
                 else:
                     palabra = resultado.nombre[posicion:]
 
-                deleteSpecialCharacters=re.compile("[^\w| |\xc1|\xe1|\xc9|\xe9|\xcd|\xed|\xbf|\xf3|\xda|\xfa|\xdc|\xfc|\xd1|\xf1]")
-                palabra=deleteSpecialCharacters.sub('', palabra)
-                palabra=palabra.capitalize()
+                deleteSpecialCharacters = re.compile(
+                    "[^\w| |\xc1|\xe1|\xc9|\xe9|\xcd|\xed|\xbf|\xf3|\xda|\xfa|\xdc|\xfc|\xd1|\xf1]")
+                palabra = deleteSpecialCharacters.sub('', palabra)
+                palabra = palabra.capitalize()
 
                 if palabra not in sugerencias:
                     sugerencias.append(palabra)
 
-                   
-
         return Response(sugerencias[0:5])
-
-    
