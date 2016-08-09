@@ -66,8 +66,8 @@ INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, 
 
 INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`, `URL_icono_seleccionado`, `categoria_padre_id`, `URL_icono_general`) VALUES
 (1, 'Naturaleza y Agroturismo', 1, 'normal_icons/naturaleza-agroturismo.png', 'selected_icons/naturaleza-agroturismo.png', NULL, 'general_icons/naturaleza-agroturismo.png'),
-(2, 'Deportes', 1, 'normal_icons/deporte.png', 'selected_icons/deporte.png', NULL, 'general_icons/deporte.png'),
-(3, 'Creencias y Costumbres', 1, 'normal_icons/costumbres-creencias.png', 'selected_icons/costumbres-creencias.png', NULL, 'general_icons/costumbres-creencias.png'),
+(2, 'Deportes', 1, 'normal_icons/deporte.png', 'selected_icons/deporte.png', NULL, 'general_icons/deportes.png'),
+(3, 'Creencias y Costumbres', 1, 'normal_icons/costumbres-creencias.png', 'selected_icons/costumbres-creencias.png', NULL, 'general_icons/creencias-costumbres.png'),
 (4, 'Arte y Cultura', 1, 'normal_icons/arte-cultura.png', 'selected_icons/arte-cultura.png', NULL, 'general_icons/arte-cultura.png'),
 (5, 'Comida y Bebida', 1, 'normal_icons/comida-bebida.png', 'selected_icons/comida-bebida.png', NULL, 'general_icons/comida-bebida.png'),
 (6, 'Entretenimiento', 1, 'normal_icons/entretenimiento.png', 'selected_icons/entretenimiento.png', NULL, 'general_icons/entretenimiento.png'),
