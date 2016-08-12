@@ -4,8 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 try:
     from allauth.account import app_settings as allauth_settings
-    from allauth.utils import (email_address_exists,
-                               get_username_max_length)
+    from allauth.utils import (email_address_exists)
     from allauth.account.adapter import get_adapter
     from allauth.account.utils import setup_user_email
 except ImportError:

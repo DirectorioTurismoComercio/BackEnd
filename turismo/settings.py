@@ -93,9 +93,10 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.user.create_user',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details',
     'users.social_pipeline.save_avatar',  # custom action
 )
-
+SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email','first_name','last_name']
 AUTH_USER_MODEL = 'authentication_module.CustomUser'
 
 SITE_ID = 1
