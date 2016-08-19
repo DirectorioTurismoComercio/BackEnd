@@ -23,12 +23,15 @@ import plataforma
 import re
 
 
+
 class SitioList(generics.ListAPIView):
     queryset = Sitio.objects.all()
     serializer_class = SitioSerializer
 
     def get_queryset(self):
+        raw_query = "SELECT DISTINCT sitios_sitio.id, sitios_sitio.nombre, sitios_sitio.telefono, sitios_sitio.whatsapp, sitios_sitio.horariolocal, sitios_sitio.web, sitios_sitio.latitud, sitios_sitio.longitud, sitios_sitio.descripcion, sitios_sitio.correolocal, sitios_sitio.ubicacionlocal, sitios_sitio.usuario_id, sitios_sitio.municipio_id FROM sitios_sitio LEFT OUTER JOIN sitios_sitio_tags ON ( sitios_sitio.id = sitios_sitio_tags.sitio_id ) LEFT OUTER JOIN plataforma_tag ON ( sitios_sitio_tags.tag_id = plataforma_tag.id ) LEFT OUTER JOIN sitios_sitiocategoria ON ( sitios_sitio.id = sitios_sitiocategoria.sitio_id ) LEFT OUTER JOIN plataforma_categoria ON ( sitios_sitiocategoria.categoria_id = plataforma_categoria.id ) LEFT OUTER JOIN sitios_sitiocategoria T6 ON ( plataforma_categoria.id = T6.categoria_id ) WHERE (sitios_sitio.nombre REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR sitios_sitio.descripcion REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR plataforma_tag.tag REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR plataforma_categoria.nombre REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' {municipio_query}) ORDER BY sitios_sitiocategoria.tipo ASC"
         queryset = super(SitioList, self).get_queryset()
+        
         word = self.request.QUERY_PARAMS.get('search', None)
         id_municipio = self.request.QUERY_PARAMS.get('id_municipio', None)
         resultados = {}
@@ -39,26 +42,18 @@ class SitioList(generics.ListAPIView):
             original_word = create_accents_regular_expression(original_word)
 
             word = inflector.singularize(word)
+              
             word = remove_accents(word.encode('utf-8'))
             word = create_accents_regular_expression(word)
             regular_expression = r'[[:<:]]'+original_word+'[[:>:]]|[[:<:]]'+word+'[[:>:]]'
-
+            
         if id_municipio is not None:
-
-            resultados = queryset.distinct().filter(
-                Q(nombre__iregex=regular_expression) |
-                Q(descripcion__iregex=regular_expression) |
-                Q(tags__tag__iregex=regular_expression) |
-                Q(categorias__nombre__iregex=regular_expression),
-                Q(municipio_id=id_municipio))
-
+            municipio_query = "AND sitios_sitio.municipio_id = "+id_municipio
         else:
-            resultados = queryset.distinct().filter(
-                Q(nombre__iregex=regular_expression) |
-                Q(descripcion__iregex=regular_expression) |
-                Q(tags__tag__iregex=regular_expression) |
-                Q(categorias__nombre__iregex=regular_expression)
-            )
+            municipio_query =""
+        
+        raw_query = raw_query.format(original_word=original_word,word=word,municipio_query=municipio_query)
+        resultados = Sitio.objects.raw(raw_query)
 
         return resultados
 
