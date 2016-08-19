@@ -22,6 +22,14 @@ from sitios.inflector.rules.spanish import Spanish
 import plataforma
 import re
 
+# select * from (
+# SELECT a.id AS aid, a.tipo, categoria_id, sitio_id, b . * 
+# FROM sitios_sitiocategoria a
+# INNER JOIN plataforma_categoria b ON a.categoria_id = b.id
+# ) z left join sitios_sitiocategoria d
+# on z.categoria_padre_id=d.categoria_id and
+# z.sitio_id=d.sitio_id
+
 
 
 class SitioList(generics.ListAPIView):

@@ -430,10 +430,6 @@ class BusquedaSitioTest(TestCase):
 	def test_busqueda_categoria_orden(self):
 		categoria3 = Categoria.objects.create(nombre='Deportes')
 		categoria4 = Categoria.objects.create(nombre='Comida')
-		subcategoria1 = Categoria.objects.create(nombre='Ciclas',categoria_padre=categoria3, nivel=2)
-		subcategoria2 = Categoria.objects.create(nombre='Balones',categoria_padre=categoria3, nivel=2)
-		subcategoria3 = Categoria.objects.create(nombre='Hamburguesas',categoria_padre=categoria4, nivel=2)
-		subcategoria3 = Categoria.objects.create(nombre='Lechona',categoria_padre=categoria4, nivel=2)
 		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria3, tipo=1);
 		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria4, tipo=2);
 		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria3, tipo=1);
@@ -441,6 +437,38 @@ class BusquedaSitioTest(TestCase):
 		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
 		resultados = self.client.get('/buscar/?search=comida');
 		resultados = resultados.data
+		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
+		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
+		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
+
+	def test_busqueda_subcategoria_orden(self):
+		categoria3 = Categoria.objects.create(nombre='Deportes')
+		categoria4 = Categoria.objects.create(nombre='Comida')
+		subcategoria1 = Categoria.objects.create(nombre='Ciclas',categoria_padre=categoria3, nivel=2)
+		subcategoria2 = Categoria.objects.create(nombre='Balones',categoria_padre=categoria3, nivel=2)
+		subcategoria3 = Categoria.objects.create(nombre='Hamburguesas',categoria_padre=categoria4, nivel=2)
+		subcategoria4 = Categoria.objects.create(nombre='Lechona',categoria_padre=categoria4, nivel=2)
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
+		
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=subcategoria3);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=subcategoria3);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=subcategoria3);
+
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=subcategoria1);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=subcategoria1);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=subcategoria1);
+
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=subcategoria4);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=subcategoria4);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=subcategoria4);
+
+		resultados = self.client.get('/buscar/?search=Lechona');
+		resultados = resultados.data
+		
 		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
 		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
 		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
