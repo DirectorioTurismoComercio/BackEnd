@@ -360,8 +360,10 @@ class BusquedaSitioTest(TestCase):
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio2,horariolocal="7-15",usuario=usuario)
+		
 		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria1);
 		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria2);
+		
 		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio6.tags.add(tag1)
 		self.sitio6.tags.add(tag2)
@@ -424,6 +426,24 @@ class BusquedaSitioTest(TestCase):
 		resultados = self.client.get('/buscar/?search=cuba');
 		resultados = [resultado['nombre'] for resultado in resultados.data]
 		self.assertTrue(self.sitio5.nombre in resultados)
+
+	def test_busqueda_categoria_orden(self):
+		categoria3 = Categoria.objects.create(nombre='Deportes')
+		categoria4 = Categoria.objects.create(nombre='Comida')
+		subcategoria1 = Categoria.objects.create(nombre='Ciclas',categoria_padre=categoria3, nivel=2)
+		subcategoria2 = Categoria.objects.create(nombre='Balones',categoria_padre=categoria3, nivel=2)
+		subcategoria3 = Categoria.objects.create(nombre='Hamburguesas',categoria_padre=categoria4, nivel=2)
+		subcategoria3 = Categoria.objects.create(nombre='Lechona',categoria_padre=categoria4, nivel=2)
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
+		resultados = self.client.get('/buscar/?search=comida');
+		resultados = resultados.data
+		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
+		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
+		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
 
 
 	def test_busqueda_en_municipio(self):
