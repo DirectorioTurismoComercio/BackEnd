@@ -341,6 +341,9 @@ class BusquedaSitioTest(TestCase):
 
 	def setUp(self):
 		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		municipio2 = Municipio.objects.create(nombre='Cajicá',latitud=0,longitud=0)
+		self.municipio=municipio
+		self.municipio2=municipio2
 		usuario = CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
 		usuario.is_valid()
 		usuario = usuario.save()
@@ -356,7 +359,7 @@ class BusquedaSitioTest(TestCase):
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
-		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio2,horariolocal="7-15",usuario=usuario)
 		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria1);
 		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria2);
 		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
@@ -421,6 +424,14 @@ class BusquedaSitioTest(TestCase):
 		resultados = self.client.get('/buscar/?search=cuba');
 		resultados = [resultado['nombre'] for resultado in resultados.data]
 		self.assertTrue(self.sitio5.nombre in resultados)
+
+
+	def test_busqueda_en_municipio(self):
+		resultados = self.client.get('/buscar/?search=cafe&id_municipio='+str(self.municipio.id));
+		resultados = [resultado['nombre'] for resultado in resultados.data]
+
+		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
+		self.assertFalse(self.sitio5.nombre in resultados)
 
 	def test_sugerencias(self):
 		palabras_esperadas = [u'Panaderia',u'Pan',u'Panes']
