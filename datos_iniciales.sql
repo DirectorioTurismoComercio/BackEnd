@@ -2,24 +2,48 @@
 -- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Aug 04, 2016 at 04:04 PM
--- Server version: 5.5.47-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.14
+-- Servidor: localhost
+-- Tiempo de generación: 15-08-2016 a las 22:55:01
+-- Versión del servidor: 5.5.47-0ubuntu0.14.04.1
+-- Versión de PHP: 5.5.9-1ubuntu4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `plataforma`
+-- Base de datos: `plataforma`
 --
 
 --
--- Dumping data for table `authentication_module_customuser`
+-- Volcado de datos para la tabla `account_emailaddress`
 --
 
-INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$20000$AnFdDySPVuSm$RWzJJVsD1XibWI71D8t6i0n383IKmhM3391GuvYOvTE=', '2016-07-01 16:32:38', 0, '', 'Johana', 'González Sánchez', 'info@restaurantesanalejo.net', 0, 1, '2016-07-01 16:25:07'),
+INSERT IGNORE INTO `account_emailaddress` (`id`, `email`, `verified`, `primary`, `user_id`) VALUES
+(1, 'mauricio@longboardcolombia.com', 0, 1, 39),
+(2, 'hotelparquezabal@hotmail.com', 0, 1, 40),
+(3, 'hotelboutiquesinai@gmail.com', 0, 1, 41),
+(4, 'das@das.com', 0, 1, 42),
+(5, 'dfsads@dadas.com', 0, 1, 43),
+(6, 'asdas@daas.com', 0, 1, 44),
+(7, 'dasdas@qwqqw.com', 0, 1, 45),
+(8, 'dasda@dasads.com', 0, 1, 46),
+(9, 'lizethdiazc@gmail.com', 0, 1, 47),
+(10, 'mauro@mail.com', 0, 1, 49),
+(11, 'hotelcostadelsolfgga@hotmail.com', 0, 1, 51),
+(12, 'hotelcatamainn@gmail.com', 0, 1, 52),
+(13, 'info@hotelelcastillochinauta.com.co', 0, 1, 53),
+(14, 'contacto@hotelchinautareal.com', 0, 1, 54),
+(15, 'fobnacho@gmail.com', 0, 1, 56),
+(16, 'pepe@prueba.com', 0, 1, 57),
+(17, 'pereza@gmail.com', 0, 1, 59),
+(18, 'oromeroce@gmail.com', 0, 1, 60);
+
+--
+-- Volcado de datos para la tabla `authentication_module_customuser`
+--
+
+INSERT IGNORE INTO `authentication_module_customuser` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
+(1, 'pbkdf2_sha256$20000$AnFdDySPVuSm$RWzJJVsD1XibWI71D8t6i0n383IKmhM3391GuvYOvTE=', '2016-08-12 22:39:35', 0, '', 'Johana', 'González Sánchez', 'info@restaurantesanalejo.net', 0, 1, '2016-07-01 16:25:07'),
 (2, 'pbkdf2_sha256$20000$sL6D6wZfaLQ8$laLtSf+SqnNb6XWrctxOZM1LZCl2MmXp3JkSuZDamxs=', NULL, 0, '', 'Álvaro', 'Osorio', 'info@edelweisscajica.com', 0, 1, '2016-07-01 16:43:17'),
 (3, 'pbkdf2_sha256$20000$olXbWBT4jUWQ$/2vmpooc+UQQz5ScrV9iq4Z0XhvbG8stsod1wUJ9Gg8=', '2016-07-01 21:53:51', 0, '', 'Martha Patricia', 'Fiscó G.', 'mapafiga@hotmail.com', 0, 1, '2016-07-01 16:54:11'),
 (4, 'pbkdf2_sha256$20000$sjZZkvRRykwi$rZOSZ7FU99AQ8MlSf+amuANdWcEp03uypgCrSgLMV8I=', '2016-07-01 21:46:20', 0, '', 'Daniel Felipe', 'Clavijo', 'alamavelas@gmail.com', 0, 1, '2016-07-01 17:03:01'),
@@ -56,15 +80,246 @@ INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, 
 (35, 'pbkdf2_sha256$20000$CwMaOfHjew3b$Dn+srob3nXUlkH6Brh74KNFtEOV7yRJ70qhxRQ0ghuA=', NULL, 0, '', 'Segundo', 'Pirazàn', 'segundopirazan@hotmail.com', 0, 1, '2016-07-01 21:03:09'),
 (36, 'pbkdf2_sha256$20000$jNKJmyPNkRr6$/2IsiqOrFo4h2QpNeCuX5B1D5AvA3aWbi3tUo0awhWw=', NULL, 0, '', 'Myriam', 'Rojas', 'macramemyriamrojas@hotmail.com', 0, 1, '2016-07-01 21:13:30'),
 (37, 'pbkdf2_sha256$20000$sPYN83jmkfzK$exGJiFcb2hTaaBfCx3kmjJ7M/VHnw0kVe/9Njy2lkxI=', NULL, 0, '', 'Luz Dary', 'Salgado', 'transcondalia@gmail.com', 0, 1, '2016-07-01 21:23:50'),
-(38, 'pbkdf2_sha256$20000$27YCwp3PWlDO$h3IqC1x1NV+B1iiVybZIef9bK4zpZtg972Jdafb2X+A=', NULL, 0, '', 'Irlena', 'Becerra', 'Neny.1015@hotmail.com', 0, 1, '2016-07-01 21:28:37');
-
-
+(38, 'pbkdf2_sha256$20000$27YCwp3PWlDO$h3IqC1x1NV+B1iiVybZIef9bK4zpZtg972Jdafb2X+A=', NULL, 0, '', 'Irlena', 'Becerra', 'Neny.1015@hotmail.com', 0, 1, '2016-07-01 21:28:37'),
+(39, 'pbkdf2_sha256$20000$fKuV48UfKJsE$D+SU7IxQqyEr4u39z4Sa/sPX0tienrXjvIdBIGfyU4w=', '2016-08-11 17:27:57', 0, 'x', 'X', 'Y', 'mauricio@longboardcolombia.com', 0, 1, '2016-08-11 17:27:56'),
+(40, 'pbkdf2_sha256$20000$zbUb4QJTyOzk$m4DC50pse0prNSWtGO9xEYk3k1e8Iedyg8aBVbn4Jlk=', '2016-08-11 17:52:39', 0, 'salomon', 'Salomon', 'Muñoz', 'hotelparquezabal@hotmail.com', 0, 1, '2016-08-11 17:52:38'),
+(41, 'pbkdf2_sha256$20000$fLvrEoKCFh1J$AzcVAI+szj/qvbbeXI8IFBMGaWZEy7nTinGjMsKCEBU=', '2016-08-11 18:23:34', 0, 'sandra', 'Sandra', 'Roa', 'hotelboutiquesinai@gmail.com', 0, 1, '2016-08-11 18:23:34'),
+(42, 'pbkdf2_sha256$20000$SJErd8zYzkF4$61xh9MORkdRWrwK6KCDGY+rJ5iXmRq4+ao6Ddzvp2g4=', '2016-08-11 19:55:34', 0, 'das', 'das', 'das', 'das@das.com', 0, 1, '2016-08-11 19:55:34'),
+(43, 'pbkdf2_sha256$20000$Im510qTfZJn5$4fu6s1cokh5EkXPFFB+kn9gArji5T1P5H40ifXiqB9M=', '2016-08-11 20:01:08', 0, 'sadsa', 'sadsa', 'dasdas', 'dfsads@dadas.com', 0, 1, '2016-08-11 20:01:08'),
+(44, 'pbkdf2_sha256$20000$LuU9BTjrD6Ve$81SbLcEq3NXZbeuUE2YkxpagC9ehMNWmjcJVd3XdmWs=', '2016-08-11 20:02:38', 0, 'dasdas', 'dasdas', 'dasdas', 'asdas@daas.com', 0, 1, '2016-08-11 20:02:37'),
+(45, 'pbkdf2_sha256$20000$4Xi5iD8MbEbB$3EuJ/e9deDJoDWxkdKNq4WZXW9GH7WTAMPOKCMXUtao=', '2016-08-11 20:06:42', 0, 'adas', 'adas', 'dasda', 'dasdas@qwqqw.com', 0, 1, '2016-08-11 20:06:41'),
+(46, 'pbkdf2_sha256$20000$NxG3Olw1orVp$Y2kwTR+ptX7cOoK1vYgFHjkqbslw5iC6wXCnUKDUbfA=', '2016-08-11 20:07:21', 0, 'dasdas2', 'dasdas', 'dasdas', 'dasda@dasads.com', 0, 1, '2016-08-11 20:07:20'),
+(47, 'pbkdf2_sha256$20000$FPwAu8JsPkuJ$Q+Nk+lqn1UJLeJ73DJ73EE3VrImybDNe0H+C7aZzVcQ=', '2016-08-11 20:11:27', 0, 'lizeth', 'Lizeth', 'Diaz', 'lizethdiazc@gmail.com', 0, 1, '2016-08-11 20:11:26'),
+(51, 'pbkdf2_sha256$20000$YFruFXgI34XB$j2Eb9z0e/cQza15+B70QNf1dzpliMtzWW7jI3DBP1E4=', '2016-08-11 21:39:49', 0, 'alfredo', 'Alfredo', 'Lopez', 'hotelcostadelsolfgga@hotmail.com', 0, 1, '2016-08-11 21:39:49'),
+(52, 'pbkdf2_sha256$20000$TWjyS2bLTDHU$yP/bLq708TORQa8y5e5xxa0NRICiW3Ygbd3a/kzoRIA=', '2016-08-11 22:17:09', 0, 'johanna', 'Johanna', 'Moreno', 'hotelcatamainn@gmail.com', 0, 1, '2016-08-11 22:17:09'),
+(53, 'pbkdf2_sha256$20000$mEY3KMFvNrhB$GNle+oN7GnuHyRmT7eE1etoAoCbLMClIAxMiEraYWSA=', '2016-08-11 23:21:17', 0, 'diego', 'Diego', 'Diaz', 'info@hotelelcastillochinauta.com.co', 0, 1, '2016-08-11 23:21:17'),
+(54, 'pbkdf2_sha256$20000$gHdYFLZ5De6L$Uj6hbCSiUaHl9/xQWTLEDh+/U/suXQSHn/u6G0Qlt7A=', '2016-08-11 23:48:54', 0, 'laura', 'Laura', 'Cardenas', 'contacto@hotelchinautareal.com', 0, 1, '2016-08-11 23:48:54');
 
 --
--- Dumping data for table `plataforma_categoria`
+-- Volcado de datos para la tabla `authtoken_token`
 --
 
-INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`, `URL_icono_seleccionado`, `categoria_padre_id`, `URL_icono_general`) VALUES
+INSERT IGNORE INTO `authtoken_token` (`key`, `created`, `user_id`) VALUES
+('f00e95737224446c923a7033ac090cc06835b5e2', '2016-08-11 20:11:27', 47),
+('ccd610e5a4fb14fbec30eaa2947f3976040c3bb8', '2016-08-11 20:29:43', 49),
+('340373b627eeaf698c83da9f1dfe3fddc4cebf17', '2016-08-11 23:48:54', 54);
+
+--
+-- Volcado de datos para la tabla `auth_permission`
+--
+
+INSERT IGNORE INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALUES
+(1, 'Can add log entry', 1, 'add_logentry'),
+(2, 'Can change log entry', 1, 'change_logentry'),
+(3, 'Can delete log entry', 1, 'delete_logentry'),
+(4, 'Can add permission', 2, 'add_permission'),
+(5, 'Can change permission', 2, 'change_permission'),
+(6, 'Can delete permission', 2, 'delete_permission'),
+(7, 'Can add group', 3, 'add_group'),
+(8, 'Can change group', 3, 'change_group'),
+(9, 'Can delete group', 3, 'delete_group'),
+(10, 'Can add content type', 4, 'add_contenttype'),
+(11, 'Can change content type', 4, 'change_contenttype'),
+(12, 'Can delete content type', 4, 'delete_contenttype'),
+(13, 'Can add session', 5, 'add_session'),
+(14, 'Can change session', 5, 'change_session'),
+(15, 'Can delete session', 5, 'delete_session'),
+(16, 'Can add site', 6, 'add_site'),
+(17, 'Can change site', 6, 'change_site'),
+(18, 'Can delete site', 6, 'delete_site'),
+(19, 'Can add custom user', 7, 'add_customuser'),
+(20, 'Can change custom user', 7, 'change_customuser'),
+(21, 'Can delete custom user', 7, 'delete_customuser'),
+(22, 'Can add cors model', 8, 'add_corsmodel'),
+(23, 'Can change cors model', 8, 'change_corsmodel'),
+(24, 'Can delete cors model', 8, 'delete_corsmodel'),
+(25, 'Can add token', 9, 'add_token'),
+(26, 'Can change token', 9, 'change_token'),
+(27, 'Can delete token', 9, 'delete_token'),
+(28, 'Can add email address', 10, 'add_emailaddress'),
+(29, 'Can change email address', 10, 'change_emailaddress'),
+(30, 'Can delete email address', 10, 'delete_emailaddress'),
+(31, 'Can add email confirmation', 11, 'add_emailconfirmation'),
+(32, 'Can change email confirmation', 11, 'change_emailconfirmation'),
+(33, 'Can delete email confirmation', 11, 'delete_emailconfirmation'),
+(34, 'Can add user social auth', 12, 'add_usersocialauth'),
+(35, 'Can change user social auth', 12, 'change_usersocialauth'),
+(36, 'Can delete user social auth', 12, 'delete_usersocialauth'),
+(37, 'Can add nonce', 13, 'add_nonce'),
+(38, 'Can change nonce', 13, 'change_nonce'),
+(39, 'Can delete nonce', 13, 'delete_nonce'),
+(40, 'Can add association', 14, 'add_association'),
+(41, 'Can change association', 14, 'change_association'),
+(42, 'Can delete association', 14, 'delete_association'),
+(43, 'Can add code', 15, 'add_code'),
+(44, 'Can change code', 15, 'change_code'),
+(45, 'Can delete code', 15, 'delete_code'),
+(46, 'Can add sitio', 16, 'add_sitio'),
+(47, 'Can change sitio', 16, 'change_sitio'),
+(48, 'Can delete sitio', 16, 'delete_sitio'),
+(49, 'Can add foto', 17, 'add_foto'),
+(50, 'Can change foto', 17, 'change_foto'),
+(51, 'Can delete foto', 17, 'delete_foto'),
+(52, 'Can add sitio categoria', 18, 'add_sitiocategoria'),
+(53, 'Can change sitio categoria', 18, 'change_sitiocategoria'),
+(54, 'Can delete sitio categoria', 18, 'delete_sitiocategoria'),
+(55, 'Can add tag', 19, 'add_tag'),
+(56, 'Can change tag', 19, 'change_tag'),
+(57, 'Can delete tag', 19, 'delete_tag'),
+(58, 'Can add categoria', 20, 'add_categoria'),
+(59, 'Can change categoria', 20, 'change_categoria'),
+(60, 'Can delete categoria', 20, 'delete_categoria'),
+(61, 'Can add municipio', 21, 'add_municipio'),
+(62, 'Can change municipio', 21, 'change_municipio'),
+(63, 'Can delete municipio', 21, 'delete_municipio');
+
+--
+-- Volcado de datos para la tabla `django_content_type`
+--
+
+INSERT IGNORE INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
+(1, 'admin', 'logentry'),
+(2, 'auth', 'permission'),
+(3, 'auth', 'group'),
+(4, 'contenttypes', 'contenttype'),
+(5, 'sessions', 'session'),
+(6, 'sites', 'site'),
+(7, 'authentication_module', 'customuser'),
+(8, 'corsheaders', 'corsmodel'),
+(9, 'authtoken', 'token'),
+(10, 'account', 'emailaddress'),
+(11, 'account', 'emailconfirmation'),
+(12, 'default', 'usersocialauth'),
+(13, 'default', 'nonce'),
+(14, 'default', 'association'),
+(15, 'default', 'code'),
+(16, 'sitios', 'sitio'),
+(17, 'sitios', 'foto'),
+(18, 'sitios', 'sitiocategoria'),
+(19, 'plataforma', 'tag'),
+(20, 'plataforma', 'categoria'),
+(21, 'plataforma', 'municipio');
+
+--
+-- Volcado de datos para la tabla `django_migrations`
+--
+
+INSERT IGNORE INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
+(1, 'contenttypes', '0001_initial', '2016-08-16 03:51:38'),
+(2, 'contenttypes', '0002_remove_content_type_name', '2016-08-16 03:51:38'),
+(3, 'auth', '0001_initial', '2016-08-16 03:51:38'),
+(4, 'auth', '0002_alter_permission_name_max_length', '2016-08-16 03:51:38'),
+(5, 'auth', '0003_alter_user_email_max_length', '2016-08-16 03:51:38'),
+(6, 'auth', '0004_alter_user_username_opts', '2016-08-16 03:51:38'),
+(7, 'auth', '0005_alter_user_last_login_null', '2016-08-16 03:51:38'),
+(8, 'auth', '0006_require_contenttypes_0002', '2016-08-16 03:51:38'),
+(9, 'authentication_module', '0001_initial', '2016-08-16 03:51:39'),
+(10, 'account', '0001_initial', '2016-08-16 03:51:39'),
+(11, 'account', '0002_auto_20151011_1430', '2016-08-16 03:51:39'),
+(12, 'admin', '0001_initial', '2016-08-16 03:51:39'),
+(13, 'auth', '0007_auto_20151127_1656', '2016-08-16 03:51:39'),
+(14, 'auth', '0008_auto_20160229_2210', '2016-08-16 03:51:39'),
+(15, 'authentication_module', '0002_auto_20160801_1950', '2016-08-16 03:51:39'),
+(16, 'authentication_module', '0003_auto_20160801_2013', '2016-08-16 03:51:39'),
+(17, 'authentication_module', '0004_auto_20160801_2318', '2016-08-16 03:51:39'),
+(18, 'authtoken', '0001_initial', '2016-08-16 03:51:40'),
+(19, 'default', '0001_initial', '2016-08-16 03:51:40'),
+(20, 'default', '0002_add_related_name', '2016-08-16 03:51:40'),
+(21, 'default', '0003_alter_email_max_length', '2016-08-16 03:51:40'),
+(22, 'plataforma', '0001_initial', '2016-08-16 03:51:40'),
+(23, 'sitios', '0001_initial', '2016-08-16 03:51:41'),
+(24, 'sitios', '0002_auto_20160801_1950', '2016-08-16 03:51:42'),
+(25, 'plataforma', '0002_auto_20160801_1950', '2016-08-16 03:51:42'),
+(26, 'plataforma', '0003_categoria_url_icono_general', '2016-08-16 03:51:42'),
+(27, 'sessions', '0001_initial', '2016-08-16 03:51:42'),
+(28, 'sites', '0001_initial', '2016-08-16 03:51:42'),
+(29, 'sitios', '0003_auto_20160801_2044', '2016-08-16 03:51:42'),
+(30, 'sitios', '0004_auto_20160801_2318', '2016-08-16 03:51:42'),
+(31, 'sitios', '0005_auto_20160805_2011', '2016-08-16 03:51:42'),
+(32, 'sitios', '0006_auto_20160805_2015', '2016-08-16 03:51:42'),
+(33, 'sitios', '0007_auto_20160805_2055', '2016-08-16 03:51:42'),
+(34, 'sitios', '0008_auto_20160808_2117', '2016-08-16 03:51:42');
+
+--
+-- Volcado de datos para la tabla `django_session`
+--
+
+INSERT IGNORE INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('0rlbpxo6n9l5e96w60drex71ebh0y6ma', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:45'),
+('2iew2scya7wdjoiz0nvrm7a71tuxuwsv', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:46'),
+('bt7fjhd848p4qqemivy94b5eapirnrkd', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:46'),
+('czr97zccoks4va2japx8m9joooozl3os', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:47'),
+('ybqiu4un63jkrl0wgux76eg5hdyw6gd2', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:48'),
+('nbmb2afpzyd4yneo69yghmtrizzwbiuk', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:49'),
+('qhid963lnrjqntaom1jsvs180kyoipnw', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:50'),
+('1o3u8sj07tfitek0nzi5l52e7eth3h7q', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 16:57:51'),
+('gq5rf754cuwb5iplkju26i30ax4kjc6e', 'NzQ1MTgxNDQ1MDFiMTczZjcwY2I4ZGE2MWM2MGU4YWUwYmU2ZjEwODp7Il9hdXRoX3VzZXJfaGFzaCI6ImIzMTFkMjAwYTY1YjA2ZDM1M2JiNTVhYzQwMjI3ZGU1NDA5OTU1ZDAiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMzkiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 17:27:57'),
+('avzdso8kew579r9lkh4oxjyowvrqgjrs', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 17:44:05'),
+('5cdc4kzliiimr2ynoyrvdgrpbiqvb691', 'MmYyZjJlODhjM2E1ZmQ2NzE0YjAwOTExZTdmZGZiMWFkMmZiMmQyYjp7Il9hdXRoX3VzZXJfaGFzaCI6ImU5MDk1MjQ0ZDQyZDAxMjBlMDllNDEyNWRkZDRlZWQ5MGYyNmQ3M2MiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDAiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 17:52:39'),
+('uwzf6eb6w4cj8urcrn0fy2zy03t9imni', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 18:16:17'),
+('opjl0urqz2bh5g4g17ckif2tgiprtqom', 'ZjMwZGE2NjgzNDMwZjY0NzI2ZGZiMGIxYmQ4YTQxMWYyNjk2MTQzYjp7Il9hdXRoX3VzZXJfaGFzaCI6ImJjZGIzZjU5Y2U2ZjI0M2MzZGViMzA3NTRkY2NhZWVjNmJhM2QxNGEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDEiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 18:23:34'),
+('w036i3j548yk0g4dnd12tgeffjlltqee', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 18:33:55'),
+('dsx70hpm4w02abqk8nszjt24dcvmhyph', 'YTIyZmY2OTU5ZGE0MzAyOGZjMzhlYmI4OGI5ZmZmODM2Y2VhYTQ1Zjp7Il9hdXRoX3VzZXJfaGFzaCI6ImI5YmFlNTAwZmYxY2ZmZmI2MzJiMmI2YWM1Njk4YjNiNzFhM2UwZjMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDIiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 19:55:34'),
+('jpef2hf4xczvne32c2uxbqpgwdrlbzmd', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:00:30'),
+('c5h0wp0r5r5y7deiwv41wyimd0fbe9rq', 'OTlhM2U0MjlkMmZhMmVjMzY3OWExNmJlN2QyMWIzZWIyODIzYmMyNDp7Il9hdXRoX3VzZXJfaGFzaCI6ImZmN2UzY2EzOGQzZTBmMTY3NjdlNzVhZWUzMjgxZDFmMWI5YTk5NDIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDMiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 20:01:08'),
+('0p7y481ys2mrwx5z9b1ib1vbm45yspcc', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:02:25'),
+('xt6365ckm0l5a8kwml2qo34pc0vwynwi', 'NjcyN2EyNGNkZjdmY2MzMTYxMWQwNTIzNzFmOWQ3MGE0NTU0NmZlYjp7Il9hdXRoX3VzZXJfaGFzaCI6ImY3ZDJkYWQ2ZDUwODUzYjdhMDk3Y2U2MGU5MDIxZjU1OTQ3ZmM2YTciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDQiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 20:02:38'),
+('shc26lzq1gix6isbit3oubcc9alkvsk6', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:04:17'),
+('jhkv9w1bui4hsfr0t0lirvlb7rlxy5s9', 'YTZiNzdmMGM3MjQ4M2NlMjJlMDY2ZjU5ODQ2NjgwZDRkYTVhNjU1YTp7Il9hdXRoX3VzZXJfaGFzaCI6IjAzMTRkNzg4YjAyNDc4ODAwYTIxYWMxMjg2YzNhYzc1Njg2NjJhMDgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDUiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 20:06:42'),
+('fp5y5m7k7ytv1ae2rjph97ok35hl1q68', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:22:42'),
+('e4q30zny0041jj6fdd7q30vlsazghpg4', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:07:13'),
+('sef1cq1bksg9n9mtx6u2y9efpusz0xr8', 'ZmE3ZDI4OGE2ZGU3MWMzMThhN2Y0NjQzNzg5YWJiYzFlYjdmNGFmNzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjNTgxNDlkZDRiM2Y1MTEyYTU4ZGJkMjgzMDZhMjkyNDNlZDcxYzYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDYiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 20:07:21'),
+('d7yjyzfzqc6uciyuiczlxknlqq3eqi98', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:08:51'),
+('lbh5zl6ivk649c0kfn4s58y12jhzso63', 'OGJhZTQxZWFiM2U1ZTk1NmNiYjUzNjNhZjg2NzZlMTVlNTAyMjVjMDp7Il9hdXRoX3VzZXJfaGFzaCI6Ijg2MDY1YTViZjQyZmY3ZmU4ZDZlMzNhNGM3M2UxN2Y5MmVjNmY4MGUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDciLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 20:11:27'),
+('kp7w0asuu9fkg0k1lo2wxcu3l14hwquh', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:26:01'),
+('tb4copdl6ane0q5d6bk08tymscgvmptt', 'MzUxMDVmMDBiMjdiMGRhYTlhMWI3OTRhNTUyN2Y4NDUwMDliNzVhZjp7Il9hdXRoX3VzZXJfaGFzaCI6IjFkNDQ1ZTEwYWZiNDNjNjY3MzgxODYyMzM1YjE1MDhlMzIwMTllYjYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNDkiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 20:29:43'),
+('tlogogqaawy99x0y15fbmxirdyfcph7e', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 20:34:36'),
+('v8oh6gec733iknium9tbtgo6x2e5aw99', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 21:38:30'),
+('t4xq1u4mlokc1gru5qyxe43zhi2jonm4', 'ZjVjOWNkODFmNjAxNDczYmNkMzA4MTlmMDZjZmY5ZTQ2NjU5NjFkNTp7Il9hdXRoX3VzZXJfaGFzaCI6ImUwNzRlNjY3NDdhYmJiN2RkMTExYTEwNDkwZTkxYjc0MzNiNGE3ZDEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNTEiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 21:39:49'),
+('00tiyt333fd5b8csj677eh4o0dyusc4b', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 22:13:11'),
+('el201qyygkrl4utj84qlcpoisss0j8ba', 'NjMyODQ3M2JiMDZhMDE1ODQxMTNhMDc1ZDU2YjYzYTk3NGM5NDM4ZTp7Il9hdXRoX3VzZXJfaGFzaCI6ImVhOWM0YmMzZDAzZDU0YjVlOWYyNGI1NTliMzk3NTA5Nzc1MGNiZGEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNTIiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 22:17:09'),
+('f6faz50v21uhiwrufs8sm9q4w2efgjh2', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 22:24:44'),
+('bgw94jgwae1csewn7wfqayrbd932o2ef', 'ZmRlYmNkMTkwMjM5NTlmODZkNjA5NGQzYTM5YzZjYmRhNDI3ZmFkNDp7Il9hdXRoX3VzZXJfaGFzaCI6IjI1ZDE1NjU2NWRmMzIzZGUxZTI4ZTdkOTcwNmEwY2JkNGE1OWIyNGEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNTMiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 23:21:17'),
+('tohne19ao269wfbcq8db45iruo929dah', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-25 23:30:55'),
+('fj3p4rmrxcyi4xxumznwpaetvuec3tk9', 'MzFhNjMxZTI3NGVhYTE3ZTg1Mzc2NjYyMjNhZTdjMjM2MTMwMzBlZjp7Il9hdXRoX3VzZXJfaGFzaCI6ImY5MTY4ZDA4NDM0OGVmMjUwN2I1ZTkwMzMwZWFjZjUyZTQ1ZTYwZDUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNTQiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-25 23:48:54'),
+('sm89zl19s0coec37a53l7e3xmfedgbzj', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 14:54:29'),
+('obka7ikkim8bgeciejvmetnd5p1wkt2q', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 14:54:43'),
+('qj1h7xd0xk0p1czjxy3yp5m3t0ji3mi7', 'YjA1MmNiMmVjNTY0ZjVhODY4M2RjNWY2NjNiNTVlNDYzMjljMzY3ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjMxYTI0MWI2NjM4YTcyY2UzMTAwNGE0ZDFjNDNlNmY5NzlmOTQ4MTkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNTYiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-26 14:55:13'),
+('uh2vgtpmyo2wtlz2ndww5tgcj5qi1a76', 'MWJmMWU4YjBlMjAzODdiNWMwZmVlZTg1YzAwMjUwZjhkZmI2ZDk0Njp7Il9hdXRoX3VzZXJfaGFzaCI6ImNiNmMyZWM1ZTlhNzc2OWNjNTlkMDAzMzNkYzRkOTUxNWRkZDA3YjcifQ==', '2016-08-26 14:56:37'),
+('c3jhwlvtbopxod0cs30p10ofe7nfo8q0', 'NzlhNWU4MjQ3YjliOTdmZmI3YTQ3OWMzYjlmYWI4MDhlZGE3ZGI5Yjp7Il9hdXRoX3VzZXJfaGFzaCI6IjY5NTcyY2YyN2IxYjA1ZGI4NDM5MWVhOTc3M2QxYTJlNTU0YzNjYWMifQ==', '2016-08-26 14:56:37'),
+('pjwckxhxvqe2cb78z9ygkgs5xzbmx6sz', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 14:56:41'),
+('68jlhccxdnpznqz03j0pg9vb6085lz78', 'MzYxNjM0YWY0NGZkM2ZhYmYzZTQwOWQ1YWQzNjgzNGM0NzkwYTU2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjY5NTcyY2YyN2IxYjA1ZGI4NDM5MWVhOTc3M2QxYTJlNTU0YzNjYWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NiJ9', '2016-08-26 14:56:59'),
+('hsessxkd3ree0vx04cazhgvhjre1n5ks', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:02:42'),
+('9g2tuyy67bd6vpyecyyrmbt8w4rmxdgv', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:04:24'),
+('uqql6rd2e99cavc79b013l5ikh2hrzo7', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:04:41'),
+('qaijakxpoquqvtm72xg8l9trqyhqvvz4', 'MzYxNjM0YWY0NGZkM2ZhYmYzZTQwOWQ1YWQzNjgzNGM0NzkwYTU2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjY5NTcyY2YyN2IxYjA1ZGI4NDM5MWVhOTc3M2QxYTJlNTU0YzNjYWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NiJ9', '2016-08-26 15:05:00'),
+('y6zmf95nccn60w9tftensq0dfe08vjpi', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:08:06'),
+('5a7wt7f25kilmpapob27g11ne2oslex9', 'MzYxNjM0YWY0NGZkM2ZhYmYzZTQwOWQ1YWQzNjgzNGM0NzkwYTU2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjY5NTcyY2YyN2IxYjA1ZGI4NDM5MWVhOTc3M2QxYTJlNTU0YzNjYWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NiJ9', '2016-08-26 15:08:46'),
+('wnzo6vdsj04a98fnvihhaxnqu1zid6u4', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:09:41'),
+('89433px53dajdo4fu5ejuw2xrs3bd8aa', 'MzYxNjM0YWY0NGZkM2ZhYmYzZTQwOWQ1YWQzNjgzNGM0NzkwYTU2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjY5NTcyY2YyN2IxYjA1ZGI4NDM5MWVhOTc3M2QxYTJlNTU0YzNjYWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NiJ9', '2016-08-26 15:10:39'),
+('czbmb3pj4t5o90ir5ke3utxbqocqpquh', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:12:47'),
+('y6ejfs8oh9peq34ou9k6jg27jktro2gj', 'MzYxNjM0YWY0NGZkM2ZhYmYzZTQwOWQ1YWQzNjgzNGM0NzkwYTU2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjY5NTcyY2YyN2IxYjA1ZGI4NDM5MWVhOTc3M2QxYTJlNTU0YzNjYWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NiJ9', '2016-08-26 15:13:07'),
+('selnjypbf6lp9ot6gz7899yehrul73sh', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 15:14:14'),
+('7ah1g2q327je5z066wziechdo7uhnsh9', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 20:28:57'),
+('uaxjmrwje70nze1mpdx76uobd1cosc0b', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 20:18:02'),
+('kfv7kxh76hb0eyhf0k6hvc5zyqom0tl0', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 21:49:03'),
+('mmmbbt2mba5yxmvo379wig36267ntu2h', 'NDkxM2QzYTk3MDhkODQ5YTEwOThjZjk0YTEyOTEwODk4YmNkYTc4Nzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjZjZmYmU4ODZlMDk2NjE5Yjc2YWY5MTMwZjk4NTdlMTU1MmY0MGQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', '2016-08-26 22:39:35'),
+('hjleqhzljzl04rtruolzbl1truuokkjw', 'NDA3MjNiYzgwYzc2NTFmNmFjZTllY2FlNTEzNDNmNWJjYTk0ZjNmMDp7Il9hdXRoX3VzZXJfaGFzaCI6ImU5N2E3NjNiODAwMWI5NjAyNDgyMWRmMTNlNjg0Y2IwYzZkMTY1ZGYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiNjAiLCJhY2NvdW50X3ZlcmlmaWVkX2VtYWlsIjpudWxsfQ==', '2016-08-26 20:29:20'),
+('rl4p8v9bfe1cpkaf3skpgag1lxpjg05o', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-26 22:41:45'),
+('e4y78n6v8omrnup2qjek2fin252kv3zy', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-08-28 14:27:57');
+
+--
+-- Volcado de datos para la tabla `django_site`
+--
+
+INSERT IGNORE INTO `django_site` (`id`, `domain`, `name`) VALUES
+(1, 'example.com', 'example.com');
+
+--
+-- Volcado de datos para la tabla `plataforma_categoria`
+--
+
+INSERT IGNORE INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`, `URL_icono_seleccionado`, `categoria_padre_id`, `URL_icono_general`) VALUES
 (1, 'Naturaleza y Agroturismo', 1, 'normal_icons/naturaleza-agroturismo.png', 'selected_icons/naturaleza-agroturismo.png', NULL, 'general_icons/naturaleza-agroturismo.png'),
 (2, 'Deportes', 1, 'normal_icons/deporte.png', 'selected_icons/deporte.png', NULL, 'general_icons/deportes.png'),
 (3, 'Creencias y Costumbres', 1, 'normal_icons/costumbres-creencias.png', 'selected_icons/costumbres-creencias.png', NULL, 'general_icons/creencias-costumbres.png'),
@@ -153,10 +408,11 @@ INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`,
 (86, 'Spas', 2, NULL, NULL, 9, NULL),
 (87, 'Hospitales / Centros médicos', 2, NULL, NULL, 9, NULL);
 
--- Dumping data for table `plataforma_municipio`
+--
+-- Volcado de datos para la tabla `plataforma_municipio`
 --
 
-INSERT INTO `plataforma_municipio` (`id`, `nombre`, `latitud`, `longitud`) VALUES
+INSERT IGNORE INTO `plataforma_municipio` (`id`, `nombre`, `latitud`, `longitud`) VALUES
 (1, 'Agua de Dios', 4.375179300000000000, -74.677920700000000000),
 (2, 'Albán', 4.895311100000000000, -74.482398900000000000),
 (3, 'Anapoima', 4.565941800000000000, -74.564331300000000000),
@@ -275,10 +531,10 @@ INSERT INTO `plataforma_municipio` (`id`, `nombre`, `latitud`, `longitud`) VALUE
 (116, 'Zipaquirá', 5.021497200000000000, -73.997903200000000000);
 
 --
--- Dumping data for table `plataforma_tag`
+-- Volcado de datos para la tabla `plataforma_tag`
 --
 
-INSERT INTO `plataforma_tag` (`id`, `tag`) VALUES
+INSERT IGNORE INTO `plataforma_tag` (`id`, `tag`) VALUES
 (1, 'Café'),
 (2, 'comida'),
 (3, 'típica'),
@@ -417,14 +673,14 @@ INSERT INTO `plataforma_tag` (`id`, `tag`) VALUES
 (136, 'forja'),
 (137, 'candelabros'),
 (138, 'pebeteros'),
-(139, 'velas');
-
+(139, 'velas'),
+(140, 'Wifi, piscina, salon de juegos, restaurante');
 
 --
--- Dumping data for table `sitios_foto`
+-- Volcado de datos para la tabla `sitios_foto`
 --
 
-INSERT INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
+INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (1867, 'Fotos/san_alejo_7.JPG', 'I', 1877),
 (1868, 'Fotos/san_alejo_2.JPG', 'F', 1877),
 (1869, 'Fotos/san_alejo_3.JPG', 'F', 1877),
@@ -646,13 +902,28 @@ INSERT INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (2085, 'Fotos/alama_6.JPG', 'F', 1917),
 (2086, 'Fotos/alama_7.JPG', 'F', 1917),
 (2087, 'Fotos/alama_8.JPG', 'F', 1917),
-(2088, 'Fotos/alama_1.JPG', 'P', 1917);
+(2088, 'Fotos/alama_1.JPG', 'P', 1917),
+(2089, 'Fotos/blob_iOZWcUT', 'P', 1918),
+(2096, 'Fotos/blob_F3E1GSU', 'F', 1919),
+(2097, 'Fotos/blob_hgYS9re', 'I', 1919),
+(2098, 'Fotos/blob_NtOwkfU', 'P', 1919),
+(2099, 'Fotos/blob_hBWMEim', 'F', 1920),
+(2100, 'Fotos/blob_8HYZSa8', 'I', 1920),
+(2101, 'Fotos/blob_0xNJIli', 'P', 1920),
+(2103, 'Fotos/blob_IvPrA8W', 'P', 1921),
+(2104, 'Fotos/blob_n88SNA7', 'P', 1922),
+(2105, 'Fotos/blob_no0DNx1', 'F', 1923),
+(2106, 'Fotos/blob_G3hjMUh', 'P', 1923),
+(2107, 'Fotos/blob_6cSEDcW', 'F', 1924),
+(2108, 'Fotos/blob_7gMRQga', 'I', 1924),
+(2109, 'Fotos/blob_l7PiXQF', 'P', 1924),
+(2110, 'Fotos/blob_rxnHOkd', 'P', 1925);
 
 --
--- Dumping data for table `sitios_sitio`
+-- Volcado de datos para la tabla `sitios_sitio`
 --
 
-INSERT INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `horariolocal`, `web`, `latitud`, `longitud`, `descripcion`, `correolocal`, `ubicacionlocal`, `municipio_id`, `usuario_id`) VALUES
+INSERT IGNORE INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `horariolocal`, `web`, `latitud`, `longitud`, `descripcion`, `correolocal`, `ubicacionlocal`, `municipio_id`, `usuario_id`) VALUES
 (1877, 'Restaurante, Muebles y Café "San Alejo"', '8833489', '3102073210 - 3014266280', 'Todos los días de 10 am a 6 pm', 'www.restaurantesanalejo.com', 4.916869335520000000, -74.026701338600000000, 'Restaurante de comida típica santafereña, parrillas al carbón. Café y panadería. Casa de finales de 1800 de arquitectura tradicional. Se venden los muebles, cuadros, decoración y todo lo que hay dentro del restaurante. Especialidad en café (carta de café). Eventos y reservas', '', 'Diagonal 6 No. 3 - 35', 13, 1),
 (1878, 'Edelweiss', '8831212', '3115411241', 'Martes y miércoles de 12 m a 6 pm. Jueves de 12 m a 7 pm. Viernes y sábado de 12 m a 10 pm. Domingos y festivos de 12 m a 7 pm', 'www.edelweisscajica.com', 4.910441995750000000, -74.027967006000000000, 'Restaurante de nueva cocina alemana. Eventos y reservas. Domicilios en la zona. Cerveza artesanal fabricada aquí mismo. Amigables con los animales (puedes traer a tu mascota). Comida vegetariana, postres, helados, entre otros. Celebramos el October Fest.', '', 'Km 1 vía Cajicá Zipaquirá, sector El Misterio', 13, 2),
 (1879, 'Arte Nativo', '3108839849', '3108839849', 'Todos los días de 10 am a 7 pm', '', 4.917777429020000000, -74.025896675900000000, 'Tienda de artesanías. Nuestra tienda tiene un enfoque social y os productos son elaborados por madres cabeza de familia, adulto mayor y personas con discapacidad. Artículos originales y típicos de fabricación propia. Nos centramos en crear, diseñar e inventar piezas exclusivas. Desatacados por los pesebres y las réplicas del monte Picio.', '', 'Calle 3 No. 2 - 47', 13, 3),
@@ -691,13 +962,21 @@ INSERT INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `horarioloca
 (1914, 'Restaurante Hornos de Sal Nemocón / Fabrica de Macrame y artesanias Myriam Rojas', '3108740760', '3105788447', '7am a 8pm domingo a domingo', '', 5.065872295330000000, -73.877184279300000000, 'A 30m de la mina de sal. Centro artesanal y gastronómico. La mejor carne a la parrilla. Panadería y cafetería. La mas deliciosa almojabana.', '', 'Calle 2 No. 0-90', 60, 36),
 (1915, 'Transcondalia', '3203932752', '', '8am a 8pm lunes a sabado / 8am a 2pm domingos', '', 5.067133351540000000, -73.877795822900000000, 'Transporte local en motocarro. Somos una empresa confiable para el transporte de pasajeros dentro de Nemocon.', '', 'Calle 3 # 5-21', 60, 37),
 (1916, 'Droguería Colfamiliar', '3115681695', '3115681695', '9am a 8pm domingo a domingo', '', 5.067015795560000000, -73.877709992200000000, 'Droguería general, inyectología, farmacia, medicamentos', '', 'Calle 3 # 5-08 barrio Centro', 60, 38),
-(1917, 'Alama Velas', '8796188', '', 'Lunes a domingo de 9 am a 1 pm y de 2 pm a 6 pm.', 'www.empresario.com/alamavelas', 4.916985582240000000, -74.023511186200000000, 'Artículos decorativos para hogar y eventos. Velas, velones, candelabros, pebeteros, forja, entre otros. Artículos para aromaterapia.', '', 'calle 3 No. 2 - 53 Local 101', 13, 4);
+(1917, 'Alama Velas', '8796188', '', 'Lunes a domingo de 9 am a 1 pm y de 2 pm a 6 pm.', 'www.empresario.com/alamavelas', 4.916985582240000000, -74.023511186200000000, 'Artículos decorativos para hogar y eventos. Velas, velones, candelabros, pebeteros, forja, entre otros. Artículos para aromaterapia.', '', 'calle 3 No. 2 - 53 Local 101', 13, 4),
+(1918, 'Hotel fusa', '123569854', '319 7781452', '24 horas', 'www.almallanera.com.co', 4.330513908604122000, -74.363113045692440000, 'Un h espectalu', '', 'Cra 1 # 3 22', 31, 39),
+(1919, 'Hotel Parque Zabal', '8736510', '3105583678', '24 horas', 'hotelparquezabal.com', 4.344224872358932000, -74.362474679946900000, 'Hotel ubicado en el centro, cerca al parque principal. Suites especiales con jacuzzi o chimenea. Zona Wifi, Direct TV, parqueadero, área social, salón de eventos.', '', 'Calle 6 # 7-71 centro', 31, 40),
+(1920, 'Hotel Boutique Sinaí', '8717004', '3107831909', '24 horas', 'Www.hotelboutiquesinai.com', 4.343937363239323400, -74.362669140100480000, 'Hotel ubicado en el centro. La mezcla perfecta de lo colonial y lo moderno. Habitaciones confotables, televisión cable, Wifi, parqueadero, apartamentos amoblados, zonas verdes, salón de eventps, conferencias con ayudas audiovisuales, habitaciones con jacuzzi', '', 'Calle 6 # 7-56 centro', 31, 41),
+(1921, 'Alpinismo', '32323232', '', '', '', 4.898788380353646000, -74.457778930664060000, 'Se realizan excursiones.', '', '312321112211', 2, 48),
+(1922, 'Hotel costa del sol', '8673932', '3102916511', '24 horas', 'Www.hotelcostadelsolfusagasuga.com.co', 4.336301615841759500, -74.366039335727690000, 'Elegancia y comfort. Empresa familiar con mas de 18 años prestando servicios de calidad y atención. Cumpliendo con los estándares de calidad y amabilidad.', '', 'Calle 17 # 12-04', 31, 51),
+(1923, 'Hotel Catama Inn', '8780858', '3118119251', '24 horas', 'Www.hotelcatamainn.com', 4.329925507051654000, -74.379981458187100000, 'Ubicado en la ciudad jardín de Colombia, brinda toda la comodidad y la belleza de un paisaje que permite a nuestros huéspedes disfrutar de un ambiente familiar. Salón de reuniones y eventos', '', 'Calle 22 # 36-91 (100m adelante de la estatua del indio)', 31, 52),
+(1924, 'Hotel el Castillo', '3143578003', '3143578003', '24 horas', 'hotelelcastillochinauta.com.co', 4.308047343273843000, -74.443627595901490000, 'Construido en 1967 al mejor estilo medieval, por el señor Luis Carlos de Mendoza enamorado de colombia por su clima, su fauna, y por el placer de observar el cerro del Quinini. Piscina, restaurante, alojamiento.', '', 'Kn 65 vía Melgar', 31, 53),
+(1925, 'Hotel Chinauta Real', '3103068504', '', '24 horas', 'www.hotelchinautareal.com', 4.290073613014737000, -74.466705322265620000, 'La naturaleza, el descanso, la recreación, junto con una buena atención son los pilares del hotel y centro de convenciones. Pinemos a su servicio nuestras instalaciones y una cálida hospitalidad.\r\n\r\nAlojamiento, alimentos y bebidas, zona húmeda y spa, eventos y recepciones, pesca deportiva, caminatas ecológicas, chiva turística, piscina y tobogán. Parqueadero, interacción con especies.', '', 'Km 68.5 vía panamericana, Bogotá-Melgar', 31, 54);
 
 --
--- Dumping data for table `sitios_sitiocategoria`
+-- Volcado de datos para la tabla `sitios_sitiocategoria`
 --
 
-INSERT INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio_id`) VALUES
+INSERT IGNORE INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio_id`) VALUES
 (1, 1, 5, 1877),
 (2, 1, 5, 1878),
 (3, 1, 4, 1879),
@@ -738,13 +1017,58 @@ INSERT INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio_id`) V
 (38, 1, 5, 1914),
 (39, 1, 8, 1915),
 (40, 1, 9, 1916),
-(41, 1, 4, 1917);
+(41, 1, 4, 1917),
+(42, 1, 9, 1918),
+(43, 2, 5, 1918),
+(44, 0, 83, 1918),
+(45, 0, 86, 1918),
+(46, 0, 58, 1918),
+(47, 0, 59, 1918),
+(63, 0, 9, 1919),
+(62, 0, 5, 1919),
+(61, 0, 9, 1919),
+(60, 0, 5, 1919),
+(59, 2, 5, 1919),
+(58, 1, 9, 1919),
+(64, 0, 83, 1919),
+(65, 0, 57, 1919),
+(66, 1, 9, 1920),
+(67, 0, 83, 1920),
+(71, 0, 2, 1921),
+(70, 1, 2, 1921),
+(72, 0, 19, 1921),
+(73, 1, 9, 1922),
+(74, 2, 5, 1922),
+(75, 0, 83, 1922),
+(76, 0, 58, 1922),
+(77, 0, 59, 1922),
+(78, 1, 9, 1923),
+(79, 2, 5, 1923),
+(80, 0, 83, 1923),
+(81, 0, 57, 1923),
+(82, 0, 58, 1923),
+(83, 0, 59, 1923),
+(84, 1, 9, 1924),
+(85, 2, 5, 1924),
+(86, 0, 83, 1924),
+(87, 0, 84, 1924),
+(88, 0, 58, 1924),
+(89, 0, 57, 1924),
+(90, 0, 61, 1924),
+(91, 1, 9, 1925),
+(92, 2, 5, 1925),
+(93, 0, 83, 1925),
+(94, 0, 86, 1925),
+(95, 0, 84, 1925),
+(96, 0, 57, 1925),
+(97, 0, 58, 1925),
+(98, 0, 66, 1925);
 
 --
--- Dumping data for table `sitios_sitio_tags`
+-- Volcado de datos para la tabla `sitios_sitio_tags`
 --
 
-INSERT INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
+INSERT IGNORE INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
 (1, 1877, 1),
 (2, 1877, 2),
 (3, 1877, 3),
@@ -950,4 +1274,6 @@ INSERT INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
 (203, 1917, 137),
 (204, 1917, 138),
 (205, 1917, 139),
-(206, 1917, 7);
+(206, 1917, 7),
+(207, 1923, 140);
+
