@@ -374,7 +374,8 @@ class BusquedaSitioTest(TestCase):
 		self.sitio8.tags.add(tag2)
 		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio10=Sitio.objects.create(nombre='Los mejores panes',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
-		
+		#print "creando bd..."
+		#raw_input("xx")
 	def test_busqueda(self):
 		resultados = self.client.get('/buscar/?search=bar');
 		resultados = [resultado['nombre'] for resultado in resultados.data]
@@ -437,6 +438,8 @@ class BusquedaSitioTest(TestCase):
 		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
 		resultados = self.client.get('/buscar/?search=comida');
 		resultados = resultados.data
+		#print "aaalgo"
+		#raw_input("press...")
 		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
 		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
 		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
@@ -468,10 +471,12 @@ class BusquedaSitioTest(TestCase):
 
 		resultados = self.client.get('/buscar/?search=Lechona');
 		resultados = resultados.data
-		
+		#print "aaalgo"
+		#raw_input("press...")
 		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
 		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
 		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
+
 
 
 	def test_busqueda_en_municipio(self):

@@ -6753,3 +6753,454 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/sitios/views.py", line 49, in get_queryset
     raw_query = raw_query.format(original_word=original_word,word=word)
 KeyError: 'municipio_query'
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id,' at line 1")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1284, in __iter__
+    query = iter(self.query)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 80, in __iter__
+    self._execute_query()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 98, in _execute_query
+    self.cursor.execute(self.sql, self.params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'plataforma_categoria.nombre' in 'where clause'")
