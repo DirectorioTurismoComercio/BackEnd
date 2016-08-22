@@ -471,8 +471,7 @@ class BusquedaSitioTest(TestCase):
 
 		resultados = self.client.get('/buscar/?search=Lechona');
 		resultados = resultados.data
-		#print "aaalgo"
-		#raw_input("press...")
+
 		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
 		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
 		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
