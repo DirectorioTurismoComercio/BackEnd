@@ -7633,3 +7633,226 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 36, in <module>
     urlpatterns=urlpatterns+static(local_settings.MEDIA_WITHOUT_SERVICE_NAME, document_root=settings.MEDIA_ROOT)
 AttributeError: 'module' object has no attribute 'MEDIA_WITHOUT_SERVICE_NAME'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 77, in create
+    print serializer.data.fotos
+AttributeError: 'ReturnDict' object has no attribute 'fotos'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 78, in create
+    site_photos = Foto.objects.filter(site_id=serializer.data["id"])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 679, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 697, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1301, in add_q
+    clause, require_inner = self._add_q(where_part, self.used_aliases)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1328, in _add_q
+    current_negated=current_negated, connector=connector, allow_joins=allow_joins)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1144, in build_filter
+    lookups, parts, reffed_aggregate = self.solve_lookup_type(arg)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1030, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1386, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'site_id' into field. Choices are: URLfoto, id, sitio, sitio_id, tipo
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_photo_size(dir+"/"+photo.name)
+NameError: global name 'reduce_photo_size' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 81, in create
+    reduce_photo_size(dir+"/"+photo.name)
+AttributeError: 'Foto' object has no attribute 'name'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 81, in create
+    reduce_photo_size(dir+"/"+photo.file.name)
+AttributeError: 'Foto' object has no attribute 'file'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 81, in create
+    reduce_photo_size(dir+"/"+photo.URLFoto.name)
+AttributeError: 'Foto' object has no attribute 'URLFoto'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 81, in create
+    reduce_photo_size(dir+"/"+photo.URLfoto.name)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 9, in reduce_photo_size
+    file = os.path.splitext(file)[0]+'.jpg'
+  File "/usr/lib/python2.7/posixpath.py", line 105, in splitext
+    return genericpath._splitext(p, sep, altsep, extsep)
+  File "/usr/lib/python2.7/genericpath.py", line 91, in _splitext
+    sepIndex = p.rfind(sep)
+  File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: rfind
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 81, in create
+    reduce_photo_size(dir+"/"+photo.URLfoto.name)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 9, in reduce_photo_size
+    print os.path.splitext(file)[0]
+  File "/usr/lib/python2.7/posixpath.py", line 105, in splitext
+    return genericpath._splitext(p, sep, altsep, extsep)
+  File "/usr/lib/python2.7/genericpath.py", line 91, in _splitext
+    sepIndex = p.rfind(sep)
+  File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 528, in __getattr__
+    raise AttributeError(name)
+AttributeError: rfind
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 81, in create
+    photo.URLfoto.name = reduce_photo_size(dir+"/"+photo.URLfoto.name)
+TypeError: reduce_photo_size() takes exactly 2 arguments (1 given)
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 117, in update
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 7, in reduce_photo_size
+    file = Image.open(photo_path+"/"+photo_filename)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'str'
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 117, in update
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 7, in reduce_photo_size
+    file = Image.open(photo_path+"/"+photo_filename)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'str'

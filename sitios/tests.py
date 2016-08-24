@@ -125,6 +125,40 @@ class CRUDSitioTest(TestCase):
 		self.assertEqual(len(Foto.objects.all()),2)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 
+	def test_create_successfully_with_photos_size_reduction(self):
+		dir = settings.MEDIA_ROOT  + "/test_photos/"
+		sitio_id = self.sitio1.id
+		
+		nombreFoto1="blob_1.png"
+		nombreFoto2="paisaje.jpg"
+		nombreFoto3="fortaleza_1.jpg"
+
+		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
+		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		fp3=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		new_site = {
+		    	"nombre": "Café Bar", 
+  				"latitud": 4.13, 
+    			"longitud": 74.23, 
+    			"descripcion": "Breve descripción",
+    			"municipio_id": self.municipio.id,
+    			"categorias": [{"categoria_id":self.categoria.id, "tipo":2}],
+    			"PRINCIPAL_foto1": fp1,
+    			"FACHADA_foto2": fp2,
+    			"FACHADA_foto3": fp3,
+    			"usuario": self.usuario.id
+			}
+		qdict = QueryDict('', mutable=True)
+		qdict.update(new_site)
+		
+		response = self.client.post('/sitio',new_site)
+		
+		self.assertEqual(len(Foto.objects.all()),3)
+		self.assertTrue(Foto.objects.all()[0].URLfoto.size<500000,Foto.objects.all()[0].URLfoto.name)
+		self.assertTrue(Foto.objects.all()[1].URLfoto.size<500000,Foto.objects.all()[1].URLfoto.name)
+		self.assertTrue(Foto.objects.all()[2].URLfoto.size<500000,Foto.objects.all()[2].URLfoto.name)
+		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+
 	def test_create_bad_request(self):
 		new_site = {
   			"latitud": 4.13, 

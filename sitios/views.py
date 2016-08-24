@@ -15,6 +15,7 @@ from sitios.serializers import SitioSerializer
 from sitios.serializers import SitioCategoriaSerializer
 from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
+from sitios.photo_processing import *
 from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from sitios.inflector.inflector import Inflector
@@ -70,10 +71,16 @@ class SitioCreate(generics.CreateAPIView):
         serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()
         serializer.is_valid()
+        dir = settings.MEDIA_ROOT  
 
         if serializer.is_valid():
             serializer.save()
             serializer.add_photos_with_abbreviations(photos)
+            site_photos = Foto.objects.filter(sitio_id=serializer.data["id"])
+            for photo in site_photos:
+                photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name)
+                photo.save()
+
             if "categorias" in data:
                 categories = request.data.getlist('categorias');
                 if isinstance(categories, list):
@@ -97,6 +104,7 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticated, IsSiteOwner)
 
     def update(self, request, *args, **kwargs):
+        dir = settings.MEDIA_ROOT  
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
         photos = request.FILES.iteritems()
@@ -105,6 +113,10 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         self.perform_update(serializer)
         self.get_object().fotos.all().delete()
         serializer.add_photos_with_abbreviations(photos)
+        site_photos = Foto.objects.filter(sitio_id=serializer.data["id"])
+        for photo in site_photos:
+            photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name)
+            photo.save()
 
         if "categorias" in request.data:
             categories = request.data.getlist('categorias');
