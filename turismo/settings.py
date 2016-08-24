@@ -132,6 +132,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+FACTOR_ESCALA_RADIO_DE_BUSQUEDA_RUTA=4
+
 
 
 # Static files (CSS, JavaScript, Images)
