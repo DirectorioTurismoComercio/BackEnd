@@ -52,6 +52,8 @@ class SitioList(generics.ListAPIView):
             municipio_query =""
         
         raw_query = raw_query.format(original_word=original_word,word=word,municipio_query=municipio_query)
+
+
         resultados = Sitio.objects.raw(raw_query)
 
         return resultados
