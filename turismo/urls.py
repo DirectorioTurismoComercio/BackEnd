@@ -33,4 +33,5 @@ urlpatterns = patterns('',
    
 )
 urlpatterns = format_suffix_patterns(urlpatterns)
-urlpatterns=urlpatterns+static(local_settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns=urlpatterns+static(local_settings.MEDIA_URL_WITHOUT_SERVICE_NAME, document_root=settings.MEDIA_ROOT)
+

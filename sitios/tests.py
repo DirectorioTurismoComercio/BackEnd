@@ -341,6 +341,9 @@ class BusquedaSitioTest(TestCase):
 
 	def setUp(self):
 		municipio = Municipio.objects.create(nombre='Cota',latitud=0,longitud=0)
+		municipio2 = Municipio.objects.create(nombre='Cajicá',latitud=0,longitud=0)
+		self.municipio=municipio
+		self.municipio2=municipio2
 		usuario = CustomUserSerializer(data={'email': self.EMAIL,'password': self.PASSWORD})
 		usuario.is_valid()
 		usuario = usuario.save()
@@ -356,9 +359,11 @@ class BusquedaSitioTest(TestCase):
 		self.sitio2=Sitio.objects.create(nombre='Pan Pan bueno',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio3=Sitio.objects.create(nombre='Hotel el holgazan',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio4=Sitio.objects.create(nombre='Bar café',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
-		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio,horariolocal="7-15",usuario=usuario)
+		self.sitio5=Sitio.objects.create(nombre='Cafe Bar',latitud=0,longitud=0, descripcion='con baño',municipio=municipio2,horariolocal="7-15",usuario=usuario)
+		
 		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria1);
 		SitioCategoria.objects.create(sitio=self.sitio5,categoria=categoria2);
+		
 		self.sitio6=Sitio.objects.create(nombre='En el bar del tango',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio6.tags.add(tag1)
 		self.sitio6.tags.add(tag2)
@@ -369,7 +374,8 @@ class BusquedaSitioTest(TestCase):
 		self.sitio8.tags.add(tag2)
 		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio10=Sitio.objects.create(nombre='Los mejores panes',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
-		
+		#print "creando bd..."
+		#raw_input("xx")
 	def test_busqueda(self):
 		resultados = self.client.get('/buscar/?search=bar');
 		resultados = [resultado['nombre'] for resultado in resultados.data]
@@ -421,6 +427,63 @@ class BusquedaSitioTest(TestCase):
 		resultados = self.client.get('/buscar/?search=cuba');
 		resultados = [resultado['nombre'] for resultado in resultados.data]
 		self.assertTrue(self.sitio5.nombre in resultados)
+
+	def test_busqueda_categoria_orden(self):
+		categoria3 = Categoria.objects.create(nombre='Deportes')
+		categoria4 = Categoria.objects.create(nombre='Comida')
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
+		resultados = self.client.get('/buscar/?search=comida');
+		resultados = resultados.data
+		#print "aaalgo"
+		#raw_input("press...")
+		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
+		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
+		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
+
+	def test_busqueda_subcategoria_orden(self):
+		categoria3 = Categoria.objects.create(nombre='Deportes')
+		categoria4 = Categoria.objects.create(nombre='Comida')
+		subcategoria1 = Categoria.objects.create(nombre='Ciclas',categoria_padre=categoria3, nivel=2)
+		subcategoria2 = Categoria.objects.create(nombre='Balones',categoria_padre=categoria3, nivel=2)
+		subcategoria3 = Categoria.objects.create(nombre='Hamburguesas',categoria_padre=categoria4, nivel=2)
+		subcategoria4 = Categoria.objects.create(nombre='Lechona',categoria_padre=categoria4, nivel=2)
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria3, tipo=1);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=categoria4, tipo=2);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
+		
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=subcategoria3);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=subcategoria3);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=subcategoria3);
+
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=subcategoria1);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=subcategoria1);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=subcategoria1);
+
+		SitioCategoria.objects.create(sitio=self.sitio6,categoria=subcategoria4);
+		SitioCategoria.objects.create(sitio=self.sitio7,categoria=subcategoria4);
+		SitioCategoria.objects.create(sitio=self.sitio8,categoria=subcategoria4);
+
+		resultados = self.client.get('/buscar/?search=Lechona');
+		resultados = resultados.data
+
+		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
+		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
+		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)
+
+
+
+	def test_busqueda_en_municipio(self):
+		resultados = self.client.get('/buscar/?search=cafe&id_municipio='+str(self.municipio.id));
+		resultados = [resultado['nombre'] for resultado in resultados.data]
+
+		self.assertTrue(self.sitio4.nombre.decode('utf8') in resultados)
+		self.assertFalse(self.sitio5.nombre in resultados)
 
 	def test_sugerencias(self):
 		palabras_esperadas = [u'Panaderia',u'Pan',u'Panes']
