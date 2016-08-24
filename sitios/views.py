@@ -18,6 +18,7 @@ from sitios.string_processing import *
 from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from sitios.inflector.inflector import Inflector
+from django.conf import settings
 from sitios.inflector.rules.spanish import Spanish
 import plataforma
 import re
@@ -132,7 +133,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         paso = 1
 
         for i in range(0, len(puntos) - (paso + 1), paso):
-            radio = hallar_distancia_geodesica(puntos[i], puntos[i + paso]) / 2
+            radio = (hallar_distancia_geodesica(puntos[i], puntos[i + paso]) / 2)*settings.FACTOR_ESCALA_RADIO_DE_BUSQUEDA_RUTA
             for site in sites:
                 distancia = hallar_distancia_geodesica(puntos[i], (site.latitud, site.longitud))
                 if distancia <= radio:
