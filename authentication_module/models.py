@@ -12,6 +12,7 @@ from django.utils.translation import gettext as _
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+	REQUIRED_FIELDS = [] 
 	username = models.CharField(max_length=30, blank=True)
 	first_name = models.CharField(max_length=30, blank=True)
 	last_name = models.CharField(max_length=30, blank=True)
@@ -25,3 +26,4 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 	date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 	USERNAME_FIELD = 'email'
 	objects = UserManager()
+

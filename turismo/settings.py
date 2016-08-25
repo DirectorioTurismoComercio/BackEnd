@@ -28,10 +28,14 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
+
 # Application definition
 
 INSTALLED_APPS = (
     'django_jenkins',
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -148,6 +152,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'Fotos')
 
 TEMPLATE_DIRS = (
                     os.path.join(os.path.dirname(__file__),'templates'),
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
 )
 
 

@@ -10,6 +10,10 @@ from plataforma.models import Municipio
 from plataforma.models import Tag
 from authentication_module.models import CustomUser
 
+from django.core.validators import RegexValidator
+
+from django.contrib.auth.models import User, AbstractUser, AbstractBaseUser
+
 
 
 class Sitio(models.Model):
@@ -46,4 +50,26 @@ class SitioCategoria(models.Model):
 	categoria = models.ForeignKey(Categoria,blank=False)
 	sitio = models.ForeignKey(Sitio,blank=False)
 
-		
+
+class AppUser():
+	_SEX = (
+	    ('M', 'Male'),
+	    ('F', 'Female'),
+	)
+	_pregex  = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+	phone    = models.CharField(validators=[_pregex], max_length=16, blank=True)
+	gender   = models.CharField(max_length=1, blank=True, null=True, choices=_SEX)
+	birthday = models.DateField(blank=True, null=True)
+	vericode = models.CharField(max_length=40, blank=True, null=True) # verification code over SMS?
+	verified = models.DateTimeField(null=True, blank=True) # datetime stored when verification happened
+
+	# for DJOSER
+	# define required fields here, so you can call put /auth/me to update your profile
+	REQUIRED_FIELDS = User.REQUIRED_FIELDS + ['first_name', 'last_name', 'gender', 'birthday']
+
+	@property
+	def age(self):
+	    if self.birthday:
+	        today = date.today()
+	        return today.year - self.birthday.year - ((today.month, today.day) < (self.birthday.month, self.birthday.day))
+	    return None
