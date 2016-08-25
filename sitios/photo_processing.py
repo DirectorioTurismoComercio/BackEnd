@@ -1,6 +1,7 @@
 from PIL import Image
 import os
 import imghdr
+from django.conf import settings
 
 def reduce_photo_size(photo_path, photo_filename):
 	quality = 90
@@ -17,3 +18,14 @@ def reduce_photo_size(photo_path, photo_filename):
 
 	return photo_filename
 
+
+def reduce_site_photos(dir,site_photos):
+	for photo in site_photos:
+		old_name = photo.URLfoto.name
+		if photo.URLfoto.size > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+			photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name)
+			if old_name != photo.URLfoto.name:
+				os.remove(dir+"/"+old_name)
+		photo.URLfoto.name = os.path.splitext(photo.URLfoto.name)[0]+'.jpg'
+		photo.save()
+		#os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)

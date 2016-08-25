@@ -154,9 +154,9 @@ class CRUDSitioTest(TestCase):
 		response = self.client.post('/sitio',new_site)
 		
 		self.assertEqual(len(Foto.objects.all()),3)
-		self.assertTrue(Foto.objects.all()[0].URLfoto.size<500000,Foto.objects.all()[0].URLfoto.name)
-		self.assertTrue(Foto.objects.all()[1].URLfoto.size<500000,Foto.objects.all()[1].URLfoto.name)
-		self.assertTrue(Foto.objects.all()[2].URLfoto.size<500000,Foto.objects.all()[2].URLfoto.name)
+		self.assertTrue(Foto.objects.all()[0].URLfoto.size<settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION,Foto.objects.all()[0].URLfoto.name)
+		self.assertTrue(Foto.objects.all()[1].URLfoto.size<settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION,Foto.objects.all()[1].URLfoto.name)
+		self.assertTrue(Foto.objects.all()[2].URLfoto.size<settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION,Foto.objects.all()[2].URLfoto.name)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 
 	def test_create_bad_request(self):
