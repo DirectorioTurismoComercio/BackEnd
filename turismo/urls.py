@@ -7,7 +7,11 @@ from django.views.generic import RedirectView
 from authentication_module import views as authentication_module_views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib import admin
+
 import local_settings
+
+admin.autodiscover()
 
 urlpatterns = patterns('',
 
@@ -30,8 +34,10 @@ urlpatterns = patterns('',
     url(r'^ruta/sitios', sitio_views.SitiosCercanosARuta.as_view({'post':'list_sites'})), 
     url(r'^sitio/detail/(?P<pk>[0-9]+)', sitio_views.SitioDetail.as_view()), 
     url(r'^sitio', sitio_views.SitioCreate.as_view()), 
+
+     url(r'^admin/', include(admin.site.urls)), 
    
 )
 urlpatterns = format_suffix_patterns(urlpatterns)
-urlpatterns=urlpatterns+static(local_settings.MEDIA_URL_WITHOUT_SERVICE_NAME, document_root=settings.MEDIA_ROOT)
+urlpatterns=urlpatterns+static(local_settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

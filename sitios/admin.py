@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Sitio, Foto, SitioCategoria
 
-# Register your models here.
+
+admin.site.register(Sitio)
+admin.site.register(Foto)
+admin.site.register(SitioCategoria)
+
+

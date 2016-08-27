@@ -10,6 +10,10 @@ from plataforma.models import Municipio
 from plataforma.models import Tag
 from authentication_module.models import CustomUser
 
+from django.core.validators import RegexValidator
+
+from django.contrib.auth.models import User, AbstractUser, AbstractBaseUser
+
 
 
 class Sitio(models.Model):
@@ -45,5 +49,3 @@ class SitioCategoria(models.Model):
 	tipo = models.IntegerField(default=1)
 	categoria = models.ForeignKey(Categoria,blank=False)
 	sitio = models.ForeignKey(Sitio,blank=False)
-
-		
