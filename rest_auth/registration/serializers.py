@@ -159,7 +159,7 @@ class RegisterSerializer(serializers.Serializer):
         if 'tipo_cuenta' in request.data:
             if(request.data['tipo_cuenta']=='M'):
                 user.tipo_cuenta = request.data['tipo_cuenta']
-                user.is_active=0
+            
 
         user.save()
         return user
