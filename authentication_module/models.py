@@ -25,7 +25,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
                     'active. Unselect this instead of deleting accounts.'))
 	date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 	tipo_cuenta = models.CharField(max_length=1,choices=(('C','COMERCIANTE'),('M','MUNICIPIO')),default='C',
-                                                  null=False, blank=False)
+                                                  null=True, blank=True)
 	USERNAME_FIELD = 'email'
 	objects = UserManager()
 

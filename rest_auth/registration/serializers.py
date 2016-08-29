@@ -121,6 +121,7 @@ class RegisterSerializer(serializers.Serializer):
     last_name = serializers.CharField(required=True, write_only=True)
     password1 = serializers.CharField(required=True, write_only=True)
     password2 = serializers.CharField(required=True, write_only=True)
+    tipo_cuenta = serializers.CharField(required=False)
 
     def validate_email(self, email):
         email = get_adapter().clean_email(email)
@@ -144,14 +145,22 @@ class RegisterSerializer(serializers.Serializer):
             'last_name': self.validated_data.get('last_name', ''),
             'password1': self.validated_data.get('password1', ''),
             'email': self.validated_data.get('email', ''),
+            'tipo_cuenta': self.validated_data.get('tipo_cuenta', ''),
         }
 
     def save(self, request):
         adapter = get_adapter()
         user = adapter.new_user(request)
         self.cleaned_data = self.get_cleaned_data()
+
         adapter.save_user(request, user, self)
         setup_user_email(request, user, [])
+        
+        if 'tipo_cuenta' in request.data:
+            if(request.data['tipo_cuenta']=='M'):
+                user.tipo_cuenta = request.data['tipo_cuenta']
+                user.is_active=0
+
         user.save()
         return user
 
