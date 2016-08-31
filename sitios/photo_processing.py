@@ -22,6 +22,7 @@ def reduce_photo_size(photo_path, photo_filename):
 def reduce_site_photos(dir,site_photos):
 	for photo in site_photos:
 		old_name = photo.URLfoto.name
+		print photo.URLfoto.size
 		if photo.URLfoto.size > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
 			photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name)
 			if old_name != photo.URLfoto.name:
