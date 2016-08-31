@@ -82,8 +82,8 @@ class SitioCreate(generics.CreateAPIView):
             if "categorias" in data:
                 categories = request.data.getlist('categorias');
                 if isinstance(categories, list):
-
-                    serializer.add_categories(categories)
+                    if categories[0]!="[]":
+                        serializer.add_categories(categories)
                 else:
                     return Response(data={"categorias": "Categorías debe ser un arreglo"},
                                     status=status.HTTP_400_BAD_REQUEST)
@@ -117,8 +117,9 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         if "categorias" in request.data:
             categories = request.data.getlist('categorias');
             if isinstance(categories, list):
-                SitioCategoria.objects.filter(sitio=self.get_object().id).all().delete()
-                serializer.add_categories(categories)
+                if categories[0]!="[]":
+                    SitioCategoria.objects.filter(sitio=self.get_object().id).all().delete()
+                    serializer.add_categories(categories)
             else:
                 return Response(data={"categorias": "Categorías debe ser un arreglo"},
                                 status=status.HTTP_400_BAD_REQUEST)

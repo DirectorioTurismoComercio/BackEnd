@@ -70,7 +70,7 @@ class SitioSerializer(serializers.ModelSerializer):
 				if serializer.is_valid(raise_exception=True):
 					serializer.save()
 			else:
-				raise serializers.ValidationError("El campo categorias debería ser un arreglo de objetos cada uno con los campos: categoria y tipo")
+				raise serializers.ValidationError("El campo categorias debería ser un arreglo de objetos cada uno con los campos: categoria_id y tipo")
 
 			
 	
