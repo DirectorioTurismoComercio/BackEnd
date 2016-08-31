@@ -31,6 +31,8 @@ class Sitio(models.Model):
 	tags = models.ManyToManyField(Tag)
 	usuario = models.ForeignKey(CustomUser,null=True,related_name='sitios')
 	municipio = models.ForeignKey(Municipio, related_name='sitios', null=False) 
+	tipo_sitio =  models.CharField(max_length=1,choices=(('M','MUNICIPIO'),('S','SITIO'),('I','INTERIOR'),('PR','PRODUCTOS')),default='S',
+                                                  null=True, blank=True)
 
 
 class Foto(models.Model):
