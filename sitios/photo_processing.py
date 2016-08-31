@@ -14,7 +14,7 @@ def reduce_photo_size(photo_path, photo_filename):
 		background.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=quality)
 
 	if imghdr.what(photo_path+"/"+photo_filename)=='jpg':
-		foo.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=quality)
+		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=quality)
 
 	return photo_filename
 
@@ -28,4 +28,5 @@ def reduce_site_photos(dir,site_photos):
 				os.remove(dir+"/"+old_name)
 		photo.URLfoto.name = os.path.splitext(photo.URLfoto.name)[0]+'.jpg'
 		photo.save()
-		os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)
+		if os.path.isfile(dir+"/"+old_name):
+			os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)

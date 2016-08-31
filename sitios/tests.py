@@ -101,9 +101,9 @@ class CRUDSitioTest(TestCase):
 		
 
 	def test_create_successfully_with_photos(self):
-		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
-		nombreFoto1="piqueteadero.jpg"
-		nombreFoto2="piqueteadero2.jpg"
+		dir = settings.MEDIA_ROOT  + "/test_photos/"
+		nombreFoto1="test_13221_piqueteadero.jpg"
+		nombreFoto2="test_13221_piqueteadero2.jpg"
 		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
 		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
 		new_site = {
@@ -129,9 +129,9 @@ class CRUDSitioTest(TestCase):
 		dir = settings.MEDIA_ROOT  + "/test_photos/"
 		sitio_id = self.sitio1.id
 		
-		nombreFoto1="blob_1.png"
-		nombreFoto2="paisaje.jpg"
-		nombreFoto3="fortaleza_1.jpg"
+		nombreFoto1="test_13221_blob_1.png"
+		nombreFoto2="test_13221_paisaje.jpg"
+		nombreFoto3="test_13221_fortaleza_1.JPG"
 
 		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
 		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
@@ -174,10 +174,10 @@ class CRUDSitioTest(TestCase):
 		self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST, response.data)
 
 	def test_update_site_texts(self):
-		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		dir = settings.MEDIA_ROOT  + "/test_photos/"
 		sitio_id = self.sitio1.id
-		nombreFoto1="piqueteadero.jpg"
-		nombreFoto2="piqueteadero2.jpg"
+		nombreFoto1="test_13221_piqueteadero.jpg"
+		nombreFoto2="test_13221_piqueteadero2.jpg"
 		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
 		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
 		nuevo_nombre = "Nuevo bar"
@@ -226,7 +226,7 @@ class CRUDSitioTest(TestCase):
 	
 
 	def test_update_site_categories_tags(self):
-		dir = os.path.abspath(os.path.dirname(__file__)) + "/test_photos/"
+		dir = settings.MEDIA_ROOT + "/test_photos/"
 		sitio_id = self.sitio1.id
 		
 		nuevo_nombre = "Nuevo bar"
@@ -264,14 +264,14 @@ class CRUDSitioTest(TestCase):
 
 		dir = settings.MEDIA_ROOT  + "/test_photos/"
 		sitio_id = self.sitio1.id
-		nombreFoto1="piqueteadero"
-		nombreFoto2="piqueteadero2"
-		nombreFoto3="piqueteadero4"
-		nombreFoto4="piqueteadero5"
+		nombreFoto1="test_13221_piqueteadero"
+		nombreFoto2="test_13221_piqueteadero2"
+		nombreFoto3="test_13221_piqueteadero4"
+		nombreFoto4="test_13221_piqueteadero5"
 		ext=".jpg"
 		
-		photo1 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto1+ext), sitio=self.sitio1, tipo='P')
-		photo2 = Foto.objects.create(URLfoto=os.path.join(os.pardir, dir+nombreFoto2+ext), sitio=self.sitio1, tipo='P')
+		photo1 = Foto.objects.create(URLfoto=os.path.join(os.pardir, settings.MEDIA_ROOT+"/"+nombreFoto1+ext), sitio=self.sitio1, tipo='P')
+		photo2 = Foto.objects.create(URLfoto=os.path.join(os.pardir, settings.MEDIA_ROOT+"/"+nombreFoto2+ext), sitio=self.sitio1, tipo='P')
 
 		fp3=open(os.path.join(os.pardir, dir+nombreFoto3+ext),'rb')
 		fp4=open(os.path.join(os.pardir, dir+nombreFoto4+ext),'rb')
@@ -365,6 +365,13 @@ class CRUDSitioTest(TestCase):
 		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response.status_code)
 
 		
+	def tearDown(self):
+		dir = settings.MEDIA_ROOT+"/Fotos"
+		files = os.listdir(dir)
+		for file in files:
+			if file.startswith("test_13221"):
+				os.remove(os.path.join(dir,file))
+
 
 		
 	
@@ -408,8 +415,7 @@ class BusquedaSitioTest(TestCase):
 		self.sitio8.tags.add(tag2)
 		self.sitio9=Sitio.objects.create(nombre='Baño público',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
 		self.sitio10=Sitio.objects.create(nombre='Los mejores panes',latitud=0,longitud=0,municipio=municipio,horariolocal="7-15",usuario=usuario)
-		#print "creando bd..."
-		#raw_input("xx")
+	
 	def test_busqueda(self):
 		resultados = self.client.get('/buscar/?search=bar');
 		resultados = [resultado['nombre'] for resultado in resultados.data]
@@ -472,8 +478,6 @@ class BusquedaSitioTest(TestCase):
 		SitioCategoria.objects.create(sitio=self.sitio8,categoria=categoria4, tipo=1);
 		resultados = self.client.get('/buscar/?search=comida');
 		resultados = resultados.data
-		#print "aaalgo"
-		#raw_input("press...")
 		self.assertEquals(resultados[0]['nombre'],self.sitio8.nombre)
 		self.assertEquals(resultados[1]['nombre'],self.sitio6.nombre)
 		self.assertEquals(resultados[2]['nombre'],self.sitio7.nombre)

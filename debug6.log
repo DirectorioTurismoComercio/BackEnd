@@ -8881,3 +8881,170 @@ Traceback (most recent call last):
   File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 31, in reduce_site_photos
     os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)
 OSError: [Errno 2] No such file or directory
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 32, in reduce_site_photos
+    input("tecla... ")
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 32, in reduce_site_photos
+    input("tecla... ")
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 115, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 32, in reduce_site_photos
+    input("tecla... ")
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 115, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 32, in reduce_site_photos
+    input("tecla... ")
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 32, in reduce_site_photos
+    input("tecla... ")
+  File "<string>", line 0
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 33, in reduce_site_photos
+    os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)
+OSError: [Errno 2] No such file or directory
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 34, in reduce_site_photos
+    os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)
+OSError: [Errno 2] No such file or directory
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documents/BackEnd/sitios/views.py", line 80, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documents/BackEnd/sitios/photo_processing.py", line 34, in reduce_site_photos
+    os.rename(dir+"/"+old_name, dir+"/"+photo.URLfoto.name)
+OSError: [Errno 2] No such file or directory
