@@ -40,7 +40,7 @@ class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class CategoriaListCreate(generics.ListCreateAPIView):
-    queryset = Categoria.objects.all()
+    queryset = Categoria.objects.all().order_by('nombre')
     serializer_class = CategoriaSerializer 
     def get_queryset(self):
         queryset = super(CategoriaListCreate, self).get_queryset()
