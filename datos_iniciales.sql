@@ -93,7 +93,7 @@ INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, 
 (51, 'pbkdf2_sha256$20000$YFruFXgI34XB$j2Eb9z0e/cQza15+B70QNf1dzpliMtzWW7jI3DBP1E4=', '2016-08-11 21:39:49', 0, 'alfredo', 'Alfredo', 'Lopez', 'hotelcostadelsolfgga@hotmail.com', 0, 1, '2016-08-11 21:39:49', 'C', 1),
 (52, 'pbkdf2_sha256$20000$TWjyS2bLTDHU$yP/bLq708TORQa8y5e5xxa0NRICiW3Ygbd3a/kzoRIA=', '2016-08-11 22:17:09', 0, 'johanna', 'Johanna', 'Moreno', 'hotelcatamainn@gmail.com', 0, 1, '2016-08-11 22:17:09', 'C', 1),
 (53, 'pbkdf2_sha256$20000$mEY3KMFvNrhB$GNle+oN7GnuHyRmT7eE1etoAoCbLMClIAxMiEraYWSA=', '2016-08-11 23:21:17', 0, 'diego', 'Diego', 'Diaz', 'info@hotelelcastillochinauta.com.co', 0, 1, '2016-08-11 23:21:17', 'C', 1),
-(54, 'pbkdf2_sha256$20000$gHdYFLZ5De6L$Uj6hbCSiUaHl9/xQWTLEDh+/U/suXQSHn/u6G0Qlt7A=', '2016-08-11 23:48:54', 0, 'laura', 'Laura', 'Cardenas', 'contacto@hotelchinautareal.com', 0, 1, '2016-08-11 23:48:54', 'C', 1);
+(54, 'pbkdf2_sha256$20000$gHdYFLZ5De6L$Uj6hbCSiUaHl9/xQWTLEDh+/U/suXQSHn/u6G0Qlt7A=', '2016-08-11 23:48:54', 0, 'laura', 'Laura', 'Cardenas', 'contacto@hotelchinautareal.com', 0, 1, '2016-08-11 23:48:54', 'C', 1),
 (55, 'pbkdf2_sha256$20000$7ES3MIFfF3mj$U5NTdf7x3bMRQujS8/E5tx3LMImwdgImoZHsAXlpyOY=', '2016-09-05 15:47:22.471305', 1, 'administrador', 'Administrador', 'Administrador', 'admin@admin.com', 1, 1, '2016-09-05 15:47:22.410085', 'C', 1);
 
 
