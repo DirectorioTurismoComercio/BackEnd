@@ -19,6 +19,8 @@ class Categoria(models.Model):
     URL_icono_general = models.FileField(upload_to="general_icons", null=True)
     URL_icono_normal = models.FileField(upload_to="normal_icons", null=True)
     URL_icono_seleccionado = models.FileField(upload_to="selected_iconos", null=True)
+    def __unicode__(self):
+      return self.nombre
 
 
 class Municipio(models.Model):
