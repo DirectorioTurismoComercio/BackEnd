@@ -10,33 +10,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
---
--- Base de datos: `plataforma`
---
-
---
--- Volcado de datos para la tabla `account_emailaddress`
---
-
-INSERT IGNORE INTO `account_emailaddress` (`id`, `email`, `verified`, `primary`, `user_id`) VALUES
-(1, 'mauricio@longboardcolombia.com', 0, 1, 39),
-(2, 'hotelparquezabal@hotmail.com', 0, 1, 40),
-(3, 'hotelboutiquesinai@gmail.com', 0, 1, 41),
-(4, 'das@das.com', 0, 1, 42),
-(5, 'dfsads@dadas.com', 0, 1, 43),
-(6, 'asdas@daas.com', 0, 1, 44),
-(7, 'dasdas@qwqqw.com', 0, 1, 45),
-(8, 'dasda@dasads.com', 0, 1, 46),
-(9, 'lizethdiazc@gmail.com', 0, 1, 47),
-(10, 'mauro@mail.com', 0, 1, 49),
-(11, 'hotelcostadelsolfgga@hotmail.com', 0, 1, 51),
-(12, 'hotelcatamainn@gmail.com', 0, 1, 52),
-(13, 'info@hotelelcastillochinauta.com.co', 0, 1, 53),
-(14, 'contacto@hotelchinautareal.com', 0, 1, 54),
-(15, 'fobnacho@gmail.com', 0, 1, 56),
-(16, 'pepe@prueba.com', 0, 1, 57),
-(17, 'pereza@gmail.com', 0, 1, 59),
-(18, 'oromeroce@gmail.com', 0, 1, 60);
 
 --
 -- Volcado de datos para la tabla `authentication_module_customuser`
@@ -81,14 +54,8 @@ INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, 
 (36, 'pbkdf2_sha256$20000$jNKJmyPNkRr6$/2IsiqOrFo4h2QpNeCuX5B1D5AvA3aWbi3tUo0awhWw=', NULL, 0, '', 'Myriam', 'Rojas', 'macramemyriamrojas@hotmail.com', 0, 1, '2016-07-01 21:13:30', 'C', 1),
 (37, 'pbkdf2_sha256$20000$sPYN83jmkfzK$exGJiFcb2hTaaBfCx3kmjJ7M/VHnw0kVe/9Njy2lkxI=', NULL, 0, '', 'Luz Dary', 'Salgado', 'transcondalia@gmail.com', 0, 1, '2016-07-01 21:23:50', 'C', 1),
 (38, 'pbkdf2_sha256$20000$27YCwp3PWlDO$h3IqC1x1NV+B1iiVybZIef9bK4zpZtg972Jdafb2X+A=', NULL, 0, '', 'Irlena', 'Becerra', 'Neny.1015@hotmail.com', 0, 1, '2016-07-01 21:28:37', 'C', 1),
-(39, 'pbkdf2_sha256$20000$fKuV48UfKJsE$D+SU7IxQqyEr4u39z4Sa/sPX0tienrXjvIdBIGfyU4w=', '2016-08-11 17:27:57', 0, 'x', 'X', 'Y', 'mauricio@longboardcolombia.com', 0, 1, '2016-08-11 17:27:56', 'C', 1),
 (40, 'pbkdf2_sha256$20000$zbUb4QJTyOzk$m4DC50pse0prNSWtGO9xEYk3k1e8Iedyg8aBVbn4Jlk=', '2016-08-11 17:52:39', 0, 'salomon', 'Salomon', 'Muñoz', 'hotelparquezabal@hotmail.com', 0, 1, '2016-08-11 17:52:38', 'C', 1),
 (41, 'pbkdf2_sha256$20000$fLvrEoKCFh1J$AzcVAI+szj/qvbbeXI8IFBMGaWZEy7nTinGjMsKCEBU=', '2016-08-11 18:23:34', 0, 'sandra', 'Sandra', 'Roa', 'hotelboutiquesinai@gmail.com', 0, 1, '2016-08-11 18:23:34', 'C', 1),
-(42, 'pbkdf2_sha256$20000$SJErd8zYzkF4$61xh9MORkdRWrwK6KCDGY+rJ5iXmRq4+ao6Ddzvp2g4=', '2016-08-11 19:55:34', 0, 'das', 'das', 'das', 'das@das.com', 0, 1, '2016-08-11 19:55:34', 'C', 1),
-(43, 'pbkdf2_sha256$20000$Im510qTfZJn5$4fu6s1cokh5EkXPFFB+kn9gArji5T1P5H40ifXiqB9M=', '2016-08-11 20:01:08', 0, 'sadsa', 'sadsa', 'dasdas', 'dfsads@dadas.com', 0, 1, '2016-08-11 20:01:08', 'C', 1),
-(44, 'pbkdf2_sha256$20000$LuU9BTjrD6Ve$81SbLcEq3NXZbeuUE2YkxpagC9ehMNWmjcJVd3XdmWs=', '2016-08-11 20:02:38', 0, 'dasdas', 'dasdas', 'dasdas', 'asdas@daas.com', 0, 1, '2016-08-11 20:02:37', 'C', 1),
-(45, 'pbkdf2_sha256$20000$4Xi5iD8MbEbB$3EuJ/e9deDJoDWxkdKNq4WZXW9GH7WTAMPOKCMXUtao=', '2016-08-11 20:06:42', 0, 'adas', 'adas', 'dasda', 'dasdas@qwqqw.com', 0, 1, '2016-08-11 20:06:41', 'C', 1),
-(46, 'pbkdf2_sha256$20000$NxG3Olw1orVp$Y2kwTR+ptX7cOoK1vYgFHjkqbslw5iC6wXCnUKDUbfA=', '2016-08-11 20:07:21', 0, 'dasdas2', 'dasdas', 'dasdas', 'dasda@dasads.com', 0, 1, '2016-08-11 20:07:20', 'C', 1),
 (47, 'pbkdf2_sha256$20000$FPwAu8JsPkuJ$Q+Nk+lqn1UJLeJ73DJ73EE3VrImybDNe0H+C7aZzVcQ=', '2016-08-11 20:11:27', 0, 'lizeth', 'Lizeth', 'Diaz', 'lizethdiazc@gmail.com', 0, 1, '2016-08-11 20:11:26', 'C', 1),
 (51, 'pbkdf2_sha256$20000$YFruFXgI34XB$j2Eb9z0e/cQza15+B70QNf1dzpliMtzWW7jI3DBP1E4=', '2016-08-11 21:39:49', 0, 'alfredo', 'Alfredo', 'Lopez', 'hotelcostadelsolfgga@hotmail.com', 0, 1, '2016-08-11 21:39:49', 'C', 1),
 (52, 'pbkdf2_sha256$20000$TWjyS2bLTDHU$yP/bLq708TORQa8y5e5xxa0NRICiW3Ygbd3a/kzoRIA=', '2016-08-11 22:17:09', 0, 'johanna', 'Johanna', 'Moreno', 'hotelcatamainn@gmail.com', 0, 1, '2016-08-11 22:17:09', 'C', 1),

@@ -7,7 +7,9 @@ from authentication_module.models import *
 
 ## Modelo para representar una palabra o frase como Tag 
 class Tag(models.Model):
-    tag = models.CharField(max_length=255, null=False)
+  tag = models.CharField(max_length=255, null=False)
+  def __unicode__(self):
+    return self.tag
 
 
 class Categoria(models.Model):
@@ -23,6 +25,8 @@ class Municipio(models.Model):
   nombre = models.TextField(null=False)
   latitud = models.DecimalField(max_digits=20, decimal_places=18)
   longitud = models.DecimalField(max_digits=20, decimal_places=18)
+  def __unicode__(self):
+    return self.nombre
 
 
   

@@ -18,21 +18,24 @@ from django.contrib.auth.models import User, AbstractUser, AbstractBaseUser
 
 class Sitio(models.Model):
 	nombre = models.CharField(max_length=200, null=False)
-	telefono = models.TextField(default="")
-	whatsapp = models.TextField(default="")
+	telefono = models.TextField(default="",blank=True)
+	whatsapp = models.TextField(default="",blank=True)
 	horariolocal = models.TextField(default="", blank=True)
-	web = models.TextField(default="")
+	web = models.TextField(default="",null=True,blank=True)
 	latitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)
 	longitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)
 	descripcion = models.TextField(null=True)
-	correolocal = models.TextField(default="")
-	ubicacionlocal = models.TextField(null=True)
+	correolocal = models.TextField(default="",blank=True)
+	ubicacionlocal = models.TextField(null=True,blank=True)
 	categorias = models.ManyToManyField(Categoria, through='SitioCategoria')
-	tags = models.ManyToManyField(Tag)
+	tags = models.ManyToManyField(Tag,blank=True)
 	usuario = models.ForeignKey(CustomUser,null=True,related_name='sitios')
 	municipio = models.ForeignKey(Municipio, related_name='sitios', null=False) 
-	tipo_sitio =  models.CharField(max_length=1,choices=(('M','MUNICIPIO'),('S','SITIO'),('I','INTERIOR'),('PR','PRODUCTOS')),default='S',
+	tipo_sitio =  models.CharField(max_length=1,choices=(('M','MUNICIPIO'),('S','SITIO')),default='S',
                                                   null=True, blank=True)
+	def __unicode__(self):
+		return self.nombre
+
 
 
 class Foto(models.Model):
@@ -40,6 +43,8 @@ class Foto(models.Model):
 	sitio=models.ForeignKey(Sitio, related_name='fotos')
 	tipo = models.CharField(max_length=2,choices=(('P','PRINCIPAL'),('F','FACHADA'),('I','INTERIOR'),('PR','PRODUCTOS')),default='P',
                                                   null=False, blank=False)
+	def __unicode__(self):
+		return self.sitio.nombre+' '+self.URLfoto.file.name
 
 
 

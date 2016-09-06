@@ -154,7 +154,8 @@ class RegisterSerializer(serializers.Serializer):
         self.cleaned_data = self.get_cleaned_data()
 
         adapter.save_user(request, user, self)
-        setup_user_email(request, user, [])
+        # Activate if email confirmation needed
+        #setup_user_email(request, user, [])
         
         if 'tipo_cuenta' in request.data:
             if(request.data['tipo_cuenta']=='M'):
