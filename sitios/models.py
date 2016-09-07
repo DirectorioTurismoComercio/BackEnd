@@ -43,9 +43,7 @@ class Foto(models.Model):
 	sitio=models.ForeignKey(Sitio, related_name='fotos')
 	tipo = models.CharField(max_length=2,choices=(('P','PRINCIPAL'),('F','FACHADA'),('I','INTERIOR'),('PR','PRODUCTOS')),default='P',
                                                   null=False, blank=False)
-	def __unicode__(self):
-		return self.sitio.nombre+' '+self.URLfoto.file.name
-
+	
 
 
 @receiver(pre_delete, sender=Foto)
