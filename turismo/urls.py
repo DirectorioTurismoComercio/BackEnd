@@ -32,6 +32,7 @@ urlpatterns = patterns('',
        authentication_module_views.CustomSocialTokenUserAuthView.as_view(),
         name='login_social_token_user'),
     url(r'^ruta/sitios', sitio_views.SitiosCercanosARuta.as_view({'post':'list_sites'})), 
+    url(r'^sitio/municipios', sitio_views.SitioMunicipioList.as_view()), 
     url(r'^sitio/detail/(?P<pk>[0-9]+)', sitio_views.SitioDetail.as_view()), 
     url(r'^sitio', sitio_views.SitioCreate.as_view()), 
 

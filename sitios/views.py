@@ -153,6 +153,11 @@ class SitiosCercanosARuta(viewsets.ViewSet):
 
         return Response(resultados)
 
+class SitioMunicipioList(generics.ListAPIView):
+    queryset = Sitio.objects.filter(tipo_sitio='M').order_by('nombre')
+    serializer_class = SitioSerializer
+
+
 
 class Sugerencias(viewsets.ViewSet):
     def list_sugerencias(self, request, token=None):
