@@ -20,7 +20,8 @@ def reduce_photo_size(photo_path, photo_filename,size):
 		new_height = int(round(file.size[1]/scale_factor))
 		file = file.resize((new_width,new_height),Image.ANTIALIAS)
 		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
-	if size > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+
+	if file.size > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
 		if imghdr.what(photo_path+"/"+photo_filename)=='png' or imghdr.what(photo_path+"/"+photo_filename).lower()=='gif':
 			photo_filename = os.path.splitext(photo_filename)[0]+'.jpg'
 			file.load() 

@@ -163,9 +163,15 @@ class Sugerencias(viewsets.ViewSet):
     def list_sugerencias(self, request, token=None):
 
         token = self.request.QUERY_PARAMS.get('token', None)
+        municipio_id = self.request.QUERY_PARAMS.get('municipio_id', None)
 
         n_espacios = token.count(' ');
-        resultados = Sitio.objects.filter(nombre__icontains=token);
+
+        if municipio_id is None:
+            resultados = Sitio.objects.filter(nombre__icontains=token);
+        else:
+            resultados = Sitio.objects.filter(nombre__icontains=token,municipio_id=municipio_id);
+            
 
         sugerencias = []
         for resultado in resultados:

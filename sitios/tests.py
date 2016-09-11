@@ -135,7 +135,7 @@ class CRUDSitioTest(TestCase):
 
 		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
 		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
-		fp3=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		fp3=open(os.path.join(os.pardir, dir+nombreFoto3),'rb')
 		new_site = {
 		    	"nombre": "Café Bar", 
   				"latitud": 4.13, 
