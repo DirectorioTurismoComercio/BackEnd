@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'sitios',
     'plataforma',
     'users',
+    'rutas',
 )
 
 MIDDLEWARE_CLASSES = (

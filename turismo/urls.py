@@ -3,6 +3,7 @@ from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from plataforma import views
 from sitios import views as sitio_views
+from rutas import views as ruta_views
 from django.views.generic import RedirectView
 from authentication_module import views as authentication_module_views
 from django.conf.urls.static import static
@@ -35,6 +36,8 @@ urlpatterns = patterns('',
     url(r'^sitio/municipios', sitio_views.SitioMunicipioList.as_view()), 
     url(r'^sitio/detail/(?P<pk>[0-9]+)', sitio_views.SitioDetail.as_view()), 
     url(r'^sitio', sitio_views.SitioCreate.as_view()), 
+    url(r'^ruta/crear', ruta_views.RutaCreate.as_view()), 
+    url(r'^rutas', ruta_views.RutaList.as_view()), 
 
      url(r'^admin/', include(admin.site.urls)), 
    
