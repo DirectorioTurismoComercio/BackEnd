@@ -898,11 +898,7 @@ INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (2107, 'Fotos/blob_6cSEDcW', 'F', 1924),
 (2108, 'Fotos/blob_7gMRQga', 'I', 1924),
 (2109, 'Fotos/blob_l7PiXQF', 'P', 1924),
-(2110, 'Fotos/blob_rxnHOkd', 'P', 1925),
-(2114, 'Fotos/blob.jpg', 'P', 1927),
-(2115, 'Fotos/blob.jpg', 'P', 1928),
-(2117, 'Fotos/Catedraldefaca.jpg', 'P', 1926),
-(2118, 'Fotos/1280px-Paque_Nemocón_Cundinamarca.jpg', 'P', 1929);
+(2110, 'Fotos/blob_rxnHOkd', 'P', 1925);
 
 --
 -- Volcado de datos para la tabla `sitios_sitio`
@@ -955,12 +951,7 @@ INSERT IGNORE INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `hora
 (1922, 'Hotel costa del sol', '8673932', '3102916511', '24 horas', 'Www.hotelcostadelsolfusagasuga.com.co', 4.336301615841759500, -74.366039335727690000, 'Elegancia y comfort. Empresa familiar con mas de 18 años prestando servicios de calidad y atención. Cumpliendo con los estándares de calidad y amabilidad.', '', 'Calle 17 # 12-04', 31, 51),
 (1923, 'Hotel Catama Inn', '8780858', '3118119251', '24 horas', 'Www.hotelcatamainn.com', 4.329925507051654000, -74.379981458187100000, 'Ubicado en la ciudad jardín de Colombia, brinda toda la comodidad y la belleza de un paisaje que permite a nuestros huéspedes disfrutar de un ambiente familiar. Salón de reuniones y eventos', '', 'Calle 22 # 36-91 (100m adelante de la estatua del indio)', 31, 52),
 (1924, 'Hotel el Castillo', '3143578003', '3143578003', '24 horas', 'hotelelcastillochinauta.com.co', 4.308047343273843000, -74.443627595901490000, 'Construido en 1967 al mejor estilo medieval, por el señor Luis Carlos de Mendoza enamorado de colombia por su clima, su fauna, y por el placer de observar el cerro del Quinini. Piscina, restaurante, alojamiento.', '', 'Kn 65 vía Melgar', 31, 53),
-(1925, 'Hotel Chinauta Real', '3103068504', '', '24 horas', 'www.hotelchinautareal.com', 4.290073613014737000, -74.466705322265620000, 'La naturaleza, el descanso, la recreación, junto con una buena atención son los pilares del hotel y centro de convenciones. Pinemos a su servicio nuestras instalaciones y una cálida hospitalidad.\r\n\r\nAlojamiento, alimentos y bebidas, zona húmeda y spa, eventos y recepciones, pesca deportiva, caminatas ecológicas, chiva turística, piscina y tobogán. Parqueadero, interacción con especies.', '', 'Km 68.5 vía panamericana, Bogotá-Melgar', 31, 54),
-(1926, 'Facatativá', '2708842', '', '', '', 4.802013413359239000, -74.339445233345030000, 'Facatativá, también conocido como Faca, es uno de los 116 municipios del departamento de Cundinamarca, centro de Colombia. Su nombre proviene del muisca, y tiene significados diferentes; sin embargo, «cercado fuerte al final de la llanura» es el más conocido y aceptado.', '', 'Cra 24 # 15-16', 26, 56, 'M'),
-(1927, 'Zipaquirá', '2708842', '', '', '', 5.014092899650111000, -73.990972638130190000, 'Zipaquirá es un municipio colombiano localizado en la provincia de Sabana Centro, de la que es su capital, sede de su diócesis y su ciudad más importante.Comúnmente llamado Zipa en referencia al Zipa; título que ostentaba el cacique muisca del Cacicazgo de Bacatá. Es uno de los centros de explotación de sal más importantes en Colombia, razón por la cual se le llama la "Ciudad de la Sal" y "el congelador de Cundinamarca" debido a su clima frío con niebla en las mañanas. ', '', 'Cra 24 # 15-16', 116, 56, 'M'),
-(1928, 'Suesca', '2708842', '', '', '', 4.802013413359239000, -74.339445233345030000, 'Suesca es un municipio de Cundinamarca, en el centro de (Colombia), ubicado en la provincia de Almeidas. La palabra Suesca se deriva del vocablo muisca "Suehica", que significa "Roca de las Aves".', '', 'Cra 24 # 15-16', 88, 56, 'M'),
-(1929, 'Nemocón', '2708842', '', '', '', 5.060604453534960000, -73.878019452095030000, 'Nemocón es un municipio de Cundinamarca (Colombia), ubicado en la provincia de Sabana Centro, se encuentra a 45 km de Bogotá. Nemocón significa, en idioma muisca, "Lamento o Rugido del Guerrero". Los primitivos pobladores eran los nemzas, de la nación muisca. Desde tiempo inmemorial, los indígenas explotaban las minas de sal. El 9 de julio de 1593 llegó de visita el oidor Miguel de Ibarra. El 11 de agosto, Francisco de Rivero hizo descripción de los indios, de la que resultaron 302. El 26 de julio de 1600 llegó de visita el Pedro Gonzales Rioja y profirió auto de esta fecha y junto con los indios de Tasgata fundó el pueblo. Más tarde, los de Tasgara fueron agregados a Tausa por Joaquín de Aróstequi.', '', 'Cra 24 # 15-16', 60, 56, 'M');
-
+(1925, 'Hotel Chinauta Real', '3103068504', '', '24 horas', 'www.hotelchinautareal.com', 4.290073613014737000, -74.466705322265620000, 'La naturaleza, el descanso, la recreación, junto con una buena atención son los pilares del hotel y centro de convenciones. Pinemos a su servicio nuestras instalaciones y una cálida hospitalidad.\r\n\r\nAlojamiento, alimentos y bebidas, zona húmeda y spa, eventos y recepciones, pesca deportiva, caminatas ecológicas, chiva turística, piscina y tobogán. Parqueadero, interacción con especies.', '', 'Km 68.5 vía panamericana, Bogotá-Melgar', 31, 54);
 --
 -- Volcado de datos para la tabla `sitios_sitiocategoria`
 --
