@@ -3,7 +3,7 @@ from sitios.models import Sitio
 from plataforma.models import Municipio
 
 class Ruta(models.Model):
-	municipio = models.ForeignKey(Municipio,blank=False)
+	sitio = models.ForeignKey(Sitio,blank=False,related_name='rutas')
 	nombre = models.CharField(max_length=200, null=False)
 	descripcion = models.TextField(null=True)
 	sitios = models.ManyToManyField(Sitio, through='RutaSitio')

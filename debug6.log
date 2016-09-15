@@ -1332,3 +1332,488 @@ Traceback (most recent call last):
   File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 3, in <module>
     from sitios.serializers import SitioSerializer, RutaSitioSerializer
 ImportError: cannot import name RutaSitioSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 3, in <module>
+    from sitios.serializers import SitioSerializer
+ImportError: cannot import name SitioSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 8, in <module>
+    class RutaSitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 9, in RutaSitioSerializer
+    sitio = SitioSerializer(read_only=True)
+NameError: name 'SitioSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 8, in <module>
+    class RutaSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 9, in RutaSerializer
+    sitios = RutaSitioSerializer(source='rutasitio_set', many=True)
+NameError: name 'RutaSitioSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 3, in <module>
+    from sitios.serializers import RutaSitioSerializer
+ImportError: cannot import name RutaSitioSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 3, in <module>
+    from sitios.serializers import CategoriaSerializer
+ImportError: cannot import name CategoriaSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 32, in <module>
+    class SitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 35, in SitioSerializer
+    rutas=RutaSerializer(many=True, read_only=True)
+NameError: name 'RutaSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 5, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 9, in <module>
+    class RutaSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 10, in RutaSerializer
+    sitios = RutaSitioSerializer(source='rutasitio_set', many=True)
+NameError: name 'RutaSitioSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 3, in <module>
+    from sitios.serializers import RutaSitioSerializer
+ImportError: cannot import name RutaSitioSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import RutaSerializer
+ImportError: cannot import name RutaSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 31, in <module>
+    class SitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 34, in SitioSerializer
+    rutas=RutaSerializer(many=True, read_only=True)
+NameError: name 'RutaSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 30, in <module>
+    class RutaSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 31, in RutaSerializer
+    sitios = RutaSitioSerializer(source='rutasitio_set', many=True)
+NameError: name 'RutaSitioSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 30, in <module>
+    class RutaSitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 31, in RutaSitioSerializer
+    sitio = SitioSerializer(read_only=True)
+NameError: name 'SitioSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 30, in <module>
+    class RutaSitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 31, in RutaSitioSerializer
+    sitio = SitioSerializer(read_only=True)
+NameError: name 'SitioSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 33, in <module>
+    class RutaSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 36, in RutaSerializer
+    class Meta:
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 37, in Meta
+    model = Ruta
+NameError: name 'Ruta' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 38, in <module>
+    class RutaSitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 40, in RutaSitioSerializer
+    class Meta:
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 41, in Meta
+    model = RutaSitio
+NameError: name 'RutaSitio' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 5, in <module>
+    from rutas.serializers import RutaSerializer
+ImportError: cannot import name RutaSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 860, in get_fields
+    model = getattr(self.Meta, 'model')
+AttributeError: 'SitioEnRutaSerializer' object has no attribute 'Meta'
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 38
+    model = Sitio
+        ^
+IndentationError: expected an indented block
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 10, in <module>
+    class SitioEnRutaSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 11, in SitioEnRutaSerializer
+    categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)
+NameError: name 'SitioCategoriaSerializer' is not defined
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 8, in <module>
+    from sitios.serializers import SitioCategoriaSerializer
+ImportError: cannot import name SitioCategoriaSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 10, in <module>
+    from rutas.serializers import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/serializers.py", line 8, in <module>
+    from sitios.serializers import SitioEnRutaSerializer
+ImportError: cannot import name SitioEnRutaSerializer
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 4, in <module>
+    from plataforma import views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/plataforma/views.py", line 6, in <module>
+    from sitios.serializers import MunicipioSerializer
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 40, in <module>
+    class RutaSitioSerializer(serializers.ModelSerializer):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 42, in RutaSitioSerializer
+    class Meta:
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 43, in Meta
+    model = RutaSitio
+NameError: name 'RutaSitio' is not defined

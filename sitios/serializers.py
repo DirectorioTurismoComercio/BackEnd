@@ -7,6 +7,8 @@ from sitios.models import Tag
 from sitios.models import SitioCategoria 
 from plataforma.models import Municipio
 from plataforma.models import Categoria
+from rutas.serializers import *
+from rutas.models import Ruta,RutaSitio
 
 class MunicipioSerializer(serializers.ModelSerializer):
   class Meta:
@@ -27,12 +29,37 @@ class SitioCategoriaSerializer(serializers.ModelSerializer):
    class Meta:
         model = SitioCategoria
 
-class SitioSerializer(serializers.ModelSerializer):  
+class SitioEnRutaSerializer(serializers.ModelSerializer):  
 	categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)
 	fotos=FotoSerializer(many=True, read_only=True)
 	municipio=MunicipioSerializer(read_only=True)
 	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False) 
 	municipio_id = serializers.IntegerField()
+	class Meta:
+		model = Sitio
+
+class RutaSitioSerializer(serializers.ModelSerializer):
+	sitio = SitioEnRutaSerializer(read_only=True) 
+	class Meta:
+		model = RutaSitio
+
+
+
+class RutaSerializer(serializers.ModelSerializer):
+	
+	sitios = RutaSitioSerializer(source='rutasitio_set', many=True)
+	class Meta:
+		model = Ruta
+
+
+class SitioSerializer(serializers.ModelSerializer):  
+	categorias = SitioCategoriaSerializer(source='sitiocategoria_set', many=True)
+	fotos=FotoSerializer(many=True, read_only=True)
+	rutas=RutaSerializer(many=True, read_only=True)
+	municipio=MunicipioSerializer(read_only=True)
+	tags = serializers.SlugRelatedField(many=True,queryset=Tag.objects.all(),slug_field='tag', required=False) 
+	municipio_id = serializers.IntegerField()
+
 
 	
 	def to_internal_value(self, data):
@@ -85,4 +112,5 @@ class SitioSerializer(serializers.ModelSerializer):
 
 
             
+
 
