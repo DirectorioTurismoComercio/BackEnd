@@ -40,6 +40,7 @@ class SitioEnRutaSerializer(serializers.ModelSerializer):
 
 class RutaSitioSerializer(serializers.ModelSerializer):
 	sitio = SitioEnRutaSerializer(read_only=True) 
+	sitio_id = serializers.IntegerField()
 	class Meta:
 		model = RutaSitio
 
@@ -48,6 +49,23 @@ class RutaSitioSerializer(serializers.ModelSerializer):
 class RutaSerializer(serializers.ModelSerializer):
 	
 	sitios = RutaSitioSerializer(source='rutasitio_set', many=True)
+
+	def add_sites_to_route(self, sites):
+		
+		for sitio in sites:
+			print sitio
+			sitio = eval(sitio)
+			sitio["ruta"] = self.data["id"]
+
+			ruta_sitio = RutaSitioSerializer(data=sitio)
+			if ruta_sitio.is_valid():
+				print ruta_sitio.data
+				ruta_sitio.save()
+			else:
+				raise serializers.ValidationError(ruta_sitio.errors)
+
+		
+
 	class Meta:
 		model = Ruta
 
