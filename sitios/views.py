@@ -21,6 +21,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from sitios.inflector.inflector import Inflector
 from django.conf import settings
 from sitios.inflector.rules.spanish import Spanish
+from django.http import HttpResponse
 import plataforma
 import re
 
@@ -154,8 +155,20 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         return Response(resultados)
 
 class SitioMunicipioList(generics.ListAPIView):
-    queryset = Sitio.objects.filter(tipo_sitio='M').order_by('nombre')
+    queryset = Sitio.objects.filter(tipo_sitio='S').order_by('nombre')
     serializer_class = SitioSerializer
+
+class SitiosDelMunicipio(generics.ListAPIView):
+    queryset = Sitio.objects.all()
+    serializer_class = SitioSerializer
+
+    def get_queryset(self):
+        queryset = super(SitiosDelMunicipio, self).get_queryset()
+        municipio_id = self.request.QUERY_PARAMS.get('municipio_id', None)
+        
+        return queryset.filter(municipio_id=municipio_id).order_by('nombre')
+
+
 
 
 
