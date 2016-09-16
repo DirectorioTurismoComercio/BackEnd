@@ -61,7 +61,6 @@ class CRUDRutaTest(TestCase):
 		
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 		ruta = Ruta.objects.filter(nombre=nombre_ruta)
-		print ruta[0].sitios.all()
 		self.assertTrue(self.sitio1 in ruta[0].sitios.all())
 		self.assertTrue(self.sitio2 in ruta[0].sitios.all())
 		self.assertTrue(self.sitio3 in ruta[0].sitios.all())

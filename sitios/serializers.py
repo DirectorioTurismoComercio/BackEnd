@@ -53,13 +53,11 @@ class RutaSerializer(serializers.ModelSerializer):
 	def add_sites_to_route(self, sites):
 		
 		for sitio in sites:
-			print sitio
 			sitio = eval(sitio)
 			sitio["ruta"] = self.data["id"]
 
 			ruta_sitio = RutaSitioSerializer(data=sitio)
 			if ruta_sitio.is_valid():
-				print ruta_sitio.data
 				ruta_sitio.save()
 			else:
 				raise serializers.ValidationError(ruta_sitio.errors)

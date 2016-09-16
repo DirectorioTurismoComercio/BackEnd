@@ -3,6 +3,8 @@ from rest_framework.views import APIView
 from rutas.models import Ruta
 from rest_framework import generics
 from sitios.serializers import RutaSerializer
+from rest_framework import status
+from rest_framework.response import Response
 
 class RutaCreate(generics.CreateAPIView):
     queryset = Ruta.objects.all()
