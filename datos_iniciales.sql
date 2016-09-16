@@ -952,7 +952,6 @@ INSERT IGNORE INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `hora
 (1923, 'Hotel Catama Inn', '8780858', '3118119251', '24 horas', 'Www.hotelcatamainn.com', 4.329925507051654000, -74.379981458187100000, 'Ubicado en la ciudad jardín de Colombia, brinda toda la comodidad y la belleza de un paisaje que permite a nuestros huéspedes disfrutar de un ambiente familiar. Salón de reuniones y eventos', '', 'Calle 22 # 36-91 (100m adelante de la estatua del indio)', 31, 52),
 (1924, 'Hotel el Castillo', '3143578003', '3143578003', '24 horas', 'hotelelcastillochinauta.com.co', 4.308047343273843000, -74.443627595901490000, 'Construido en 1967 al mejor estilo medieval, por el señor Luis Carlos de Mendoza enamorado de colombia por su clima, su fauna, y por el placer de observar el cerro del Quinini. Piscina, restaurante, alojamiento.', '', 'Kn 65 vía Melgar', 31, 53),
 (1925, 'Hotel Chinauta Real', '3103068504', '', '24 horas', 'www.hotelchinautareal.com', 4.290073613014737000, -74.466705322265620000, 'La naturaleza, el descanso, la recreación, junto con una buena atención son los pilares del hotel y centro de convenciones. Pinemos a su servicio nuestras instalaciones y una cálida hospitalidad.\r\n\r\nAlojamiento, alimentos y bebidas, zona húmeda y spa, eventos y recepciones, pesca deportiva, caminatas ecológicas, chiva turística, piscina y tobogán. Parqueadero, interacción con especies.', '', 'Km 68.5 vía panamericana, Bogotá-Melgar', 31, 54);
-
 --
 -- Volcado de datos para la tabla `sitios_sitiocategoria`
 --
