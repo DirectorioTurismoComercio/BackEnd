@@ -11,16 +11,13 @@ class RutaCreate(generics.CreateAPIView):
     serializer_class = RutaSerializer
     def create(self, request):
 		data = request.data
-		
 		serializer = RutaSerializer(data=data)
-
 		if serializer.is_valid():
 			serializer.save()
 			if "sitios" in data:
-				sitios = request.data.getlist('sitios')
-				serializer.add_sites_to_route(sitios)
+				serializer.add_sites_to_route(data["sitios"])
 		else:
-		    return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+			return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 		return Response(status=status.HTTP_201_CREATED)
 

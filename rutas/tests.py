@@ -2,11 +2,12 @@
 from django.test import TestCase
 from authentication_module.serializers import CustomUserSerializer
 from plataforma.models import Municipio
-from rutas.models import Ruta
+from rutas.models import Ruta,RutaSitio
 from sitios.models import Sitio
 from rest_framework.authtoken.models import Token
 from rest_framework.test import APIClient
 from rest_framework import status
+import json
 
 
 class CRUDRutaTest(TestCase):	
@@ -39,25 +40,34 @@ class CRUDRutaTest(TestCase):
 		self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
 	
 	def test_create_successfully(self):
+		client =  APIClient()
 		nombre_ruta = "ruta de la sal"
+		sitios = [
+			{'sitio_id':self.sitio1.id, 'orden': 1},
+			{'sitio_id':self.sitio2.id, 'orden': 2},
+			{'sitio_id':self.sitio3.id, 'orden': 3},
+			{'sitio_id':self.sitio4.id, 'orden': 4},
+			]
+
+
 		ruta = {
 		    "nombre": nombre_ruta, 
   			"descripcion": "xxx xxxx xxxx xxx xxxx xxx", 
-    		"municipio_id": self.municipio.id,
- 			"sitio": self.sitio.id,
-    		"usuario": self.usuario.id,
+    		"sitio": self.sitio.id, 
     		"sitios": [
-    		{'sitio_id':self.sitio1.id, 'orden': 1},
-    		{'sitio_id':self.sitio2.id, 'orden': 2},
-    		{'sitio_id':self.sitio3.id, 'orden': 3},
-    		{'sitio_id':self.sitio4.id, 'orden': 4},
-    		
-    		]
+			{"sitio_id":self.sitio1.id, "orden": 1},
+			{"sitio_id":self.sitio2.id, "orden": 2},
+			{"sitio_id":self.sitio3.id, "orden": 3},
+			{"sitio_id":self.sitio4.id, "orden": 4},
+			]
+
 		}
+		
+		
 
 
-		response = self.client.post('/ruta/crear',
-                                    ruta)
+		response = self.client.post('/ruta/crear', content_type='application/json',
+                                    data=json.dumps(ruta))
 		
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 		ruta = Ruta.objects.filter(nombre=nombre_ruta)

@@ -48,12 +48,11 @@ class RutaSitioSerializer(serializers.ModelSerializer):
 
 class RutaSerializer(serializers.ModelSerializer):
 	
-	sitios = RutaSitioSerializer(source='rutasitio_set', many=True)
+	sitios = RutaSitioSerializer(source='rutasitio_set', many=True,read_only=True)
 
 	def add_sites_to_route(self, sites):
-		
 		for sitio in sites:
-			sitio = eval(sitio)
+			
 			sitio["ruta"] = self.data["id"]
 
 			ruta_sitio = RutaSitioSerializer(data=sitio)

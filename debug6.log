@@ -4646,3 +4646,499 @@ Traceback (most recent call last):
 AttributeError: Got AttributeError when attempting to get a value for field `categorias` on serializer `SitioSerializer`.
 The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
 Original exception text was: 'str' object has no attribute 'sitiocategoria_set'.
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 16
+    print data
+             ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 14, in create
+    request.data.getlist
+AttributeError: 'dict' object has no attribute 'getlist'
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 23
+    return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                                                                              ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 23
+    return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                                                                              ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipio/sitios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 22
+    print "ERROR"
+        ^
+IndentationError: expected an indented block
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 22
+    print "ERROR"
+        ^
+IndentationError: expected an indented block
+Internal Server Error: /municipio/sitios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 22
+    print "ERROR"
+        ^
+IndentationError: expected an indented block
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 19, in create
+    sitios = request.data.getlist('sitios')
+AttributeError: 'dict' object has no attribute 'getlist'
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(sitios)
+NameError: global name 'sitios' is not defined
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 56, in add_sites_to_route
+    sitio = eval(sitio)
+  File "<string>", line 1
+    {
+    ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 56, in add_sites_to_route
+    sitio = eval(sitio)
+TypeError: eval() arg 1 must be a string or code object
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rutas/views.py", line 20, in create
+    serializer.add_sites_to_route(data["sitios"])
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
+    sitio["ruta"] = self.data["id"]
+TypeError: 'unicode' object does not support item assignment
