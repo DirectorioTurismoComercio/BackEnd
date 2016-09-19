@@ -41,6 +41,7 @@ class SitioEnRutaSerializer(serializers.ModelSerializer):
 class RutaSitioSerializer(serializers.ModelSerializer):
 	sitio = SitioEnRutaSerializer(read_only=True) 
 	sitio_id = serializers.IntegerField()
+	ordering = ('-orden',)
 	class Meta:
 		model = RutaSitio
 

@@ -38,6 +38,7 @@ urlpatterns = patterns('',
     url(r'^sitio/detail/(?P<pk>[0-9]+)', sitio_views.SitioDetail.as_view()), 
     url(r'^sitio', sitio_views.SitioCreate.as_view()), 
     url(r'^ruta/crear', ruta_views.RutaCreate.as_view()), 
+    url(r'^ruta/actualizar/(?P<pk>[0-9]+)', ruta_views.RutaDetail.as_view()), 
     url(r'^rutas', ruta_views.RutaList.as_view()), 
 
      url(r'^admin/', include(admin.site.urls)), 

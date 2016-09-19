@@ -15,3 +15,5 @@ class RutaSitio(models.Model):
 	ruta = models.ForeignKey(Ruta,blank=False)
 	orden = models.IntegerField()
 
+	class Meta:
+		ordering = ('orden',)
