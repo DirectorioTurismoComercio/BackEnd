@@ -5142,3 +5142,95 @@ Traceback (most recent call last):
   File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/serializers.py", line 58, in add_sites_to_route
     sitio["ruta"] = self.data["id"]
 TypeError: 'unicode' object does not support item assignment
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documents/BackEnd/rutas/views.py", line 8, in <module>
+    from rutas.permissions import IsRouteOwner
+ImportError: cannot import name IsRouteOwner
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documents/BackEnd/rutas/views.py", line 32, in <module>
+    class RutaDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/rutas/views.py", line 35, in RutaDetail
+    serializer_class = SitioSerializer
+NameError: name 'SitioSerializer' is not defined
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documents/BackEnd/rutas/views.py", line 32, in <module>
+    class RutaDetail(generics.RetrieveUpdateDestroyAPIView):
+  File "/home/camilo/Documents/BackEnd/rutas/views.py", line 35, in RutaDetail
+    permission_classes = (IsAuthenticated, IsRouteOwner)
+NameError: name 'IsAuthenticated' is not defined
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documents/BackEnd/turismo/urls.py", line 6, in <module>
+    from rutas import views as ruta_views
+  File "/home/camilo/Documents/BackEnd/rutas/views.py", line 14
+    permission_classes = (IsAuthenticated)
+    ^
+IndentationError: unexpected indent
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 395, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 325, in initial
+    self.check_permissions(request)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 281, in check_permissions
+    for permission in self.get_permissions():
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 234, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'type' object is not iterable

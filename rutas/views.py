@@ -5,10 +5,13 @@ from rest_framework import generics
 from sitios.serializers import RutaSerializer
 from rest_framework import status
 from rest_framework.response import Response
+from rutas.permissions import IsRouteOwner
+from rest_framework.permissions import IsAuthenticated
 
 class RutaCreate(generics.CreateAPIView):
     queryset = Ruta.objects.all()
     serializer_class = RutaSerializer
+    permission_classes = (IsAuthenticated,)
     def create(self, request):
 		data = request.data
 		serializer = RutaSerializer(data=data)
@@ -31,6 +34,7 @@ class RutaList(generics.ListAPIView):
 class RutaDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ruta.objects.all()
     serializer_class = RutaSerializer
+    permission_classes = (IsAuthenticated, IsRouteOwner)
 
     def update(self, request, *args, **kwargs):
 		data = request.data

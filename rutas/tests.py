@@ -54,6 +54,8 @@ class CRUDRutaTest(TestCase):
 		    "nombre": nombre_ruta, 
   			"descripcion": "xxx xxxx xxxx xxx xxxx xxx", 
     		"sitio": self.sitio.id, 
+    		"tiempo": "0",
+    		"distancia": "0",
     		"sitios": [
 			{"sitio_id":self.sitio1.id, "orden": 1},
 			{"sitio_id":self.sitio2.id, "orden": 2},
