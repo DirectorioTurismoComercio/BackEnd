@@ -363,7 +363,7 @@ INSERT IGNORE INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_n
 (63, 'Postres', 2, NULL, NULL, 5, NULL),
 (64, 'Frutería', 2, NULL, NULL, 5, NULL),
 (65, 'Comida Vegetariana', 2, NULL, NULL, 5, NULL),
-(66, 'Licorera / Estanco', 2, NULL, NULL, 5, NULL),
+(66, 'Licorera / Cigarreria', 2, NULL, NULL, 5, NULL),
 (67, 'Club', 2, NULL, NULL, 6, NULL),
 (68, 'Bar', 2, NULL, NULL, 6, NULL),
 (69, 'Discoteca', 2, NULL, NULL, 6, NULL),
