@@ -26,6 +26,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 	date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 	tipo_cuenta = models.CharField(max_length=1,choices=(('C','COMERCIANTE'),('M','MUNICIPIO')),default='C',
                                                   null=True, blank=True)
+	es_cuenta_activa = models.BooleanField(default=True)
 	USERNAME_FIELD = 'email'
 	objects = UserManager()
 
