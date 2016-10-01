@@ -1,7 +1,7 @@
 from django.http import HttpRequest
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-
+import time
 try:
     from allauth.account import app_settings as allauth_settings
     from allauth.utils import (email_address_exists)
@@ -124,6 +124,8 @@ class RegisterSerializer(serializers.Serializer):
     tipo_cuenta = serializers.CharField(required=False)
 
     def validate_email(self, email):
+        time.sleep(15) 
+      
         email = get_adapter().clean_email(email)
         if allauth_settings.UNIQUE_EMAIL:
             if email and email_address_exists(email):

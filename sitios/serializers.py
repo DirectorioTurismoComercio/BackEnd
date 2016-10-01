@@ -62,6 +62,7 @@ class RutaSerializer(serializers.ModelSerializer):
 			else:
 				raise serializers.ValidationError(ruta_sitio.errors)
 
+
 		
 
 	class Meta:

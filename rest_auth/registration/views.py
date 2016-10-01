@@ -70,6 +70,7 @@ class VerifyEmailView(APIView, ConfirmEmailView):
     allowed_methods = ('POST', 'OPTIONS', 'HEAD')
 
     def post(self, request, *args, **kwargs):
+
         serializer = VerifyEmailSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.kwargs['key'] = serializer.validated_data['key']
