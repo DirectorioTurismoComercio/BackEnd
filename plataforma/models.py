@@ -14,6 +14,7 @@ class Tag(models.Model):
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=200, blank=False, null=False)
+    name = models.CharField(max_length=200, blank=False, null=False)
     nivel = models.IntegerField(default=0)
     categoria_padre = models.ForeignKey("self",null=True) 
     URL_icono_general = models.FileField(upload_to="general_icons", null=True)
