@@ -31,6 +31,18 @@ class Municipio(models.Model):
   def __unicode__(self):
     return self.nombre
 
+class Correo(models.Model):
+    identificador =  models.CharField(max_length=3,choices=(
+      ('MCA','MENSAJE_CUENTA_ACTIVA'),
+      ('MCI','MENSAJE_CUENTA_INACTIVA'),
+      ('MRC','MENSAJE_RECUPERAR_CONSTRASENA')),default='MCI',
+                                                  null=True, blank=True)
+    asunto = models.CharField(max_length=200, blank=False, null=False)
+    cuerpo = models.TextField(null=False)
+
+    def __unicode__(self):
+      return self.asunto
+    
 
   
  

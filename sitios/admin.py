@@ -4,7 +4,7 @@ from plataforma.models import Categoria
 
 class FotoInline(admin.TabularInline):
     model = Foto
-#    extra = 2 # how many rows to show
+
 
 class CategoriaInline(admin.TabularInline):
     model = SitioCategoria

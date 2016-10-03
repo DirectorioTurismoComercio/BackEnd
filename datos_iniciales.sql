@@ -1561,6 +1561,10 @@ INSERT IGNORE INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
 (253, 1964, 12),
 (254, 1964, 153);
 
+INSERT INTO `plataforma_correo` (`id`, `identificador`, `asunto`, `cuerpo`) VALUES
+(1, 'MCI', 'Cuenta Inactiva', 'Tu cuenta ha sido activada.'),
+(2, 'MCA', 'Cuenta Activada', 'Tu cuenta ha sido activada.');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
