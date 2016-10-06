@@ -124,7 +124,6 @@ class RegisterSerializer(serializers.Serializer):
     tipo_cuenta = serializers.CharField(required=False)
 
     def validate_email(self, email):
-        time.sleep(15) 
       
         email = get_adapter().clean_email(email)
         if allauth_settings.UNIQUE_EMAIL:
