@@ -2,32 +2,26 @@
 -- version 4.3.8
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Oct 03, 2016 at 02:26 PM
--- Server version: 5.5.51-38.2
--- PHP Version: 5.4.31
+-- Servidor: localhost
+-- Tiempo de generación: 07-10-2016 a las 16:12:13
+-- Versión del servidor: 5.5.51-38.2
+-- Versión de PHP: 5.4.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
 --
--- Database: `innovati_plataforma`
+-- Base de datos: `innovati_plataforma`
 --
 
 --
--- Dumping data for table `authentication_module_customuser`
+-- Volcado de datos para la tabla `authentication_module_customuser`
 --
 
 INSERT IGNORE INTO `authentication_module_customuser` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `tipo_cuenta`, `es_cuenta_activa`) VALUES
 (1, 'pbkdf2_sha256$20000$AnFdDySPVuSm$RWzJJVsD1XibWI71D8t6i0n383IKmhM3391GuvYOvTE=', '2016-09-12 21:04:36', 0, '', 'Johana', 'González Sánchez', 'info@restaurantesanalejo.net', 0, 1, '2016-07-01 16:25:07', 'C', 1),
-(2, 'pbkdf2_sha256$20000$sL6D6wZfaLQ8$laLtSf+SqnNb6XWrctxOZM1LZCl2MmXp3JkSuZDamxs=', NULL, 0, '', 'Álvaro', 'Osorio', 'info@edelweisscajica.com', 0, 1, '2016-07-01 16:43:17', 'C', 1),
-(3, 'pbkdf2_sha256$20000$olXbWBT4jUWQ$/2vmpooc+UQQz5ScrV9iq4Z0XhvbG8stsod1wUJ9Gg8=', '2016-07-01 21:53:51', 0, '', 'Martha Patricia', 'Fiscó G.', 'mapafiga@hotmail.com', 0, 1, '2016-07-01 16:54:11', 'C', 1),
+(2, 'pbkdf2_sha256$20000$sL6D6wZfaLQ8$laLtSf+SqnNb6XWrctxOZM1LZCl2MmXp3JkSuZDamxs=', '2016-10-07 19:34:08', 0, '', 'Álvaro', 'Osorio', 'info@edelweisscajica.com', 0, 1, '2016-07-01 16:43:17', 'C', 1),
+(3, 'pbkdf2_sha256$20000$olXbWBT4jUWQ$/2vmpooc+UQQz5ScrV9iq4Z0XhvbG8stsod1wUJ9Gg8=', '2016-10-07 19:50:27', 0, '', 'Martha Patricia', 'Fiscó G.', 'mapafiga@hotmail.com', 0, 1, '2016-07-01 16:54:11', 'C', 1),
 (4, 'pbkdf2_sha256$20000$sjZZkvRRykwi$rZOSZ7FU99AQ8MlSf+amuANdWcEp03uypgCrSgLMV8I=', '2016-07-01 21:46:20', 0, '', 'Daniel Felipe', 'Clavijo', 'alamavelas@gmail.com', 0, 1, '2016-07-01 17:03:01', 'C', 1),
 (5, 'pbkdf2_sha256$20000$BQcOrNTyDkCj$xWdxzzxb/HK2qVxC7YZ7080pNAKEZLiMyepwLsvUpUs=', NULL, 0, '', 'Víctor Manuel', 'Chaves', 'vicmar_chaves@hotmail.com', 0, 1, '2016-07-01 17:06:59', 'C', 1),
 (6, 'pbkdf2_sha256$20000$o4rUqfesNk8u$liGnUuC356BfUV0VuAc9YdxqxCzKs7qypCEphwWXumI=', NULL, 0, '', 'Esperanza', 'Mancera', 'jica2000@hotmail.com', 0, 1, '2016-07-01 17:08:50', 'C', 1),
@@ -69,7 +63,10 @@ INSERT IGNORE INTO `authentication_module_customuser` (`id`, `password`, `last_l
 (52, 'pbkdf2_sha256$20000$TWjyS2bLTDHU$yP/bLq708TORQa8y5e5xxa0NRICiW3Ygbd3a/kzoRIA=', '2016-08-11 22:17:09', 0, 'johanna', 'Johanna', 'Moreno', 'hotelcatamainn@gmail.com', 0, 1, '2016-08-11 22:17:09', 'C', 1),
 (53, 'pbkdf2_sha256$20000$mEY3KMFvNrhB$GNle+oN7GnuHyRmT7eE1etoAoCbLMClIAxMiEraYWSA=', '2016-08-11 23:21:17', 0, 'diego', 'Diego', 'Diaz', 'info@hotelelcastillochinauta.com.co', 0, 1, '2016-08-11 23:21:17', 'C', 1),
 (54, 'pbkdf2_sha256$20000$gHdYFLZ5De6L$Uj6hbCSiUaHl9/xQWTLEDh+/U/suXQSHn/u6G0Qlt7A=', '2016-08-11 23:48:54', 0, 'laura', 'Laura', 'Cardenas', 'contacto@hotelchinautareal.com', 0, 1, '2016-08-11 23:48:54', 'C', 1),
+(106, 'pbkdf2_sha256$20000$yZoIaDAHiya1$PZgz2RlrndL669OEiflJLgYh4ZbB0GbidAMVNheGhOo=', '2016-10-05 16:50:48', 0, 'facatativa', 'Facatativá', 'Facatativá', 'oficinaturismofacatativa@gmail.com', 0, 1, '2016-10-05 16:50:47', 'M', 0),
+(105, 'pbkdf2_sha256$20000$dSxKvi9H56sq$OeRJTSitgqeiQKfTnzex7PXospMO3ui5z15hrjsX2LY=', '2016-10-04 17:53:02', 0, 'victoria', 'Victoria', 'Crovo Gómez', 'vicovickytoria@gmail.com', 0, 1, '2016-10-04 17:53:02', 'C', 1),
 (66, 'pbkdf2_sha256$20000$09k78Fwg2iO2$hFDaYnbb4rizROp8jXeM5Kd+KpivAdTrRgAQdmnhOO4=', '2016-09-12 15:51:34', 0, 'prueba', 'Prueba', 'Gobernacion', 'mauricio@longboardcolombia.com', 0, 1, '2016-09-12 15:51:33', 'C', 1),
+(104, 'pbkdf2_sha256$20000$oF8XMiXrwkRm$TfO9qUADEmmyKnass73gVHADFu03HCIdkGEvIwNx/GU=', '2016-10-04 16:51:23', 0, 'emliano', 'Emliano', 'Gonzalez Giraldo', 'emilianog@gmail.com', 0, 1, '2016-10-04 16:51:22', 'C', 1),
 (73, 'pbkdf2_sha256$20000$OH454D9Fp3iN$q2WL2HRsDUBfkPHmSqQ7aqFS5BJPGgLe3ugScH/4LAQ=', '2016-09-20 16:54:25', 0, 'girardot', 'Girardot', 'Girardot', 'turismo@girardot-cundinamarca.gov.co', 0, 1, '2016-09-20 16:54:25', 'M', 1),
 (74, 'pbkdf2_sha256$20000$N41eFtjmNgSe$BNUYirNuwp2fqRlJN0wvvxlU48yqJKGfYBiRycGAYPg=', '2016-09-20 17:56:05', 0, 'jose_manuel', 'Jose manuel', 'Olaya', 'viajescuatroestaciones@gmail.com', 0, 1, '2016-09-20 17:56:05', 'C', 1),
 (75, 'pbkdf2_sha256$20000$oP4YHSWeup30$xcOw0RiZTmjPg35sM57zCSe3lyeNYU3iaM8XsKJzyT4=', '2016-09-20 20:22:30', 0, 'nubia_isabel', 'Nubia Isabel', 'Jimenez Girón', 'asomarteg@hotmail.com', 0, 1, '2016-09-20 20:22:30', 'C', 1),
@@ -81,6 +78,8 @@ INSERT IGNORE INTO `authentication_module_customuser` (`id`, `password`, `last_l
 (82, 'pbkdf2_sha256$20000$tqgfnvIG2xqT$8Ve4zy/uBRDSK/CdJ2mQHFOBI5L03nW1tQ8qa/L5WU4=', '2016-09-22 19:14:52', 0, 'blanca', 'Blanca', 'Torres Garcia', 'blancatorres2600@gmail.com', 0, 1, '2016-09-22 19:14:51', 'C', 1),
 (83, 'pbkdf2_sha256$20000$jlo41sxllURd$drmbLCDy78RE+uLUb7rrtwfUnKdbFo8eQ9pTHh9Iksk=', '2016-09-22 19:58:41', 0, 'carlos_alberto', 'Carlos Alberto', 'Casteblanco', 'tallerartesanalelmuisca@gmail.com', 0, 1, '2016-09-22 19:58:41', 'C', 1),
 (84, 'pbkdf2_sha256$20000$gU6lpgFComJn$O4D92D6UNhduE1K6IpFiGllJ7ZDbKjyJkZFRX2GKeC8=', '2016-09-22 20:33:36', 0, 'zoraida', 'Zoraida', 'Parra', 'info@viajasinstress.com', 0, 1, '2016-09-22 20:33:35', 'C', 1),
+(100, '!YhjU1RQdc5DxmeR5Svb5lpD8UBYOsFWLZ8Bwea8H', NULL, 0, 'oromeroce', 'Oscar', 'Romero', 'oromeroce@gmail.com', 0, 1, '2016-10-03 20:11:59', 'C', 1),
+(101, 'pbkdf2_sha256$20000$Iy6aKxKHd5bO$SabZ/i0n58n1sjHti1+2vxitJ3BMe2srIynNBB0O8F8=', '2016-10-03 20:13:21', 0, 'oscar', 'Oscar', 'Romero', 'oscarromero1987@hotmail.com', 0, 1, '2016-10-03 20:13:21', 'C', 1),
 (86, 'pbkdf2_sha256$20000$srLoEztm3Gkb$pGETDtd30ib8EuDIBmpi4Pq1d+i77zN5XGFt3MA/19M=', '2016-09-23 16:35:39', 0, 'bituima', 'Bituima', 'Bituima', 'bitu@gmail.com', 0, 1, '2016-09-23 16:35:38', 'M', 0),
 (87, 'pbkdf2_sha256$20000$fSUrSjfFWyw2$XXpnuDakJTAq+3zqOEQ78mD0V5Z6153m81qM5DejHWA=', '2016-09-27 16:39:43', 0, 'madrid', 'Madrid', 'Madrid', 'desarrolloeconomico@madrid-cundinamarca.gov.co', 0, 1, '2016-09-27 16:39:42', 'M', 1),
 (88, 'pbkdf2_sha256$20000$25qtHCXPDrdK$6V3CdkqIymM6dCpNeRww9aps1pY+S+w7EnZ2rBYgLXM=', '2016-09-27 18:51:33', 0, 'yamile', 'Yamile', 'Valderrama', 'emily_250806@hotmail.com', 0, 1, '2016-09-27 18:51:33', 'C', 1),
@@ -90,10 +89,11 @@ INSERT IGNORE INTO `authentication_module_customuser` (`id`, `password`, `last_l
 (94, 'pbkdf2_sha256$20000$grRnZQ9vlFPL$ovZWqKTx+FBo3MupmqRlOqBGOaUUPRRRWogPybbHSUE=', '2016-09-30 16:36:26', 0, 'flor', 'Flor', 'Díaz', 'diazflor808@gmail.com', 0, 1, '2016-09-30 16:36:26', 'C', 1),
 (95, 'pbkdf2_sha256$20000$PCTu2mQzjdKZ$Jb+Zxf2Yel1uV7E/DBVg3lJDFEQ954EkAs1teMVrZ18=', '2016-09-30 17:08:24', 0, 'maria_teresa', 'María Teresa', 'Forero', 'andresforerotelenet@hotmail.com', 0, 1, '2016-09-30 17:08:24', 'C', 1),
 (96, 'pbkdf2_sha256$20000$Y8F0GS6yWjXy$2cmkNhw9r4dSgP0+8INJXy9OkO3XxCc+DUYPeODnb+M=', '2016-09-30 19:56:23', 0, 'julian', 'Julian', 'Giraldo', 'haciendakala@hotmail.com', 0, 1, '2016-09-30 19:56:23', 'C', 1),
-(55, 'pbkdf2_sha256$20000$HZV5nEZwJRCg$4u9hudMQHapDTMa/eUdpP4iKfJfp384viPc5Pjvpgok=', '2016-10-03 15:51:09', 1, 'administrador', 'Administrador', 'Administrador', 'laboratorios@ecosistema.com', 1, 1, '2016-09-05 15:47:22', 'C', 1);
+(103, 'pbkdf2_sha256$20000$fd2hdNRjcJUl$uYM8piNeuKP1MIq85p+/9a8R1FJHhcoJc2w4X6qijjg=', '2016-10-04 16:19:11', 0, 'mery', 'Mery', 'Mendieta', 'mendieta.mery@gmail.com', 0, 1, '2016-10-04 16:19:11', 'C', 1),
+(102, 'pbkdf2_sha256$20000$2ZW8j9G3JFUO$sQXqQe7biOygkf6GXftppt3072Q41t7LCOHrbcWZNIM=', '2016-10-04 15:35:00', 0, 'tabio', 'Tabio', 'Tabio', 'sdeyt@tabio-cundinamarca.gov.co', 0, 1, '2016-10-04 15:35:00', 'M', 0);
 
 --
--- Dumping data for table `authtoken_token`
+-- Volcado de datos para la tabla `authtoken_token`
 --
 
 INSERT IGNORE INTO `authtoken_token` (`key`, `created`, `user_id`) VALUES
@@ -107,10 +107,12 @@ INSERT IGNORE INTO `authtoken_token` (`key`, `created`, `user_id`) VALUES
 ('d4161c54381e778b6e92d833bf6a88a5144d376b', '2016-09-20 16:54:25', 73),
 ('a26e18064cab1f55c12a1c142faa939d447728b3', '2016-09-30 20:45:13', 97),
 ('3b1e1bb51a450f9aa6afadf2ac5e6d7d6d6f7b4a', '2016-09-23 16:35:39', 86),
-('5f5446f8d41a407edc658a7356730127f4c7a7f2', '2016-09-30 21:30:15', 98);
+('5f5446f8d41a407edc658a7356730127f4c7a7f2', '2016-09-30 21:30:15', 98),
+('8d17968e66bfcc530660f0bcd8c722e310d4c72e', '2016-10-05 16:50:48', 106),
+('ee4f1ad372447b8e50135b33c055809d4d0f17a1', '2016-10-07 19:50:27', 3);
 
 --
--- Dumping data for table `auth_permission`
+-- Volcado de datos para la tabla `auth_permission`
 --
 
 INSERT IGNORE INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALUES
@@ -185,7 +187,7 @@ INSERT IGNORE INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename
 (69, 'Can delete ruta sitio', 23, 'delete_rutasitio');
 
 --
--- Dumping data for table `django_admin_log`
+-- Volcado de datos para la tabla `django_admin_log`
 --
 
 INSERT IGNORE INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
@@ -197,7 +199,7 @@ INSERT IGNORE INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object
 (6, '2016-10-03 16:02:21', '73', 'turismo@girardot-cundinamarca.gov.co', 2, 'Changed es_cuenta_activa.', 7, 55);
 
 --
--- Dumping data for table `django_content_type`
+-- Volcado de datos para la tabla `django_content_type`
 --
 
 INSERT IGNORE INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
@@ -226,7 +228,7 @@ INSERT IGNORE INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (23, 'rutas', 'rutasitio');
 
 --
--- Dumping data for table `django_migrations`
+-- Volcado de datos para la tabla `django_migrations`
 --
 
 INSERT IGNORE INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
@@ -283,7 +285,7 @@ INSERT IGNORE INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (51, 'auth', '0008_auto_20160229_2210', '2016-10-01 23:55:36');
 
 --
--- Dumping data for table `django_session`
+-- Volcado de datos para la tabla `django_session`
 --
 
 INSERT IGNORE INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
@@ -415,20 +417,38 @@ INSERT IGNORE INTO `django_session` (`session_key`, `session_data`, `expire_date
 ('twhvf3g839621dcgmc4ktgjald1bt83g', 'Y2QwZjZlN2NlNmZiN2I2NzY1MzU0MjM1YjUzNDBiM2FkNjA5OGQwYzp7Il9hdXRoX3VzZXJfaGFzaCI6IjJiNmE1OWJkNGRiYjRkYTljZmVjMjZjNTI1OTJmZGI2NjFlOTUxMzMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NSJ9', '2016-10-17 15:51:09'),
 ('kz7gz3fz1gigzzggqcsb2oonwdnsweim', 'YjVmMTZhZmNjZjMyM2M4ZDAyZWRiODk1NThlOWZkMjc2NTI0Yzg4Nzp7Il9hdXRoX3VzZXJfaGFzaCI6ImExZDM1ZTY0YTJhZWFjMmI0N2ZjNTY1MDJlZGJkZmYwOTJiZDdiYjAiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1NSJ9', '2016-10-17 15:48:28'),
 ('9cybrxie9rjoatgsnqg88cavbou2blb9', 'NDM4ZTNkMDJjNzJmMWU2MTY0Y2U1Y2Q3N2EwMjY2NGEyNmRhNWY2MDp7Il9hdXRoX3VzZXJfaGFzaCI6IjJiNmE1OWJkNGRiYjRkYTljZmVjMjZjNTI1OTJmZGI2NjFlOTUxMzMifQ==', '2016-10-17 15:50:32'),
-('tyvb9ih5s0teak2oz085hrwoh4c0f6ti', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-17 15:50:43');
+('tyvb9ih5s0teak2oz085hrwoh4c0f6ti', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-17 15:50:43'),
+('uzpoi9upu233j7ft7mdvm0lhwl66s25v', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-17 20:11:27'),
+('o4cu2bcu6jzgsesshiqxjgzuzi8ooug6', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-17 20:12:12'),
+('cjpocl4xjdmyyjboslspjnbtw1dvfx6j', 'NmE0ZDg0ZWQ5YjA2MDU4YzNjOWYxZjY5MGIyYTk0ODJmMjQ4OGFhMjp7Il9hdXRoX3VzZXJfaGFzaCI6IjM4YWJhMGVmY2U5ZDQ5YmFlZDI3NDYyODkyNDkwYjRmNzczOGRjYmEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMTAxIn0=', '2016-10-17 20:13:22'),
+('xu4fu4wb9285xs542a65164keiuf41se', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-17 20:13:51'),
+('6xkkr6mokxeiatvgbhfonecaupcrjvp6', 'NWMxNWRjYzBhMGQ4NTBmZmVhMjU0MmU0YWYxODU1ZGRlYjRhZjA5Nzp7Il9hdXRoX3VzZXJfaGFzaCI6ImQwN2YxMzk4YjhiYzYxZjYwZGQxNGYyZmUxMTI2YWMyNDhhZDU2ZTEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMTAyIn0=', '2016-10-18 15:35:00'),
+('vvj2u87r9gxduvdkm023gwtri1gbn0kc', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-18 16:18:05'),
+('vua89ezpoy2p0m8lpblfnne3mheq8pvq', 'ZDI5NTZlNDJmN2JkNWNkOGUzYzFhODBkMjYwYTYyMWQ3ZWQ4ZTA5YTp7Il9hdXRoX3VzZXJfaGFzaCI6IjhmNDFlNjUxMzQ4ODQzNTY4ZjZmYzg4NGUyZmFjZGQ5MzQyZDRkNzIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMTAzIn0=', '2016-10-18 16:19:11'),
+('tkodmizacr2rolwxxp3ebgdzys49dd17', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-18 16:48:54'),
+('46cs6bcp6x2xzey1obgfbpdr1zezfpjh', 'MmVmODU5N2Y2Njk4MTYzN2NiMWZiZGE2NTRkMTJmODI5YTU4MGY0ZTp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNjE1Mjg5YmNiZDBiOGI3ODUyNzYxYzRhYmVjMTdlOTAwZGIzYzkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMTA0In0=', '2016-10-18 16:51:23'),
+('vu007ornoep5q9im4d12ry88cyo233qp', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-18 17:07:12'),
+('jl5vek3gva2wlk6v9qoy5f9irhb3myo7', 'N2FhNzVjYTU5YjBmMzFjZDJkYmZhZjVhZTFkMjhjMjI3NzE2YjQ2Njp7Il9hdXRoX3VzZXJfaGFzaCI6ImVjZDA4MDlkMDkyYTkzZTllMTIzYTRkMGQ1NzAwMWFlN2Y1MDcxYjgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMTA1In0=', '2016-10-18 17:53:03'),
+('sxs50o8by6nit8bp08hytr0p6a3cawiy', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-18 18:09:53'),
+('8wu2idnzqhalwddocyjst20xpksb5i0q', 'ZGVkNjlkZTQ2YTcxZDE3ZTk3NjY0NTE2MmI3ZDdkZmIzY2M4YmQ2Mjp7Il9hdXRoX3VzZXJfaGFzaCI6ImE0MmFmOTg2NTZiN2FiMDlkM2ZjYzFiOWY5OWE0NjNiOWUzOWE5NGIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2lkIjoiMTA2In0=', '2016-10-19 16:50:51'),
+('he058wj99d3uun0ssfhxg5tejv6k90hc', 'YjZiMzA2NDQ0NDdjZDU5ZTVhNTcyNTRjNjBmZjczY2MzMGQ4MTc2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQ0YzJhZmM5NGYyNmRiOTA2NGRkZDhlMDA1NzU0ZGUzMWU5OGEyYzQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=', '2016-10-21 19:23:47'),
+('ut9uvz5ug3hfihuodqcv7g8qc72xsu8b', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-21 19:32:09'),
+('ng5fpau24v0gwmbtck1w6z4vt8lkobtl', 'YjZiMzA2NDQ0NDdjZDU5ZTVhNTcyNTRjNjBmZjczY2MzMGQ4MTc2Yzp7Il9hdXRoX3VzZXJfaGFzaCI6IjQ0YzJhZmM5NGYyNmRiOTA2NGRkZDhlMDA1NzU0ZGUzMWU5OGEyYzQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=', '2016-10-21 19:34:08'),
+('gaq38nkvuvt8hn9vzhauc3lkx2v1ivtv', 'MTBkZDAwNDNjMWU5YzQ3N2M1NDJhNTgyYTE1ODYyODE5YWMyMmE1Nzp7fQ==', '2016-10-21 19:47:06'),
+('o6nuovfqp8057y88wc4014tqme9jkag4', 'ZTM0OTliN2IwOTA4YjdlM2E3ZDhjMGRjZWViMjY5ZTc0ZGFkYzI1ODp7Il9hdXRoX3VzZXJfaGFzaCI6IjE1ZjFlYzQ5ZjVhNGExMTc4Yjc3NmY5ZTE1ZjI2NTdiMGEzOGJkZjAiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=', '2016-10-21 19:50:27');
 
 --
--- Dumping data for table `django_site`
+-- Volcado de datos para la tabla `django_site`
 --
 
 INSERT IGNORE INTO `django_site` (`id`, `domain`, `name`) VALUES
 (1, 'example.com', 'example.com');
 
 --
--- Dumping data for table `plataforma_categoria`
+-- Volcado de datos para la tabla `plataforma_categoria`
 --
 
-INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`, `URL_icono_seleccionado`, `categoria_padre_id`, `URL_icono_general`, `name`) VALUES
+INSERT IGNORE INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`, `URL_icono_seleccionado`, `categoria_padre_id`, `URL_icono_general`, `name`) VALUES
 (1, 'Naturaleza', 1, 'normal_icons/naturaleza-agroturismo.png', 'selected_icons/naturaleza-agroturismo.png', NULL, 'general_icons/naturaleza-agroturismo.png', 'Nature'),
 (2, 'Deportes', 1, 'normal_icons/deporte.png', 'selected_icons/deporte.png', NULL, 'general_icons/deportes.png', 'Sports'),
 (3, 'Salud', 1, 'normal_icons/salud.png', 'selected_icons/salud.png', NULL, 'general_icons/salud.png', 'Health'),
@@ -527,9 +547,8 @@ INSERT INTO `plataforma_categoria` (`id`, `nombre`, `nivel`, `URL_icono_normal`,
 (101, 'Centro recreativo', 2, NULL, NULL, 9, NULL, 'Recreational centre'),
 (102, 'Piscina', 2, NULL, NULL, 9, NULL, 'Pools');
 
-
 --
--- Dumping data for table `plataforma_municipio`
+-- Volcado de datos para la tabla `plataforma_municipio`
 --
 
 INSERT IGNORE INTO `plataforma_municipio` (`id`, `nombre`, `latitud`, `longitud`) VALUES
@@ -651,7 +670,7 @@ INSERT IGNORE INTO `plataforma_municipio` (`id`, `nombre`, `latitud`, `longitud`
 (116, 'Zipaquirá', '5.021497200000000000', '-73.997903200000000000');
 
 --
--- Dumping data for table `plataforma_tag`
+-- Volcado de datos para la tabla `plataforma_tag`
 --
 
 INSERT IGNORE INTO `plataforma_tag` (`id`, `tag`) VALUES
@@ -811,7 +830,7 @@ INSERT IGNORE INTO `plataforma_tag` (`id`, `tag`) VALUES
 (154, 'helados');
 
 --
--- Dumping data for table `rutas_ruta`
+-- Volcado de datos para la tabla `rutas_ruta`
 --
 
 INSERT IGNORE INTO `rutas_ruta` (`id`, `nombre`, `descripcion`, `sitio_id`, `distancia`, `tiempo`) VALUES
@@ -819,7 +838,7 @@ INSERT IGNORE INTO `rutas_ruta` (`id`, `nombre`, `descripcion`, `sitio_id`, `dis
 (3, 'Ruta del millo', 'Ruta cheveronga', 1959, '31.7 km', '1 hour 7 mins');
 
 --
--- Dumping data for table `rutas_rutasitio`
+-- Volcado de datos para la tabla `rutas_rutasitio`
 --
 
 INSERT IGNORE INTO `rutas_rutasitio` (`id`, `orden`, `ruta_id`, `sitio_id`) VALUES
@@ -830,7 +849,7 @@ INSERT IGNORE INTO `rutas_rutasitio` (`id`, `orden`, `ruta_id`, `sitio_id`) VALU
 (29, 1, 3, 1959);
 
 --
--- Dumping data for table `sitios_foto`
+-- Volcado de datos para la tabla `sitios_foto`
 --
 
 INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
@@ -841,23 +860,20 @@ INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (1871, 'Fotos/san_alejo_5.jpg', 'F', 1877),
 (1872, 'Fotos/san_alejo_8.jpg', 'PR', 1877),
 (1873, 'Fotos/san_alejo_1.jpg', 'P', 1877),
-(1874, 'Fotos/edelweiss_6.jpg', 'I', 1878),
-(1875, 'Fotos/edelweiss_5.jpg', 'I', 1878),
-(1876, 'Fotos/edelweiss_4.jpg', 'I', 1878),
-(1877, 'Fotos/edelweiss_2.jpg', 'F', 1878),
-(1878, 'Fotos/edelweiss_3.jpg', 'F', 1878),
-(1879, 'Fotos/edelweiss_8.jpg', 'PR', 1878),
-(1880, 'Fotos/edelweiss_7.jpg', 'PR', 1878),
-(1881, 'Fotos/edelweiss_1.jpg', 'P', 1878),
-(1882, 'Fotos/nativo_6.jpg', 'I', 1879),
-(1883, 'Fotos/nativo_5.jpg', 'I', 1879),
-(1884, 'Fotos/nativo_4.jpg', 'I', 1879),
-(1885, 'Fotos/nativo_2.jpg', 'F', 1879),
-(1886, 'Fotos/nativo_3.jpg', 'F', 1879),
-(1887, 'Fotos/nativo_8.jpg', 'PR', 1879),
-(1888, 'Fotos/nativo_7.jpg', 'PR', 1879),
-(1889, 'Fotos/nativo_1.jpg', 'P', 1879),
-(1890, 'Fotos/nativo_9.jpg', 'PR', 1879),
+(2411, 'Fotos/blob.jpg', 'F', 1878),
+(2412, 'Fotos/edelweiss_3.jpg', 'I', 1878),
+(2413, 'Fotos/blob_6T6iN94.jpg', 'I', 1878),
+(2414, 'Fotos/blob_OvPFSj5.jpg', 'I', 1878),
+(2415, 'Fotos/blob_ajc46OW.jpg', 'P', 1878),
+(2424, 'Fotos/blob_ZDevrTR.jpg', 'PR', 1879),
+(2423, 'Fotos/blob_DiFje42.jpg', 'P', 1879),
+(2422, 'Fotos/blob_eNx7rhy.jpg', 'PR', 1879),
+(2421, 'Fotos/blob_fRtvlq4.jpg', 'PR', 1879),
+(2420, 'Fotos/blob_wRAwdoT.jpg', 'F', 1879),
+(2419, 'Fotos/blob_hSpq2AZ.jpg', 'F', 1879),
+(2418, 'Fotos/blob_vqape2b.jpg', 'I', 1879),
+(2417, 'Fotos/blob_0FZxejO.jpg', 'I', 1879),
+(2416, 'Fotos/blob.jpg', 'I', 1879),
 (1891, 'Fotos/La_estacion_7.jpg', 'I', 1880),
 (1892, 'Fotos/La_estacion_2.jpg', 'F', 1880),
 (1893, 'Fotos/La_estacion_3.jpg', 'F', 1880),
@@ -1091,6 +1107,16 @@ INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (2269, 'Fotos/14745750195171486151756.jpg', 'P', 1952),
 (2270, 'Fotos/agencia_sin_estres22.jpg', 'F', 1953),
 (2271, 'Fotos/Logo6.jpg', 'P', 1953),
+(2394, 'Fotos/Facatativa_20041117_46.jpg', 'P', 1975),
+(2393, 'Fotos/facatativa.jpg', 'I', 1975),
+(2392, 'Fotos/1475604437051-159239051.jpg', 'P', 1974),
+(2391, 'Fotos/14756045271931001059112.jpg', 'PR', 1974),
+(2390, 'Fotos/1475604557531597318745.jpg', 'I', 1974),
+(2389, 'Fotos/14756045030551688238030.jpg', 'F', 1974),
+(2388, 'Fotos/1475600654205631256707.jpg', 'P', 1973),
+(2387, 'Fotos/1475600776964514311057.jpg', 'PR', 1973),
+(2386, 'Fotos/1475600759800423127599.jpg', 'I', 1973),
+(2385, 'Fotos/1475600680480-641958717.jpg', 'F', 1973),
 (2317, 'Fotos/image.jpg', 'F', 1960),
 (2318, 'Fotos/image_4mQHx0Z.jpg', 'P', 1960),
 (2321, 'Fotos/14749951303031641845775.jpg', 'P', 1961),
@@ -1101,6 +1127,13 @@ INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (2326, 'Fotos/1475003635108801539169.jpg', 'PR', 1962),
 (2327, 'Fotos/1475003472728146944833.jpg', 'P', 1962),
 (2328, 'Fotos/1475003698644341516030.jpg', 'PR', 1962),
+(2384, 'Fotos/panoramica01.jpg', 'P', 1972),
+(2383, 'Fotos/eventos06-1.jpg', 'PR', 1972),
+(2382, 'Fotos/instalaciones03.jpg', 'F', 1972),
+(2381, 'Fotos/panoramica02.jpg', 'F', 1972),
+(2380, 'Fotos/instalaciones05.jpg', 'I', 1972),
+(2379, 'Fotos/eventos02.jpg', 'I', 1972),
+(2378, 'Fotos/14755958876911575056196.jpg', 'P', 1971),
 (2336, 'Fotos/image_OrcHy72.jpg', 'I', 1964),
 (2337, 'Fotos/image_aERTdiK.jpg', 'I', 1964),
 (2338, 'Fotos/image_nMnRETf.jpg', 'F', 1964),
@@ -1128,56 +1161,60 @@ INSERT IGNORE INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 (2375, 'Fotos/blob_kPiS13W.jpg', 'I', 1970);
 
 --
--- Dumping data for table `sitios_sitio`
+-- Volcado de datos para la tabla `sitios_sitio`
 --
 
 INSERT IGNORE INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `horariolocal`, `web`, `latitud`, `longitud`, `descripcion`, `correolocal`, `ubicacionlocal`, `municipio_id`, `usuario_id`, `tipo_sitio`) VALUES
-(1877, 'Restaurante, Muebles y Café "San Alejo"', '8833489', '3102073210 - 3014266280', 'Todos los días de 10 am a 6 pm', 'www.restaurantesanalejo.com', '4.916869335520000000', '-74.026701338600000000', 'Restaurante de comida típica santafereña, parrillas al carbón. Café y panadería. Casa de finales de 1800 de arquitectura tradicional. Se venden los muebles, cuadros, decoración y todo lo que hay dentro del restaurante. Especialidad en café (carta de café). Eventos y reservas', '', 'Diagonal 6 No. 3 - 35', 13, 1, NULL),
-(1878, 'Edelweiss', '8831212', '3115411241', 'Martes y miércoles de 12 m a 6 pm. Jueves de 12 m a 7 pm. Viernes y sábado de 12 m a 10 pm. Domingos y festivos de 12 m a 7 pm', 'www.edelweisscajica.com', '4.910441995750000000', '-74.027967006000000000', 'Restaurante de nueva cocina alemana. Eventos y reservas. Domicilios en la zona. Cerveza artesanal fabricada aquí mismo. Amigables con los animales (puedes traer a tu mascota). Comida vegetariana, postres, helados, entre otros. Celebramos el October Fest.', '', 'Km 1 vía Cajicá Zipaquirá, sector El Misterio', 13, 2, NULL),
-(1879, 'Arte Nativo', '3108839849', '3108839849', 'Todos los días de 10 am a 7 pm', '', '4.917777429020000000', '-74.025896675900000000', 'Tienda de artesanías. Nuestra tienda tiene un enfoque social y os productos son elaborados por madres cabeza de familia, adulto mayor y personas con discapacidad. Artículos originales y típicos de fabricación propia. Nos centramos en crear, diseñar e inventar piezas exclusivas. Desatacados por los pesebres y las réplicas del monte Picio.', '', 'Calle 3 No. 2 - 47', 13, 3, NULL),
-(1880, 'Panadería La Estación', '8660067', '', 'Todos los días de 6 am a 8 pm', '', '4.918239509260000000', '-74.025406837500000000', 'Pan caliente de 6 am a 7 pm. Pasabocas, pan de yuca, pan saludable, resetas nuevas constantemente. Todo hecho con levadura natural y bajo estricta higiene. Postres los fines de semana. Experiencia de 18 años en el pueblo de Cajicá', '', 'Carrera 2 No. 3 - 35 Frente a la Estación del tren.', 13, 5, NULL),
-(1881, 'Jicá Restaurante', '8660340', '3125824177', 'Martes a  viernes de 11 am a 8 pm. Fines de semana de 9 am a 9 pm', '', '4.917563642170000000', '-74.025081284300000000', 'Restaurante. Platos típicos, música en vivo, ambiente familiar, comida vegetariana. Postres, cafetería y panadería. Fabricación artesanal. Famoso por el pan de aceite de oliva y la sobrebarriga', '', 'Calle 3 No. 4 - 74', 13, 6, NULL),
-(1882, 'Obleas Cajiqueñas', '3144482755', '3144482755', 'Fines de semana de 8 am a 7 pm', '', '4.917052190240000000', '-74.025202989600000000', 'Obleas con arequipe, dulce casero de piña y de mora. El precio varía entre 1000 y 2000 pesos. 36 años de experiencia vendiendo obleas en el parque central de Cajicá', '', 'Parque principal, frente a la iglesia del pueblo', 13, 7, NULL),
-(1883, 'Caprinos Restaurante', '8663632', '3176799072', 'Lunes a Domingo 7 am a 7 pm', '', '4.916772630250000000', '-74.026175625600000000', 'Reuniones y eventos. Platos a la carta, menú ejecutivo, desayunos. Contratos para almuerzos y diferentes tipos de eventos.', '', 'Calle 2 No. 5 - 57 Costado derecho de la Iglesia', 13, 8, NULL),
-(1884, 'Piedras de Chivonegro', '8243410', '3214515721 - 3108755522', 'Espacio abierto - se recomienda visita diurna', '', '4.733478706920000000', '-74.343309290700000000', 'Parque Arqueológico del municipio de Bojacá. Posee varias piedras con pintura rupestre, en medio de un conjunto rocoso y relictos de vegetación de bosque seco que forman un paisaje de singular belleza. Forman parte del arte rupestre de la zona el Chuvaná, La Paz, Bobacé, Alto de la Cruz y el Castillo, San Antonio y Barroblanco y Fute.', '', 'Carrera 7 # 6 - 06 Alcaldía Municipal', 9, 10, NULL),
-(1885, 'Restaurante Porta Morada', '8243302', '3114812912', 'Lunes a viernes de 9 am a 7 pm. Fines de semana de 8 am a 7 pm', '', '4.732775457590000000', '-74.340695142700000000', 'Restaurante, postres y onces. Eventos, matrimonios, cumpleaños y bautizos. Platos típicos satafereños, ajiacos y platos a la carta. Especialidad en Pescado. El sitio perfecto para que los ciclistas desayunen los fines de semana.', '', 'Calle 7 No. 5 - 56. Parque principal', 9, 11, NULL),
-(1886, 'Fortaleza de piedra - tapetes anudados', '8662713', '3107773746', 'Tapetes anudados de lana virgen, tapetes en cuero, dique, cobre, estaño, pieles vírgenes y tinturadas. Muebles y accesorios decorativos de todo tipo. Los tapetes son elaborados a mano en telares artesanales y tienen garantía de 15 a 20 años. Costos moderados.', '', '4.917559132600000000', '-74.025049097800000000', 'Lunes a domingo de 9 am a 6 pm', '', 'Calle 3 No. 2 - 59', 13, 9, NULL),
-(1887, 'Santuario Nuestra Señora de la Salud de Bojacá', '8243166', '3143312601', 'Lunes a viernes 7am, 11 am y 6:30 pm. Sábados: 7 am, 9 am 11 am, 1 pm, 3:30 pm y 6:30 pm. Domingos: 7, 8, 9 10 y 11am, 12 m, 1 pm y 3:30 pm. Festivos: 7, 9 y 11 am, 1 pm y 3:30 pm', 'http://santuariovirgendelasalud.blogspot.com.co/', '4.733131626580000000', '-74.342962447600000000', 'El santuario de nuestra señora de la salud de Bojacá es reconodico por la bendición de los vehículos y sus familias. Es un lugar sagrado dedicado a la oración que cuenta con una arquitectura clásica. Fiestas principales: Segundo domingo de septiembre, último domingo de mayo y ocho de diciembre.', '', 'Parque principal Bojacá', 9, 12, NULL),
-(1888, 'Dulcerino', '3202972629', '3202972629', 'Lunes a viernes de 7 am a 8 pm. Fines de semana de 7 am a 7 pm', '', '4.732335053580000000', '-74.341868106300000000', 'Postres, almuerzos los fines de semana. Cafetería. Eventos y reservas.', '', 'Cra. 7 No. 67-03', 9, 13, NULL),
-(1889, 'Droguería Bojacá', '3212141539', '', 'Todos los días de 8 am a 9 pm', '', '4.732356646930000000', '-74.340160461100000000', 'Droguería, inyectología, toma de tensión. Venta de medicamentos en general, artículos de aseo y de tocador. Atención a usuarios de EPS Convida.', '', 'Carrera 5 No. 6 - 71', 9, 14, NULL),
-(1890, 'Alma Llanera Asadero Restaurante', '3103218744', '3103218744', '8am a 7pm domingo a domingo', '', '5.021497818720000000', '-74.000572934700000000', 'Del llano a Zipaquirá, la auténtica mamona. Carne de cerdo, de res, chigüiro, pescados y sopas. \r\nSe atienden eventos y recepciones.', '', 'Zipaquirá', 116, 15, NULL),
-(1891, 'Centro Recreativo Musisal', '8519204', '', '1pm a 11pm lunes a miércoles / 1pm a 1am de jueves a domingo', '', '5.021497818720000000', '-74.005765691400000000', 'El sitio emblemático de la rumba en Zipaquirá. Entretenimiento y diversión para toda la familia (menores hasta las 6 pm)', '', 'Cra 7 # 1-56', 116, 16, NULL),
-(1892, 'Hotel Cacique Real', '8510209', '3115134781', '24 horas', '', '5.022684982650000000', '-74.005951769600000000', 'Un hotel tradicional con ambiente colonial. Servicio de restaurante, salón de eventos, parqueadero, wi-fi y tv por cable', '', 'Carrera 6 # 2-36', 116, 17, NULL),
-(1893, 'Café Santa Emma', '3223095756', '3223095756', 'Todos los días de 6 am a 8 pm', '', '4.731716121700000000', '-74.342132806800000000', 'Cafetería y onces. Aquí encuentra cuajada con melao´, leche asada, almojábanas con aguapanela y queso. También Café, aromática de frutas y comidas rápidas.', '', 'Calle 7 No. 6 - 32', 9, 18, NULL),
-(1894, 'Signos Artesanías', '3103449344', '3103449344', 'Lunes a domingo 10:30am a 7pm', '', '5.022550085120000000', '-74.006073474900000000', 'Accesorios en diferentes semillas de la región y tejidos en algodón y lana virgen. Lámparas y objetos hechos a mano en fibras naturales', '', 'Cra 6 # 2-56', 116, 19, NULL),
-(1895, 'Óptica Luz', '8520877', '', '9 am a 12pm y de 2pm a 5:30pm', '', '5.026363602140000000', '-74.005887508400000000', '33 años de experiencia en óptica. Consultas, monturas y lentes, todo lo relacionado con óptica', '', 'Calle 4 # 7-19', 116, 20, NULL),
-(1896, 'Clandestino Tattoo', '3004055674', '3004055674', '11am a 8pm domingo a domingo', '', '5.022462000630000000', '-74.005116820100000000', '"Tatuajes y modificación corporal. Arte corporal, implantes, \r\ntodo lo relacionado con modificaciones. Implantes, reconstrucción, expansión, bifurcación, piercing"', '', 'Cra 7 #3-39 local 122', 116, 21, NULL),
-(1897, 'Café de la Plaza', '8514682', '', '7:30am a 7pm domingo a domingo', '', '5.027635422380000000', '-74.005511999300000000', '"Los mejores postres y café en pleno centro de Zipa.\r\n Disfruta de una bebida acompañada de nuestras delicias en un ambiente colonial, con la mejor atención."', '', 'Carrera 8 # 4-04 centro', 116, 22, NULL),
-(1898, 'Promo Tour años dorados', '3105752340', '310-575-2340  / 313-314-2796', '9am a 4pm lunes a viernes', '', '4.966050817300000000', '-73.913211822700000000', 'Paquetes turísticos, donde el turista realiza sus sueños de conocer sitios nuevos.', '', 'Calle 11 # 6-54 parque principal', 99, 23, NULL),
-(1899, 'La posada de Ibarra Restaurante', '8574394', '3105752340', '7am a 5pm lun. a jue. / 7am a 11pm vie. Y sab. / 10am a 5pm dom.', 'Www.laposadadeibarra.amawebs.com', '4.965890488860000000', '-73.913061619000000000', '"Comida casera y tradicional con el mejor sabor de la región. Almuerzos y platos a la carta.  \r\nCafetería y bar. Música en vivo y karaoke los fines de semana."', '', 'Calle 11 # 6-54 parque principal', 99, 24, NULL),
-(1902, 'Droguería Acuña', '8511423', '', 'Lunes a sabado 8am a 9pm / dom y fest 9am a 8pm', 'drogueriasacuna.com', '5.022905003220000000', '-74.003925919600000000', 'Droguería ubicada en la Plaza principal de Zipa. Inyectología, toma de tensión. Domicilios.', '', 'Cra 8 # 4-48', 116, 26, NULL),
-(1901, 'Granja el Mohán de Quebrada Honda', '3138618373', '313-861-8373 / 313-357-6795', '10am a 5:30pm', '', '4.964015400230000000', '-73.910808116200000000', 'Disfrute de un día inolvidable en la granja "El Mohán". En contacto con la naturaleza y los animales de la zoología doméstica.', '', 'Tocancipá, Vereda Canavita, Sector el Tablón', 99, 25, NULL),
-(1903, 'Artesanias Artoca (asociación de artesanos de Tocancipá)', '3188653084', '3105752340', '11am a 7pm lunes a domingo', '', '4.965748620400000000', '-73.913390412900000000', 'Artesanías tejidas a mano y cerámica. Accesorios y ropa (gorras, bufandas, ruanas, chales, guantes, chalecos, pantuflas, etc.)', '', 'Plaza Central de Tocancipá', 99, 27, NULL),
-(1904, 'Galería y sala de exposición Ramón Torres Méndez', '8575464', '', '9am a 12pm y de 2pm a 6pm Lunes a viernes', '', '4.965311641580000000', '-73.913567606400000000', 'Espacio cultural para la exposición de obas de diferentes manifestaciones artísticas, \r\ncomo pintura, escultura, fotografía, manualidades y demás proyectos culturales, académicos y particulares. \r\nHace parte de la Casa de la Cultura de Tocancipá.', '', 'Calle 10 # 6-53 piso 2 Casa de la Cultura', 99, 28, NULL),
-(1905, 'Flores y estilos', '3112796308', '3112796308', '7am a 7pm lun. a sab. / 8am a 1pm domingos y festivos', '', '4.965017455230000000', '-73.914813995400000000', 'Flores y arreglos para eventos, cumpleaños, aniversarios y fúnebres.', '', 'Cra  7 # 9-03', 99, 29, NULL),
-(1906, 'Droguería central', '8524435', '', '8am a 9:30pm jornada continua domingo a domingo', '', '4.963729313250000000', '-73.916011937000000000', 'Encuentre cosméticos y medicamentos en general. Además, tenemos servicio de inyectología. Encuentre helados y bebidas frías.', '', 'Cra 7 # 7-93 Centro', 99, 30, NULL),
-(1908, 'Mina de Sal de Nemocón', '3212044506', '3212044506', '9am a 5pm domingo a domingo', 'www.minadesal.com', '5.064042657360000000', '-73.875262141200000000', 'En la Mina de Sal de Nemocón usted no solo descubrirá el origen de un pueblo que guarda sus secretos en la profundidad de un inmenso domo salino subterráneo, a 80 mts bajo tierra, también se cautivara con sus espectaculares formaciones y atractivos naturales únicos en el mundo. Descubra el sentido cultural, histórico, científico, temático, minero y turístico de la Mina de sal de Nemocón. Viva la mejor caminata subterránea que se pueda imaginar, con propiedades medicinales y terapéuticas. Somos un atractivo turístico de interés nacional que se ha convertido en uno de los lugares más visitados al interior de nuestro país, una maravilla natural que sorprende por su arquitectura vernácula, testimonio material de la tradicional minería subterránea de cámaras y pilares. Nuestro recorrido será una experiencia para descubrir historias y lugares. Un verdadero banquete para los sentidos y el espíritu.', '', 'Calle 2 # 0-05', 60, 31, NULL),
-(1909, 'Cafe Cacique nemequen', '3143243052', '3143243052', '9am a 10pm domingo a domingo', '', '5.066652440560000000', '-73.877366669500000000', 'Mejor café de Nemocón. En pleno parque principal, disfrute de buen ambiente, música, bebidas, y artículos de tienda tradicional.', '', 'Cra 4 # 3-37 parque ppal.', 60, 32, NULL),
-(1910, 'Hotel Valle de la Sal', '8544422', '3112236036', '24 horas', '', '5.066823431180000000', '-73.876873143000000000', 'Nuestro hotel al estilo colonial, un lugar acogedor, tranquilo y silencioso, en el que el descanzo y la armonía reinan. La paz y el recogimiento se funden para entregar una experiencia única a las personas que nos visitan.', '', 'Calle 4 # 4-13', 60, 33, NULL),
-(1911, 'Restaurante el Colonial JR', '3213008172', '3213008172', 'Fines de semana y festivos a partir de las 11:30am hasta las 6:00pm', '', '5.067732235490000000', '-73.877041284000000000', 'Restaurante colonial que ofrece comida típica en un ambiente colonial y familiar. Eventos como matrimonios, primeras comuniones, recepciones y fiestas privadas. Casa colonial con mas de 120 años de existencia.', '', 'Cll 4 # 5-26', 60, 34, NULL),
-(1912, 'pastelería y cafetería pan de trigo', '3213614051', '3213614051', '6am a 10pm, de domingo a domingo', '', '5.066626140740000000', '-73.877304140500000000', 'El mejor pan hawaiano de Nemocon, pastelería, panadería, postres, cafetería, bebidas frías. Desayunos, empanadas, pastel de pollo, pan hojaldrado', '', 'Cll 3 # 4-21', 60, 35, NULL),
-(1913, 'Restaurante Hornos de Sal Nemocón / Fabrica de Macrame y artesanias Myriam Rojas', '3108740760', '3105788447', '7am a 8pm domingo a domingo', '', '5.065872295330000000', '-73.877184279300000000', 'A 30m de la mina de sal. Centro artesanal y gastronómico. La mejor carne a la parrilla. Panadería y cafetería. La mas deliciosa almojabana.', '', 'Calle 2 No. 0-90', 60, 36, NULL),
-(1915, 'Transcondalia', '3203932752', '', '8am a 8pm lunes a sabado / 8am a 2pm domingos', '', '5.067133351540000000', '-73.877795822900000000', 'Transporte local en motocarro. Somos una empresa confiable para el transporte de pasajeros dentro de Nemocon.', '', 'Calle 3 # 5-21', 60, 37, NULL),
-(1916, 'Droguería Colfamiliar', '3115681695', '3115681695', '9am a 8pm domingo a domingo', '', '5.067015795560000000', '-73.877709992200000000', 'Droguería general, inyectología, farmacia, medicamentos', '', 'Calle 3 # 5-08 barrio Centro', 60, 38, NULL),
-(1917, 'Alama Velas', '8796188', '', 'Lunes a domingo de 9 am a 1 pm y de 2 pm a 6 pm.', 'www.empresario.com/alamavelas', '4.916985582240000000', '-74.023511186200000000', 'Artículos decorativos para hogar y eventos. Velas, velones, candelabros, pebeteros, forja, entre otros. Artículos para aromaterapia.', '', 'calle 3 No. 2 - 53 Local 101', 13, 4, NULL),
-(1918, 'Hotel fusa', '123569854', '319 7781452', '24 horas', 'www.almallanera.com.co', '4.330513908604122000', '-74.363113045692440000', 'Un h espectalu', '', 'Cra 1 # 3 22', 31, 39, NULL),
-(1919, 'Hotel Parque Zabal', '8736510', '3105583678', '24 horas', 'hotelparquezabal.com', '4.344224872358932000', '-74.362474679946900000', 'Hotel ubicado en el centro, cerca al parque principal. Suites especiales con jacuzzi o chimenea. Zona Wifi, Direct TV, parqueadero, área social, salón de eventos.', '', 'Calle 6 # 7-71 centro', 31, 40, NULL),
-(1920, 'Hotel Boutique Sinaí', '8717004', '3107831909', '24 horas', 'Www.hotelboutiquesinai.com', '4.343937363239323400', '-74.362669140100480000', 'Hotel ubicado en el centro. La mezcla perfecta de lo colonial y lo moderno. Habitaciones confotables, televisión cable, Wifi, parqueadero, apartamentos amoblados, zonas verdes, salón de eventps, conferencias con ayudas audiovisuales, habitaciones con jacuzzi', '', 'Calle 6 # 7-56 centro', 31, 41, NULL),
-(1921, 'Alpinismo', '32323232', '', '', '', '4.898788380353646000', '-74.457778930664060000', 'Se realizan excursiones.', '', '312321112211', 2, 48, NULL),
-(1922, 'Hotel costa del sol', '8673932', '3102916511', '24 horas', 'Www.hotelcostadelsolfusagasuga.com.co', '4.336301615841759500', '-74.366039335727690000', 'Elegancia y comfort. Empresa familiar con mas de 18 años prestando servicios de calidad y atención. Cumpliendo con los estándares de calidad y amabilidad.', '', 'Calle 17 # 12-04', 31, 51, NULL),
-(1923, 'Hotel Catama Inn', '8780858', '3118119251', '24 horas', 'Www.hotelcatamainn.com', '4.329925507051654000', '-74.379981458187100000', 'Ubicado en la ciudad jardín de Colombia, brinda toda la comodidad y la belleza de un paisaje que permite a nuestros huéspedes disfrutar de un ambiente familiar. Salón de reuniones y eventos', '', 'Calle 22 # 36-91 (100m adelante de la estatua del indio)', 31, 52, NULL),
-(1924, 'Hotel el Castillo', '3143578003', '3143578003', '24 horas', 'hotelelcastillochinauta.com.co', '4.308047343273843000', '-74.443627595901490000', 'Construido en 1967 al mejor estilo medieval, por el señor Luis Carlos de Mendoza enamorado de colombia por su clima, su fauna, y por el placer de observar el cerro del Quinini. Piscina, restaurante, alojamiento.', '', 'Kn 65 vía Melgar', 31, 53, NULL),
-(1925, 'Hotel Chinauta Real', '3103068504', '', '24 horas', 'www.hotelchinautareal.com', '4.290073613014737000', '-74.466705322265620000', 'La naturaleza, el descanso, la recreación, junto con una buena atención son los pilares del hotel y centro de convenciones. Pinemos a su servicio nuestras instalaciones y una cálida hospitalidad.\r\n\r\nAlojamiento, alimentos y bebidas, zona húmeda y spa, eventos y recepciones, pesca deportiva, caminatas ecológicas, chiva turística, piscina y tobogán. Parqueadero, interacción con especies.', '', 'Km 68.5 vía panamericana, Bogotá-Melgar', 31, 54, NULL),
+(1877, 'Restaurante, Muebles y Café "San Alejo"', '8833489', '3102073210 - 3014266280', 'Todos los días de 10 am a 6 pm', 'www.restaurantesanalejo.com', '4.916869335520000000', '-74.026701338600000000', 'Restaurante de comida típica santafereña, parrillas al carbón. Café y panadería. Casa de finales de 1800 de arquitectura tradicional. Se venden los muebles, cuadros, decoración y todo lo que hay dentro del restaurante. Especialidad en café (carta de café). Eventos y reservas', '', 'Diagonal 6 No. 3 - 35', 13, 1, 'S'),
+(1878, 'Edelweiss', '8831212', '3115411241', 'Martes y miércoles de 12 m a 6 pm. Jueves de 12 m a 7 pm. Viernes y sábado de 12 m a 10 pm. Domingos y festivos de 12 m a 7 pm', 'www.edelweisscajica.com', '4.910441995750000000', '-74.027967006000000000', 'Restaurante de nueva cocina alemana. Eventos y reservas. Domicilios en la zona. Cerveza artesanal fabricada aquí mismo. Amigables con los animales (puedes traer a tu mascota). Comida vegetariana, postres, helados, entre otros. Celebramos el October Fest.', '', 'Km 1 vía Cajicá Zipaquirá, sector El Misterio', 13, 2, 'S'),
+(1879, 'Arte Nativo', '3108839849', '3108839849', 'Todos los días de 10 am a 7 pm', '', '4.917777429020000000', '-74.025896675900000000', 'Tienda de artesanías. Nuestra tienda tiene un enfoque social, y los productos son elaborados por madres cabeza de familia, adultos mayores y personas con discapacidad. Artículos originales y típicos de fabricación propia. Nos centramos en crear, diseñar e inventar piezas exclusivas. Destacados por los pesebres y las réplicas del monte Picio.', '', 'Calle 3 No. 2 - 47', 13, 3, 'S'),
+(1880, 'Panadería La Estación', '8660067', '', 'Todos los días de 6 am a 8 pm', '', '4.918239509260000000', '-74.025406837500000000', 'Pan caliente de 6 am a 7 pm. Pasabocas, pan de yuca, pan saludable, resetas nuevas constantemente. Todo hecho con levadura natural y bajo estricta higiene. Postres los fines de semana. Experiencia de 18 años en el pueblo de Cajicá', '', 'Carrera 2 No. 3 - 35 Frente a la Estación del tren.', 13, 5, 'S'),
+(1881, 'Jicá Restaurante', '8660340', '3125824177', 'Martes a  viernes de 11 am a 8 pm. Fines de semana de 9 am a 9 pm', '', '4.917563642170000000', '-74.025081284300000000', 'Restaurante. Platos típicos, música en vivo, ambiente familiar, comida vegetariana. Postres, cafetería y panadería. Fabricación artesanal. Famoso por el pan de aceite de oliva y la sobrebarriga', '', 'Calle 3 No. 4 - 74', 13, 6, 'S'),
+(1882, 'Obleas Cajiqueñas', '3144482755', '3144482755', 'Fines de semana de 8 am a 7 pm', '', '4.917052190240000000', '-74.025202989600000000', 'Obleas con arequipe, dulce casero de piña y de mora. El precio varía entre 1000 y 2000 pesos. 36 años de experiencia vendiendo obleas en el parque central de Cajicá', '', 'Parque principal, frente a la iglesia del pueblo', 13, 7, 'S'),
+(1883, 'Caprinos Restaurante', '8663632', '3176799072', 'Lunes a Domingo 7 am a 7 pm', '', '4.916772630250000000', '-74.026175625600000000', 'Reuniones y eventos. Platos a la carta, menú ejecutivo, desayunos. Contratos para almuerzos y diferentes tipos de eventos.', '', 'Calle 2 No. 5 - 57 Costado derecho de la Iglesia', 13, 8, 'S'),
+(1884, 'Piedras de Chivonegro', '8243410', '3214515721 - 3108755522', 'Espacio abierto - se recomienda visita diurna', '', '4.733478706920000000', '-74.343309290700000000', 'Parque Arqueológico del municipio de Bojacá. Posee varias piedras con pintura rupestre, en medio de un conjunto rocoso y relictos de vegetación de bosque seco que forman un paisaje de singular belleza. Forman parte del arte rupestre de la zona el Chuvaná, La Paz, Bobacé, Alto de la Cruz y el Castillo, San Antonio y Barroblanco y Fute.', '', 'Carrera 7 # 6 - 06 Alcaldía Municipal', 9, 10, 'S'),
+(1885, 'Restaurante Porta Morada', '8243302', '3114812912', 'Lunes a viernes de 9 am a 7 pm. Fines de semana de 8 am a 7 pm', '', '4.732775457590000000', '-74.340695142700000000', 'Restaurante, postres y onces. Eventos, matrimonios, cumpleaños y bautizos. Platos típicos satafereños, ajiacos y platos a la carta. Especialidad en Pescado. El sitio perfecto para que los ciclistas desayunen los fines de semana.', '', 'Calle 7 No. 5 - 56. Parque principal', 9, 11, 'S'),
+(1886, 'Fortaleza de piedra - tapetes anudados', '8662713', '3107773746', 'Tapetes anudados de lana virgen, tapetes en cuero, dique, cobre, estaño, pieles vírgenes y tinturadas. Muebles y accesorios decorativos de todo tipo. Los tapetes son elaborados a mano en telares artesanales y tienen garantía de 15 a 20 años. Costos moderados.', '', '4.917559132600000000', '-74.025049097800000000', 'Lunes a domingo de 9 am a 6 pm', '', 'Calle 3 No. 2 - 59', 13, 9, 'S'),
+(1887, 'Santuario Nuestra Señora de la Salud de Bojacá', '8243166', '3143312601', 'Lunes a viernes 7am, 11 am y 6:30 pm. Sábados: 7 am, 9 am 11 am, 1 pm, 3:30 pm y 6:30 pm. Domingos: 7, 8, 9 10 y 11am, 12 m, 1 pm y 3:30 pm. Festivos: 7, 9 y 11 am, 1 pm y 3:30 pm', 'http://santuariovirgendelasalud.blogspot.com.co/', '4.733131626580000000', '-74.342962447600000000', 'El santuario de nuestra señora de la salud de Bojacá es reconodico por la bendición de los vehículos y sus familias. Es un lugar sagrado dedicado a la oración que cuenta con una arquitectura clásica. Fiestas principales: Segundo domingo de septiembre, último domingo de mayo y ocho de diciembre.', '', 'Parque principal Bojacá', 9, 12, 'S'),
+(1888, 'Dulcerino', '3202972629', '3202972629', 'Lunes a viernes de 7 am a 8 pm. Fines de semana de 7 am a 7 pm', '', '4.732335053580000000', '-74.341868106300000000', 'Postres, almuerzos los fines de semana. Cafetería. Eventos y reservas.', '', 'Cra. 7 No. 67-03', 9, 13, 'S'),
+(1889, 'Droguería Bojacá', '3212141539', '', 'Todos los días de 8 am a 9 pm', '', '4.732356646930000000', '-74.340160461100000000', 'Droguería, inyectología, toma de tensión. Venta de medicamentos en general, artículos de aseo y de tocador. Atención a usuarios de EPS Convida.', '', 'Carrera 5 No. 6 - 71', 9, 14, 'S'),
+(1890, 'Alma Llanera Asadero Restaurante', '3103218744', '3103218744', '8am a 7pm domingo a domingo', '', '5.021497818720000000', '-74.000572934700000000', 'Del llano a Zipaquirá, la auténtica mamona. Carne de cerdo, de res, chigüiro, pescados y sopas. \r\nSe atienden eventos y recepciones.', '', 'Zipaquirá', 116, 15, 'S'),
+(1891, 'Centro Recreativo Musisal', '8519204', '', '1pm a 11pm lunes a miércoles / 1pm a 1am de jueves a domingo', '', '5.021497818720000000', '-74.005765691400000000', 'El sitio emblemático de la rumba en Zipaquirá. Entretenimiento y diversión para toda la familia (menores hasta las 6 pm)', '', 'Cra 7 # 1-56', 116, 16, 'S'),
+(1892, 'Hotel Cacique Real', '8510209', '3115134781', '24 horas', '', '5.022684982650000000', '-74.005951769600000000', 'Un hotel tradicional con ambiente colonial. Servicio de restaurante, salón de eventos, parqueadero, wi-fi y tv por cable', '', 'Carrera 6 # 2-36', 116, 17, 'S'),
+(1893, 'Café Santa Emma', '3223095756', '3223095756', 'Todos los días de 6 am a 8 pm', '', '4.731716121700000000', '-74.342132806800000000', 'Cafetería y onces. Aquí encuentra cuajada con melao´, leche asada, almojábanas con aguapanela y queso. También Café, aromática de frutas y comidas rápidas.', '', 'Calle 7 No. 6 - 32', 9, 18, 'S'),
+(1894, 'Signos Artesanías', '3103449344', '3103449344', 'Lunes a domingo 10:30am a 7pm', '', '5.022550085120000000', '-74.006073474900000000', 'Accesorios en diferentes semillas de la región y tejidos en algodón y lana virgen. Lámparas y objetos hechos a mano en fibras naturales', '', 'Cra 6 # 2-56', 116, 19, 'S'),
+(1895, 'Óptica Luz', '8520877', '', '9 am a 12pm y de 2pm a 5:30pm', '', '5.026363602140000000', '-74.005887508400000000', '33 años de experiencia en óptica. Consultas, monturas y lentes, todo lo relacionado con óptica', '', 'Calle 4 # 7-19', 116, 20, 'S'),
+(1896, 'Clandestino Tattoo', '3004055674', '3004055674', '11am a 8pm domingo a domingo', '', '5.022462000630000000', '-74.005116820100000000', '"Tatuajes y modificación corporal. Arte corporal, implantes, \r\ntodo lo relacionado con modificaciones. Implantes, reconstrucción, expansión, bifurcación, piercing"', '', 'Cra 7 #3-39 local 122', 116, 21, 'S'),
+(1897, 'Café de la Plaza', '8514682', '', '7:30am a 7pm domingo a domingo', '', '5.027635422380000000', '-74.005511999300000000', '"Los mejores postres y café en pleno centro de Zipa.\r\n Disfruta de una bebida acompañada de nuestras delicias en un ambiente colonial, con la mejor atención."', '', 'Carrera 8 # 4-04 centro', 116, 22, 'S'),
+(1898, 'Promo Tour años dorados', '3105752340', '310-575-2340  / 313-314-2796', '9am a 4pm lunes a viernes', '', '4.966050817300000000', '-73.913211822700000000', 'Paquetes turísticos, donde el turista realiza sus sueños de conocer sitios nuevos.', '', 'Calle 11 # 6-54 parque principal', 99, 23, 'S'),
+(1899, 'La posada de Ibarra Restaurante', '8574394', '3105752340', '7am a 5pm lun. a jue. / 7am a 11pm vie. Y sab. / 10am a 5pm dom.', 'Www.laposadadeibarra.amawebs.com', '4.965890488860000000', '-73.913061619000000000', '"Comida casera y tradicional con el mejor sabor de la región. Almuerzos y platos a la carta.  \r\nCafetería y bar. Música en vivo y karaoke los fines de semana."', '', 'Calle 11 # 6-54 parque principal', 99, 24, 'S'),
+(1902, 'Droguería Acuña', '8511423', '', 'Lunes a sabado 8am a 9pm / dom y fest 9am a 8pm', 'drogueriasacuna.com', '5.022905003220000000', '-74.003925919600000000', 'Droguería ubicada en la Plaza principal de Zipa. Inyectología, toma de tensión. Domicilios.', '', 'Cra 8 # 4-48', 116, 26, 'S'),
+(1901, 'Granja el Mohán de Quebrada Honda', '3138618373', '313-861-8373 / 313-357-6795', '10am a 5:30pm', '', '4.964015400230000000', '-73.910808116200000000', 'Disfrute de un día inolvidable en la granja "El Mohán". En contacto con la naturaleza y los animales de la zoología doméstica.', '', 'Tocancipá, Vereda Canavita, Sector el Tablón', 99, 25, 'S'),
+(1903, 'Artesanias Artoca (asociación de artesanos de Tocancipá)', '3188653084', '3105752340', '11am a 7pm lunes a domingo', '', '4.965748620400000000', '-73.913390412900000000', 'Artesanías tejidas a mano y cerámica. Accesorios y ropa (gorras, bufandas, ruanas, chales, guantes, chalecos, pantuflas, etc.)', '', 'Plaza Central de Tocancipá', 99, 27, 'S'),
+(1904, 'Galería y sala de exposición Ramón Torres Méndez', '8575464', '', '9am a 12pm y de 2pm a 6pm Lunes a viernes', '', '4.965311641580000000', '-73.913567606400000000', 'Espacio cultural para la exposición de obas de diferentes manifestaciones artísticas, \r\ncomo pintura, escultura, fotografía, manualidades y demás proyectos culturales, académicos y particulares. \r\nHace parte de la Casa de la Cultura de Tocancipá.', '', 'Calle 10 # 6-53 piso 2 Casa de la Cultura', 99, 28, 'S'),
+(1905, 'Flores y estilos', '3112796308', '3112796308', '7am a 7pm lun. a sab. / 8am a 1pm domingos y festivos', '', '4.965017455230000000', '-73.914813995400000000', 'Flores y arreglos para eventos, cumpleaños, aniversarios y fúnebres.', '', 'Cra  7 # 9-03', 99, 29, 'S'),
+(1906, 'Droguería central', '8524435', '', '8am a 9:30pm jornada continua domingo a domingo', '', '4.963729313250000000', '-73.916011937000000000', 'Encuentre cosméticos y medicamentos en general. Además, tenemos servicio de inyectología. Encuentre helados y bebidas frías.', '', 'Cra 7 # 7-93 Centro', 99, 30, 'S'),
+(1908, 'Mina de Sal de Nemocón', '3212044506', '3212044506', '9am a 5pm domingo a domingo', 'www.minadesal.com', '5.064042657360000000', '-73.875262141200000000', 'En la Mina de Sal de Nemocón usted no solo descubrirá el origen de un pueblo que guarda sus secretos en la profundidad de un inmenso domo salino subterráneo, a 80 mts bajo tierra, también se cautivara con sus espectaculares formaciones y atractivos naturales únicos en el mundo. Descubra el sentido cultural, histórico, científico, temático, minero y turístico de la Mina de sal de Nemocón. Viva la mejor caminata subterránea que se pueda imaginar, con propiedades medicinales y terapéuticas. Somos un atractivo turístico de interés nacional que se ha convertido en uno de los lugares más visitados al interior de nuestro país, una maravilla natural que sorprende por su arquitectura vernácula, testimonio material de la tradicional minería subterránea de cámaras y pilares. Nuestro recorrido será una experiencia para descubrir historias y lugares. Un verdadero banquete para los sentidos y el espíritu.', '', 'Calle 2 # 0-05', 60, 31, 'S'),
+(1909, 'Cafe Cacique nemequen', '3143243052', '3143243052', '9am a 10pm domingo a domingo', '', '5.066652440560000000', '-73.877366669500000000', 'Mejor café de Nemocón. En pleno parque principal, disfrute de buen ambiente, música, bebidas, y artículos de tienda tradicional.', '', 'Cra 4 # 3-37 parque ppal.', 60, 32, 'S'),
+(1910, 'Hotel Valle de la Sal', '8544422', '3112236036', '24 horas', '', '5.066823431180000000', '-73.876873143000000000', 'Nuestro hotel al estilo colonial, un lugar acogedor, tranquilo y silencioso, en el que el descanzo y la armonía reinan. La paz y el recogimiento se funden para entregar una experiencia única a las personas que nos visitan.', '', 'Calle 4 # 4-13', 60, 33, 'S'),
+(1911, 'Restaurante el Colonial JR', '3213008172', '3213008172', 'Fines de semana y festivos a partir de las 11:30am hasta las 6:00pm', '', '5.067732235490000000', '-73.877041284000000000', 'Restaurante colonial que ofrece comida típica en un ambiente colonial y familiar. Eventos como matrimonios, primeras comuniones, recepciones y fiestas privadas. Casa colonial con mas de 120 años de existencia.', '', 'Cll 4 # 5-26', 60, 34, 'S'),
+(1912, 'pastelería y cafetería pan de trigo', '3213614051', '3213614051', '6am a 10pm, de domingo a domingo', '', '5.066626140740000000', '-73.877304140500000000', 'El mejor pan hawaiano de Nemocon, pastelería, panadería, postres, cafetería, bebidas frías. Desayunos, empanadas, pastel de pollo, pan hojaldrado', '', 'Cll 3 # 4-21', 60, 35, 'S'),
+(1913, 'Restaurante Hornos de Sal Nemocón / Fabrica de Macrame y artesanias Myriam Rojas', '3108740760', '3105788447', '7am a 8pm domingo a domingo', '', '5.065872295330000000', '-73.877184279300000000', 'A 30m de la mina de sal. Centro artesanal y gastronómico. La mejor carne a la parrilla. Panadería y cafetería. La mas deliciosa almojabana.', '', 'Calle 2 No. 0-90', 60, 36, 'S'),
+(1973, 'Telarana', '3015544482', '3015544482', 'Miercoles a Domingo 10am a 7pm', 'www.facebook.com/telaranatabio', '4.921572969172166000', '-74.091335535049440000', 'Una tienda hecha a muchas manos. Artesanias y decoración', '', 'Calle 5 #3-32', 92, 104, 'S'),
+(1915, 'Transcondalia', '3203932752', '', '8am a 8pm lunes a sabado / 8am a 2pm domingos', '', '5.067133351540000000', '-73.877795822900000000', 'Transporte local en motocarro. Somos una empresa confiable para el transporte de pasajeros dentro de Nemocon.', '', 'Calle 3 # 5-21', 60, 37, 'S'),
+(1916, 'Droguería Colfamiliar', '3115681695', '3115681695', '9am a 8pm domingo a domingo', '', '5.067015795560000000', '-73.877709992200000000', 'Droguería general, inyectología, farmacia, medicamentos', '', 'Calle 3 # 5-08 barrio Centro', 60, 38, 'S'),
+(1917, 'Alama Velas', '8796188', '', 'Lunes a domingo de 9 am a 1 pm y de 2 pm a 6 pm.', 'www.empresario.com/alamavelas', '4.916985582240000000', '-74.023511186200000000', 'Artículos decorativos para hogar y eventos. Velas, velones, candelabros, pebeteros, forja, entre otros. Artículos para aromaterapia.', '', 'calle 3 No. 2 - 53 Local 101', 13, 4, 'S'),
+(1918, 'Hotel fusa', '123569854', '319 7781452', '24 horas', 'www.almallanera.com.co', '4.330513908604122000', '-74.363113045692440000', 'Un h espectalu', '', 'Cra 1 # 3 22', 31, 39, 'S'),
+(1919, 'Hotel Parque Zabal', '8736510', '3105583678', '24 horas', 'hotelparquezabal.com', '4.344224872358932000', '-74.362474679946900000', 'Hotel ubicado en el centro, cerca al parque principal. Suites especiales con jacuzzi o chimenea. Zona Wifi, Direct TV, parqueadero, área social, salón de eventos.', '', 'Calle 6 # 7-71 centro', 31, 40, 'S'),
+(1920, 'Hotel Boutique Sinaí', '8717004', '3107831909', '24 horas', 'Www.hotelboutiquesinai.com', '4.343937363239323400', '-74.362669140100480000', 'Hotel ubicado en el centro. La mezcla perfecta de lo colonial y lo moderno. Habitaciones confotables, televisión cable, Wifi, parqueadero, apartamentos amoblados, zonas verdes, salón de eventps, conferencias con ayudas audiovisuales, habitaciones con jacuzzi', '', 'Calle 6 # 7-56 centro', 31, 41, 'S'),
+(1921, 'Alpinismo', '32323232', '', '', '', '4.898788380353646000', '-74.457778930664060000', 'Se realizan excursiones.', '', '312321112211', 2, 48, 'S'),
+(1922, 'Hotel costa del sol', '8673932', '3102916511', '24 horas', 'Www.hotelcostadelsolfusagasuga.com.co', '4.336301615841759500', '-74.366039335727690000', 'Elegancia y comfort. Empresa familiar con mas de 18 años prestando servicios de calidad y atención. Cumpliendo con los estándares de calidad y amabilidad.', '', 'Calle 17 # 12-04', 31, 51, 'S'),
+(1923, 'Hotel Catama Inn', '8780858', '3118119251', '24 horas', 'Www.hotelcatamainn.com', '4.329925507051654000', '-74.379981458187100000', 'Ubicado en la ciudad jardín de Colombia, brinda toda la comodidad y la belleza de un paisaje que permite a nuestros huéspedes disfrutar de un ambiente familiar. Salón de reuniones y eventos', '', 'Calle 22 # 36-91 (100m adelante de la estatua del indio)', 31, 52, 'S'),
+(1924, 'Hotel el Castillo', '3143578003', '3143578003', '24 horas', 'hotelelcastillochinauta.com.co', '4.308047343273843000', '-74.443627595901490000', 'Construido en 1967 al mejor estilo medieval, por el señor Luis Carlos de Mendoza enamorado de colombia por su clima, su fauna, y por el placer de observar el cerro del Quinini. Piscina, restaurante, alojamiento.', '', 'Kn 65 vía Melgar', 31, 53, 'S'),
+(1925, 'Hotel Chinauta Real', '3103068504', '', '24 horas', 'www.hotelchinautareal.com', '4.290073613014737000', '-74.466705322265620000', 'La naturaleza, el descanso, la recreación, junto con una buena atención son los pilares del hotel y centro de convenciones. Pinemos a su servicio nuestras instalaciones y una cálida hospitalidad.\r\n\r\nAlojamiento, alimentos y bebidas, zona húmeda y spa, eventos y recepciones, pesca deportiva, caminatas ecológicas, chiva turística, piscina y tobogán. Parqueadero, interacción con especies.', '', 'Km 68.5 vía panamericana, Bogotá-Melgar', 31, 54, 'S'),
+(1974, 'Tygua Magüe', '3165080812', '3165080812', 'Reserva previa', 'www.tyguamague.com', '4.920365079488746000', '-74.078192710876460000', 'Ecoparque, centro de bienestar que se encuentra dentro de una zona de reserva forestal que va desde el bosque alto andino hasta el sub-páramo entre 2600 y 2920 msnm. Cuenta con mas de 220 especies nativas de flora y 50 clases de aves.\r\n\r\nTiene un sendero con 17 estaciones de observación para el descanso y la meditación. Aqui podras realizar safaris fotográficos, caminatas ecológicas, paisajismo rural, observación de aves, ascenso a las cumbres y observación de estrellas.\r\n\r\nDentro del ecoparque se encuentra también el Centro de Bienestar.', '', 'Via Lourdes entrada Torobarroso, Ecoparque', 92, 105, 'S'),
+(1972, 'Finca el Refugio', '3102966383', '310 296 6383', '24 horas', 'http://www.fincaelrefugio.co', '4.964617301446976000', '-74.076390266418460000', 'A una hora de Bogotá, en el hermoso Municipio de Tabio, se encuentra la Finca El Refugio.\r\nUn acogedor lugar dónde se pueden realizar todo tipo de eventos sociales y empresariales. Adicionalmente,\r\ncuenta con el servicio de hospedaje rural en cómodas habitaciones dónde se mantiene un permanente contacto\r\ncon la naturaleza lo que garantiza un descanso total.', '', 'Vereda Río Frío Oriental', 92, 103, 'S'),
+(1971, 'Tabio', '3212106730', '3212106730', 'Pendiente', 'www.tabioes.com', '4.916089346184426000', '-74.099006652832030000', 'Pendiente', '', 'Carrera 5 # 4-27 Parque principal', 92, 102, 'M'),
 (1935, 'Hotel Del Paso', '3115243278', '', 'lunes a domingo 10am a 6pm', 'www.prueba.com', '4.549806955360925000', '-74.536016508882310000', 'Hotel con los mejores', '', 'Calle 2 # 3 - 45 esquina', 3, 66, 'S'),
 (1943, 'Girardot', '3016292941', '3016292941', 'Lunes a domingo de 9am a 8pm en el terminal de transporte.', 'www.girardot-cundinamarca.gov.co', '4.302248721861002000', '-74.805200099945070000', 'Pendiente envio por correo', '', 'Terminal de transporte', 36, 73, 'M'),
 (1944, 'Viajes Cuatro Estaciones Sas', '3202125062', '3202528066', 'Lunes a viernes de 9am a 12pm y de 2pm a 6pm', 'Facebook.com/atviajescuatroestaciones', '4.300141093910289000', '-74.799213409423830000', 'Empreaa dedicada al turismo nacional e internacional a través de medios terrestres, aéreos y maritimos. Operamos con calidad, eficiencia y economía. Ofrecemos planes individuales, familiares o para grupos. En paquetes todo incluído o solamente transporte y alojamiento.', '', 'Carrera 5 # 24-02 barrio Santander', 36, 74, 'S'),
@@ -1190,6 +1227,7 @@ INSERT IGNORE INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `hora
 (1951, 'Artesanias Torres', '3208191065', '3053270118', 'Lunes a sábado de 10am a 8pm', '', '4.710712708587282000', '-74.224944412708280000', 'Artesanías ruanas, tejidos, mochilas, tejidos, cerámica y dulces típicos. Joyería en plata: anillos, aretes, cadenas.', '', 'Carrera 4 # 10A-35 barrio el carmen', 58, 82, 'S'),
 (1952, 'Taller artesanal el muisca', '3103418213', '', 'Domingo a domingo de 10am a 10pm', '', '4.705711229491129000', '-74.214701056480410000', 'Artesano local. Trabajos en madera. Restauraciones, tallados, pirograbados, taraseadas. Artesanías de todo tipo en madera. Arte, esculturas.', '', 'Calle 19B # 8-20E villa Jenny', 58, 83, 'S'),
 (1953, 'Viaja Sin Stress Agencia de Viajes', '8943224', '3208022284', 'Lunes a viernes de 10am a 6pm y sábados de 10am a 4pm', 'www.viajasinstress.com', '4.712343149182354000', '-74.220685869463520000', 'Especializados en viajes para adultos mayores y personas en condición de discapacidad. Viajes nacionales e internacionales, cruceros, paquetes todo incluído, documentación (visas), tarjetas de asistencia médica.', '', 'Carrera 3 # 17B-10 Barrio Villa Nueva', 58, 84, 'S'),
+(1975, 'Facatativá', '8420818', '3045498831', 'Martes a Domingo de 8 am a 4 pm', 'Www.facatativa-cundinamarca.gov.co', '4.805410526378084000', '-74.350149929523470000', 'Pendiente', '', 'Cra 2 con calle 1 edificio desarrolllo social', 26, 106, 'M'),
 (1960, 'Casa del zapato', '312848462', '', '5-7', '', '4.870027273757409000', '-74.525241851806640000', 'Zapatos en lona', '', 'Calle ulg', 8, 86, 'S'),
 (1961, 'Madrid', '8250414', '', 'Lunes a viernes de 8am a 1pm y de 2pm a 5pm', 'www.madrid-cundinamarca.gov.co', '4.731127244660799000', '-74.263420701026920000', 'Pendiente. Sacar de la pagina web', '', 'Carrera 5 calle 5 parque principal', 55, 87, 'M'),
 (1962, 'Fullspa', '8209097', '3045745343', 'Lunes a viernes de 6am a 9pm y sábados de 6am a 4pm', '', '4.732001337995864500', '-74.261144846677780000', 'Tenemos para todos una zona de confot donde encontraras spa, estetica corporal, facial y gimnasio.', '', 'Calle7 # 4-06 zona centro', 55, 88, 'S'),
@@ -1201,13 +1239,13 @@ INSERT IGNORE INTO `sitios_sitio` (`id`, `nombre`, `telefono`, `whatsapp`, `hora
 (1969, 'Pasaje Comercial Santa Inés', '3123904984', '3123904984', 'Lunes a domingo de 9am a 7pm', '', '4.853006242745677500', '-74.260749220848080000', 'Artesanías y productos para decoración:\r\nproductos en madera, productos en cuero, lana virgen, productos de aseo artesanales y ecológicos, plantas y flores, tejidos y bordados, bisutería, collares, manillas y carteras. Pasabocas, helados y obleas.', '', 'Carrera 10 junto al CAI', 25, 95, 'S');
 
 --
--- Dumping data for table `sitios_sitiocategoria`
+-- Volcado de datos para la tabla `sitios_sitiocategoria`
 --
 
 INSERT IGNORE INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio_id`) VALUES
 (1, 1, 5, 1877),
-(2, 1, 5, 1878),
-(3, 1, 4, 1879),
+(246, 1, 5, 1878),
+(247, 1, 4, 1879),
 (4, 1, 5, 1880),
 (5, 1, 5, 1881),
 (6, 1, 5, 1882),
@@ -1288,12 +1326,17 @@ INSERT IGNORE INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio
 (96, 0, 57, 1925),
 (97, 0, 58, 1925),
 (98, 0, 66, 1925),
+(242, 0, 86, 1974),
+(241, 0, 83, 1974),
+(240, 0, 84, 1974),
 (120, 1, 9, 1935),
 (121, 2, 5, 1935),
 (122, 0, 99, 1935),
 (123, 0, 97, 1935),
 (124, 0, 57, 1935),
 (125, 0, 59, 1935),
+(239, 0, 11, 1974),
+(238, 0, 14, 1974),
 (140, 1, 9, 1944),
 (141, 2, 8, 1944),
 (142, 3, 1, 1944),
@@ -1335,11 +1378,22 @@ INSERT IGNORE INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio
 (187, 0, 54, 1952),
 (188, 0, 52, 1952),
 (189, 1, 7, 1953),
+(237, 0, 15, 1974),
+(236, 2, 9, 1974),
+(235, 1, 1, 1974),
+(234, 0, 76, 1973),
+(233, 0, 45, 1973),
+(232, 0, 52, 1973),
+(231, 2, 7, 1973),
+(230, 1, 4, 1973),
 (200, 1, 5, 1960),
 (201, 0, 64, 1960),
 (204, 1, 9, 1962),
 (205, 2, 2, 1962),
 (206, 0, 86, 1962),
+(229, 0, 83, 1972),
+(228, 0, 84, 1972),
+(227, 1, 9, 1972),
 (210, 1, 5, 1964),
 (211, 0, 63, 1964),
 (217, 0, 97, 1965),
@@ -1356,7 +1410,7 @@ INSERT IGNORE INTO `sitios_sitiocategoria` (`id`, `tipo`, `categoria_id`, `sitio
 (226, 0, 63, 1969);
 
 --
--- Dumping data for table `sitios_sitio_tags`
+-- Volcado de datos para la tabla `sitios_sitio_tags`
 --
 
 INSERT IGNORE INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
@@ -1367,18 +1421,18 @@ INSERT IGNORE INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
 (5, 1877, 5),
 (6, 1877, 6),
 (7, 1877, 7),
-(8, 1878, 8),
-(9, 1878, 9),
-(10, 1878, 10),
-(11, 1878, 11),
-(12, 1878, 12),
-(13, 1878, 13),
-(14, 1878, 14),
-(15, 1878, 15),
-(16, 1879, 16),
-(17, 1879, 17),
-(18, 1879, 18),
-(19, 1879, 19),
+(286, 1878, 15),
+(285, 1878, 14),
+(284, 1878, 13),
+(283, 1878, 12),
+(282, 1878, 11),
+(281, 1878, 10),
+(280, 1878, 9),
+(279, 1878, 8),
+(290, 1879, 19),
+(289, 1879, 18),
+(288, 1879, 17),
+(287, 1879, 16),
 (20, 1880, 20),
 (21, 1880, 12),
 (22, 1880, 6),
@@ -1561,11 +1615,3 @@ INSERT IGNORE INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
 (252, 1964, 154),
 (253, 1964, 12),
 (254, 1964, 153);
-
-INSERT INTO `plataforma_correo` (`id`, `identificador`, `asunto`, `cuerpo`) VALUES
-(1, 'MCI', 'Cuenta Inactiva', 'Tu cuenta ha sido activada.'),
-(2, 'MCA', 'Cuenta Activada', 'Tu cuenta ha sido activada.');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
