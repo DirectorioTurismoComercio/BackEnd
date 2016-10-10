@@ -5504,3 +5504,1125 @@ Traceback (most recent call last):
     print "rutasitios"
                      ^
 IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 311, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'plataforma_categoria.name' in 'field list'")
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 269, in get
+    return self.list(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 423, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 290, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/fields.py", line 70, in get_attribute
+    instance = getattr(instance, attr)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 604, in __get__
+    rel_obj = qs.get()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 328, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 144, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'plataforma_categoria.name' in 'field list'")
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 69
+    if orientation == 3:
+                       ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /rest-auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 69
+    if orientation == 3:
+                       ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /rest-auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 69
+    if orientation == 3:
+                       ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 69
+    if orientation == 3:
+                       ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 69
+    if orientation == 3:
+                       ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 69
+    if orientation == 3:
+                       ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /sitio/detail/1971
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 116, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 53, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 33, in reduce_photo_size
+    if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+  File "/usr/lib/python2.7/genericpath.py", line 49, in getsize
+    return os.stat(filename).st_size
+OSError: [Errno 2] No such file or directory: '/home/camilo/Documentos/djangoprojects/plataforma/Fotos/Fotos/fortaleza_1.jpg'
+Internal Server Error: /sitio/detail/1971
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 116, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 53, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 33, in reduce_photo_size
+    if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+  File "/usr/lib/python2.7/genericpath.py", line 49, in getsize
+    return os.stat(filename).st_size
+OSError: [Errno 2] No such file or directory: '/home/camilo/Documentos/djangoprojects/plataforma/Fotos/Fotos/fortaleza_1.jpg'
+Internal Server Error: /sitio/detail/1971
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 116, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 53, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 33, in reduce_photo_size
+    if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+  File "/usr/lib/python2.7/genericpath.py", line 49, in getsize
+    return os.stat(filename).st_size
+OSError: [Errno 2] No such file or directory: '/home/camilo/Documentos/djangoprojects/plataforma/Fotos/Fotos/fortaleza_1.jpg'
+Internal Server Error: /sitio/detail/1971
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 116, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 53, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 33, in reduce_photo_size
+    if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+  File "/usr/lib/python2.7/genericpath.py", line 49, in getsize
+    return os.stat(filename).st_size
+OSError: [Errno 2] No such file or directory: '/home/camilo/Documentos/djangoprojects/plataforma/Fotos/Fotos/fortaleza_1.jpg'
+Internal Server Error: /sitio/detail/1971
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 116, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 53, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 33, in reduce_photo_size
+    if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+  File "/usr/lib/python2.7/genericpath.py", line 49, in getsize
+    return os.stat(filename).st_size
+OSError: [Errno 2] No such file or directory: '/home/camilo/Documentos/djangoprojects/plataforma/Fotos/Fotos/fortaleza_1.jpg'
+Internal Server Error: /sitio/detail/1971
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 357, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 116, in update
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 53, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 33, in reduce_photo_size
+    if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
+  File "/usr/lib/python2.7/genericpath.py", line 49, in getsize
+    return os.stat(filename).st_size
+OSError: [Errno 2] No such file or directory: '/home/camilo/Documentos/djangoprojects/plataforma/Fotos/Fotos/fortaleza_1.jpg'
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /Fotos/Fotos/fortaleza_1.jpg
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /sitio/municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /sitio/municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /sitio/municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /sitio/municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /sitio/municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /categorias
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+Internal Server Error: /municipios
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 5, in <module>
+    from sitios import views as sitio_views
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 18, in <module>
+    from sitios.photo_processing import *
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 20
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+                                                                            ^
+IndentationError: unindent does not match any outer indentation level

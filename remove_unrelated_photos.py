@@ -19,7 +19,7 @@ try:
   cursor.execute(query)
 
   for (URLfoto) in cursor:
-     	urls.append(URLfoto[0].split('Fotos/')[1].encode())
+     	urls.append(URLfoto[0].split('Fotos/')[1])
   i=0
   for file in onlyfiles:
   	if file not in urls:
