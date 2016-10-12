@@ -20,8 +20,6 @@ def reduce_photo_size(photo_path, photo_filename,size):
 	file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
     
 	if file.size[0]>max_width or file.size[1]>max_height:
-		print("reducing max_width",file.size[0],file.size[1])
-		print("settings max_width",max_width,max_height)
 		if file.size[0]>file.size[1]:
 			scale_factor = file.size[0]/max_width
 		else: 
@@ -33,7 +31,6 @@ def reduce_photo_size(photo_path, photo_filename,size):
 		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
 
 	if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
-		print "reducing size",os.path.getsize(photo_path+"/"+photo_filename)
 		if imghdr.what(photo_path+"/"+photo_filename)=='png' or imghdr.what(photo_path+"/"+photo_filename).lower()=='gif':
 			photo_filename = os.path.splitext(photo_filename)[0]+'.jpg'
 			file.load() 
@@ -50,7 +47,6 @@ def reduce_photo_size(photo_path, photo_filename,size):
 
 def reduce_site_photos(dir,site_photos):
 	for photo in site_photos:
-		print photo.URLfoto.name
 		old_name = photo.URLfoto.name	
 		photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
 		if old_name != photo.URLfoto.name:
@@ -79,7 +75,6 @@ def rotate_image(image, orientation):
 		    image=image.rotate(90, expand=True)
 
 	except (AttributeError, KeyError, IndexError):
-		print AttributeError, KeyError, IndexError
 		pass
 	return image
 
