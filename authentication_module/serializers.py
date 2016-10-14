@@ -50,6 +50,6 @@ class CustomUserSerializer(serializers.ModelSerializer):
 
  	class Meta:
    		model = CustomUser
-   		fields = ('id','email', 'first_name','last_name','tipo_cuenta', 'sitios','social_auth')
+   		fields = ('id','email', 'first_name','last_name','tipo_cuenta', 'sitios','social_auth', 'is_active')
    		
    		
