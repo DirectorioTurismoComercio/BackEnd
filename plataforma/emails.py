@@ -10,9 +10,9 @@ import os
 from django.conf import settings
 ## Función encargada de enviar el correo de inscripción. Recibe el correo de detido y el contenido del correo.
 
-def enviar_correo(destinatario,contenido,asunto):
+def enviar_correo(destinatario,contenido,asunto,template):
 
-  template = get_template('inscripcion.html')
+  template = get_template(template)
   context = Context(contenido)
   content = template.render(context)
   email = EmailMultiAlternatives(asunto, content, settings.EMAIL_HOST_USER,

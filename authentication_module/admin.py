@@ -17,6 +17,6 @@ class UserAdmin(admin.ModelAdmin):
 				else:
 					correo = Correo.objects.filter(identificador='MCI')[0]
 					
-				enviar_correo(obj.email,{"contenido":correo.cuerpo},correo.asunto)
+				enviar_correo(obj.email,{"contenido":correo.cuerpo},correo.asunto,'correo_base.html')
 
 admin.site.register(CustomUser, UserAdmin)

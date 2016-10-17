@@ -13,11 +13,9 @@ from plataforma.models import Correo
 from rest_framework import serializers, exceptions
 from rest_framework.exceptions import ValidationError
 
+
+from plataforma.emails import *
 from django import forms
-from django.template import loader
-from django.core.mail import EmailMultiAlternatives
-import os
-from email.MIMEImage import MIMEImage
 from authentication_module.models import CustomUser 
 
 # Get the UserModel
@@ -33,26 +31,8 @@ class CustomPasswordResetForm(PasswordResetForm):
         """
         correo = Correo.objects.filter(identificador='MFP')[0]
         context['contenido'] = correo.cuerpo
-        subject = loader.render_to_string(subject_template_name, context)
-        # Email subject *must not* contain newlines
-        subject = ''.join(subject.splitlines())
-        body = loader.render_to_string(email_template_name, context)
-        email_message = EmailMultiAlternatives(correo.asunto, body, settings.EMAIL_HOST_USER, [to_email])
-        if html_email_template_name is not None:
-            html_email = loader.render_to_string(html_email_template_name, context)
-            email_message.attach_alternative(html_email, 'text/html')
-
-        email_message.mixed_subtype = 'related'       
-
-        for f in ['email-header.png']:
-            fp = open(os.path.join(settings.BASE_DIR, 'plataforma/media/'+f), 'rb')  
-            msg_img = MIMEImage(fp.read())
-            fp.close()
-            msg_img.add_header('Content-ID', '<{}>'.format(f))
-            email_message.attach(msg_img)
-
-
-        email_message.send()
+        context['url_reset_password'] = settings.URL_FRONTEND_RESET_PASSWORD
+        enviar_correo(to_email,context,correo.asunto,"correo_reset_password.html")
 
 
 class LoginSerializer(serializers.Serializer):
