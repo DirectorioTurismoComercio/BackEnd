@@ -1615,3 +1615,9 @@ INSERT IGNORE INTO `sitios_sitio_tags` (`id`, `sitio_id`, `tag_id`) VALUES
 (252, 1964, 154),
 (253, 1964, 12),
 (254, 1964, 153);
+
+
+INSERT INTO `plataforma_correo` (`id`, `identificador`, `asunto`, `cuerpo`) VALUES
+(1, 'MCI', 'Cuenta Inactiva', 'Tu cuenta ha sido desactivada.'),
+(2, 'MCA', 'Cuenta Activada', 'Tu cuenta ha sido activada.'),
+(3, 'MFP', 'Reestablecer contraseña', 'Para reestablecer tu contraseña haz clic en el siguiente enlace:');

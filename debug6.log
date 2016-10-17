@@ -1,0 +1,1269 @@
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 174, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 206, in send_mail
+    body = loader.render_to_string(email_template_name, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 40, in render
+    output = self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 578, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 495, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'password_reset_confirm' with arguments '()' and keyword arguments '{u'uidb64': 'OTk', u'token': u'4g7-94fee1c96e5649a59313'}' not found. 0 pattern(s) tried: []
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 174, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 206, in send_mail
+    body = loader.render_to_string(email_template_name, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 40, in render
+    output = self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 578, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 495, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'password_reset_confirm' with arguments '()' and keyword arguments '{u'uidb64': 'OTk', u'token': u'4g7-94fee1c96e5649a59313'}' not found. 2 pattern(s) tried: [u'rest-auth/password/reset/confirm/\\.(?P<format>[a-z0-9]+)$', 'rest-auth/password/reset/confirm/$']
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 166, in save
+    template = get_template('correo_reset_password.html')
+NameError: global name 'get_template' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 170, in save
+    context = Context(contenido)
+NameError: global name 'contenido' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 171, in save
+    content = template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 574, in render
+    six.iteritems(self.extra_context)}
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 573, in <dictcomp>
+    values = {key: val.resolve(context) for key, val in
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 668, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 787, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 839, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [uid] in u"[{'False': False, 'None': None, 'True': True}, {'mensaje': 'xx'}]"
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 166, in save
+    template = get_template('correo_reset_password.html')
+NameError: global name 'get_template' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    from rest_auth.views import CustomPasswordResetForm
+ImportError: cannot import name CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    from rest_auth.views import CustomPasswordResetForm
+ImportError: cannot import name CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    import CustomPasswordResetForm
+ImportError: No module named CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    import CustomPasswordResetForm
+ImportError: No module named CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    import CustomPasswordResetForm
+ImportError: No module named CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    from rest_auth.views import CustomPasswordResetForm
+ImportError: cannot import name CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 13, in <module>
+    from rest_auth.views import CustomPasswordResetForm
+ImportError: cannot import name CustomPasswordResetForm
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 18, in <module>
+    class CustomPasswordResetForm(PasswordResetForm):
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 19, in CustomPasswordResetForm
+    email = forms.EmailField(label=_("Email"), max_length=254)
+NameError: name 'forms' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 195, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 26, in send_mail
+    subject = loader.render_to_string(subject_template_name, context)
+NameError: global name 'loader' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 196, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 32, in send_mail
+    email_message = EmailMultiAlternatives(subject, body, from_email, [to_email])
+NameError: global name 'EmailMultiAlternatives' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 42
+    fp = open(os.path.join(settings.BASE_DIR, 'plataforma/media/'+f), 'rb')
+     ^
+IndentationError: expected an indented block
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 208, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 38, in send_mail
+    email_message.attach_alternative(content, "text/html")
+NameError: global name 'content' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 208, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 38, in send_mail
+    email_message.attach_alternative(content, "text/html")
+NameError: global name 'content' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 207, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 41, in send_mail
+    fp = open(os.path.join(settings.BASE_DIR, 'plataforma/media/'+f), 'rb')
+NameError: global name 'os' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 208, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 43, in send_mail
+    msg_img = MIMEImage(fp.read())
+NameError: global name 'MIMEImage' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 211, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 30, in send_mail
+    context.contenido = 'blah blah'
+AttributeError: 'dict' object has no attribute 'contenido'
+Internal Server Error: /rest-auth/password/reset/confirm
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 84, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to innovamarca.com.co:8000/rest-auth/password/reset/confirm/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /rest-auth/password/reset/confirm
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 84, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to innovamarca.com.co:8000/rest-auth/password/reset/confirm/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 155, in post
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 399, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 194, in validate_email
+    print self.email
+AttributeError: 'PasswordResetSerializer' object has no attribute 'email'
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 196
+    if len(user)==0
+                  ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 216, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 31, in send_mail
+    correo = Correo.objects.filter(identificador='MFP')[0]
+NameError: global name 'Correo' is not defined
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 9, in <module>
+    from plataforma.models import correo
+ImportError: cannot import name correo
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 9, in <module>
+    from plataforma.models import correo
+ImportError: cannot import name correo
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 217, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 33, in send_mail
+    context['contenido'] = correo.cuerpo.decode()
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 219, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 35, in send_mail
+    context['contenido'] = correo.cuerpo.decode()
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 219, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    subject = loader.render_to_string(correo.asunto, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: Reestablecer contrase\xf1a
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 219, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    subject = loader.render_to_string(correo.asunto, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: Reestablecer contrase\xf1a
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode()
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode("utf-8")
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode("utf-8").encode("utf-8")
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode("utf-8").encode("utf-8").decode("utf-8")
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode("utf-16")
+  File "/usr/lib/python2.7/encodings/utf_16.py", line 16, in decode
+    return codecs.utf_16_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36
+    context['contenido'] = correo.cuerpo.decode(‘ascii’, ‘ignore’)
+                                                ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode('ascii', 'ignore')
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 35, in send_mail
+    print correo.cuerpo.decode('ascii', 'ignore')
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 21
+    from authentication_module.models imp.ort CustomUser
+                                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 35, in send_mail
+    print correo.cuerpo.decode('utf-8')
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 20
+    from email.MIMEImage encode MIMEImage
+                              ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpodecode('utf-8')
+AttributeError: 'Correo' object has no attribute 'cuerpodecode'
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 37, in send_mail
+    subject = loader.render_to_string(correo.asunto, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: Reestablecer contrase\xf1a
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 37, in send_mail
+    subject = loader.render_to_string(correo.asunto, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: Reestablecer contrase\xf1a
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    context['contenido'] = correo.cuerpo.decode('utf-8')
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 35, in send_mail
+    cuerpo = correo.cuerpo.decode("utf-8")
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 221, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 36, in send_mail
+    cuerpo = correo.cuerpo.decode("utf-8")
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 29: ordinal not in range(128)
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 220, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 37, in send_mail
+    subject = loader.render_to_string(correo.asunto, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: Reestablecer contrase\xf1a
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 157, in post
+    serializer.save()
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 222, in save
+    self.reset_form.save(**opts)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/forms.py", line 256, in save
+    html_email_template_name=html_email_template_name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 44, in send_mail
+    email_message = EmailMultiAlternatives(correo.asunto.decode('utf-8'), body, from_email, [to_email])
+  File "/usr/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 21: ordinal not in range(128)

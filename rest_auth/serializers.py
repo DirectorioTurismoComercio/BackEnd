@@ -1,3 +1,5 @@
+# coding=utf-8 
+
 from django.contrib.auth import get_user_model, authenticate
 from django.conf import settings
 from django.contrib.auth.forms import PasswordResetForm, SetPasswordForm
@@ -5,14 +7,52 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_decode as uid_decoder
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import force_text
-
 from .models import TokenModel
+from plataforma.models import Correo
 
 from rest_framework import serializers, exceptions
 from rest_framework.exceptions import ValidationError
 
+from django import forms
+from django.template import loader
+from django.core.mail import EmailMultiAlternatives
+import os
+from email.MIMEImage import MIMEImage
+from authentication_module.models import CustomUser 
+
 # Get the UserModel
 UserModel = get_user_model()
+
+class CustomPasswordResetForm(PasswordResetForm):
+    email = forms.EmailField(label=_("Email"), max_length=254)
+
+    def send_mail(self, subject_template_name, email_template_name,
+                  context, from_email, to_email, html_email_template_name=None):
+        """
+        Sends a django.core.mail.EmailMultiAlternatives to `to_email`.
+        """
+        correo = Correo.objects.filter(identificador='MFP')[0]
+        context['contenido'] = correo.cuerpo
+        subject = loader.render_to_string(subject_template_name, context)
+        # Email subject *must not* contain newlines
+        subject = ''.join(subject.splitlines())
+        body = loader.render_to_string(email_template_name, context)
+        email_message = EmailMultiAlternatives(correo.asunto, body, from_email, [to_email])
+        if html_email_template_name is not None:
+            html_email = loader.render_to_string(html_email_template_name, context)
+            email_message.attach_alternative(html_email, 'text/html')
+
+        email_message.mixed_subtype = 'related'       
+
+        for f in ['email-header.png']:
+            fp = open(os.path.join(settings.BASE_DIR, 'plataforma/media/'+f), 'rb')  
+            msg_img = MIMEImage(fp.read())
+            fp.close()
+            msg_img.add_header('Content-ID', '<{}>'.format(f))
+            email_message.attach(msg_img)
+
+
+        email_message.send()
 
 
 class LoginSerializer(serializers.Serializer):
@@ -146,7 +186,7 @@ class PasswordResetSerializer(serializers.Serializer):
 
     email = serializers.EmailField()
 
-    password_reset_form_class = PasswordResetForm
+    password_reset_form_class = CustomPasswordResetForm
 
     def get_email_options(self):
         """ Override this method to change default e-mail options
@@ -154,6 +194,10 @@ class PasswordResetSerializer(serializers.Serializer):
         return {}
 
     def validate_email(self, value):
+        user = CustomUser.objects.filter(email=value)
+        if len(user)==0:
+            raise serializers.ValidationError("E104")
+
         # Create PasswordResetForm with the serializer
         self.reset_form = self.password_reset_form_class(data=self.initial_data)
         if not self.reset_form.is_valid():
@@ -163,10 +207,10 @@ class PasswordResetSerializer(serializers.Serializer):
 
     def save(self):
         request = self.context.get('request')
-        # Set some values to trigger the send_email method.
         opts = {
             'use_https': request.is_secure(),
             'from_email': getattr(settings, 'DEFAULT_FROM_EMAIL'),
+            'email_template_name': 'correo_reset_password.html',
             'request': request,
         }
 

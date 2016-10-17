@@ -197,3 +197,4 @@ class PasswordChangeView(GenericAPIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response({"success": _("New password has been saved.")})
+
