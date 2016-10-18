@@ -31,6 +31,8 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
 }
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'public_profile']  # optional
 MEDIA_URL='/Fotos/Fotos/'
+URL_FRONTEND_RESET_PASSWORD='http://ecosistema.desarrollo.com/FrontEnd/public/#/forgotpassword'
+
 
 LOGGING = {
    'version': 1,
