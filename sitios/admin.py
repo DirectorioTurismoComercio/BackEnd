@@ -15,6 +15,13 @@ class SiteAdmin(admin.ModelAdmin):
 	filter_horizontal = ('tags', )
 	inlines = [FotoInline,CategoriaInline]
 
+	def get_queryset(self, request):
+		qs = super(SiteAdmin, self).get_queryset(request)
+		if request.user.is_superuser:
+			return qs
+		municipio_id= request.user.sitios.filter(tipo_sitio='M')[0].municipio_id
+		return qs.filter(municipio_id=municipio_id)
+
 
 
 admin.site.register(Sitio,SiteAdmin)
