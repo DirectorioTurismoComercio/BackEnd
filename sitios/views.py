@@ -134,8 +134,7 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):
 
-        sites = Sitio.objects.all()
-
+        sites = Sitio.objects.filter(usuario__es_cuenta_activa=1)
         resultados = []
 
         puntos = request.data['points']
