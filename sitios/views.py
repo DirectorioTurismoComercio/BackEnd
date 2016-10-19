@@ -31,7 +31,7 @@ class SitioList(generics.ListAPIView):
     serializer_class = SitioSerializer
 
     def get_queryset(self):
-        raw_query = "SELECT DISTINCT sitios_sitio.id, sitios_sitio.nombre, sitios_sitio.telefono, sitios_sitio.whatsapp, sitios_sitio.horariolocal, sitios_sitio.web, sitios_sitio.latitud, sitios_sitio.longitud, sitios_sitio.descripcion, sitios_sitio.correolocal, sitios_sitio.ubicacionlocal, sitios_sitio.usuario_id, sitios_sitio.municipio_id FROM authentication_module_customuser INNER JOIN sitios_sitio ON (authentication_module_customuser.id=sitios_sitio.usuario_id) LEFT OUTER JOIN sitios_sitio_tags ON ( sitios_sitio.id = sitios_sitio_tags.sitio_id ) LEFT OUTER JOIN plataforma_tag ON ( sitios_sitio_tags.tag_id = plataforma_tag.id ) LEFT OUTER JOIN (select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id, sitio_id, b . * FROM sitios_sitiocategoria a INNER JOIN plataforma_categoria b ON a.categoria_id = b.id) z left join sitios_sitiocategoria d on z.categoria_padre_id=d.categoria_id and z.sitio_id=d.sitio_id) T6 ON ( sitios_sitio.id = T6.sitio_id ) WHERE ((sitios_sitio.nombre REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR sitios_sitio.descripcion REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR plataforma_tag.tag REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]') OR T6.nombre REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]') {municipio_query} AND authentication_module_customuser.es_cuenta_activa=1 ORDER BY T6.tipo, T6.tipopadre ASC"
+        raw_query = "SELECT DISTINCT sitios_sitio.id, sitios_sitio.nombre, sitios_sitio.telefono, sitios_sitio.whatsapp, sitios_sitio.horariolocal, sitios_sitio.web, sitios_sitio.latitud, sitios_sitio.longitud, sitios_sitio.descripcion, sitios_sitio.correolocal, sitios_sitio.ubicacionlocal, sitios_sitio.usuario_id, sitios_sitio.municipio_id FROM authentication_module_customuser INNER JOIN sitios_sitio ON (authentication_module_customuser.id=sitios_sitio.usuario_id) LEFT OUTER JOIN sitios_sitio_tags ON ( sitios_sitio.id = sitios_sitio_tags.sitio_id ) LEFT OUTER JOIN plataforma_tag ON ( sitios_sitio_tags.tag_id = plataforma_tag.id ) LEFT OUTER JOIN (select z.*, d.tipo as tipopadre from (SELECT a.id AS aid, a.tipo, categoria_id, sitio_id, b . * FROM sitios_sitiocategoria a INNER JOIN plataforma_categoria b ON a.categoria_id = b.id) z left join sitios_sitiocategoria d on z.categoria_padre_id=d.categoria_id and z.sitio_id=d.sitio_id) T6 ON ( sitios_sitio.id = T6.sitio_id ) WHERE ((sitios_sitio.nombre REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR sitios_sitio.descripcion REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]' OR plataforma_tag.tag REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]') OR T6.nombre REGEXP '[[:<:]]{original_word}[[:>:]]|[[:<:]]{word}[[:>:]]') {municipio_query} AND authentication_module_customuser.es_cuenta_activa=1 AND authentication_module_customuser.is_active=1 ORDER BY T6.tipo, T6.tipopadre ASC"
         queryset = super(SitioList, self).get_queryset()
         
         word = self.request.QUERY_PARAMS.get('search', None)
@@ -134,7 +134,7 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):
 
-        sites = Sitio.objects.filter(usuario__es_cuenta_activa=1)
+        sites = Sitio.objects.filter(usuario__es_cuenta_activa=1, usuario__is_active=1)
         resultados = []
 
         puntos = request.data['points']
