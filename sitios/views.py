@@ -155,7 +155,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         return Response(resultados)
 
 class SitioMunicipioList(generics.ListAPIView):
-    queryset = Sitio.objects.filter(tipo_sitio='M').order_by('nombre')
+    queryset =  Sitio.objects.filter(tipo_sitio='M',usuario__es_cuenta_activa=True).order_by('nombre')
     serializer_class = SitioSerializer
 
 class SitiosDelMunicipio(generics.ListAPIView):
