@@ -65,7 +65,7 @@ class CRUDSitioTest(TestCase):
 		    "nombre": "Café Bar", 
   			"latitud": 4.13, 
     		"longitud": 74.23, 
-    		"descripcion": "Breve descripcion", 
+    		"descripcion": "Breve descripción",
     		"municipio_id": self.municipio.id,
     		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria2.id, "tipo":1}],
     		"usuario": self.usuario.id
@@ -79,6 +79,8 @@ class CRUDSitioTest(TestCase):
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 		self.assertTrue(self.categoria in sitio.categorias.all())
 		self.assertTrue(self.categoria2 in sitio.categorias.all())
+		self.assertTrue(sitio.description=='Brief description' or sitio.description=='Short description')
+
 
 	def test_not_authenticated_user_cant_create_site(self):
 		client =  APIClient()
@@ -86,7 +88,7 @@ class CRUDSitioTest(TestCase):
 		    "nombre": "Café Bar", 
   			"latitud": 4.13, 
     		"longitud": 74.23, 
-    		"descripcion": "Breve descripcion", 
+    		"descripcion": "Breve descripción",
     		"municipio_id": self.municipio.id,
     		"categorias": [{"categoria_id":self.categoria.id, "tipo":1}, {"categoria_id":self.categoria2.id, "tipo":1}],
     		"usuario": self.usuario.id

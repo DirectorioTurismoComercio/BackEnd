@@ -25,6 +25,7 @@ class Sitio(models.Model):
 	latitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)
 	longitud = models.DecimalField(max_digits=20, decimal_places=18, null=False)
 	descripcion = models.TextField(null=True)
+	description = models.TextField(null=True, blank=True)
 	correolocal = models.TextField(default="",blank=True)
 	ubicacionlocal = models.TextField(null=True,blank=True)
 	categorias = models.ManyToManyField(Categoria, through='SitioCategoria')
