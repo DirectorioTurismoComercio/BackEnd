@@ -30,7 +30,9 @@ class CustomPasswordResetForm(PasswordResetForm):
         Sends a django.core.mail.EmailMultiAlternatives to `to_email`.
         """
         correo = Correo.objects.filter(identificador='MFP')[0]
+        
         context['contenido'] = correo.cuerpo
+        context['tipo_cuenta']=context['user'].tipo_cuenta
         context['url_reset_password'] = settings.URL_FRONTEND_RESET_PASSWORD
         enviar_correo(to_email,context,correo.asunto,"correo_reset_password.html")
 
@@ -192,8 +194,8 @@ class PasswordResetSerializer(serializers.Serializer):
             'from_email': getattr(settings, 'DEFAULT_FROM_EMAIL'),
             'email_template_name': 'correo_reset_password.html',
             'request': request,
+            
         }
-
         opts.update(self.get_email_options())
         self.reset_form.save(**opts)
 
