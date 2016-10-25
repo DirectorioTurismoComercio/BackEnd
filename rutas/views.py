@@ -7,6 +7,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rutas.permissions import IsRouteOwner
 from rest_framework.permissions import IsAuthenticated
+from translator import  translator
+
 
 class RutaCreate(generics.CreateAPIView):
     queryset = Ruta.objects.all()
@@ -14,9 +16,18 @@ class RutaCreate(generics.CreateAPIView):
     permission_classes = (IsAuthenticated,)
     def create(self, request):
 		data = request.data
+
+		descripcion = data["descripcion"]
+		descripcion = ''.join(descripcion)
+		descripcion = descripcion.encode('utf-8')
+		traductor = translator.Translator()
+
 		serializer = RutaSerializer(data=data)
 		if serializer.is_valid():
-			serializer.save()
+			newObject = serializer.save()
+			newObject.description = traductor.getTranslatedWord(newObject.descripcion)
+			newObject.save()
+
 			if "sitios" in data:
 				serializer.add_sites_to_route(data["sitios"])
 		else:
@@ -56,3 +67,9 @@ class RutaDetail(generics.RetrieveUpdateDestroyAPIView):
 			return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 		return Response(serializer.data)
+
+    def perform_update(self, serializer):
+		instance = serializer.save()
+		traductor = translator.Translator()
+		instance.description = traductor.getTranslatedWord(instance.descripcion)
+		instance.save()

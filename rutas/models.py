@@ -6,6 +6,7 @@ class Ruta(models.Model):
 	sitio = models.ForeignKey(Sitio,blank=False,related_name='rutas')
 	nombre = models.CharField(max_length=200, null=False)
 	descripcion = models.TextField(null=True)
+	description = models.TextField(null=True, blank=True)
 	sitios = models.ManyToManyField(Sitio, through='RutaSitio')
 	tiempo = models.CharField(max_length=200)
 	distancia = models.CharField(max_length=200)
