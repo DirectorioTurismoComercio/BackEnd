@@ -24,8 +24,7 @@ from sitios.inflector.rules.spanish import Spanish
 from django.http import HttpResponse
 import plataforma
 import re
-import urllib2
-import json
+from translator import  translator
 
 
 
@@ -76,7 +75,7 @@ class SitioCreate(generics.CreateAPIView):
         descripcion =  request.data.getlist('descripcion')
         descripcion = ''.join(descripcion)
         descripcion = descripcion.encode('utf-8')
-        traductor = Translator()
+        traductor = translator.Translator()
         serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()
         serializer.is_valid()
@@ -143,7 +142,7 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
 
     def perform_update(self, serializer):
         instance = serializer.save()
-        traductor = Translator()
+        traductor = translator.Translator()
         instance.description = traductor.getTranslatedWord(instance.descripcion)
         instance.save()
 
@@ -241,13 +240,6 @@ class Sugerencias(viewsets.ViewSet):
 
         return Response(sugerencias[0:5])
 
-class Translator():
-    def getTranslatedWord(self,keyword):
-        translatorAPIKey="trnsl.1.1.20161024T195702Z.b306b5c031a2ac5e.12c39e368a8b60f0c7d74ed76e03b3699c2fa1a1"
-        keyword=keyword.encode('utf-8')
-        translateResponse = urllib2.urlopen("https://translate.yandex.net/api/v1.5/tr.json/translate?key="+translatorAPIKey+"&text="+keyword+"&lang=es-en").read()
-        JSONTranslateResponse = json.loads(translateResponse)
-        translatedKeyword= JSONTranslateResponse['text'][0]
-        return translatedKeyword
+
 
 
