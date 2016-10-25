@@ -225,7 +225,7 @@ class CRUDSitioTest(TestCase):
 		self.assertEqual(sitio.correolocal, nuevo_correolocal)
 		self.assertEqual(sitio.ubicacionlocal, nueva_ubicacionlocal)
 		self.assertEqual(sitio.municipio, self.municipio2)
-	
+		self.assertTrue(sitio.description == 'new data')
 
 	def test_update_site_categories_tags(self):
 		dir = settings.MEDIA_ROOT + "/test_photos/"

@@ -141,6 +141,15 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         return Response(serializer.data)
 
 
+    def perform_update(self, serializer):
+        instance = serializer.save()
+        traductor = Translator()
+        instance.description = traductor.getTranslatedWord(instance.descripcion)
+        instance.save()
+
+
+
+
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):
 
