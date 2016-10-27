@@ -72,9 +72,6 @@ class SitioCreate(generics.CreateAPIView):
     def create(self, request):
         data = request.data
 
-        descripcion =  request.data.getlist('descripcion')
-        descripcion = ''.join(descripcion)
-        descripcion = descripcion.encode('utf-8')
         traductor = translator.Translator()
         serializer = SitioSerializer(data=data)
         photos = request.FILES.iteritems()

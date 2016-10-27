@@ -16,10 +16,6 @@ class RutaCreate(generics.CreateAPIView):
     permission_classes = (IsAuthenticated,)
     def create(self, request):
 		data = request.data
-
-		descripcion = data["descripcion"]
-		descripcion = ''.join(descripcion)
-		descripcion = descripcion.encode('utf-8')
 		traductor = translator.Translator()
 
 		serializer = RutaSerializer(data=data)
