@@ -81,6 +81,7 @@ class SitioCreate(generics.CreateAPIView):
         if serializer.is_valid():
             newObject = serializer.save()
             newObject.description=traductor.getTranslatedWord(newObject.descripcion)
+            newObject.businessOpenningHours = traductor.getTranslatedWord(newObject.horariolocal)
             newObject.save()
             serializer.add_photos_with_abbreviations(photos)
             site_photos = Foto.objects.filter(sitio_id=serializer.data["id"])
@@ -141,6 +142,7 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         instance = serializer.save()
         traductor = translator.Translator()
         instance.description = traductor.getTranslatedWord(instance.descripcion)
+        instance.businessOpenningHours = traductor.getTranslatedWord(instance.horariolocal)
         instance.save()
 
 
