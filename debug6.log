@@ -1645,3 +1645,1670 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1550, in do_with
     "assignment" % bits[0])
 TemplateSyntaxError: u'with' expected at least one variable assignment
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sugerencias/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183
+    if  user.is_active==0
+                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /ruta/crear
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /buscar/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sugerencias/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /sitio/detail/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/registration/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/user/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/turismo/urls.py", line 29, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 18, in <module>
+    from .app_settings import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 186
+    if user.tipo_cuenta='M' and user.es_cuenta_activa==0:
+                       ^
+SyntaxError: invalid syntax
+Internal Server Error: /rest-auth/password/reset/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/views.py", line 155, in post
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 186, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 364, in run_validation
+    value = self.to_internal_value(data)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/serializers.py", line 399, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183, in validate_email
+    if  user.is_active==0:
+AttributeError: 'QuerySet' object has no attribute 'is_active'
