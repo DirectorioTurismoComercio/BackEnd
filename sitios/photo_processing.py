@@ -15,9 +15,15 @@ def reduce_photo_size(photo_path, photo_filename,size):
 		orientation=int(string_array[1])
 		photo_filename=string_array[0]
 
+	originalFile = file
 	file = rotate_image(file,orientation)
-    
-	file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+	try:
+		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+	except IOError as e:
+		file = originalFile
+		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+		print e.message
+		pass
     
 	if file.size[0]>max_width or file.size[1]>max_height:
 		if file.size[0]>file.size[1]:
@@ -27,8 +33,15 @@ def reduce_photo_size(photo_path, photo_filename,size):
 
 		new_width = int(round(file.size[0]/scale_factor))
 		new_height = int(round(file.size[1]/scale_factor))
+		originalFile = file
 		file = file.resize((new_width,new_height),Image.ANTIALIAS)
+	try:
 		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+	except IOError as e:
+		file = originalFile
+		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+		print e.message
+		pass
 
 	if os.path.getsize(photo_path+"/"+photo_filename) > settings.MAX_TAMANO_IMAGEN_SIN_REDUCCION:
 		if imghdr.what(photo_path+"/"+photo_filename)=='png' or imghdr.what(photo_path+"/"+photo_filename).lower()=='gif':
@@ -39,8 +52,14 @@ def reduce_photo_size(photo_path, photo_filename,size):
 			background.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=quality)
 
 		if imghdr.what(photo_path+"/"+photo_filename).lower()=='jpg' or imghdr.what(photo_path+"/"+photo_filename).lower()=='jpeg':
-			file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=quality)
-	
+			try:
+				file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=quality)
+			except IOError as e:
+				file = originalFile
+				file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+				print e.message
+				pass
+		
 
 	return photo_filename
 

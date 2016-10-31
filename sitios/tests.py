@@ -106,8 +106,10 @@ class CRUDSitioTest(TestCase):
 		dir = settings.MEDIA_ROOT  + "/test_photos/"
 		nombreFoto1="test_13221_piqueteadero.jpg"
 		nombreFoto2="test_13221_piqueteadero2.jpg"
+		nombreFoto3="test_13221_f2.jpg"
 		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
 		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
+		fp3=open(os.path.join(os.pardir, dir+nombreFoto3),'rb')
 		new_site = {
 		    	"nombre": "Café Bar", 
   				"latitud": 4.13, 
@@ -117,6 +119,7 @@ class CRUDSitioTest(TestCase):
     			"categorias": [{"categoria_id":self.categoria.id, "tipo":2}],
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
+    			"FACHADA_foto3": fp3,
     			"usuario": self.usuario.id
 			}
 		qdict = QueryDict('', mutable=True)
@@ -124,7 +127,7 @@ class CRUDSitioTest(TestCase):
 		
 		response = self.client.post('/sitio',new_site)
 		
-		self.assertEqual(len(Foto.objects.all()),2)
+		self.assertEqual(len(Foto.objects.all()),3)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 
 	def test_create_successfully_with_photos_size_reduction(self):
