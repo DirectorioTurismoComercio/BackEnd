@@ -183,9 +183,6 @@ class PasswordResetSerializer(serializers.Serializer):
         if  user[0].is_active==0:
             raise serializers.ValidationError("E105")
 
-        if user[0].tipo_cuenta=='M' and user[0].es_cuenta_activa==0:
-            raise serializers.ValidationError("E106")
-
         self.reset_form = self.password_reset_form_class(data=self.initial_data)
         if not self.reset_form.is_valid():
             raise serializers.ValidationError(self.reset_form.errors)
