@@ -73,7 +73,7 @@ class SitioList(generics.ListAPIView):
             contacts = paginator.page(1)
         except EmptyPage:
             # If page is out of range (e.g. 9999), deliver last page of results.
-            contacts = paginator.page(paginator.num_pages)
+            contacts = []
 
         return contacts
 
