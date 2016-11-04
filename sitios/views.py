@@ -27,6 +27,8 @@ import re
 from translator import  translator
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from operator import itemgetter
+
 
 
 
@@ -177,12 +179,15 @@ class SitiosCercanosARuta(viewsets.ViewSet):
             for site in sites:
                 distancia = hallar_distancia_geodesica(puntos[i], (site.latitud, site.longitud))
                 if distancia <= radio:
-                    if not site in resultados:
-                        siteSerializer = SitioSerializer(site, context={'request': request})
-                        if not siteSerializer.data in resultados:
-                            resultados.append(siteSerializer.data)
+                    siteSerializer = SitioSerializer(site, context={'request': request})
+                    siteSerializerDictionary = siteSerializer.data
+                    siteSerializerDictionary['distancia'] = distancia
+                    if not siteSerializer.data.get('id') in {x['id'] for x in resultados}:
+                        resultados.append(siteSerializerDictionary)
 
-        return Response(resultados)
+        resultadosByDistance = sorted(resultados, key=itemgetter('distancia'))
+        return Response(resultadosByDistance)
+   
 
 class SitioMunicipioList(generics.ListAPIView):
     queryset =  Sitio.objects.filter(tipo_sitio='M',usuario__es_cuenta_activa=True).order_by('nombre')
