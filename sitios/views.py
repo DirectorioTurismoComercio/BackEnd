@@ -28,6 +28,7 @@ from translator import  translator
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from operator import itemgetter
+import json
 
 
 
@@ -69,15 +70,15 @@ class SitioList(generics.ListAPIView):
 
         page = self.request.GET.get('page')
         try:
-            contacts = paginator.page(page)
+            resultados = paginator.page(page)
         except PageNotAnInteger:
             # If page is not an integer, deliver first page.
-            contacts = paginator.page(1)
+            resultados = paginator.page(1)
         except EmptyPage:
             # If page is out of range (e.g. 9999), deliver last page of results.
-            contacts = []
+            resultados = []
 
-        return contacts
+        return resultados
 
 
 class SitioCreate(generics.CreateAPIView):
@@ -170,6 +171,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         sites = Sitio.objects.filter(usuario__es_cuenta_activa=1, usuario__is_active=1)
         resultados = []
 
+
         puntos = request.data['points']
 
         paso = 1
@@ -180,14 +182,47 @@ class SitiosCercanosARuta(viewsets.ViewSet):
                 distancia = hallar_distancia_geodesica(puntos[i], (site.latitud, site.longitud))
                 if distancia <= radio:
                     siteSerializer = SitioSerializer(site, context={'request': request})
-                    siteSerializerDictionary = siteSerializer.data
-                    siteSerializerDictionary['distancia'] = distancia
-                    if not siteSerializer.data.get('id') in {x['id'] for x in resultados}:
-                        resultados.append(siteSerializerDictionary)
+                    #siteSerializerDictionary = siteSerializer.data
+                    #siteSerializerDictionary['distancia'] = distancia
+                    if not site in {x['sitio'] for x in resultados}:
+                        resultados.append({'sitio':site,'distancia':distancia})
 
         resultadosByDistance = sorted(resultados, key=itemgetter('distancia'))
-        return Response(resultadosByDistance)
-   
+
+        print resultadosByDistance
+
+        resultados=[]
+
+
+
+
+
+
+
+
+        paginator = Paginator((list(resultadosByDistance)), 40)
+
+        page = self.request.GET.get('page')
+        try:
+            resultados = paginator.page(page)
+        except PageNotAnInteger:
+            # If page is not an integer, deliver first page.
+            resultados = paginator.page(1)
+        except EmptyPage:
+            # If page is out of range (e.g. 9999), deliver last page of results.
+            resultados = []
+
+
+        sitios=[]
+
+        for resultado in resultados.object_list:
+            siteSerializer = SitioSerializer(resultado['sitio'], context={'request': request})
+
+            sitios.append(siteSerializer.data)
+
+
+        return Response(sitios)
+
 
 class SitioMunicipioList(generics.ListAPIView):
     queryset =  Sitio.objects.filter(tipo_sitio='M',usuario__es_cuenta_activa=True).order_by('nombre')
