@@ -3312,3 +3312,147 @@ Traceback (most recent call last):
   File "/home/camilo/Documentos/djangoprojects/plataforma/rest_auth/serializers.py", line 183, in validate_email
     if  user.is_active==0:
 AttributeError: 'QuerySet' object has no attribute 'is_active'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 88, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 51, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 31, in reduce_photo_size
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+  File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 1468, in save
+    save_handler(self, fp, filename)
+  File "/usr/lib/python2.7/dist-packages/PIL/JpegImagePlugin.py", line 579, in _save
+    ImageFile._save(im, fp, [("jpeg", (0,0)+im.size, 0, rawmode)], bufsize)
+  File "/usr/lib/python2.7/dist-packages/PIL/ImageFile.py", line 479, in _save
+    raise IOError("encoder error %d when writing image file" % s)
+IOError: encoder error -2 when writing image file
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 88, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 58, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 36, in reduce_photo_size
+    except(Error):
+NameError: global name 'Error' is not defined
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 88, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 58, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 35, in reduce_photo_size
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+  File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 1468, in save
+    save_handler(self, fp, filename)
+  File "/usr/lib/python2.7/dist-packages/PIL/JpegImagePlugin.py", line 579, in _save
+    ImageFile._save(im, fp, [("jpeg", (0,0)+im.size, 0, rawmode)], bufsize)
+  File "/usr/lib/python2.7/dist-packages/PIL/ImageFile.py", line 479, in _save
+    raise IOError("encoder error %d when writing image file" % s)
+IOError: encoder error -2 when writing image file
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 88, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 58, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 35, in reduce_photo_size
+    file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
+  File "/usr/lib/python2.7/dist-packages/PIL/Image.py", line 1468, in save
+    save_handler(self, fp, filename)
+  File "/usr/lib/python2.7/dist-packages/PIL/JpegImagePlugin.py", line 579, in _save
+    ImageFile._save(im, fp, [("jpeg", (0,0)+im.size, 0, rawmode)], bufsize)
+  File "/usr/lib/python2.7/dist-packages/PIL/ImageFile.py", line 479, in _save
+    raise IOError("encoder error %d when writing image file" % s)
+IOError: encoder error -2 when writing image file
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 88, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 62, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 37, in reduce_photo_size
+    print IOError.msg
+AttributeError: type object 'exceptions.IOError' has no attribute 'msg'
+Internal Server Error: /sitio
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/rest_framework/generics.py", line 260, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/views.py", line 88, in create
+    reduce_site_photos(dir,site_photos)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 62, in reduce_site_photos
+    photo.URLfoto.name = reduce_photo_size(dir,photo.URLfoto.name,photo.URLfoto.size)
+  File "/home/camilo/Documentos/djangoprojects/plataforma/sitios/photo_processing.py", line 37, in reduce_photo_size
+    print e.msg
+AttributeError: 'exceptions.IOError' object has no attribute 'msg'
