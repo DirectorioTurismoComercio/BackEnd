@@ -13,3 +13,6 @@ INSERT INTO `sitios_foto` (`id`, `URLfoto`, `tipo`, `sitio_id`) VALUES
 INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `tipo_cuenta`, `es_cuenta_activa`) VALUES
 (3000, 'pbkdf2_sha256$20000$G47cKQseOQrx$ZPZ02mjl7vTe9XVuJ8/3oBHokGi1DIHGUsdQfqtrRiM=', '2016-09-14 17:23:07.282342', 0, 'municipio', 'Municipio', 'Municipio', 'm@m.mm', 0, 1, '2016-09-14 17:23:07.223316', 'M', 1);
 
+INSERT INTO `authentication_module_customuser` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `tipo_cuenta`, `es_cuenta_activa`) VALUES
+(3001, 'pbkdf2_sha256$20000$G47cKQseOQrx$ZPZ02mjl7vTe9XVuJ8/3oBHokGi1DIHGUsdQfqtrRiM=', '2016-09-14 17:23:07.282342', 0, 'municipio', 'Municipio', 'Municipio', 't@t.tt', 0, 1, '2016-09-14 17:23:07.223316', 'C', 1);
+

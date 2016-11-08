@@ -9,6 +9,7 @@ from plataforma.models import Municipio
 from plataforma.models import Categoria
 from rutas.serializers import *
 from rutas.models import Ruta,RutaSitio
+from unidecode import unidecode
 
 class MunicipioSerializer(serializers.ModelSerializer):
   class Meta:
@@ -99,6 +100,7 @@ class SitioSerializer(serializers.ModelSerializer):
 				elif 'PRODUCTOS' in nombre:
 					tipoAbreviatura = 'PR'
 
+				archivo.name=unidecode(archivo.name)
 				z = Foto.objects.create(
                     URLfoto=archivo,
                     sitio_id=self.data["id"],
