@@ -182,25 +182,11 @@ class SitiosCercanosARuta(viewsets.ViewSet):
                 distancia = hallar_distancia_geodesica(puntos[i], (site.latitud, site.longitud))
                 if distancia <= radio:
                     siteSerializer = SitioSerializer(site, context={'request': request})
-                    #siteSerializerDictionary = siteSerializer.data
-                    #siteSerializerDictionary['distancia'] = distancia
-                    if not site in {x['sitio'] for x in resultados}:
-                        resultados.append({'sitio':site,'distancia':distancia})
-
-        resultadosByDistance = sorted(resultados, key=itemgetter('distancia'))
-
-        print resultadosByDistance
-
+                    if not site in resultados:
+                        resultados.append(site)
         resultados=[]
 
-
-
-
-
-
-
-
-        paginator = Paginator((list(resultadosByDistance)), 40)
+        paginator = Paginator((list(resultados)), 5)
 
         page = self.request.GET.get('page')
         try:
@@ -216,7 +202,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         sitios=[]
 
         for resultado in resultados.object_list:
-            siteSerializer = SitioSerializer(resultado['sitio'], context={'request': request})
+            siteSerializer = SitioSerializer(resultado, context={'request': request})
 
             sitios.append(siteSerializer.data)
 
