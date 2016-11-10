@@ -107,10 +107,13 @@ class CRUDSitioTest(TestCase):
 		nombreFoto1="test_13221_piqueteadero.jpg"
 		nombreFoto2="test_13221_piqueteadero2.jpg"
 		nombreFoto3="test_13221_f2.jpg"
-		
+		nombreFoto4 = "test_13221_18643e00a68c-1507-4108-be79-66cdb4cfb558.jpg_exif_orientation1"
+
+
 		fp1=open(os.path.join(os.pardir, dir+nombreFoto1),'rb')
 		fp2=open(os.path.join(os.pardir, dir+nombreFoto2),'rb')
 		fp3=open(os.path.join(os.pardir, dir+nombreFoto3),'rb')
+		fp4 = open(os.path.join(os.pardir, dir + nombreFoto4), 'rb')
 		
 		new_site = {
 		    	"nombre": "Café Bar", 
@@ -122,14 +125,15 @@ class CRUDSitioTest(TestCase):
     			"PRINCIPAL_foto1": fp1,
     			"FACHADA_foto2": fp2,
     			"FACHADA_foto3": fp3,
+				"FACHADA_foto4": fp4,
     			"usuario": self.usuario.id
 			}
 		qdict = QueryDict('', mutable=True)
 		qdict.update(new_site)
 		
 		response = self.client.post('/sitio',new_site)
-		
-		self.assertEqual(len(Foto.objects.all()),3)
+
+		self.assertEqual(len(Foto.objects.all()),4)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
 
 	def test_create_successfully_with_photos_size_reduction(self):
@@ -376,7 +380,7 @@ class CRUDSitioTest(TestCase):
 		dir = settings.MEDIA_ROOT+"/Fotos"
 		files = os.listdir(dir)
 		for file in files:
-			if file.startswith("test_13221"):
+			if  "test_13221" in file :
 				os.remove(os.path.join(dir,file))
 
 

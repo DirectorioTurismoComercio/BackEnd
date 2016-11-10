@@ -7,8 +7,12 @@ def reduce_photo_size(photo_path, photo_filename,size):
 	quality = settings.PORCENTAJE_CALIDAD_FOTOS
 	max_width = settings.MAXIMO_ANCHO_FOTOS;
 	max_height = settings.MAXIMO_ALTO_FOTOS;
-	file = Image.open(photo_path+"/"+photo_filename)
 	orientation = None
+
+	try:
+		file = Image.open(photo_path+"/"+photo_filename)
+	except IOError as e:
+		return photo_filename
 
 	if "exif" in photo_filename:
 		string_array=photo_filename.split("_exif_orientation")
@@ -16,8 +20,8 @@ def reduce_photo_size(photo_path, photo_filename,size):
 		photo_filename=string_array[0]
 
 	originalFile = file
-	file = rotate_image(file,orientation)
 	try:
+		file = rotate_image(file, orientation)
 		file.save(photo_path+"/"+photo_filename,'JPEG',optimize=True,quality=100)
 	except IOError as e:
 		file = originalFile
@@ -77,7 +81,6 @@ def reduce_site_photos(dir,site_photos):
 
 
 def rotate_image(image, orientation):
-
 	try:
 		if orientation is None:
 		    for orientation in ExifTags.TAGS.keys():
