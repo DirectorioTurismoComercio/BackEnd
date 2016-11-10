@@ -184,10 +184,10 @@ class SitiosCercanosARuta(viewsets.ViewSet):
                     siteSerializer = SitioSerializer(site, context={'request': request})
                     if not site in resultados:
                         resultados.append(site)
-        resultados=[]
 
+        print ("los resultados", len(resultados))
         paginator = Paginator((list(resultados)), 5)
-
+        resultados = []
         page = self.request.GET.get('page')
         try:
             resultados = paginator.page(page)
