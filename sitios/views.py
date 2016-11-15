@@ -185,9 +185,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
                     if not site in resultados:
                         resultados.append(site)
 
-        print ("los resultados", len(resultados))
         paginator = Paginator((list(resultados)), 5)
-        resultados = []
         page = request.data['page']
         try:
             resultados = paginator.page(page)
@@ -201,11 +199,14 @@ class SitiosCercanosARuta(viewsets.ViewSet):
 
         sitios=[]
 
-        for resultado in resultados.object_list:
-            siteSerializer = SitioSerializer(resultado, context={'request': request})
 
-            sitios.append(siteSerializer.data)
+        try:
+            for resultado in resultados.object_list:
+                siteSerializer = SitioSerializer(resultado, context={'request': request})
 
+                sitios.append(siteSerializer.data)
+        except:
+            pass
 
         return Response(sitios)
 
