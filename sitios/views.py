@@ -188,7 +188,7 @@ class SitiosCercanosARuta(viewsets.ViewSet):
         print ("los resultados", len(resultados))
         paginator = Paginator((list(resultados)), 5)
         resultados = []
-        page = self.request.GET.get('page')
+        page = request.data['page']
         try:
             resultados = paginator.page(page)
         except PageNotAnInteger:
