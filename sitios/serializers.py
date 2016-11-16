@@ -4,6 +4,7 @@ from rest_framework import serializers
 from sitios.models import Sitio
 from sitios.models import Foto 
 from sitios.models import Tag 
+from sitios.models import Calificacion
 from sitios.models import SitioCategoria 
 from plataforma.models import Municipio
 from plataforma.models import Categoria
@@ -132,6 +133,9 @@ class SitioSerializer(serializers.ModelSerializer):
 		model = Sitio
 
 
-            
+class CalificacionSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Calificacion
 
 

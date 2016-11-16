@@ -12,4 +12,3 @@ class CustomSocialTokenUserAuthView(BaseSocialAuthView):
     serializer_class = UserTokenSerializer
     authentication_classes = (TokenAuthentication, )
 
-

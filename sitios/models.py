@@ -56,3 +56,9 @@ class SitioCategoria(models.Model):
     tipo = models.IntegerField(default=1)
     categoria = models.ForeignKey(Categoria,blank=False)
     sitio = models.ForeignKey(Sitio,blank=False)
+
+
+class Calificacion(models.Model):
+    user = models.ForeignKey(CustomUser)
+    sitio = models.ForeignKey(Sitio)
+    calificacion = models.IntegerField(default=1)

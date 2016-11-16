@@ -2,6 +2,7 @@
 from sitios.models import Foto
 from sitios.models import Sitio
 from sitios.models import SitioCategoria
+from sitios.models import Calificacion
 from sitios.permissions import IsSiteOwner
 from rest_framework.views import APIView
 from rest_framework import viewsets
@@ -12,6 +13,7 @@ from rest_framework.parsers import FormParser
 from rest_framework.response import Response
 from sitios.distancia import *
 from sitios.serializers import SitioSerializer
+from sitios.serializers import CalificacionSerializer
 from sitios.serializers import SitioCategoriaSerializer
 from sitios.serializers import FotoSerializer
 from sitios.string_processing import *
@@ -146,7 +148,9 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
         instance.save()
 
 
-
+class CalificacionCreate(generics.CreateAPIView):
+    queryset = Calificacion.objects.all()
+    serializer_class = CalificacionSerializer
 
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):
