@@ -27,6 +27,8 @@ from django.http import HttpResponse
 import plataforma
 import re
 from translator import  translator
+from django.db.models import Avg
+
 
 
 
@@ -151,6 +153,33 @@ class SitioDetail(generics.RetrieveUpdateDestroyAPIView):
 class CalificacionCreate(generics.CreateAPIView):
     queryset = Calificacion.objects.all()
     serializer_class = CalificacionSerializer
+    permission_classes = (IsAuthenticated,)
+    def create(self, request):
+        data = { 'user': request.user.id, 'calificacion': request.data['calificacion'], 'sitio': request.data['sitio']}
+        
+        calificacion = Calificacion.objects.filter(user=request.user.id,sitio=request.data['sitio'])
+        if calificacion:
+            serializer = CalificacionSerializer(calificacion[0], data=data, partial=True)
+        else:
+            serializer = CalificacionSerializer(data=data)
+        
+        if serializer.is_valid():
+            serializer.save()
+            self.update_site_rating(request.data['sitio'])
+        else:
+            return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response(status=status.HTTP_201_CREATED)
+
+    def update_site_rating(self,sitio_id):
+        average_rating=Calificacion.objects.filter(sitio=sitio_id).aggregate(Avg('calificacion'))['calificacion__avg']
+        votes=len(Calificacion.objects.filter(sitio=sitio_id))
+        site = Sitio.objects.get(pk=sitio_id)
+        site.calificacionPromedio = float("{0:.1f}".format(average_rating))
+        site.votos = votes
+        site.save()
+
+
 
 class SitiosCercanosARuta(viewsets.ViewSet):
     def list_sites(self, request):

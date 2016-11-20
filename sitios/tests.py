@@ -2,6 +2,7 @@
 import os
 import time
 from authentication_module.serializers import CustomUserSerializer
+from authentication_module.models import CustomUser
 from rest_framework import status
 from django.test import TestCase, RequestFactory
 from sitios.models import Sitio
@@ -10,6 +11,7 @@ from plataforma.models import Municipio
 from plataforma.models import Categoria
 from plataforma.models import Tag
 from search_suggestions import generate_string_suggestions
+from sitios.models import Calificacion
 from sitios.distancia import hallar_distancia_geodesica
 from sitios.distancia import geodesica_a_cartesiana
 from sitios.distancia import hallar_angulo_rotacion
@@ -375,6 +377,34 @@ class CRUDSitioTest(TestCase):
 		sitio = Sitio.objects.get(pk=sitio_id)
 		self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN, response.status_code)
 
+	def test_new_rate_site(self):
+		response = self.client.post('/calificacion',{'sitio': self.sitio1.id, 'calificacion': 2})
+
+		self.assertEqual(len(Calificacion.objects.all()),1)
+		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+
+	def test_update_rate_site(self):
+		Calificacion.objects.create(sitio=self.sitio1, calificacion=5,user=self.usuario)
+		response = self.client.post('/calificacion',{'sitio': self.sitio1.id, 'calificacion': 2})
+
+		self.assertEqual(len(Calificacion.objects.all()),1)
+		self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+
+ 	def test_get_average_rating_site(self):
+ 		usuario2 =CustomUser.objects.create(email= self.EMAIL+'2',password= 'xxxx', first_name='Carlos',last_name='Torres')
+ 		usuario3 =CustomUser.objects.create(email= self.EMAIL+'3',password= 'xxxx', first_name='Carlos',last_name='Torres')
+ 		Calificacion.objects.create(sitio=self.sitio1, calificacion=5,user=usuario2)
+		Calificacion.objects.create(sitio=self.sitio1, calificacion=4,user=usuario3)
+		
+ 		
+ 		response = self.client.post('/calificacion',{'sitio': self.sitio1.id, 'calificacion': 3})
+ 		sitio = Sitio.objects.get(pk=self.sitio1.id)
+		self.assertEqual(sitio.calificacionPromedio,4)
+		self.assertEqual(sitio.votos,3)
+
+
+ 		
+ 		
 		
 	def tearDown(self):
 		dir = settings.MEDIA_ROOT+"/Fotos"

@@ -8,6 +8,7 @@ from django.db import models
 from plataforma.models import Categoria
 from plataforma.models import Municipio
 from plataforma.models import Tag
+
 from authentication_module.models import CustomUser
 
 from django.core.validators import RegexValidator
@@ -33,8 +34,9 @@ class Sitio(models.Model):
     tags = models.ManyToManyField(Tag,blank=True)
     usuario = models.ForeignKey(CustomUser,null=True,related_name='sitios')
     municipio = models.ForeignKey(Municipio, related_name='sitios', null=False)
-    tipo_sitio =  models.CharField(max_length=1,choices=(('M','MUNICIPIO'),('S','SITIO')),default='S',
-                                                  null=True, blank=True)
+    tipo_sitio =  models.CharField(max_length=1,choices=(('M','MUNICIPIO'),('S','SITIO')),default='S',                                                  null=True, blank=True)
+    calificacionPromedio = models.DecimalField(max_digits=3, decimal_places=2, null=True, default=None)
+    votos = models.IntegerField(default=0)
     def __unicode__(self):
         return self.nombre
 
