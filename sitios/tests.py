@@ -394,9 +394,7 @@ class CRUDSitioTest(TestCase):
  		usuario2 =CustomUser.objects.create(email= self.EMAIL+'2',password= 'xxxx', first_name='Carlos',last_name='Torres')
  		usuario3 =CustomUser.objects.create(email= self.EMAIL+'3',password= 'xxxx', first_name='Carlos',last_name='Torres')
  		Calificacion.objects.create(sitio=self.sitio1, calificacion=5,user=usuario2)
-		Calificacion.objects.create(sitio=self.sitio1, calificacion=4,user=usuario3)
-		
- 		
+		Calificacion.objects.create(sitio=self.sitio1, calificacion=4,user=usuario3)		
  		response = self.client.post('/calificacion',{'sitio': self.sitio1.id, 'calificacion': 3})
  		sitio = Sitio.objects.get(pk=self.sitio1.id)
 		self.assertEqual(sitio.calificacionPromedio,4)
