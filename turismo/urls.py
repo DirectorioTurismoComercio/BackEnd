@@ -17,14 +17,15 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     url(r'^buscar/$', sitio_views.SitioList.as_view()), 
-    url(r'^sugerencias/$', sitio_views.Sugerencias.as_view({'get':'list_sugerencias'})), 
+    url(r'^sugerencias/$', sitio_views.Sugerencias.as_view({'get':'list_sugerencias'})),
     url(r'^municipios', views.MunicipiosListCreate.as_view()), 
     url(r'^municipio/sitios', sitio_views.SitiosDelMunicipio.as_view()), 
     url(r'^usuario', views.UsuarioDetail.as_view()),
     url(r'^categorias/(?P<pk>[0-9]+)', views.CategoriaDetail.as_view()),
     url(r'^categorias', views.CategoriaListCreate.as_view()), 
     url(r'^tags/(?P<pk>[0-9]+)', views.TagDetail.as_view()),
-    url(r'^tags', views.TagListCreate.as_view()), 
+    url(r'^detalle-sitio/(?P<pk>[0-9]+)', views.DetalleSitio.as_view()),
+    url(r'^tags', views.TagListCreate.as_view()),
     url(r'^docs/', include('rest_framework_swagger.urls')), # url documentation
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),

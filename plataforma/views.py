@@ -1,5 +1,6 @@
 # coding=utf-8 
 
+from sitios.models import Sitio
 from plataforma.models import *
 from rest_framework import status
 from plataforma.serializers import *
@@ -14,70 +15,63 @@ from rest_framework import generics
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
-
+from sitios.serializers import SitioSerializer
 
 from plataforma.similarity import *
 from plataforma.emails import *
 from django.db.models import Q
 import json
-import logging 
+import logging
 
 from rest_framework import permissions
+
 
 class MunicipiosListCreate(generics.ListCreateAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     queryset = Municipio.objects.all()
-    serializer_class = MunicipioSerializer  
+    serializer_class = MunicipioSerializer
 
-    
-    
+
 class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
-
     queryset = CustomUser.objects.all()
-    serializer_class = CustomUserSerializer  
-    permission_classes = (IsAuthenticated,IsSiteOwner)
-
+    serializer_class = CustomUserSerializer
+    permission_classes = (IsAuthenticated, IsSiteOwner)
 
 
 class CategoriaListCreate(generics.ListCreateAPIView):
     queryset = Categoria.objects.all().order_by('nombre')
-    serializer_class = CategoriaSerializer 
+    serializer_class = CategoriaSerializer
+
     def get_queryset(self):
         queryset = super(CategoriaListCreate, self).get_queryset()
-        
+
         nivel = self.request.QUERY_PARAMS.get('nivel', None)
         padre = self.request.QUERY_PARAMS.get('categoria_padre', None)
-      
-        if nivel is not None:
-          if padre is not None:
-            return queryset.filter(nivel=nivel,categoria_padre_id=padre)            
-          else:
-            return queryset.filter(nivel=nivel)    
 
-        return queryset.filter()  
+        if nivel is not None:
+            if padre is not None:
+                return queryset.filter(nivel=nivel, categoria_padre_id=padre)
+            else:
+                return queryset.filter(nivel=nivel)
+
+        return queryset.filter()
+
 
 class CategoriaDetail(generics.RetrieveUpdateDestroyAPIView):
-
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
 
 
 class TagListCreate(generics.ListCreateAPIView):
     queryset = Tag.objects.all()
-    serializer_class = TagSerializer 
+    serializer_class = TagSerializer
+
 
 class TagDetail(generics.RetrieveUpdateDestroyAPIView):
-
     queryset = Tag.objects.all()
-    serializer_class = TagSerializer 
+    serializer_class = TagSerializer
 
 
-
-
-
-
-
-   
-
-        
-
+class DetalleSitio(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Sitio.objects.all()
+    serializer_class = SitioSerializer
